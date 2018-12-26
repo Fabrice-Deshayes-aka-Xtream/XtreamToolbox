@@ -32,15 +32,16 @@
 
 - Langage de dévelopement : C#
 - Auteur : Fabrice Deshayes aka Xtream
-- Dll utilisées :
-    - C2DPushGraph (graph mode of System Info and
-  Storage Sensor) by Stuart Konen
-    - Google Data API
-- Graphismes :
+- Dll/packages utilisées :
+    - [C2DPushGraph by Stuart Konen](https://www.codeproject.com/articles/16634//Articles/16634/C2DPushGraph-A-Push-Graph-Control-2) (graph mode of System Info and Storage Sensor)
+	- [Global mouse key hook by gmamaladze](https://github.com/gmamaladze/globalmousekeyhook)
+	- [Newtonsoft by JamesNK](https://github.com/JamesNK/Newtonsoft.Json)
+    - Google Data API (calendar)
+- Icons :
     - IconBuffet studio
-    - Refreshcl by tpdk
-    - Gant by mattahan
-    - Weather iconset by Wojciech
+    - [Refreshcl by tpdk](https://www.deviantart.com/tpdkcasimir/art/Refresh-CL-Icons-Pack-25565201)
+    - [G.A.N.T. by mattahan](https://www.deviantart.com/mattahan/art/G-A-N-T-3035321)
+    - [Weather iconset by Wojciech Grzanka](http://www.softicons.com/web-icons/weather-icons-by-wojciech-grzanka)
 
 Xtream's Toolbox est une barre d'outils multifonction personnalisable. Elle est composée d’un container (appelé aussi « toolbox ») qui heberge un ou plusieurs « sensor ». Chaque sensor a une fonction particulière et peut être paramétrable. Il est possible d’ajouter ou de supprimer des sensors et de définir leurs positions les uns par rapport aux autres. Ce logiciel a été réalisé pour mes besoins personnels (principalement en 2006) et évolus depuis par petite touches
 
