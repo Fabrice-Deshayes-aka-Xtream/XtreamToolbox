@@ -43,7 +43,7 @@
     - [G.A.N.T. by mattahan](https://www.deviantart.com/mattahan/art/G-A-N-T-3035321)
     - [Weather iconset by Wojciech Grzanka](http://www.softicons.com/web-icons/weather-icons-by-wojciech-grzanka)
 
-Xtream's Toolbox est une barre d'outils multifonction personnalisable. Elle est composée d’un container (appelé aussi « toolbox ») qui heberge un ou plusieurs « sensor ». Chaque sensor a une fonction particulière et peut être paramétrable. Il est possible d’ajouter ou de supprimer des sensors et de définir leurs positions les uns par rapport aux autres. Ce logiciel a été réalisé pour mes besoins personnels (principalement en 2006) et évolus depuis par petite touches
+Xtream's Toolbox est une barre d'outils multifonction personnalisable. Elle est composée d’un container (appelé aussi « toolbox ») qui héberge un ou plusieurs « sensor ». Chaque sensor a une fonction particulière et peut être paramétrable. Il est possible d’ajouter ou de supprimer des sensors et de définir leurs positions les uns par rapport aux autres. Ce logiciel a été réalisé pour mes besoins personnels (principalement en 2006) et évolue depuis par petite touches
 
 ![ToolBox-overview](screenshots/overview.png)
 
@@ -84,7 +84,7 @@ Ce sensor permet d’afficher le status des touches verrouillage majuscule (caps
 
 Ce sensor permet d’afficher le mode d’alimentation du PC ainsi que le niveau de charge de la batterie.
 
-Un clique avec le bouton gauche de la souris ouvre le panneau de configuration de l’alimentation du PC.
+Un clic avec le bouton gauche de la souris ouvre le panneau de configuration de l’alimentation du PC.
 
 ### SystemInfos
 
@@ -114,7 +114,7 @@ L’heure du PC peut être mise à l’heure de manière automatique via l’uti
 
 Ce sensor permet de voir en un clin d’œil l’espace disque occupé et disponible sur les partitions des disques dur du PC. Il permet également d’obtenir des informations détaillé sur une lecteur comme le type de partition (FAT16 / FAT32 / NTFS…) ainsi qu’un graphique du débit en lecture et écriture.
 
-Un clique avec le bouton gauche de la souris permet d’ouvrir le panneau d’extension.
+Un clic avec le bouton gauche de la souris permet d’ouvrir le panneau d’extension.
 
 ![Storage-ext](screenshots/storage-ext.png)
 
@@ -182,7 +182,10 @@ Ce sensor permet de vider la corbeille (clic droit) ou d'avoir accès à son con
 
 ![ShutdownManager](screenshots/shutdownmanager.png)
 
-Ce sensor permet d'eteindre/redémarrer/vérouiller/hiberner l'ordinateur. Voir les paramètres pour choisi quelle action se fait sur quel bouton de la souris, et pour désactiver les confirmations.
+Ce sensor permet d'avoir des icones d'accès rapide à deux des fonctionnalités suivantes : verrouiller/clore la session/changer d'utilisateur/redémarrer/veille prolongée/arrêter l'ordinateur. Voir les paramètres pour choisi quelle action choisir.
+
+Il est également possible, via un clic droit sur les icones, d'ouvrir le panneau d'extension afin de planifier un arrêt.
+![ShutdownManager-ext](screenshots/shutdownmanager-ext.png)
 
 ### Spacer
 
