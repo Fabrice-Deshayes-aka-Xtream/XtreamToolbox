@@ -20,7 +20,7 @@ namespace Xtream_ToolBox.Sensors {
         public SensorNotepadExtendedPanel() {
             InitializeComponent();
             Initialisation();
-            SystemUtils.hideFromAltTab(this);
+            SystemUtils.HideFromAltTab(this);
         }
 
         // Init GUI

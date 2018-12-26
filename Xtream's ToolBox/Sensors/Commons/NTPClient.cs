@@ -560,6 +560,6 @@ namespace TimeSync {
         }
 
         // The URL of the time server we're connecting to
-        private string TimeServer;
+        private readonly string TimeServer;
     }
 }

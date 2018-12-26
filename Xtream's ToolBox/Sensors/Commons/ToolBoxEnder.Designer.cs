@@ -55,9 +55,9 @@
             this.moveBoxEnder.Size = new System.Drawing.Size(16, 33);
             this.moveBoxEnder.TabIndex = 4;
             this.moveBoxEnder.TabStop = false;
-            this.moveBoxEnder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseDown);
-            this.moveBoxEnder.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseMove);
-            this.moveBoxEnder.MouseUp += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseUp);
+            this.moveBoxEnder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseDown);
+            this.moveBoxEnder.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseMove);
+            this.moveBoxEnder.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseUp);
             // 
             // closerPictureBox
             // 
@@ -69,7 +69,7 @@
             this.closerPictureBox.Size = new System.Drawing.Size(16, 15);
             this.closerPictureBox.TabIndex = 5;
             this.closerPictureBox.TabStop = false;
-            this.closerPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.closerPictureBox_MouseClick);
+            this.closerPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CloserPictureBox_MouseClick);
             // 
             // helpToolTip
             // 

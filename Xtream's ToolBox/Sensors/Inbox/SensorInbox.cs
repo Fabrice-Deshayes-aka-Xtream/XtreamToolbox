@@ -43,11 +43,11 @@ namespace Xtream_ToolBox.Sensors {
         public SensorInbox(ToolBox toolbox) {
             InitializeComponent();
             this.toolbox = toolbox;
-            initUI();
+            InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form getExtendedPanel() {
+        public Form GetExtendedPanel() {
             return null;
         }
 
@@ -55,16 +55,16 @@ namespace Xtream_ToolBox.Sensors {
         private void initialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
-            initSensorData();
+            InitSensorData();
         }
 
         // after init sensor data, refresh ui
         private void initialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
-            refreshUI();
+            RefreshUI();
         }
 
         // init UI
-        public void initUI() {
+        public void InitUI() {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -87,7 +87,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void initSensorData() {
+        public void InitSensorData() {
             String user, password, port;
             int currentNbEmail, currentNbSpam;
             IMailClient currentMailClient;
@@ -98,19 +98,19 @@ namespace Xtream_ToolBox.Sensors {
 
             if (Properties.Settings.Default.location != null) {
                 foreach (String locationStr in Properties.Settings.Default.location) {
-                    Location location = Xtream_ToolBox.Location.fromString(locationStr);
+                    Location location = Xtream_ToolBox.Location.FromString(locationStr);
                     if (location != null) {
-                        switch (location.type) {
+                        switch (location.Type) {
                             case Xtream_ToolBox.Location.POP3ACCOUNT:
-                                location.parameters.TryGetValue("user", out user);
-                                location.parameters.TryGetValue("password", out password);
-                                location.parameters.TryGetValue("port", out port);
+                                location.Parameters.TryGetValue("user", out user);
+                                location.Parameters.TryGetValue("password", out password);
+                                location.Parameters.TryGetValue("port", out port);
                                 if (port==null || port.Equals("")) {
                                     port = "110";
                                 }
                                 
                                 currentMailClient = new Pop3Client();
-                                currentMailClient.connect(location.location, user, password, Int16.Parse(port));
+                                currentMailClient.connect(location.Loc, user, password, Int16.Parse(port));
                                 currentNbEmail = 0;
                                 currentNbSpam = 0;
 
@@ -130,7 +130,7 @@ namespace Xtream_ToolBox.Sensors {
                                 nbEmail += currentNbEmail;
                                 nbSpam += currentNbSpam;
                                 if ((currentNbSpam > 0) || (currentNbEmail > 0)) {
-                                    hints += String.Format(resources.GetString("Pop3Checker_Hint"), location.location, user, currentNbEmail, currentNbSpam, Environment.NewLine);
+                                    hints += String.Format(resources.GetString("Pop3Checker_Hint"), location.Loc, user, currentNbEmail, currentNbSpam, Environment.NewLine);
                                 }
                                 break;
                             default:
@@ -244,7 +244,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // refresh UI based on sensor Data
-        public void refreshUI() {
+        public void RefreshUI() {
             emailLabel.Visible = true;
             spamLabel.Visible = true;
             progressPictureBox.Visible = false;
@@ -272,7 +272,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // update location of extended panel if needed
-        public void updateLocation() {
+        public void UpdateLocation() {
             // nothing to do on this sensor
         }
 

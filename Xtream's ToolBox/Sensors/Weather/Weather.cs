@@ -21,7 +21,7 @@ namespace Xtream_ToolBox.Sensors {
         public Weather() {
         }
 
-        public static Weather getCurrentConditionWeather(String codeLocation) {
+        public static Weather GetCurrentConditionWeather(String codeLocation) {
             Weather weather = null;
 
             try {

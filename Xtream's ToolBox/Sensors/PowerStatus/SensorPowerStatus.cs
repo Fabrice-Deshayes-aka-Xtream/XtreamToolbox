@@ -23,16 +23,16 @@ namespace Xtream_ToolBox.Sensors {
         public SensorPowerStatus(ToolBox toolbox) {
             InitializeComponent();
             this.toolbox = toolbox;
-            initUI();
+            InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form getExtendedPanel() {
+        public Form GetExtendedPanel() {
             return null;
         }
 
         // init UI
-        public void initUI() {
+        public void InitUI() {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -42,24 +42,24 @@ namespace Xtream_ToolBox.Sensors {
 
             SystemEvents.PowerModeChanged += new PowerModeChangedEventHandler(SystemEvents_PowerModeChanged);
 
-            refreshUI();
+            RefreshUI();
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void initSensorData() {
+        public void InitSensorData() {
             // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
-        public void refreshUI() {
+        public void RefreshUI() {
             if (SystemInformation.PowerStatus.BatteryChargeStatus != BatteryChargeStatus.NoSystemBattery) {
                 String batteryFullLifetime = "n/a";
                 if (SystemInformation.PowerStatus.BatteryFullLifetime!=-1) {
-                    batteryFullLifetime = SystemUtils.getFriendlyTimespan(SystemInformation.PowerStatus.BatteryFullLifetime, "auto");
+                    batteryFullLifetime = SystemUtils.GetFriendlyTimespan(SystemInformation.PowerStatus.BatteryFullLifetime, "auto");
                 }
                 String batteryLifeRemaining = "n/a";
                 if (SystemInformation.PowerStatus.BatteryLifeRemaining!=-1) {
-                    batteryLifeRemaining = SystemUtils.getFriendlyTimespan(SystemInformation.PowerStatus.BatteryLifeRemaining, "auto");
+                    batteryLifeRemaining = SystemUtils.GetFriendlyTimespan(SystemInformation.PowerStatus.BatteryLifeRemaining, "auto");
                 }
                 double batteryLifePercent = Math.Truncate(SystemInformation.PowerStatus.BatteryLifePercent * 100);
                 ToolBoxUtils.setTooltips(helpToolTip, this, String.Format(resources.GetString("PowerStatus_Tips2"), batteryFullLifetime, batteryLifeRemaining, batteryLifePercent, Environment.NewLine));
@@ -141,13 +141,13 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // update location of extended panel if needed
-        public void updateLocation() {
+        public void UpdateLocation() {
             // nothing to do on this sensor
         }
 
         // rafraichi le power status à chaque évenement lié à l'alimentation
         private void SystemEvents_PowerModeChanged(object sender, PowerModeChangedEventArgs e) {
-            refreshUI();
+            RefreshUI();
         }
 
         // Launch power managment configuration panel

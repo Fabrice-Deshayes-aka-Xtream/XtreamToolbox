@@ -31,13 +31,13 @@ namespace Xtream_ToolBox.Sensors {
             String workingDirectory;
             String description;
 
-            quicklaunchDisplayNameTextBox.Text = currentLocation.name;
-            quicklaunchPathTextBox.Text = currentLocation.location;
+            quicklaunchDisplayNameTextBox.Text = currentLocation.Name;
+            quicklaunchPathTextBox.Text = currentLocation.Loc;
 
-            currentLocation.parameters.TryGetValue("imagePath", out imagePath);
-            currentLocation.parameters.TryGetValue("arguments", out arguments);
-            currentLocation.parameters.TryGetValue("workingDirectory", out workingDirectory);
-            currentLocation.parameters.TryGetValue("description", out description);
+            currentLocation.Parameters.TryGetValue("imagePath", out imagePath);
+            currentLocation.Parameters.TryGetValue("arguments", out arguments);
+            currentLocation.Parameters.TryGetValue("workingDirectory", out workingDirectory);
+            currentLocation.Parameters.TryGetValue("description", out description);
             quicklaunchImagePathTextBox.Text = imagePath;
             quickLaunchArgumentsTextBox.Text = arguments;
             quickLaunchWorkingDirTextBox.Text = workingDirectory;
@@ -52,16 +52,16 @@ namespace Xtream_ToolBox.Sensors {
 
         // save location modifications
         private void saveButton_Click(object sender, EventArgs e) {
-            currentLocation.name = quicklaunchDisplayNameTextBox.Text;
-            currentLocation.location = quicklaunchPathTextBox.Text;
-            currentLocation.parameters.Remove("imagePath");
-            currentLocation.parameters.Add("imagePath", quicklaunchImagePathTextBox.Text);
-            currentLocation.parameters.Remove("arguments");
-            currentLocation.parameters.Add("arguments", quickLaunchArgumentsTextBox.Text);
-            currentLocation.parameters.Remove("workingDirectory");
-            currentLocation.parameters.Add("workingDirectory", quickLaunchWorkingDirTextBox.Text);
-            currentLocation.parameters.Remove("description");
-            currentLocation.parameters.Add("description", quickLaunchDescriptionTextBox.Text);
+            currentLocation.Name = quicklaunchDisplayNameTextBox.Text;
+            currentLocation.Loc = quicklaunchPathTextBox.Text;
+            currentLocation.Parameters.Remove("imagePath");
+            currentLocation.Parameters.Add("imagePath", quicklaunchImagePathTextBox.Text);
+            currentLocation.Parameters.Remove("arguments");
+            currentLocation.Parameters.Add("arguments", quickLaunchArgumentsTextBox.Text);
+            currentLocation.Parameters.Remove("workingDirectory");
+            currentLocation.Parameters.Add("workingDirectory", quickLaunchWorkingDirTextBox.Text);
+            currentLocation.Parameters.Remove("description");
+            currentLocation.Parameters.Add("description", quickLaunchDescriptionTextBox.Text);
 
             this.DialogResult = DialogResult.OK;
             Close();

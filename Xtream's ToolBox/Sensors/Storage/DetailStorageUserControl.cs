@@ -105,7 +105,7 @@ namespace Xtream_ToolBox.Sensors {
                     if (usedSpace < 0) usedSpace = 0;
                     if (usedSpace > 100) usedSpace = 100;
                     deviceSpacePictureBox.Width = (int)(usedSpace / 2);
-                    sizeInfoLabel.Text = String.Format(resources.GetString("StorageUserControlSize"), SystemUtils.getFriendlyBytesSize(device.TotalSize, "auto"), usedSpace, SystemUtils.getFriendlyBytesSize(device.TotalFreeSpace, "auto"));
+                    sizeInfoLabel.Text = String.Format(resources.GetString("StorageUserControlSize"), SystemUtils.GetFriendlyBytesSize(device.TotalSize, "auto"), usedSpace, SystemUtils.GetFriendlyBytesSize(device.TotalFreeSpace, "auto"));
                     devicePictureBox.Cursor = Cursors.Hand;
                     devicePictureBox.Click += new EventHandler(this.devicePictureBox_Click);
 

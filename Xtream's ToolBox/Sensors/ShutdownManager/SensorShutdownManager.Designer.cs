@@ -34,17 +34,13 @@
             // 
             // lowerButton
             // 
-            this.lowerButton.AccessibleDescription = null;
-            this.lowerButton.AccessibleName = null;
             resources.ApplyResources(this.lowerButton, "lowerButton");
-            this.lowerButton.BackgroundImage = null;
             this.lowerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lowerButton.Font = null;
-            this.lowerButton.ImageLocation = null;
+            this.lowerButton.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_shutdown;
             this.lowerButton.Name = "lowerButton";
             this.lowerButton.TabStop = false;
             this.helpToolTip.SetToolTip(this.lowerButton, resources.GetString("lowerButton.ToolTip"));
-            this.lowerButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lowerButton_MouseClick);
+            this.lowerButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LowerButton_MouseClick);
             // 
             // helpToolTip
             // 
@@ -56,31 +52,22 @@
             // 
             // upperButton
             // 
-            this.upperButton.AccessibleDescription = null;
-            this.upperButton.AccessibleName = null;
             resources.ApplyResources(this.upperButton, "upperButton");
-            this.upperButton.BackgroundImage = null;
             this.upperButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.upperButton.Font = null;
             this.upperButton.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_logoff;
-            this.upperButton.ImageLocation = null;
             this.upperButton.Name = "upperButton";
             this.upperButton.TabStop = false;
             this.helpToolTip.SetToolTip(this.upperButton, resources.GetString("upperButton.ToolTip"));
-            this.upperButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.upperButton_MouseClick);
+            this.upperButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UpperButton_MouseClick);
             // 
             // SensorShutdownManager
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = null;
             this.Controls.Add(this.lowerButton);
             this.Controls.Add(this.upperButton);
             this.DoubleBuffered = true;
-            this.Font = null;
             this.Name = "SensorShutdownManager";
             this.helpToolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             ((System.ComponentModel.ISupportInitialize)(this.lowerButton)).EndInit();

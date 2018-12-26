@@ -188,7 +188,7 @@ namespace Xtream_ToolBox {
         // repercute le mouvements sur les extended panels
         private void ToolBox_Move(object sender, EventArgs e) {
             foreach (Control control in toolBoxFlowLayoutPanel.Controls) {
-                ((ISensor)control).updateLocation();
+                ((ISensor)control).UpdateLocation();
             }
         }
 
@@ -244,13 +244,13 @@ namespace Xtream_ToolBox {
 
             // mount network drives
             if (Properties.Settings.Default.nd1DriveLetter != null && !Properties.Settings.Default.nd1DriveLetter.Equals("none")) {
-                SystemUtils.mountNetworkDrive(Properties.Settings.Default.nd1DriveLetter, Properties.Settings.Default.nd1Path);
+                SystemUtils.MountNetworkDrive(Properties.Settings.Default.nd1DriveLetter, Properties.Settings.Default.nd1Path);
             }
             if (Properties.Settings.Default.nd2DriveLetter != null && !Properties.Settings.Default.nd2DriveLetter.Equals("none")) {
-                SystemUtils.mountNetworkDrive(Properties.Settings.Default.nd2DriveLetter, Properties.Settings.Default.nd2Path);
+                SystemUtils.MountNetworkDrive(Properties.Settings.Default.nd2DriveLetter, Properties.Settings.Default.nd2Path);
             }
             if (Properties.Settings.Default.nd3DriveLetter != null && !Properties.Settings.Default.nd3DriveLetter.Equals("none")) {
-                SystemUtils.mountNetworkDrive(Properties.Settings.Default.nd3DriveLetter, Properties.Settings.Default.nd3Path);
+                SystemUtils.MountNetworkDrive(Properties.Settings.Default.nd3DriveLetter, Properties.Settings.Default.nd3Path);
             }
 
             Properties.Settings.Default.Save();
@@ -279,7 +279,7 @@ namespace Xtream_ToolBox {
                     foreach (Control sensor in sensors) {
                         if (sensor.GetType().ToString().EndsWith(sensorName)) {
                             toolBoxFlowLayoutPanel.Controls.Add(sensor);
-                            ((ISensor)sensor).initUI();
+                            ((ISensor)sensor).InitUI();
                             sensors.Remove(sensor);
                             found = true;
                             break;
@@ -363,7 +363,7 @@ namespace Xtream_ToolBox {
                             (currentSensor.GetType().ToString().EndsWith("SensorWeather")) ||
                             (currentSensor.GetType().ToString().EndsWith("SensorTimeIcalManager"))
                             ) {
-                            currentSensor.initUI();
+                            currentSensor.InitUI();
                         }
                     }
                 }
@@ -376,8 +376,8 @@ namespace Xtream_ToolBox {
                 foreach (Control sensor in toolBoxFlowLayoutPanel.Controls) {
                     ISensor currentSensor;
                     currentSensor = (ISensor)sensor;
-                    if ((currentSensor.getExtendedPanel() != null) && (currentSensor.getExtendedPanel().Visible == true)) {
-                        currentSensor.getExtendedPanel().Activate();
+                    if ((currentSensor.GetExtendedPanel() != null) && (currentSensor.GetExtendedPanel().Visible == true)) {
+                        currentSensor.GetExtendedPanel().Activate();
                     }
                 }
 

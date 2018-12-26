@@ -37,7 +37,7 @@
             resources.GetString("webLocationComboBox.Items")});
             this.webLocationComboBox.Name = "webLocationComboBox";
             this.webLocationComboBox.TabStop = false;
-            this.webLocationComboBox.SelectedIndexChanged += new System.EventHandler(this.webLocationComboBox_SelectedIndexChanged);
+            this.webLocationComboBox.SelectedIndexChanged += new System.EventHandler(this.WebLocationComboBox_SelectedIndexChanged);
             // 
             // fileLocationComboBox
             // 
@@ -48,7 +48,7 @@
             resources.GetString("fileLocationComboBox.Items")});
             this.fileLocationComboBox.Name = "fileLocationComboBox";
             this.fileLocationComboBox.TabStop = false;
-            this.fileLocationComboBox.SelectedIndexChanged += new System.EventHandler(this.fileLocationComboBox_SelectedIndexChanged);
+            this.fileLocationComboBox.SelectedIndexChanged += new System.EventHandler(this.FileLocationComboBox_SelectedIndexChanged);
             // 
             // SensorFavoriteLocations
             // 

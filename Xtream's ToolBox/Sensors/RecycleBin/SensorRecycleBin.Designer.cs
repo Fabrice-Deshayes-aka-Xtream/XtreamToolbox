@@ -32,7 +32,7 @@
             // 
             this.recycleBinTimer.Enabled = true;
             this.recycleBinTimer.Interval = 1000;
-            this.recycleBinTimer.Tick += new System.EventHandler(this.recycleBinTimer_Tick);
+            this.recycleBinTimer.Tick += new System.EventHandler(this.RecycleBinTimer_Tick);
             // 
             // helpToolTip
             // 
@@ -54,7 +54,7 @@
             this.Name = "SensorRecycleBin";
             this.Size = new System.Drawing.Size(42, 48);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.SensorRecycleBin_DragDrop);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.trashFull_MouseClick);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TrashFull_MouseClick);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.SensorRecycleBin_DragEnter);
             this.ResumeLayout(false);
 

@@ -30,8 +30,8 @@ namespace Xtream_ToolBox.Sensors {
             // 
             // initialisationBackgroundWorker
             // 
-            this.initialisationBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.initialisationBackgroundWorker_DoWork);
-            this.initialisationBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.initialisationBackgroundWorker_RunWorkerCompleted);
+            this.initialisationBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.InitialisationBackgroundWorker_DoWork);
+            this.initialisationBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.InitialisationBackgroundWorker_RunWorkerCompleted);
             // 
             // helpToolTip
             // 

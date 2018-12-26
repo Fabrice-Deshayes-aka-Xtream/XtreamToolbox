@@ -244,13 +244,13 @@
     <value>Le vérouillage du pavé numérique est activé</value>
   </data>
   <data name="MyComputer_tip" xml:space="preserve">
-    <value>Click gauche pour ouvrir le poste de travail{0}Click droit pour accéder aux outils d'administration</value>
+    <value>Clic gauche pour ouvrir le poste de travail{0}Clic droit pour accéder aux outils d'administration</value>
   </data>
   <data name="not_available" xml:space="preserve">
     <value>n/d</value>
   </data>
   <data name="NotePad_tip" xml:space="preserve">
-    <value>Clique gauche pour ouvrir et fermer le bloc note.Clique droit pour executer votre editeur de texte préféré.</value>
+    <value>Clic gauche pour ouvrir et fermer le bloc note.Clic droit pour executer votre editeur de texte préféré.</value>
   </data>
   <data name="Pop3Checker_Hint" xml:space="preserve">
     <value>{2} emails et {3} spams sur le compte {1} du serveur {0}{4}</value>
@@ -268,7 +268,7 @@
     <value>aucun spam</value>
   </data>
   <data name="Pop3Checker_OpenIt" xml:space="preserve">
-    <value>Clique gauche pour ouvrir vôtre logiciel de courrier electronique, Clique droit pour rafraichir le nombre de mails reçu.</value>
+    <value>Clic gauche pour ouvrir vôtre logiciel de courrier electronique, Clic droit pour rafraichir le nombre de mails reçu.</value>
   </data>
   <data name="PowerStatus_Tips1" xml:space="preserve">
     <value>Cliquez ici pour configurer la manière dont votre ordinateur gère l'energie</value>
@@ -280,7 +280,7 @@
     <value>La poubelle est vide</value>
   </data>
   <data name="RecycleBin_Infos" xml:space="preserve">
-    <value>{0} ({1} items) dans la poubelle{2}Click gauche pour ouvrir la poubelle{2}Click droit pour la vider</value>
+    <value>{0} ({1} items) dans la poubelle{2}Clic gauche pour ouvrir la poubelle{2}Clic droit pour la vider</value>
   </data>
   <data name="ShutdownManager_ConfirmeLogOff" xml:space="preserve">
     <value>Voulez vous vraiment fermer votre session ?</value>
@@ -349,7 +349,7 @@
     <value>an(s)</value>
   </data>
   <data name="SysInfoGraph_Tips" xml:space="preserve">
-    <value>Click gauche pour ouvrir le panneau d'informations systèmes{0}Click droit pour choisir les informations à afficher sur le graphique</value>
+    <value>Clic gauche pour ouvrir le panneau d'informations systèmes{0}Clic droit pour choisir les informations à afficher sur le graphique</value>
   </data>
   <data name="SysInfos_01" xml:space="preserve">
     <value>{0} {1}</value>
@@ -418,7 +418,7 @@
     <value>dd/MM/yy HH:mm</value>
   </data>
   <data name="SysInfosTips" xml:space="preserve">
-    <value>Clique gauche pour ouvrir les informations systèmes{0}Clique droit pour ouvrir le menu contextuel d'options</value>
+    <value>Clic gauche pour ouvrir les informations systèmes{0}Clic droit pour ouvrir le menu contextuel d'options</value>
   </data>
   <data name="Toolbox_close" xml:space="preserve">
     <value>Fermer la ToolBox</value>
@@ -493,10 +493,10 @@
     <value>Voulez vous vraiment mettre votre ordinateur en veille ?</value>
   </data>
   <data name="ShutdownManager_ConfirmeSuspendTitle" xml:space="preserve">
-    <value> mise en veille de l'ordinateur</value>
+    <value>mise en veille de l'ordinateur</value>
   </data>
   <data name="ShutdownManager_Tip" xml:space="preserve">
-    <value>Clique gauche pour effectuer l'action par défaut (voir options){0}Clique droit pour afficher le menu</value>
+    <value>Clic gauche pour effectuer l'action par défaut (voir options){0}Clic droit pour afficher le menu</value>
   </data>
   <data name="FormName_ShutdownManager" xml:space="preserve">
     <value>Xtream's ToolBox - Shutdown manager</value>

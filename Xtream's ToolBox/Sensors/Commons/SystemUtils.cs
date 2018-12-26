@@ -135,7 +135,7 @@ namespace Xtream_ToolBox {
         [DllImport("user32", CharSet = CharSet.Auto)]
         private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
 
-        public static void hideFromAltTab(Form form) {
+        public static void HideFromAltTab(Form form) {
             SetWindowLong(form.Handle, GWL_EXSTYLE, (GetWindowLong(form.Handle, GWL_EXSTYLE) | WS_EX_TOOLWINDOW) & ~WS_EX_APPWINDOW);
         }
         // Endhide this form from alt tab (overhide activated event)
@@ -159,7 +159,7 @@ namespace Xtream_ToolBox {
             public long i64NumItems;
         }
 
-        private static int ERROR_SUCCESS = 0;
+        private static readonly int ERROR_SUCCESS = 0;
         public static bool IsInternetConnected() {
             long dwConnectionFlags = 0;
             if (!InternetGetConnectedState(dwConnectionFlags, 0))
@@ -188,51 +188,53 @@ namespace Xtream_ToolBox {
         private static ResourceManager resources = Properties.Resources.ResourceManager;
 
         // deconnexion de l'utilisateur
-        public static void logoff() {
+        public static void Logoff() {
             ExitSystem(Convert.ToUInt32(EWX_ENUM.EWX_FORCELOGOFF));
         }
 
         // redémarre le PC
-        public static void restart() {
+        public static void Restart() {
             ExitSystem(Convert.ToUInt32(EWX_ENUM.EWX_FORCEREBOOT));
         }
 
         // éteind le PC
-        public static void shutdown() {
+        public static void Shutdown() {
             ExitSystem(Convert.ToUInt32(EWX_ENUM.EWX_FORCEPOWEROFF));
         }
 
         // lock le PC
-        public static void lockWorkStation() {
+        public static void LockMyWorkStation() {
             LockWorkStation();
         }
 
         // passe en veille prolongée
-        public static void hibernate() {
+        public static void Hibernate() {
             Application.SetSuspendState(PowerState.Hibernate, true, true);
         }
 
         // passe en veille
-        public static void suspend() {
+        public static void Suspend() {
             Application.SetSuspendState(PowerState.Suspend, true, true);
         }
 
         // change d'utilisateur
-        public static void switchUser() {
+        public static void SwitchUser() {
             WTSDisconnectSession(IntPtr.Zero, -1, false);
         }
 
         // mount network drive
-        public static void mountNetworkDrive(String driveLetter, String path) {
-            ProcessStartInfo info = new ProcessStartInfo();
-            info.FileName = "net.exe";
-            info.Arguments = "use " + driveLetter + ": " + path;         
-            info.WindowStyle = ProcessWindowStyle.Hidden;
+        public static void MountNetworkDrive(String driveLetter, String path) {
+            ProcessStartInfo info = new ProcessStartInfo
+            {
+                FileName = "net.exe",
+                Arguments = "use " + driveLetter + ": " + path,
+                WindowStyle = ProcessWindowStyle.Hidden
+            };
             System.Diagnostics.Process.Start(info);
         }
 
         // open webpage in default browser
-        public static void openInDefaultBrowser(String link) {
+        public static void OpenInDefaultBrowser(String link) {
             try {
                 System.Diagnostics.Process.Start(link);
             } catch (Exception exception) {
@@ -284,7 +286,7 @@ namespace Xtream_ToolBox {
         }
 
         // vide la poubelle (avec ou sans confirmation)
-        public static uint emptyRecycleBin(bool disableConfirmation) {
+        public static uint EmptyRecycleBin(bool disableConfirmation) {
             uint retour;
 
             if (disableConfirmation) {
@@ -297,15 +299,17 @@ namespace Xtream_ToolBox {
         }
 
         // récupère des infos sur le contenu de la poubelle
-        public static SHQUERYRBINFO getInfosFromRecycleBin() {
-            SHQUERYRBINFO sqrbi = new SHQUERYRBINFO();
-            sqrbi.cbSize = Marshal.SizeOf(typeof(SHQUERYRBINFO));
+        public static SHQUERYRBINFO GetInfosFromRecycleBin() {
+            SHQUERYRBINFO sqrbi = new SHQUERYRBINFO
+            {
+                cbSize = Marshal.SizeOf(typeof(SHQUERYRBINFO))
+            };
             int hresult = SHQueryRecycleBin(string.Empty, ref sqrbi);
             return sqrbi;
         }
 
         // récupère la taille d'un fichier
-        public static String getFriendlyBytesSize(long sizeInByte, String displayMode) {
+        public static String GetFriendlyBytesSize(long sizeInByte, String displayMode) {
             String friendlyBytesSize = "";
             String byteStr = resources.GetString("Sys_byte");
             String kbyteStr = resources.GetString("Sys_kbyte");
@@ -334,7 +338,7 @@ namespace Xtream_ToolBox {
         }
 
         // récupère une taille formaté à partir d'un nombre de bit
-        public static String getFriendlyBitsSize(long sizeInBits, String displayMode) {
+        public static String GetFriendlyBitsSize(long sizeInBits, String displayMode) {
             String friendlyBitsSize = "";
             String bitStr = resources.GetString("Sys_bit");
             String kbitStr = resources.GetString("Sys_kbit");
@@ -363,7 +367,7 @@ namespace Xtream_ToolBox {
         }
 
         // récupère une durée à partir d'un nombre de secondes
-        public static String getFriendlyTimespan(int spanInSeconde, String displayMode) {
+        public static String GetFriendlyTimespan(int spanInSeconde, String displayMode) {
             String friendlyTimespan = "";
             String hourStr = resources.GetString("Sys_h");
             String minStr = resources.GetString("Sys_mn");
@@ -407,7 +411,7 @@ namespace Xtream_ToolBox {
         }
 
         // return hostname of local machine
-        public static String getHostName() {
+        public static String GetHostName() {
             String retour = "";
             
             try {
@@ -420,7 +424,7 @@ namespace Xtream_ToolBox {
         }
 
         // return ip adress of local machine
-        public static String getHostAdress() {
+        public static String GetHostAdress() {
             String retour = "";
 
             try {
@@ -499,7 +503,7 @@ namespace Xtream_ToolBox {
             }
         }
 
-        public static string formatSpeedInHertz(Int64 lSpeed) {
+        public static string FormatSpeedInHertz(Int64 lSpeed) {
             //Format number to Hz
             float floatSpeed = 0;
             string stringSpeed = "";
@@ -516,7 +520,7 @@ namespace Xtream_ToolBox {
             return stringSpeed;
         }
 
-        public static SystemInformations getSystemInfo() {
+        public static SystemInformations GetSystemInfo() {
             SystemInformations retour = new SystemInformations();
             ManagementObjectSearcher query = null;
             ManagementObjectCollection queryCollection = null;

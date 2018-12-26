@@ -7,18 +7,18 @@ namespace Xtream_ToolBox {
     interface ISensor {
 
         // init UI
-        void initUI();
+        void InitUI();
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        void initSensorData();
+        void InitSensorData();
 
         // refresh UI based on sensor Data
-        void refreshUI();
+        void RefreshUI();
 
         // call when toolbox location is update
-        void updateLocation();
+        void UpdateLocation();
 
         // return extended panel if exist (null otherwise)
-        Form getExtendedPanel();
+        Form GetExtendedPanel();
     }
 }

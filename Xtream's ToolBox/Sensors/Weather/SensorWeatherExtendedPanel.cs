@@ -25,7 +25,7 @@ namespace Xtream_ToolBox.Sensors {
             InitializeComponent();
             this.sensorWeather = sensorWeather;
             Initialisation();
-            SystemUtils.hideFromAltTab(this);
+            SystemUtils.HideFromAltTab(this);
         }
 
         // initialize weather data

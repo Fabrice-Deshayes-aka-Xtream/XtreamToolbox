@@ -52,7 +52,7 @@ namespace Xtream_ToolBox {
         }
 
         private void HomepageLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            SystemUtils.openInDefaultBrowser("http://www.xtream.be");
+            SystemUtils.OpenInDefaultBrowser("http://www.xtream.be");
         }
     }
 }

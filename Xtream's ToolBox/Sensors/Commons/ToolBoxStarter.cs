@@ -28,16 +28,16 @@ namespace Xtream_ToolBox {
         public ToolBoxStarter(ToolBox toolbox) {
             InitializeComponent();
             this.toolbox = toolbox;
-            initUI();
+            InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form getExtendedPanel() {
+        public Form GetExtendedPanel() {
             return null;
         }
 
         // init UI
-        public void initUI() {
+        public void InitUI() {
             ToolBoxUtils.configureTooltips(helpToolTip);
 
             // tooltips & lock move
@@ -50,17 +50,17 @@ namespace Xtream_ToolBox {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void initSensorData() {
+        public void InitSensorData() {
             // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
-        public void refreshUI() {
+        public void RefreshUI() {
             // nothing to do on this sensor
         }
 
         // update location of extended panel if needed
-        public void updateLocation() {
+        public void UpdateLocation() {
             // nothing to do on this sensor
         }
 

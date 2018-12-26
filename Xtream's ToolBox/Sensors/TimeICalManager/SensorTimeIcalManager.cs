@@ -34,15 +34,15 @@ namespace Xtream_ToolBox.Sensors {
         public SensorTimeIcalManager(ToolBox toolbox) {
             InitializeComponent();
             this.toolbox = toolbox;
-            initUI();
+            InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form getExtendedPanel() {
+        public Form GetExtendedPanel() {
             return null;
         }
 
-        public void initSensorData() {
+        public void InitSensorData() {
             try {
                 ArrayList updatedDates = new ArrayList(50);
                 ArrayList updatedEntryList = new ArrayList(50);
@@ -93,7 +93,7 @@ namespace Xtream_ToolBox.Sensors {
         private void initialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
-            initSensorData();
+            InitSensorData();
         }
 
         private void initialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {            
@@ -102,7 +102,7 @@ namespace Xtream_ToolBox.Sensors {
             reminderTimer_Tick(this, null);
         }
 
-        public void initUI() {
+        public void InitUI() {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -115,7 +115,7 @@ namespace Xtream_ToolBox.Sensors {
             hasEventToday = false;
             hasBirthdayToday = false;
 
-            refreshUI();
+            RefreshUI();
 
             if (SystemUtils.IsInternetConnected() && !initialisationBackgroundWorker.IsBusy) {
                 initialisationBackgroundWorker.RunWorkerAsync();
@@ -123,7 +123,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // refresh UI based on sensor Data
-        public void refreshUI() {
+        public void RefreshUI() {
             dayLabel.Text = DateTime.Now.ToString("dddd");
             dateLabel.Text = DateTime.Now.ToString("d MMM");
             timeLabel.Text = DateTime.Now.ToLongTimeString();
@@ -138,13 +138,13 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // update location of extended panel if needed
-        public void updateLocation() {
+        public void UpdateLocation() {
             // nothing to do on this sensor
         }
 
         // refresh datetime every timer tick
         private void calendarTimer_Tick(object sender, EventArgs e) {
-            refreshUI();
+            RefreshUI();
         }
 
         // view reminding event or view calendar

@@ -22,16 +22,16 @@ namespace Xtream_ToolBox {
         public SensorRecycleBin(ToolBox toolbox) {
             InitializeComponent();
             this.toolbox = toolbox;
-            initUI();
+            InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form getExtendedPanel() {
+        public Form GetExtendedPanel() {
             return null;
         }
 
         // init UI
-        public void initUI() {
+        public void InitUI() {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -45,21 +45,21 @@ namespace Xtream_ToolBox {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void initSensorData() {
+        public void InitSensorData() {
             // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
-        public void refreshUI() {
-            long numItemsInRecycleBin = SystemUtils.getInfosFromRecycleBin().i64NumItems;
-            long sizeOfItemsInRecycleBin = SystemUtils.getInfosFromRecycleBin().i64Size;
+        public void RefreshUI() {
+            long numItemsInRecycleBin = SystemUtils.GetInfosFromRecycleBin().i64NumItems;
+            long sizeOfItemsInRecycleBin = SystemUtils.GetInfosFromRecycleBin().i64Size;
 
             if (numItemsInRecycleBin > 0) {
                 this.BackgroundImage = Properties.Resources.TrashFull;
                 if (!helpToolTip.Active) {
                     helpToolTip.RemoveAll();
                 }
-                ToolBoxUtils.setTooltips(helpToolTip, this, String.Format(resources.GetString("RecycleBin_Infos"), SystemUtils.getFriendlyBytesSize(sizeOfItemsInRecycleBin, "auto"), numItemsInRecycleBin.ToString(), Environment.NewLine));                
+                ToolBoxUtils.setTooltips(helpToolTip, this, String.Format(resources.GetString("RecycleBin_Infos"), SystemUtils.GetFriendlyBytesSize(sizeOfItemsInRecycleBin, "auto"), numItemsInRecycleBin.ToString(), Environment.NewLine));                
                 this.Cursor = Cursors.Hand;
             } else {
                 this.BackgroundImage = Properties.Resources.TrashEmpty;
@@ -72,16 +72,16 @@ namespace Xtream_ToolBox {
         }
 
         // update location of extended panel if needed
-        public void updateLocation() {
+        public void UpdateLocation() {
             // nothing to do on this sensor
         }
 
         // Left click to open trash, right click to empty
-        private void trashFull_MouseClick(object sender, MouseEventArgs e) {
+        private void TrashFull_MouseClick(object sender, MouseEventArgs e) {
             if (this.Cursor == Cursors.Hand) {
                 if (e.Button.Equals(MouseButtons.Right)) {
-                    SystemUtils.emptyRecycleBin(Properties.Settings.Default.disableDeleteConfirmation);
-                    refreshUI();
+                    SystemUtils.EmptyRecycleBin(Properties.Settings.Default.disableDeleteConfirmation);
+                    RefreshUI();
                 } else if (e.Button.Equals(MouseButtons.Left)) {
                     String errMsg = SystemUtils.StartProcess("Explorer", "/N,::{645FF040-5081-101B-9F08-00AA002F954E}", null);
                     if (errMsg != null) {
@@ -92,8 +92,8 @@ namespace Xtream_ToolBox {
         }
 
         // refresh size and status of trash on timer tick
-        private void recycleBinTimer_Tick(object sender, EventArgs e) {
-            refreshUI();
+        private void RecycleBinTimer_Tick(object sender, EventArgs e) {
+            RefreshUI();
         }
 
         private void SensorRecycleBin_DragEnter(object sender, DragEventArgs e) {

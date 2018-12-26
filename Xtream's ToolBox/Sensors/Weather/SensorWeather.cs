@@ -30,28 +30,28 @@ namespace Xtream_ToolBox.Sensors {
         public SensorWeather(ToolBox toolbox) {
             InitializeComponent();
             this.toolbox = toolbox;
-            initUI();
+            InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form getExtendedPanel() {
+        public Form GetExtendedPanel() {
             return extendedPanel;
         }
 
         // init sensor data in asynch mode
-        private void initialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
+        private void InitialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
-            initSensorData();
+            InitSensorData();
         }
 
         // after init sensor data, refresh ui
-        private void initialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
-            refreshUI();
+        private void InitialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
+            RefreshUI();
         }
 
         // init UI
-        public void initUI() {
+        public void InitUI() {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -70,13 +70,13 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void initSensorData() {
-            currentWeather = Weather.getCurrentConditionWeather(Properties.Settings.Default.weatherCode);
-            currentWeather = friendly(currentWeather);
+        public void InitSensorData() {
+            currentWeather = Weather.GetCurrentConditionWeather(Properties.Settings.Default.weatherCode);
+            currentWeather = Friendly(currentWeather);
         }
 
         // refresh UI based on sensor Data
-        public void refreshUI() {
+        public void RefreshUI() {
             if (currentWeather == null) {
                 weatherPictureBox.Image = Properties.Resources._na;
                 tempLabel.Text = resources.GetString("not_available");
@@ -93,12 +93,12 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // update location of extended panel if needed
-        public void updateLocation() {
+        public void UpdateLocation() {
             ToolBoxUtils.manageExtendedPanelPosition(this, toolbox, extendedPanel);
         }
 
         // update weather each 30 minutes
-        private void updateWeatherTimer_Tick(object sender, EventArgs e) {
+        private void UpdateWeatherTimer_Tick(object sender, EventArgs e) {
             if (!initialisationBackgroundWorker.IsBusy) {
                 initialisationBackgroundWorker.RunWorkerAsync();
             }
@@ -108,7 +108,7 @@ namespace Xtream_ToolBox.Sensors {
         private void SensorWeather_MouseClick(object sender, MouseEventArgs e) {
             if ((extendedPanel == null) || (extendedPanel.IsDisposed)) {
                 extendedPanel = new SensorWeatherExtendedPanel(this);
-                refreshUI();
+                RefreshUI();
             }
 
             if (extendedPanel.Visible) {
@@ -120,7 +120,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // transform dataset for internationnalisation
-        private Weather friendly(Weather weather) {
+        private Weather Friendly(Weather weather) {
             try {
                 //// Friendly Wind direction
                 weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("N", resources.GetString("Weather_WinDir_N"));

@@ -28,11 +28,11 @@ namespace Xtream_ToolBox.Sensors {
         public SensorStorage(ToolBox toolbox) {
             InitializeComponent();
             this.toolbox = toolbox;
-            initUI();
+            InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form getExtendedPanel() {
+        public Form GetExtendedPanel() {
             return extendedPanel;
         }
 
@@ -40,16 +40,16 @@ namespace Xtream_ToolBox.Sensors {
         private void initialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
-            initSensorData();
+            InitSensorData();
         }
 
         // after init sensor data, refresh ui
         private void initialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
-            refreshUI();
+            RefreshUI();
         }
 
         // init UI
-        public void initUI() {
+        public void InitUI() {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -62,17 +62,17 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void initSensorData() {
+        public void InitSensorData() {
             allDrives = DriveInfo.GetDrives();
         }
 
         // refresh UI based on sensor Data
-        public void refreshUI() {
+        public void RefreshUI() {
             // nothing to do on this sensor
         }
 
         // update location of extended panel if needed
-        public void updateLocation() {
+        public void UpdateLocation() {
             ToolBoxUtils.manageExtendedPanelPosition(this, toolbox, extendedPanel);
         }
 

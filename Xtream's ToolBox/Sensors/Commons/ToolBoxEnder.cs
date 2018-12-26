@@ -27,16 +27,16 @@ namespace Xtream_ToolBox {
         public ToolBoxEnder(ToolBox toolbox) {
             InitializeComponent();
             this.toolbox = toolbox;
-            initUI();
+            InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form getExtendedPanel() {
+        public Form GetExtendedPanel() {
             return null;
         }
 
         // init UI
-        public void initUI() {
+        public void InitUI() {
             // tooltips & lock move
             helpToolTip.SetToolTip(closerPictureBox, resources.GetString("Toolbox_close"));
             ToolBoxUtils.configureTooltips(helpToolTip);
@@ -51,29 +51,29 @@ namespace Xtream_ToolBox {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void initSensorData() {
+        public void InitSensorData() {
             // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
-        public void refreshUI() {
+        public void RefreshUI() {
             // nothing to do on this sensor
         }
 
         // update location of extended panel if needed
-        public void updateLocation() {
+        public void UpdateLocation() {
             // nothing to do on this sensor
         }
 
         // gestion du déplacement de la toolbox : initialisation du déplacement
-        private void moveBox_MouseDown(object sender, MouseEventArgs e) {
+        private void MoveBox_MouseDown(object sender, MouseEventArgs e) {
             mouseIsDown = true;
             lastMousePositionX = e.X;
             lastMousePositionY = e.Y;
         }
 
         // gestion du déplacement de la toolbox : déplacement
-        private void moveBox_MouseMove(object sender, MouseEventArgs e) {
+        private void MoveBox_MouseMove(object sender, MouseEventArgs e) {
             if (mouseIsDown && !Properties.Settings.Default.lockPosition) {
                 Rectangle toolboxArea = ToolBoxUtils.manageMagneticPosition(new Rectangle(toolbox.Left - (lastMousePositionX - e.X), toolbox.Top - (lastMousePositionY - e.Y), toolbox.Width, toolbox.Height), toolbox.magneticXPositions, toolbox.magneticYPositions, 16, Properties.Settings.Default.magneticScreenBorder);
                 toolbox.Top = toolboxArea.Top;
@@ -82,7 +82,7 @@ namespace Xtream_ToolBox {
         }
 
         // gestion du déplacement de la toolbox : sauvegarde du déplacement
-        private void moveBox_MouseUp(object sender, MouseEventArgs e) {
+        private void MoveBox_MouseUp(object sender, MouseEventArgs e) {
             mouseIsDown = false;
 
             // save position in property
@@ -92,7 +92,7 @@ namespace Xtream_ToolBox {
         }
 
         // fermeture de la toolbox quand on clique sur la croix
-        private void closerPictureBox_MouseClick(object sender, MouseEventArgs e) {
+        private void CloserPictureBox_MouseClick(object sender, MouseEventArgs e) {
             toolbox.Close();
         }
     }

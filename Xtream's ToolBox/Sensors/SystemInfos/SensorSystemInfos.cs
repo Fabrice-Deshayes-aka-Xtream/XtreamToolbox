@@ -98,11 +98,11 @@ namespace Xtream_ToolBox.Sensors {
             lineHandleWanU.Thickness = 1;
             lineHandleCpu = c2DPushGraph.AddLine(LINE_CPU, Color.Green);
             lineHandleCpu.Thickness = 1;
-            initUI();
+            InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form getExtendedPanel() {
+        public Form GetExtendedPanel() {
             return extendedPanel;
         }
 
@@ -110,7 +110,7 @@ namespace Xtream_ToolBox.Sensors {
         private void initialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
-            initSensorData();
+            InitSensorData();
         }
 
         // after init sensor data, refresh ui
@@ -119,7 +119,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // init UI
-        public void initUI() {
+        public void InitUI() {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -171,7 +171,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void initSensorData() {
+        public void InitSensorData() {
             // init network value and card
             if (NetworkInterface.GetIsNetworkAvailable()) {
                 foreach (NetworkInterface myNetworkInterface in NetworkInterface.GetAllNetworkInterfaces()) {
@@ -209,11 +209,11 @@ namespace Xtream_ToolBox.Sensors {
             wanNetworkConnectionSpeedUpload = Properties.Settings.Default.networkInternetUpload * 1000;
 
             // populate system information objects and init extended panel
-            systemInformations = SystemUtils.getSystemInfo();
+            systemInformations = SystemUtils.GetSystemInfo();
         }
 
         // refresh UI based on sensor Data
-        public void refreshUI() {
+        public void RefreshUI() {
             // set cpu vumeter
             cpuUsed = (Int64)cpu_used_counter.NextValue();
             if (cpuUsed < 0) cpuUsed = 0;
@@ -241,7 +241,7 @@ namespace Xtream_ToolBox.Sensors {
                     c2DPushGraph.Push((int)ramUsed, LINE_RAM);
                 }
             }
-            ramUsedStr = String.Format(resources.GetString("SysInfos_18"), ramUsed, SystemUtils.getFriendlyBytesSize(systemInformations.memoryTotalPhysicalMemory, "mbyte"));
+            ramUsedStr = String.Format(resources.GetString("SysInfos_18"), ramUsed, SystemUtils.GetFriendlyBytesSize(systemInformations.memoryTotalPhysicalMemory, "mbyte"));
 
             // process & threads informations
             Process[] allProcess = Process.GetProcesses();
@@ -403,13 +403,13 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // update location of extended panel if needed
-        public void updateLocation() {
+        public void UpdateLocation() {
             ToolBoxUtils.manageExtendedPanelPosition(this, toolbox, extendedPanel);
         }
 
         // processing on each timer tick
         private void cpuRamTimer_Tick(object sender, EventArgs e) {
-            refreshUI();
+            RefreshUI();
         }
 
         // Open or closed more infos panel

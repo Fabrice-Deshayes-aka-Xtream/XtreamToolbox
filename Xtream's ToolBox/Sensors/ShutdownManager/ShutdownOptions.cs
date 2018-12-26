@@ -98,22 +98,22 @@ namespace Xtream_ToolBox.Sensors.ShutdownManager {
             if (doAction && !when.HasValue) {
                 switch (action) {
                     case SHUTDOWN:
-                        SystemUtils.shutdown();
+                        SystemUtils.Shutdown();
                         break;
                     case RESTART:
-                        SystemUtils.restart();
+                        SystemUtils.Restart();
                         break;
                     case HIBERNATE:
-                        SystemUtils.hibernate();
+                        SystemUtils.Hibernate();
                         break;
                     case LOGOFF:
-                        SystemUtils.logoff();
+                        SystemUtils.Logoff();
                         break;
                     case LOCK:
-                        SystemUtils.lockWorkStation();
+                        SystemUtils.LockWorkStation();
                         break;
                     case SWITCH_USER:
-                        SystemUtils.switchUser();
+                        SystemUtils.SwitchUser();
                         break;
                 }
                 Hide();

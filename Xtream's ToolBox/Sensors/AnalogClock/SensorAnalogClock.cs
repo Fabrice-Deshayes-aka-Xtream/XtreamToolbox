@@ -21,10 +21,10 @@ namespace Xtream_ToolBox.Sensors {
     /// </summary>
     public class SensorAnalogClock : UserControl, ISensor {
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private readonly ToolBox toolbox = null;
 
         // ressource manager pour accéder aux chaines localisées
-        private ResourceManager resources = Xtream_ToolBox.Properties.Resources.ResourceManager;
+        private readonly ResourceManager resources = Xtream_ToolBox.Properties.Resources.ResourceManager;
 
         private const float PI = 3.141592654F;
 
@@ -45,7 +45,7 @@ namespace Xtream_ToolBox.Sensors {
 
         private bool bDraw5MinuteTicks = true;
         private bool bDraw1MinuteTicks = false;
-        private float fTicksThickness = 1;
+        private readonly float fTicksThickness = 1;
 
         private Color hrColor = Color.Black;
         private Color minColor = Color.Black;
@@ -62,16 +62,16 @@ namespace Xtream_ToolBox.Sensors {
             InitializeComponent();
 
             this.toolbox = toolbox;
-            initUI();
+            InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form getExtendedPanel() {
+        public Form GetExtendedPanel() {
             return null;
         }
 
         // init UI
-        public void initUI() {
+        public void InitUI() {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Xtream_ToolBox.Properties.Settings.Default.spaceBetweenSensor, 0, Xtream_ToolBox.Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -95,18 +95,18 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void initSensorData() {
+        public void InitSensorData() {
             // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
-        public void refreshUI() {
+        public void RefreshUI() {
             this.dateTime = DateTime.Now;
             this.Refresh();
         }
 
         // update location of extended panel if needed
-        public void updateLocation() {
+        public void UpdateLocation() {
             // nothing to do on this sensor
         }
 
@@ -137,7 +137,7 @@ namespace Xtream_ToolBox.Sensors {
             // 
             this.timer.Enabled = true;
             this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // helpToolTip
             // 
@@ -162,8 +162,8 @@ namespace Xtream_ToolBox.Sensors {
         }
         #endregion
 
-        private void timer1_Tick(object sender, System.EventArgs e) {
-            refreshUI();
+        private void Timer1_Tick(object sender, System.EventArgs e) {
+            RefreshUI();
         }
 
         private void DrawLine(float fThickness, float fLength, Color color, System.Windows.Forms.PaintEventArgs e) {

@@ -53,12 +53,12 @@
             // 
             this.updateWeatherTimer.Enabled = true;
             this.updateWeatherTimer.Interval = 1800000;
-            this.updateWeatherTimer.Tick += new System.EventHandler(this.updateWeatherTimer_Tick);
+            this.updateWeatherTimer.Tick += new System.EventHandler(this.UpdateWeatherTimer_Tick);
             // 
             // initialisationBackgroundWorker
             // 
-            this.initialisationBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.initialisationBackgroundWorker_DoWork);
-            this.initialisationBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.initialisationBackgroundWorker_RunWorkerCompleted);
+            this.initialisationBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.InitialisationBackgroundWorker_DoWork);
+            this.initialisationBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.InitialisationBackgroundWorker_RunWorkerCompleted);
             // 
             // helpToolTip
             // 

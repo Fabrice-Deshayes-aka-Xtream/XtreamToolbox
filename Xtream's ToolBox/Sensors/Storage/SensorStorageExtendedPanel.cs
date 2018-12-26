@@ -17,7 +17,7 @@ namespace Xtream_ToolBox.Sensors {
         public SensorStorageExtendedPanel(SensorStorage sensorStorage) {
             InitializeComponent();
             this.sensorStorage = sensorStorage;
-            SystemUtils.hideFromAltTab(this);
+            SystemUtils.HideFromAltTab(this);
         }
 
         private void closeExtendedInfosPictureBox_Click(object sender, EventArgs e) {
@@ -47,7 +47,7 @@ namespace Xtream_ToolBox.Sensors {
             }
             flowLayoutPanel.Visible = true;
             drivesComboBox.SelectedIndex = 0;
-            totalSizeValueLabel.Text = SystemUtils.getFriendlyBytesSize(totalSpace, "auto");
+            totalSizeValueLabel.Text = SystemUtils.GetFriendlyBytesSize(totalSpace, "auto");
             occupiedSpaceValueLabel.Text = Math.Floor((Double)((totalSpace - totalFreeSpace) * 100) / totalSpace) + "%";
             deviceSpacePictureBox.Width = (int)Math.Floor((Double)((totalSpace - totalFreeSpace) * 50) / totalSpace);
             ResumeLayout();

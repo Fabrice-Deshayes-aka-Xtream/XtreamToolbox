@@ -24,16 +24,16 @@ namespace Xtream_ToolBox {
         public SensorShutdownManager(ToolBox toolbox) {
             InitializeComponent();
             this.toolbox = toolbox;
-            initUI();
+            InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form getExtendedPanel() {
+        public Form GetExtendedPanel() {
             return null;
         }
 
         // init UI
-        public void initUI() {
+        public void InitUI() {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -86,21 +86,21 @@ namespace Xtream_ToolBox {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void initSensorData() {
+        public void InitSensorData() {
             // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
-        public void refreshUI() {
+        public void RefreshUI() {
             // nothing to do on this sensor
         }
 
         // update location of extended panel if needed
-        public void updateLocation() {
+        public void UpdateLocation() {
             // nothing to do on this sensor
         }
 
-        private void upperButton_MouseClick(object sender, MouseEventArgs e) {
+        private void UpperButton_MouseClick(object sender, MouseEventArgs e) {
             if (e.Button.Equals(MouseButtons.Left)) {
                 if (!Properties.Settings.Default.shutdownManagerLowerActionConfirmation) {
                     shutdownOptions.doAction(Properties.Settings.Default.shutdownManagerDefaultActionUpperButton, true);
@@ -115,7 +115,7 @@ namespace Xtream_ToolBox {
             }
         }
 
-        private void lowerButton_MouseClick(object sender, MouseEventArgs e) {
+        private void LowerButton_MouseClick(object sender, MouseEventArgs e) {
             if (e.Button.Equals(MouseButtons.Left)) {
                 if (!Properties.Settings.Default.shutdownManagerUpperActionConfirmation) {
                     shutdownOptions.doAction(Properties.Settings.Default.shutdownManagerDefaultActionLowerButton, true);

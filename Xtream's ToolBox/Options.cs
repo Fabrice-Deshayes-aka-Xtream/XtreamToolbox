@@ -153,9 +153,9 @@ namespace Xtream_ToolBox {
             popListBox.Items.Clear();
             if (Properties.Settings.Default.location != null) {
                 foreach (String locationStr in Properties.Settings.Default.location) {
-                    Location location = Xtream_ToolBox.Location.fromString(locationStr);
+                    Location location = Xtream_ToolBox.Location.FromString(locationStr);
                     if (location != null) {
-                        switch (location.type) {
+                        switch (location.Type) {
                             case Xtream_ToolBox.Location.FILESYSTEM:
                                 fileLocationListBox.Items.Add(location);
                                 break;
@@ -404,22 +404,22 @@ namespace Xtream_ToolBox {
             StringCollection locations = new StringCollection();
             Location currentLocation;
             foreach (String locationStr in Properties.Settings.Default.location) {
-                currentLocation = Xtream_ToolBox.Location.fromString(locationStr);
-                if ((currentLocation.type == Xtream_ToolBox.Location.APPLICATION) || (currentLocation.type == Xtream_ToolBox.Location.CALENDAR)) {
+                currentLocation = Xtream_ToolBox.Location.FromString(locationStr);
+                if ((currentLocation.Type == Xtream_ToolBox.Location.APPLICATION) || (currentLocation.Type == Xtream_ToolBox.Location.CALENDAR)) {
                     locations.Add(locationStr);
                 }
             }
             // add File Favorite Location
             foreach (Location location in fileLocationListBox.Items) {
-                locations.Add(location.toDelimitedString());
+                locations.Add(location.ToDelimitedString());
             }
             // add Web Favorite Location
             foreach (Location location in webLocationListBox.Items) {
-                locations.Add(location.toDelimitedString());
+                locations.Add(location.ToDelimitedString());
             }
             // add Pop Location
             foreach (Location location in popListBox.Items) {
-                locations.Add(location.toDelimitedString());
+                locations.Add(location.ToDelimitedString());
             }
 
             Properties.Settings.Default.location = locations;
@@ -722,12 +722,12 @@ namespace Xtream_ToolBox {
             String response = ControlPopLocation();
             if (response == null) {
                 Location newLocation = new Location(popServerTextBox.Text + " on account " + popLoginTextBox.Text, Xtream_ToolBox.Location.POP3ACCOUNT, popServerTextBox.Text);
-                newLocation.parameters.Add("user", popLoginTextBox.Text);
-                newLocation.parameters.Add("password", popPasswordTextBox.Text);
+                newLocation.Parameters.Add("user", popLoginTextBox.Text);
+                newLocation.Parameters.Add("password", popPasswordTextBox.Text);
                 if (popPortTextBox.Text.Equals("")) {
                     popPortTextBox.Text = "110";
                 }
-                newLocation.parameters.Add("port", popPortTextBox.Text);
+                newLocation.Parameters.Add("port", popPortTextBox.Text);
                 popListBox.Items.Add(newLocation);
                 EmptyPopLocationForm();
                 popListBox.SelectedIndex = popListBox.Items.Count - 1;
