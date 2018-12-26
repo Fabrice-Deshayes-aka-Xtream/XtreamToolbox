@@ -2,6 +2,8 @@ version 2018.12.26
 - clean solution / code style
 - write documentation in markdown format
 - fix some wording
+- find workaround for warning AL1073: Referenced assembly 
+  'mscorlib.dll' targets a different processor
 - put project on github
 
 version 2017.03.17
