@@ -1,0 +1,1117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{335D7684-C2DD-4695-A8C0-A9D4ED0FEE1E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xtream_ToolBox</RootNamespace>
+    <AssemblyName>Xtream_ToolBox</AssemblyName>
+    <StartupObject>Xtream_ToolBox.Program</StartupObject>
+    <ApplicationIcon>Resources\icoHome.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>D19888B7211F011D2171EC5FBA335A7F463E7F5A</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Xtream%27s ToolBox_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignManifests>false</SignManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>D:\xtr\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://toolbox.xtream.be/</UpdateUrl>
+    <TargetCulture>fr</TargetCulture>
+    <ProductName>Xtream%27s ToolBox</ProductName>
+    <PublisherName>Xtream production</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="antlr.runtime, Version=2.7.6.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\antlr.runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="C2DPushGraph, Version=1.0.2525.35540, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\C2DPushGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.AccessControl, Version=2.2.0.0, Culture=neutral, PublicKeyToken=b4b8eb9a7afc8328, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.GData.AccessControl.2.2.0.0\lib\Google.GData.AccessControl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.GData.Calendar, Version=2.2.0.0, Culture=neutral, PublicKeyToken=aa6748391206b888, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.GData.Calendar.2.2.0.0\lib\Google.GData.Calendar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=2.2.0.0, Culture=neutral, PublicKeyToken=04a59ca9b0273830, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.GData.Client.2.2.0.0\lib\Google.GData.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.GData.Extensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0b4c5df2ebf20876, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.GData.Extensions.2.2.0.0\lib\Google.GData.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\ShutdownManager\ShutdownOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensors\ShutdownManager\ShutdownOptions.Designer.cs">
+      <DependentUpon>ShutdownOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\TimeICalManager\SensorTimeManagerICalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensors\TimeICalManager\SensorTimeManagerICalendar.Designer.cs">
+      <DependentUpon>SensorTimeManagerICalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\TimeICalManager\SensorTimeIcalManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\TimeICalManager\SensorTimeIcalManager.Designer.cs">
+      <DependentUpon>SensorTimeIcalManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ImagesRenamer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ImagesRenamer.Designer.cs">
+      <DependentUpon>ImagesRenamer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\TimeICalManager\SensorTimeManagerICalendar.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorTimeManagerICalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\TimeICalManager\SensorTimeManagerICalendar.resx">
+      <DependentUpon>SensorTimeManagerICalendar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\TimeICalManager\SensorTimeIcalManager.fr.resx">
+      <DependentUpon>SensorTimeIcalManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\TimeICalManager\SensorTimeIcalManager.resx">
+      <DependentUpon>SensorTimeIcalManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ImagesRenamer.fr.resx">
+      <DependentUpon>ImagesRenamer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ImagesRenamer.resx">
+      <DependentUpon>ImagesRenamer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Storage\SensorStorageExtendedPanel.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorStorageExtendedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Storage\StorageUserControl.fr.resx">
+      <DependentUpon>StorageUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Storage\StorageUserControl.resx">
+      <DependentUpon>StorageUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\AnalogClock\SensorAnalogClock.resx">
+      <DependentUpon>SensorAnalogClock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\EmptySensor.resx">
+      <DependentUpon>EmptySensor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Calc\SensorCalc.fr.resx">
+      <DependentUpon>SensorCalc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Calc\SensorCalc.resx">
+      <DependentUpon>SensorCalc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\FavoriteLocations\SensorFavoriteLocations.fr.resx">
+      <DependentUpon>SensorFavoriteLocations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\FavoriteLocations\SensorFavoriteLocations.resx">
+      <DependentUpon>SensorFavoriteLocations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Inbox\SensorInbox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorInbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\KeyStatus\SensorKeyStatus.fr.resx">
+      <DependentUpon>SensorKeyStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\KeyStatus\SensorKeyStatus.resx">
+      <DependentUpon>SensorKeyStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\MyComputer\SensorMyComputer.fr.resx">
+      <DependentUpon>SensorMyComputer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\MyComputer\SensorMyComputer.resx">
+      <DependentUpon>SensorMyComputer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Notepad\SensorNotepad.fr.resx">
+      <DependentUpon>SensorNotepad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Notepad\SensorNotepad.resx">
+      <DependentUpon>SensorNotepad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Notepad\SensorNotepadExtendedPanel.fr.resx">
+      <DependentUpon>SensorNotepadExtendedPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Notepad\SensorNotepadExtendedPanel.resx">
+      <DependentUpon>SensorNotepadExtendedPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\PowerStatus\SensorPowerStatus.resx">
+      <DependentUpon>SensorPowerStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\QuickLauncher\SensorQuickLauncher.resx">
+      <DependentUpon>SensorQuickLauncher.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\QuickLauncher\SensorQuickLaunchPropertyForm.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorQuickLaunchPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\QuickLauncher\SensorQuickLaunchPropertyForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorQuickLaunchPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\RecycleBin\SensorRecycleBin.resx">
+      <DependentUpon>SensorRecycleBin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\ShutdownManager\SensorShutdownManager.fr.resx">
+      <DependentUpon>SensorShutdownManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\ShutdownManager\SensorShutdownManager.resx">
+      <DependentUpon>SensorShutdownManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Storage\SensorStorage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Storage\SensorStorage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Storage\SensorStorageExtendedPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorStorageExtendedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\SystemInfos\SensorSystemInfos.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorSystemInfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\SystemInfos\SensorSystemInfos.resx">
+      <DependentUpon>SensorSystemInfos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\SystemInfos\SensorSystemInfosExtendedPanel.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorSystemInfosExtendedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\SystemInfos\SensorSystemInfosExtendedPanel.resx">
+      <DependentUpon>SensorSystemInfosExtendedPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Weather\SensorWeather.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Weather\SensorWeather.resx">
+      <DependentUpon>SensorWeather.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Weather\SensorWeatherExtendedPanel.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorWeatherExtendedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Weather\SensorWeatherExtendedPanel.resx">
+      <DependentUpon>SensorWeatherExtendedPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Storage\DetailStorageUserControl.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailStorageUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Storage\DetailStorageUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailStorageUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Commons\ToolBoxEnder.resx">
+      <DependentUpon>ToolBoxEnder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Commons\ToolBoxSpacer.resx">
+      <DependentUpon>ToolBoxSpacer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\Commons\ToolBoxStarter.resx">
+      <DependentUpon>ToolBoxStarter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolBox.fr.resx">
+      <DependentUpon>ToolBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolBox.resx">
+      <DependentUpon>ToolBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.fr.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Sensors\Storage\StorageUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\Storage\StorageUserControl.Designer.cs">
+      <DependentUpon>StorageUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\AnalogClock\SensorAnalogClock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\EmptySensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\EmptySensor.Designer.cs">
+      <DependentUpon>EmptySensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Commons\ISensor.cs" />
+    <Compile Include="Sensors\Commons\Location.cs" />
+    <Compile Include="Sensors\Calc\SensorCalc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\Calc\SensorCalc.Designer.cs">
+      <DependentUpon>SensorCalc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\FavoriteLocations\SensorFavoriteLocations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\FavoriteLocations\SensorFavoriteLocations.Designer.cs">
+      <DependentUpon>SensorFavoriteLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Inbox\SensorInbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\Inbox\SensorInbox.Designer.cs">
+      <DependentUpon>SensorInbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\KeyStatus\SensorKeyStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\KeyStatus\SensorKeyStatus.Designer.cs">
+      <DependentUpon>SensorKeyStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\MyComputer\SensorMyComputer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\MyComputer\SensorMyComputer.Designer.cs">
+      <DependentUpon>SensorMyComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Notepad\SensorNotepad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\Notepad\SensorNotepad.Designer.cs">
+      <DependentUpon>SensorNotepad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Notepad\SensorNotepadExtendedPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensors\Notepad\SensorNotepadExtendedPanel.Designer.cs">
+      <DependentUpon>SensorNotepadExtendedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\PowerStatus\SensorPowerStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\PowerStatus\SensorPowerStatus.Designer.cs">
+      <DependentUpon>SensorPowerStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\QuickLauncher\SensorQuickLauncher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\QuickLauncher\SensorQuickLauncher.Designer.cs">
+      <DependentUpon>SensorQuickLauncher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\QuickLauncher\SensorQuickLaunchPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensors\QuickLauncher\SensorQuickLaunchPropertyForm.Designer.cs">
+      <DependentUpon>SensorQuickLaunchPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\RecycleBin\SensorRecycleBin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\RecycleBin\SensorRecycleBin.Designer.cs">
+      <DependentUpon>SensorRecycleBin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\ShutdownManager\SensorShutdownManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\ShutdownManager\SensorShutdownManager.Designer.cs">
+      <DependentUpon>SensorShutdownManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Storage\SensorStorage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\Storage\SensorStorage.Designer.cs">
+      <DependentUpon>SensorStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Storage\SensorStorageExtendedPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensors\Storage\SensorStorageExtendedPanel.Designer.cs">
+      <DependentUpon>SensorStorageExtendedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\SystemInfos\SensorSystemInfos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\SystemInfos\SensorSystemInfos.Designer.cs">
+      <DependentUpon>SensorSystemInfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\SystemInfos\SensorSystemInfosExtendedPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensors\SystemInfos\SensorSystemInfosExtendedPanel.Designer.cs">
+      <DependentUpon>SensorSystemInfosExtendedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Weather\SensorWeather.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\Weather\SensorWeather.Designer.cs">
+      <DependentUpon>SensorWeather.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Weather\SensorWeatherExtendedPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensors\Weather\SensorWeatherExtendedPanel.Designer.cs">
+      <DependentUpon>SensorWeatherExtendedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Storage\DetailStorageUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\Storage\DetailStorageUserControl.Designer.cs">
+      <DependentUpon>DetailStorageUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Commons\ToolBoxEnder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\Commons\ToolBoxEnder.Designer.cs">
+      <DependentUpon>ToolBoxEnder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Commons\ToolBoxSpacer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\Commons\ToolBoxSpacer.Designer.cs">
+      <DependentUpon>ToolBoxSpacer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Commons\ToolBoxStarter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensors\Commons\ToolBoxStarter.Designer.cs">
+      <DependentUpon>ToolBoxStarter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Weather\Weather.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="ToolBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolBox.Designer.cs">
+      <DependentUpon>ToolBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensors\Inbox\IMailClient.cs" />
+    <Compile Include="Sensors\Commons\NTPClient.cs" />
+    <Compile Include="Sensors\Inbox\Pop3Client.cs" />
+    <Compile Include="Sensors\QuickLauncher\ShellLinkNative.cs" />
+    <Compile Include="Sensors\QuickLauncher\ShellShortcut.cs" />
+    <Compile Include="Sensors\Commons\SystemUtils.cs" />
+    <Compile Include="Sensors\Commons\ToolBoxUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\add_16.png" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <EmbeddedResource Include="Resources\analogClock.png" />
+    <EmbeddedResource Include="Resources\arrow-back_16.png" />
+    <EmbeddedResource Include="Resources\arrow-down_16.png" />
+    <EmbeddedResource Include="Resources\arrow-forward_16.png" />
+    <EmbeddedResource Include="Resources\arrow-up_16.png" />
+    <EmbeddedResource Include="Resources\background-left.png" />
+    <EmbeddedResource Include="Resources\background-right.png" />
+    <EmbeddedResource Include="Resources\background-separator.png" />
+    <EmbeddedResource Include="Resources\background.png" />
+    <EmbeddedResource Include="Resources\barometer.png" />
+    <EmbeddedResource Include="Resources\battery_0.png" />
+    <EmbeddedResource Include="Resources\battery_1.png" />
+    <EmbeddedResource Include="Resources\battery_2.png" />
+    <EmbeddedResource Include="Resources\battery_3.png" />
+    <EmbeddedResource Include="Resources\battery_4.png" />
+    <EmbeddedResource Include="Resources\battery_5.png" />
+    <EmbeddedResource Include="Resources\battery_6.png" />
+    <EmbeddedResource Include="Resources\battery_7.png" />
+    <EmbeddedResource Include="Resources\battery_8.png" />
+    <EmbeddedResource Include="Resources\battery_c0.png" />
+    <EmbeddedResource Include="Resources\battery_c1.png" />
+    <EmbeddedResource Include="Resources\battery_c2.png" />
+    <EmbeddedResource Include="Resources\battery_c3.png" />
+    <EmbeddedResource Include="Resources\battery_c4.png" />
+    <EmbeddedResource Include="Resources\battery_c5.png" />
+    <EmbeddedResource Include="Resources\battery_c6.png" />
+    <EmbeddedResource Include="Resources\battery_c7.png" />
+    <EmbeddedResource Include="Resources\battery_c8.png" />
+    <EmbeddedResource Include="Resources\battery_charged.png" />
+    <EmbeddedResource Include="Resources\battery_na.png" />
+    <EmbeddedResource Include="Resources\box_vert.png" />
+    <EmbeddedResource Include="Resources\box_bleu.png" />
+    <EmbeddedResource Include="Resources\box_jaune.png" />
+    <EmbeddedResource Include="Resources\box_rose.png" />
+    <EmbeddedResource Include="Resources\box_rouge.png" />
+    <EmbeddedResource Include="Resources\box_turquoise.png" />
+    <EmbeddedResource Include="Resources\calendarBackground.png" />
+    <EmbeddedResource Include="Resources\camera.png" />
+    <EmbeddedResource Include="Resources\Drive_USB.png" />
+    <EmbeddedResource Include="Resources\Drive_cd_rom.png" />
+    <EmbeddedResource Include="Resources\Drive_floppy.png" />
+    <EmbeddedResource Include="Resources\Drive_harddisc.png" />
+    <EmbeddedResource Include="Resources\Drive.png" />
+    <EmbeddedResource Include="Resources\Drive_network.png" />
+    <EmbeddedResource Include="Resources\EventPicto.png" />
+    <EmbeddedResource Include="Resources\EventBirthday.png" />
+    <EmbeddedResource Include="Resources\extendInfosBackground.png" />
+    <EmbeddedResource Include="Resources\folder-open_16.png" />
+    <EmbeddedResource Include="Resources\InboxEmpty.png" />
+    <EmbeddedResource Include="Resources\InboxFull.png" />
+    <EmbeddedResource Include="Resources\icoToolBoxOptions.ico" />
+    <EmbeddedResource Include="Resources\icoCalendar.ico" />
+    <EmbeddedResource Include="Resources\icoPhotosRenamer.ico" />
+    <EmbeddedResource Include="Resources\key_capslock_off.png" />
+    <EmbeddedResource Include="Resources\key_capslock_on.png" />
+    <EmbeddedResource Include="Resources\key_numlock_off.png" />
+    <EmbeddedResource Include="Resources\key_numlock_on.png" />
+    <EmbeddedResource Include="Resources\MCalendarEvent.png" />
+    <EmbeddedResource Include="Resources\MCalendar.png" />
+    <EmbeddedResource Include="Resources\MCalculator.png" />
+    <EmbeddedResource Include="Resources\MusicBackground_small.png" />
+    <EmbeddedResource Include="Resources\myComputer.png" />
+    <EmbeddedResource Include="Resources\MyComputer2.png" />
+    <EmbeddedResource Include="Resources\MyComputer_AddOrRemovePrograms.png" />
+    <EmbeddedResource Include="Resources\MyComputer_ControlPanel.png" />
+    <EmbeddedResource Include="Resources\MyComputer_DiskDefragmenter.png" />
+    <EmbeddedResource Include="Resources\MyComputer_DisplayAndDesktopProperties.png" />
+    <EmbeddedResource Include="Resources\MyComputer_EventsViewer.png" />
+    <EmbeddedResource Include="Resources\MyComputer_MicrosoftUpdate.png" />
+    <EmbeddedResource Include="Resources\MyComputer_MMC.png" />
+    <EmbeddedResource Include="Resources\MyComputer_ServicesManagment.png" />
+    <EmbeddedResource Include="Resources\MyComputer_SystemProperties.png" />
+    <EmbeddedResource Include="Resources\MyComputer_WindowsUpdate.png" />
+    <EmbeddedResource Include="Resources\notepad.png" />
+    <EmbeddedResource Include="Resources\not_found.png" />
+    <EmbeddedResource Include="Resources\properties.png" />
+    <EmbeddedResource Include="Resources\redo_16.png" />
+    <EmbeddedResource Include="Resources\RefreshCL.png" />
+    <EmbeddedResource Include="Resources\rename.png" />
+    <EmbeddedResource Include="Resources\save_16.png" />
+    <EmbeddedResource Include="Resources\separator.png" />
+    <EmbeddedResource Include="Resources\simulate.png" />
+    <EmbeddedResource Include="Resources\SI_Central_Unit.png" />
+    <EmbeddedResource Include="Resources\SI_Home.png" />
+    <EmbeddedResource Include="Resources\SI_Internet_Connection.png" />
+    <EmbeddedResource Include="Resources\SI_Key.png" />
+    <EmbeddedResource Include="Resources\SI_Memory.png" />
+    <EmbeddedResource Include="Resources\SI_MyComputer.png" />
+    <EmbeddedResource Include="Resources\stop.png" />
+    <EmbeddedResource Include="Resources\StorageMyComputer.png" />
+    <EmbeddedResource Include="Resources\sun_moon.png" />
+    <EmbeddedResource Include="Resources\Task_Manager.png" />
+    <EmbeddedResource Include="Resources\thermometre.png" />
+    <EmbeddedResource Include="Resources\TrashFull.png" />
+    <EmbeddedResource Include="Resources\TrashEmpty.png" />
+    <EmbeddedResource Include="Resources\trash_16.png" />
+    <EmbeddedResource Include="Resources\vumeter.png" />
+    <EmbeddedResource Include="Resources\vumeter_background.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_0.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_1.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_10.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_11.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_12.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_13.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_14.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_15.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_16.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_17.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_18.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_19.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_2.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_20.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_21.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_22.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_24.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_25.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_26.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_27.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_28.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_29.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_3.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_30.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_31.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_32.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_33.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_34.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_35.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_36.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_37.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_38.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_39.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_4.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_40.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_41.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_42.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_43.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_44.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_45.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_46.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_47.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_5.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_6.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_7.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_8.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_9.png" />
+    <EmbeddedResource Include="Resources\Weather_128x128_na.png" />
+    <EmbeddedResource Include="Resources\Weather_Logo_32px.png" />
+    <EmbeddedResource Include="Resources\Weather_small_0.png" />
+    <EmbeddedResource Include="Resources\Weather_small_1.png" />
+    <EmbeddedResource Include="Resources\Weather_small_10.png" />
+    <EmbeddedResource Include="Resources\Weather_small_11.png" />
+    <EmbeddedResource Include="Resources\Weather_small_12.png" />
+    <EmbeddedResource Include="Resources\Weather_small_13.png" />
+    <EmbeddedResource Include="Resources\Weather_small_14.png" />
+    <EmbeddedResource Include="Resources\Weather_small_15.png" />
+    <EmbeddedResource Include="Resources\Weather_small_16.png" />
+    <EmbeddedResource Include="Resources\Weather_small_17.png" />
+    <EmbeddedResource Include="Resources\Weather_small_18.png" />
+    <EmbeddedResource Include="Resources\Weather_small_19.png" />
+    <EmbeddedResource Include="Resources\Weather_small_2.png" />
+    <EmbeddedResource Include="Resources\Weather_small_20.png" />
+    <EmbeddedResource Include="Resources\Weather_small_21.png" />
+    <EmbeddedResource Include="Resources\Weather_small_22.png" />
+    <EmbeddedResource Include="Resources\Weather_small_24.png" />
+    <EmbeddedResource Include="Resources\Weather_small_25.png" />
+    <EmbeddedResource Include="Resources\Weather_small_26.png" />
+    <EmbeddedResource Include="Resources\Weather_small_27.png" />
+    <EmbeddedResource Include="Resources\Weather_small_28.png" />
+    <EmbeddedResource Include="Resources\Weather_small_29.png" />
+    <EmbeddedResource Include="Resources\Weather_small_3.png" />
+    <EmbeddedResource Include="Resources\Weather_small_30.png" />
+    <EmbeddedResource Include="Resources\Weather_small_31.png" />
+    <EmbeddedResource Include="Resources\Weather_small_32.png" />
+    <EmbeddedResource Include="Resources\Weather_small_33.png" />
+    <EmbeddedResource Include="Resources\Weather_small_34.png" />
+    <EmbeddedResource Include="Resources\Weather_small_35.png" />
+    <EmbeddedResource Include="Resources\Weather_small_36.png" />
+    <EmbeddedResource Include="Resources\Weather_small_37.png" />
+    <EmbeddedResource Include="Resources\Weather_small_38.png" />
+    <EmbeddedResource Include="Resources\Weather_small_39.png" />
+    <EmbeddedResource Include="Resources\Weather_small_4.png" />
+    <EmbeddedResource Include="Resources\Weather_small_40.png" />
+    <EmbeddedResource Include="Resources\Weather_small_41.png" />
+    <EmbeddedResource Include="Resources\Weather_small_42.png" />
+    <EmbeddedResource Include="Resources\Weather_small_43.png" />
+    <EmbeddedResource Include="Resources\Weather_small_44.png" />
+    <EmbeddedResource Include="Resources\Weather_small_45.png" />
+    <EmbeddedResource Include="Resources\Weather_small_46.png" />
+    <EmbeddedResource Include="Resources\Weather_small_47.png" />
+    <EmbeddedResource Include="Resources\Weather_small_5.png" />
+    <EmbeddedResource Include="Resources\Weather_small_6.png" />
+    <EmbeddedResource Include="Resources\Weather_small_7.png" />
+    <EmbeddedResource Include="Resources\Weather_small_8.png" />
+    <EmbeddedResource Include="Resources\Weather_small_9.png" />
+    <EmbeddedResource Include="Resources\Weather_small_na.png" />
+    <EmbeddedResource Include="Sensors\ShutdownManager\ShutdownOptions.fr.resx">
+      <DependentUpon>ShutdownOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\ShutdownManager\ShutdownOptions.resx">
+      <DependentUpon>ShutdownOptions.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdownManager_standby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdownManager_switch_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdownManager_hibernate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdownManager_lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdownManager_logoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdownManager_restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdownManager_shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weather_128x128_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weather_128x128_261.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_chancerain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_chanceflurries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_chanceflurries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_chancesleet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_chancesleet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_chanceflurries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_chancerain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_chancesleet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_chancesnow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_chancetstorms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_cloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_flurries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_fog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_mostlycloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_mostlysunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_na.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_clear..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_cloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_fog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_mostlycloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_mostlysunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_partlycloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_partlysunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_sleet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_sunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_tstorms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_partlycloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_partlysunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_sleet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_sunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_tstorms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceflurries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chancerain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chancesleet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chancesnow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chancetstorms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flurries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hazy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mostlycloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mostlysunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\na.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_clear..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_cloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_flurries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_fog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_hazy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_mostlycloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_mostlysunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_partlycloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_partlysunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_sleet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_sunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_tstorms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\partlycloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\partlysunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tstorms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_chancesnow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_chancesnow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_chancetstorms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nt_chancetstorms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_chancerain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weather_small_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weather_128x128_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_fog1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_nt_fog1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icoHome.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

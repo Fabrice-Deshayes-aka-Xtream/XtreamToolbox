@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Calc_tip" xml:space="preserve">
+    <value>Executer la calculatrice Windows</value>
+  </data>
+  <data name="CalendarDate" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="CalendarEventDateTime" xml:space="preserve">
+    <value>dd/MM/yy HH:mm</value>
+  </data>
+  <data name="CalendarEventType" xml:space="preserve">
+    <value>événement unique;événement recurent - journalier;événement recurent - hebdomadaire;événement recurent - mensuel;événement recurent - annuel</value>
+  </data>
+  <data name="CalendarRemindMeType" xml:space="preserve">
+    <value>dismiss this event;remind me again in 5 minutes;remind me again in 10 minutes;remind me again in 15 minutes;remind me again in 20 minutes;remind me again in 25 minutes;remind me again in 30 minutes;remind me again in 45 minutes;remind me again in 1 day;remind me again in 2 days;remind me again in 1 week</value>
+  </data>
+  <data name="CalendarRemindType" xml:space="preserve">
+    <value>pas de rappel;5 minutes avant;10 minutes avant;15 minutes avant;20 minutes avant;25 minutes avant;30 minutes avant;45 minutes avant;1 heure avant;2 heures avant;3 heures avant;1 jour avant;2 jours avant;1 semaine avant</value>
+  </data>
+  <data name="CalendarTime" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="FormName_About" xml:space="preserve">
+    <value>Xtream's ToolBox - A propos</value>
+  </data>
+  <data name="FormName_ExifRenamer" xml:space="preserve">
+    <value>Xtream's ToolBox - Renommeur de photos Jpeg basé sur la date EXIF</value>
+  </data>
+  <data name="FormName_Notepad" xml:space="preserve">
+    <value>Xtream's ToolBox - Bloc note</value>
+  </data>
+  <data name="FormName_Option" xml:space="preserve">
+    <value>Xtream's ToolBox - Options</value>
+  </data>
+  <data name="FormName_QuickLaunchProperty" xml:space="preserve">
+    <value>Xtream's ToolBox - Propriétés du raccourci</value>
+  </data>
+  <data name="FormName_SysInfos" xml:space="preserve">
+    <value>Xtream's ToolBox - Informations système</value>
+  </data>
+  <data name="FormName_Toolbox" xml:space="preserve">
+    <value>Xtream's ToolBox</value>
+  </data>
+  <data name="FormName_Weather" xml:space="preserve">
+    <value>Xtream's ToolBox - Météo</value>
+  </data>
+  <data name="JpgRenamer_Action1" xml:space="preserve">
+    <value>{0} -&gt; aucune modification. Le nom du fichier est déjà correct.</value>
+  </data>
+  <data name="JpgRenamer_Action2" xml:space="preserve">
+    <value>{0} -&gt; {1} (la date EXIF dans le nom du fichier n'était pas correcte).</value>
+  </data>
+  <data name="JpgRenamer_Action3" xml:space="preserve">
+    <value>{0} -&gt; {1}</value>
+  </data>
+  <data name="JpgRenamer_Action4" xml:space="preserve">
+    <value>{0} -&gt; pas de données EXIF. Impossible de renommer cette photo.</value>
+  </data>
+  <data name="JpgRenamer_Canceled" xml:space="preserve">
+    <value>annulé</value>
+  </data>
+  <data name="JpgRenamer_Complete" xml:space="preserve">
+    <value>terminé</value>
+  </data>
+  <data name="JpgRenamer_Error" xml:space="preserve">
+    <value>ERREUR : {0}</value>
+  </data>
+  <data name="JpgRenamer_NormalMode" xml:space="preserve">
+    <value>(mode normal)</value>
+  </data>
+  <data name="JpgRenamer_NPhotosToRename" xml:space="preserve">
+    <value>{0} photo(s) à renommer...</value>
+  </data>
+  <data name="JpgRenamer_RecursiveMode" xml:space="preserve">
+    <value>(mode récursif)</value>
+  </data>
+  <data name="JpgRenamer_RenameStart" xml:space="preserve">
+    <value>Démarrage du renommage sur le repertoire {0}</value>
+  </data>
+  <data name="JpgRenamer_ReportRename1" xml:space="preserve">
+    <value>renommage {0} pour {1} photo(s) jpg {2} en {3} seconde(s)</value>
+  </data>
+  <data name="JpgRenamer_ReportRename2" xml:space="preserve">
+    <value>    {0} photo(s) ont été renommée(s)</value>
+  </data>
+  <data name="JpgRenamer_ReportRename3" xml:space="preserve">
+    <value>    {0} photo(s) ont été ignorée(s) à cause de l'absence de données EXIF</value>
+  </data>
+  <data name="JpgRenamer_ReportRename4" xml:space="preserve">
+    <value>    {0} photo(s) ont été ignorée(s) car le nom de fichier est déjà correct</value>
+  </data>
+  <data name="JpgRenamer_ReportRename5" xml:space="preserve">
+    <value>    {0} photo(s) ont été corrigée(s) car la date EXIF déjà présente dans le nom du fichier était éronnée</value>
+  </data>
+  <data name="JpgRenamer_ReportRename6" xml:space="preserve">
+    <value>    {0} erreur(s) lors du renommage</value>
+  </data>
+  <data name="JpgRenamer_ReportSimulation1" xml:space="preserve">
+    <value>simulation {0} pour {1} photo(s) jpg {2} en {3} seconde(s)</value>
+  </data>
+  <data name="JpgRenamer_ReportSimulation2" xml:space="preserve">
+    <value>    {0} photo(s) seront renommée(s)</value>
+  </data>
+  <data name="JpgRenamer_ReportSimulation3" xml:space="preserve">
+    <value>    {0} photo(s) seront ignorée(s) à cause de l'absence de données EXIF</value>
+  </data>
+  <data name="JpgRenamer_ReportSimulation4" xml:space="preserve">
+    <value>    {0} photo(s) seront ignorée(s) car le nom de fichier est déjà correct</value>
+  </data>
+  <data name="JpgRenamer_ReportSimulation5" xml:space="preserve">
+    <value>    {0} photo(s) seront corrigée(s) car la date EXIF déjà présente dans le nom du fichier était éronnée</value>
+  </data>
+  <data name="JpgRenamer_SimulationStart" xml:space="preserve">
+    <value>Démarrage de la simulation sur le repertoire {0}</value>
+  </data>
+  <data name="KeyStatus_Caps_OFF" xml:space="preserve">
+    <value>Le vérouillage des majuscules est désactivé</value>
+  </data>
+  <data name="KeyStatus_Caps_ON" xml:space="preserve">
+    <value>Le vérouillage des majuscules est activé</value>
+  </data>
+  <data name="KeyStatus_Num_OFF" xml:space="preserve">
+    <value>Le vérouillage du pavé numérique est désactivé</value>
+  </data>
+  <data name="KeyStatus_Num_ON" xml:space="preserve">
+    <value>Le vérouillage du pavé numérique est activé</value>
+  </data>
+  <data name="MyComputer_tip" xml:space="preserve">
+    <value>Click gauche pour ouvrir le poste de travail{0}Click droit pour accéder aux outils d'administration</value>
+  </data>
+  <data name="not_available" xml:space="preserve">
+    <value>n/d</value>
+  </data>
+  <data name="NotePad_tip" xml:space="preserve">
+    <value>Clique gauche pour ouvrir et fermer le bloc note.Clique droit pour executer votre editeur de texte préféré.</value>
+  </data>
+  <data name="Pop3Checker_Hint" xml:space="preserve">
+    <value>{2} emails et {3} spams sur le compte {1} du serveur {0}{4}</value>
+  </data>
+  <data name="Pop3Checker_nbmails" xml:space="preserve">
+    <value>{0} mails</value>
+  </data>
+  <data name="Pop3Checker_nbspam" xml:space="preserve">
+    <value>{0} spams</value>
+  </data>
+  <data name="Pop3Checker_nomail" xml:space="preserve">
+    <value>aucun mail</value>
+  </data>
+  <data name="Pop3Checker_nospam" xml:space="preserve">
+    <value>aucun spam</value>
+  </data>
+  <data name="Pop3Checker_OpenIt" xml:space="preserve">
+    <value>Clique gauche pour ouvrir vôtre logiciel de courrier electronique, Clique droit pour rafraichir le nombre de mails reçu.</value>
+  </data>
+  <data name="PowerStatus_Tips1" xml:space="preserve">
+    <value>Cliquez ici pour configurer la manière dont votre ordinateur gère l'energie</value>
+  </data>
+  <data name="PowerStatus_Tips2" xml:space="preserve">
+    <value>Cliquez ici pour configurer la manière dont votre ordinateur gère l'energie{3}{3}Durée de la batterie en pleine charge : {0}{3}Durée restante : {1} ({2}%)</value>
+  </data>
+  <data name="RecycleBin_Empty" xml:space="preserve">
+    <value>La poubelle est vide</value>
+  </data>
+  <data name="RecycleBin_Infos" xml:space="preserve">
+    <value>{0} ({1} items) dans la poubelle{2}Click gauche pour ouvrir la poubelle{2}Click droit pour la vider</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeLogOff" xml:space="preserve">
+    <value>Voulez vous vraiment fermer votre session ?</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeLogOffTitle" xml:space="preserve">
+    <value>fermeture de la session</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeRestart" xml:space="preserve">
+    <value>Vouler vous vraiment redémarrer votre ordinateur ?</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeRestartTitle" xml:space="preserve">
+    <value>redémarrage de l'ordinateur</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeShutDown" xml:space="preserve">
+    <value>Voulez vous vraiment éteindre votre ordinateur ?</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeShutDownTitle" xml:space="preserve">
+    <value>extinction de l'ordinateur</value>
+  </data>
+  <data name="StorageUserControlNotReady" xml:space="preserve">
+    <value>Périphérique non disponible</value>
+  </data>
+  <data name="StorageUserControlSize" xml:space="preserve">
+    <value>{0} : {1}% utilisé, {2} disponible</value>
+  </data>
+  <data name="Sys_bit" xml:space="preserve">
+    <value>b</value>
+  </data>
+  <data name="Sys_byte" xml:space="preserve">
+    <value>o</value>
+  </data>
+  <data name="Sys_d" xml:space="preserve">
+    <value>jour(s)</value>
+  </data>
+  <data name="Sys_gbit" xml:space="preserve">
+    <value>gb</value>
+  </data>
+  <data name="Sys_gbyte" xml:space="preserve">
+    <value>go</value>
+  </data>
+  <data name="Sys_h" xml:space="preserve">
+    <value>heure(s)</value>
+  </data>
+  <data name="Sys_kbit" xml:space="preserve">
+    <value>kb</value>
+  </data>
+  <data name="Sys_kbyte" xml:space="preserve">
+    <value>ko</value>
+  </data>
+  <data name="Sys_m" xml:space="preserve">
+    <value>mois</value>
+  </data>
+  <data name="Sys_mbit" xml:space="preserve">
+    <value>mb</value>
+  </data>
+  <data name="Sys_mbyte" xml:space="preserve">
+    <value>mo</value>
+  </data>
+  <data name="Sys_mn" xml:space="preserve">
+    <value>minute(s)</value>
+  </data>
+  <data name="Sys_s" xml:space="preserve">
+    <value>seconde(s)</value>
+  </data>
+  <data name="Sys_y" xml:space="preserve">
+    <value>an(s)</value>
+  </data>
+  <data name="SysInfoGraph_Tips" xml:space="preserve">
+    <value>Click gauche pour ouvrir le panneau d'informations systèmes{0}Click droit pour choisir les informations à afficher sur le graphique</value>
+  </data>
+  <data name="SysInfos_01" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="SysInfos_02" xml:space="preserve">
+    <value>Numéro de série : {0}</value>
+  </data>
+  <data name="SysInfos_03" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="SysInfos_04" xml:space="preserve">
+    <value>Mémoire virtuelle : {0}</value>
+  </data>
+  <data name="SysInfos_05" xml:space="preserve">
+    <value>Utilisateur '{0}' connecté sur l'ordinateur '{1}'</value>
+  </data>
+  <data name="SysInfos_06" xml:space="preserve">
+    <value>@IPv4 : {0}  ({1})</value>
+  </data>
+  <data name="SysInfos_07" xml:space="preserve">
+    <value>Carte réseau : {0} {1} Mb/s</value>
+  </data>
+  <data name="SysInfos_08" xml:space="preserve">
+    <value>{0} - {1} RAM</value>
+  </data>
+  <data name="SysInfos_09" xml:space="preserve">
+    <value>{0} écran(s) connecté(s)</value>
+  </data>
+  <data name="SysInfos_10" xml:space="preserve">
+    <value>{0} (principal)</value>
+  </data>
+  <data name="SysInfos_12" xml:space="preserve">
+    <value>Type : {0}</value>
+  </data>
+  <data name="SysInfos_13" xml:space="preserve">
+    <value>{0} processus (max {1}). {2} threads (max {3})</value>
+  </data>
+  <data name="SysInfos_14" xml:space="preserve">
+    <value>Mémoire physique : {0}</value>
+  </data>
+  <data name="SysInfos_15" xml:space="preserve">
+    <value>{0} : {1}</value>
+  </data>
+  <data name="SysInfos_16" xml:space="preserve">
+    <value>Installé le : {0} / Allumé depuis : {1}:{2}:{3}</value>
+  </data>
+  <data name="SysInfos_17" xml:space="preserve">
+    <value>{0}% du processeur utilisé</value>
+  </data>
+  <data name="SysInfos_18" xml:space="preserve">
+    <value>{0}% des {1} utilisé</value>
+  </data>
+  <data name="SysInfos_19" xml:space="preserve">
+    <value>Envoyé : {0}/s - Reçu : {1}/s{4}{2}% des {3}/s de la bande passante descendante utilisé.</value>
+  </data>
+  <data name="SysInfos_20" xml:space="preserve">
+    <value>Envoyé : {0}/s - Reçu : {1}/s{4}{2}% des {3}/s de la bande passante utilisé.</value>
+  </data>
+  <data name="SysInfos_21" xml:space="preserve">
+    <value>{0}Cliquez ici pour basculer le vumetre entre le réseau local et la connection Internet</value>
+  </data>
+  <data name="SysInfos_22" xml:space="preserve">
+    <value>aucune carte réseau trouvé !!!</value>
+  </data>
+  <data name="SysInfos_InstalleDateFormat" xml:space="preserve">
+    <value>dd/MM/yy HH:mm</value>
+  </data>
+  <data name="SysInfosTips" xml:space="preserve">
+    <value>Clique gauche pour ouvrir les informations systèmes{0}Clique droit pour ouvrir le menu contextuel d'options</value>
+  </data>
+  <data name="Toolbox_close" xml:space="preserve">
+    <value>Fermer la ToolBox</value>
+  </data>
+  <data name="Toolbox_loading" xml:space="preserve">
+    <value>Xtream's ToolBox :: Veuillez patienter - Initialisation du Sensor {0}</value>
+  </data>
+  <data name="Toolbox_move" xml:space="preserve">
+    <value>Déplacer la ToolBox</value>
+  </data>
+  <data name="Toolbox_one_Instance" xml:space="preserve">
+    <value>Il n'est pas autorisé d'executer plusieurs instances de la toolbox.</value>
+  </data>
+  <data name="Weather_01" xml:space="preserve">
+    <value>ville non trouvée</value>
+  </data>
+  <data name="Weather_02" xml:space="preserve">
+    <value>Latitude {0} / longitude {1}</value>
+  </data>
+  <data name="Weather_03" xml:space="preserve">
+    <value>Dernière mesure : {0}</value>
+  </data>
+  <data name="Weather_04" xml:space="preserve">
+    <value>Dernière mise à jour : {0}</value>
+  </data>
+  <data name="Weather_05" xml:space="preserve">
+    <value>Température : {0}°{1} (ressentie {2}°{3})</value>
+  </data>
+  <data name="Weather_06" xml:space="preserve">
+    <value>Humidité relative : {0} / Point de rosée : {1}°{2}</value>
+  </data>
+  <data name="Weather_08" xml:space="preserve">
+    <value>Indice UV : {0} / Visibilité : {1} {2}</value>
+  </data>
+  <data name="Weather_09" xml:space="preserve">
+    <value>Vitesse du vent : {0} {1} en provenance de {2} ({3}°)</value>
+  </data>
+  <data name="Weather_11" xml:space="preserve">
+    <value>Le soleil se lève à {0} et se couche à {1}</value>
+  </data>
+  <data name="Weather_12" xml:space="preserve">
+    <value>Phase de la lune actuelle : {0}</value>
+  </data>
+  <data name="Weather_DataProvider" xml:space="preserve">
+    <value>Infos météo fournies par</value>
+  </data>
+  <data name="Weather_err" xml:space="preserve">
+    <value>Impossible de récupérer les informations météo. Vérifiez votre code de localisation, votre connection réseau et le bon fonctionnement du site web www.weather.com</value>
+  </data>
+  <data name="Weather_tip" xml:space="preserve">
+    <value>Ouvrir / Fermer les informations météo</value>
+  </data>
+  <data name="Weather_WinDir_E" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="Weather_WinDir_N" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="Weather_WinDir_S" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="Weather_WinDir_W" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeHibernate" xml:space="preserve">
+    <value>Voulez vous vraiment mettre votre ordinateur en veille prolongée ?</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeHibernateTitle" xml:space="preserve">
+    <value>mise en veille prolongée</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeSuspend" xml:space="preserve">
+    <value>Voulez vous vraiment mettre votre ordinateur en veille ?</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeSuspendTitle" xml:space="preserve">
+    <value> mise en veille de l'ordinateur</value>
+  </data>
+  <data name="ShutdownManager_Tip" xml:space="preserve">
+    <value>Clique gauche pour effectuer l'action par défaut (voir options){0}Clique droit pour afficher le menu</value>
+  </data>
+  <data name="FormName_ShutdownManager" xml:space="preserve">
+    <value>Xtream's ToolBox - Shutdown manager</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeLock" xml:space="preserve">
+    <value>Voulez vous vraiment vérouiller votre session ?</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeLockTitle" xml:space="preserve">
+    <value>vérouillage de la session</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeSwitchUser" xml:space="preserve">
+    <value>Voulez vous vraiment changer d'utilisateur ?</value>
+  </data>
+  <data name="ShutdownManager_ConfirmeSwitchUserTitle" xml:space="preserve">
+    <value>bascule d'utilisateur</value>
+  </data>
+  <data name="ShutdownManager_Programmed" xml:space="preserve">
+    <value>dans</value>
+  </data>
+  <data name="SysInfos_06_v6" xml:space="preserve">
+    <value>@IPv6 : {0}</value>
+  </data>
+  <data name="SysInfos_11" xml:space="preserve">
+    <value>{0} (secondaire)</value>
+  </data>
+  <data name="ScreenshotName" xml:space="preserve">
+    <value>dd-MM-yy_HH-mm-ss</value>
+  </data>
+</root>
