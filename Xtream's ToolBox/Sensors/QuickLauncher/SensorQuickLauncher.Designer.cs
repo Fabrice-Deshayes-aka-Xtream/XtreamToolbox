@@ -53,8 +53,8 @@
             this.quickLaunchFlowLayoutPanelDown.Size = new System.Drawing.Size(48, 24);
             this.quickLaunchFlowLayoutPanelDown.TabIndex = 1;
             this.quickLaunchFlowLayoutPanelDown.WrapContents = false;
-            this.quickLaunchFlowLayoutPanelDown.DragDrop += new System.Windows.Forms.DragEventHandler(this.quickLaunchFlowLayoutPanelDown_DragDrop);
-            this.quickLaunchFlowLayoutPanelDown.DragEnter += new System.Windows.Forms.DragEventHandler(this.quickLaunchFlowLayoutPanelUp_DragEnter);
+            this.quickLaunchFlowLayoutPanelDown.DragDrop += new System.Windows.Forms.DragEventHandler(this.QuickLaunchFlowLayoutPanelDown_DragDrop);
+            this.quickLaunchFlowLayoutPanelDown.DragEnter += new System.Windows.Forms.DragEventHandler(this.QuickLaunchFlowLayoutPanelUp_DragEnter);
             // 
             // helpToolTip
             // 
@@ -77,8 +77,8 @@
             this.quickLaunchFlowLayoutPanelUp.Size = new System.Drawing.Size(48, 24);
             this.quickLaunchFlowLayoutPanelUp.TabIndex = 2;
             this.quickLaunchFlowLayoutPanelUp.WrapContents = false;
-            this.quickLaunchFlowLayoutPanelUp.DragDrop += new System.Windows.Forms.DragEventHandler(this.quickLaunchFlowLayoutPanelDown_DragDrop);
-            this.quickLaunchFlowLayoutPanelUp.DragEnter += new System.Windows.Forms.DragEventHandler(this.quickLaunchFlowLayoutPanelUp_DragEnter);
+            this.quickLaunchFlowLayoutPanelUp.DragDrop += new System.Windows.Forms.DragEventHandler(this.QuickLaunchFlowLayoutPanelDown_DragDrop);
+            this.quickLaunchFlowLayoutPanelUp.DragEnter += new System.Windows.Forms.DragEventHandler(this.QuickLaunchFlowLayoutPanelUp_DragEnter);
             // 
             // shortcutContextMenu
             // 
@@ -105,7 +105,7 @@
             this.addSeparatorAfterThisItemToolStripMenuItem.Name = "addSeparatorAfterThisItemToolStripMenuItem";
             this.addSeparatorAfterThisItemToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.addSeparatorAfterThisItemToolStripMenuItem.Text = "Insert separator before this item";
-            this.addSeparatorAfterThisItemToolStripMenuItem.Click += new System.EventHandler(this.addSeparatorBeforeThisItemToolStripMenuItem_Click);
+            this.addSeparatorAfterThisItemToolStripMenuItem.Click += new System.EventHandler(this.AddSeparatorBeforeThisItemToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -163,8 +163,8 @@
             this.MinimumSize = new System.Drawing.Size(48, 48);
             this.Name = "SensorQuickLauncher";
             this.Size = new System.Drawing.Size(48, 48);
-            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.quickLaunchFlowLayoutPanelDown_DragDrop);
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.quickLaunchFlowLayoutPanelUp_DragEnter);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.QuickLaunchFlowLayoutPanelDown_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.QuickLaunchFlowLayoutPanelUp_DragEnter);
             this.shortcutContextMenu.ResumeLayout(false);
             this.separatorContextMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.moveShortcutPictureBox)).EndInit();

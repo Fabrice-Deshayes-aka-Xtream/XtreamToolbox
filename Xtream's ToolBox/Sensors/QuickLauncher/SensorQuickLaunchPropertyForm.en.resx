@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,48 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="commentLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>370, 13</value>
-  </data>
-  <data name="commentLabel1.Text" xml:space="preserve">
-    <value>Si vous ne précisez pas d'image, l'icone par défaut de l'application sera utilisé</value>
-  </data>
-  <data name="quickLaunchBrowseImageButton.Text" xml:space="preserve">
-    <value>parcourir...</value>
-  </data>
-  <data name="quickLaunchImagePathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
-  </data>
-  <data name="quickLaunchImagePathLabel.Text" xml:space="preserve">
-    <value>Image</value>
-  </data>
-  <data name="quickLaunchBrowseButton.Text" xml:space="preserve">
-    <value>parcourir...</value>
-  </data>
-  <data name="quicklaunchPathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 13</value>
-  </data>
-  <data name="quicklaunchPathLabel.Text" xml:space="preserve">
-    <value>Executable</value>
-  </data>
-  <data name="quicklaunchDisplayNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
-  </data>
-  <data name="quicklaunchDisplayNameLabel.Text" xml:space="preserve">
-    <value>Nom</value>
-  </data>
-  <data name="cancelButton.Text" xml:space="preserve">
-    <value>Abandonner</value>
-  </data>
-  <data name="saveButton.Text" xml:space="preserve">
-    <value>Enregistrer</value>
-  </data>
-  <data name="quickLaunchWorkingDirLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 13</value>
-  </data>
-  <data name="quickLaunchWorkingDirLabel.Text" xml:space="preserve">
-    <value>Rep de travail</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAQAEBAAAAEAIABoBAAARgAAABgYAAABACAAiAkAAK4EAAAgIAAAAQAgAKgQAAA2DgAAMDAAAAEA
@@ -456,8 +414,5 @@
         AAD//8ACAf8AAP//4AYB/wAA///wDgH/AAD///geAf8AAP///D///wAA////////AAD///////8AAP//
         /////wAA////////AAD///////8AAA==
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Propriétés du raccourci...</value>
   </data>
 </root>

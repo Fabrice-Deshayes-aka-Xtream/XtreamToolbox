@@ -21,23 +21,18 @@ namespace Xtream_ToolBox.Sensors {
 
             this.Text = resources.GetString("FormName_QuickLaunchProperty");
             this.currentLocation = currentLocation;
-            populateForm();
+            PopulateForm();
         }
 
         // populate form data with location informations
-        private void populateForm(){
-            String imagePath;
-            String arguments;
-            String workingDirectory;
-            String description;
-
+        private void PopulateForm(){
             quicklaunchDisplayNameTextBox.Text = currentLocation.Name;
             quicklaunchPathTextBox.Text = currentLocation.Loc;
 
-            currentLocation.Parameters.TryGetValue("imagePath", out imagePath);
-            currentLocation.Parameters.TryGetValue("arguments", out arguments);
-            currentLocation.Parameters.TryGetValue("workingDirectory", out workingDirectory);
-            currentLocation.Parameters.TryGetValue("description", out description);
+            currentLocation.Parameters.TryGetValue("imagePath", out string imagePath);
+            currentLocation.Parameters.TryGetValue("arguments", out string arguments);
+            currentLocation.Parameters.TryGetValue("workingDirectory", out string workingDirectory);
+            currentLocation.Parameters.TryGetValue("description", out string description);
             quicklaunchImagePathTextBox.Text = imagePath;
             quickLaunchArgumentsTextBox.Text = arguments;
             quickLaunchWorkingDirTextBox.Text = workingDirectory;
@@ -51,7 +46,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // save location modifications
-        private void saveButton_Click(object sender, EventArgs e) {
+        private void SaveButton_Click(object sender, EventArgs e) {
             currentLocation.Name = quicklaunchDisplayNameTextBox.Text;
             currentLocation.Loc = quicklaunchPathTextBox.Text;
             currentLocation.Parameters.Remove("imagePath");
@@ -75,7 +70,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // browse for optional image icon
-        private void quickLaunchBrowseImageButton_Click(object sender, EventArgs e) {
+        private void QuickLaunchBrowseImageButton_Click(object sender, EventArgs e) {
             if (quicklaunchOpenFileDialog.ShowDialog(this) == DialogResult.OK) {
                 quicklaunchImagePathTextBox.Text = quicklaunchOpenFileDialog.FileName;
             }

@@ -209,6 +209,9 @@
       <DependentUpon>About.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sensors\QuickLauncher\SensorQuickLaunchPropertyForm.en.resx">
+      <DependentUpon>SensorQuickLaunchPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sensors\ShutdownManager\SensorShutdownManager.en.resx">
       <DependentUpon>SensorShutdownManager.cs</DependentUpon>
     </EmbeddedResource>
