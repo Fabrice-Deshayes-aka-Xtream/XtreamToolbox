@@ -1,5 +1,7 @@
-﻿namespace Xtream_ToolBox.Sensors {
-    partial class SensorInbox {
+﻿namespace Xtream_ToolBox.Sensors
+{
+    partial class SensorInbox
+    {
         /// <summary> 
         /// Variable nécessaire au concepteur.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Nettoyage des ressources utilisées.
         /// </summary>
         /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +26,8 @@
         /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
         /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SensorInbox));
             this.initialisationBackgroundWorker = new System.ComponentModel.BackgroundWorker();
@@ -36,8 +41,8 @@
             // 
             // initialisationBackgroundWorker
             // 
-            this.initialisationBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.initialisationBackgroundWorker_DoWork);
-            this.initialisationBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.initialisationBackgroundWorker_RunWorkerCompleted);
+            this.initialisationBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.InitialisationBackgroundWorker_DoWork);
+            this.initialisationBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.InitialisationBackgroundWorker_RunWorkerCompleted);
             // 
             // helpToolTip
             // 
@@ -59,7 +64,7 @@
             // 
             this.checkMailTimer.Enabled = true;
             this.checkMailTimer.Interval = 300000;
-            this.checkMailTimer.Tick += new System.EventHandler(this.checkMailTimer_Tick);
+            this.checkMailTimer.Tick += new System.EventHandler(this.CheckMailTimer_Tick);
             // 
             // spamLabel
             // 

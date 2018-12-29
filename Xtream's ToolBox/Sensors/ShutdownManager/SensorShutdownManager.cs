@@ -9,8 +9,10 @@ using System.Resources;
 using Xtream_ToolBox.Utils;
 using Xtream_ToolBox.Sensors.ShutdownManager;
 
-namespace Xtream_ToolBox {
-    public partial class SensorShutdownManager : UserControl, ISensor {
+namespace Xtream_ToolBox
+{
+    public partial class SensorShutdownManager : UserControl, ISensor
+    {
 
         // reference on toolbox
         private ToolBox toolbox = null;
@@ -21,19 +23,22 @@ namespace Xtream_ToolBox {
         private ShutdownOptions shutdownOptions = new ShutdownOptions();
 
         // constructor
-        public SensorShutdownManager(ToolBox toolbox) {
+        public SensorShutdownManager(ToolBox toolbox)
+        {
             InitializeComponent();
             this.toolbox = toolbox;
             InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form GetExtendedPanel() {
+        public Form GetExtendedPanel()
+        {
             return null;
         }
 
         // init UI
-        public void InitUI() {
+        public void InitUI()
+        {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -42,7 +47,8 @@ namespace Xtream_ToolBox {
             helpToolTip.SetToolTip(lowerButton, String.Format(resources.GetString("ShutdownManager_Tip"), Environment.NewLine));
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
-            switch (Properties.Settings.Default.shutdownManagerDefaultActionUpperButton) {
+            switch (Properties.Settings.Default.shutdownManagerDefaultActionUpperButton)
+            {
                 case ShutdownOptions.SHUTDOWN:
                     upperButton.Image = Properties.Resources.shutdownManager_shutdown;
                     break;
@@ -63,7 +69,8 @@ namespace Xtream_ToolBox {
                     break;
             }
 
-            switch (Properties.Settings.Default.shutdownManagerDefaultActionLowerButton) {
+            switch (Properties.Settings.Default.shutdownManagerDefaultActionLowerButton)
+            {
                 case ShutdownOptions.SHUTDOWN:
                     lowerButton.Image = Properties.Resources.shutdownManager_shutdown;
                     break;
@@ -86,45 +93,58 @@ namespace Xtream_ToolBox {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void InitSensorData() {
+        public void InitSensorData()
+        {
             // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
-        public void RefreshUI() {
+        public void RefreshUI()
+        {
             // nothing to do on this sensor
         }
 
         // update location of extended panel if needed
-        public void UpdateLocation() {
+        public void UpdateLocation()
+        {
             // nothing to do on this sensor
         }
 
-        private void UpperButton_MouseClick(object sender, MouseEventArgs e) {
-            if (e.Button.Equals(MouseButtons.Left)) {
-                if (!Properties.Settings.Default.shutdownManagerLowerActionConfirmation) {
+        private void UpperButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button.Equals(MouseButtons.Left))
+            {
+                if (!Properties.Settings.Default.shutdownManagerLowerActionConfirmation)
+                {
                     shutdownOptions.DoAction(Properties.Settings.Default.shutdownManagerDefaultActionUpperButton, true);
                 }
-                else {
+                else
+                {
                     shutdownOptions.DoAction(Properties.Settings.Default.shutdownManagerDefaultActionUpperButton, false);
                 }
             }
-            else if (e.Button.Equals(MouseButtons.Right)) {
+            else if (e.Button.Equals(MouseButtons.Right))
+            {
                 // display menu for other or timed actions
                 shutdownOptions.ShowDialog();
             }
         }
 
-        private void LowerButton_MouseClick(object sender, MouseEventArgs e) {
-            if (e.Button.Equals(MouseButtons.Left)) {
-                if (!Properties.Settings.Default.shutdownManagerUpperActionConfirmation) {
+        private void LowerButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button.Equals(MouseButtons.Left))
+            {
+                if (!Properties.Settings.Default.shutdownManagerUpperActionConfirmation)
+                {
                     shutdownOptions.DoAction(Properties.Settings.Default.shutdownManagerDefaultActionLowerButton, true);
                 }
-                else {
+                else
+                {
                     shutdownOptions.DoAction(Properties.Settings.Default.shutdownManagerDefaultActionLowerButton, false);
                 }
             }
-            else if (e.Button.Equals(MouseButtons.Right)) {
+            else if (e.Button.Equals(MouseButtons.Right))
+            {
                 shutdownOptions.Show();
             }
         }

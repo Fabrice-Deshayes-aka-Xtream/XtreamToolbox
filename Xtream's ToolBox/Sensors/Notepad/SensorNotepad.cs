@@ -9,9 +9,11 @@ using System.Resources;
 using Xtream_ToolBox.Utils;
 using System.IO;
 
-namespace Xtream_ToolBox.Sensors {
-    public partial class SensorNotepad : UserControl, ISensor {
-        
+namespace Xtream_ToolBox.Sensors
+{
+    public partial class SensorNotepad : UserControl, ISensor
+    {
+
         // reference on toolbox
         private ToolBox toolbox = null;
 
@@ -22,19 +24,22 @@ namespace Xtream_ToolBox.Sensors {
         private SensorNotepadExtendedPanel extendedPanel = null;
 
         // constructor
-        public SensorNotepad(ToolBox toolbox) {
+        public SensorNotepad(ToolBox toolbox)
+        {
             InitializeComponent();
             this.toolbox = toolbox;
             InitUI();
         }
 
         // return extended panel (for activate and hide/show)
-        public Form GetExtendedPanel() {
+        public Form GetExtendedPanel()
+        {
             return extendedPanel;
         }
 
         // init UI
-        public void InitUI() {
+        public void InitUI()
+        {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -44,37 +49,51 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void InitSensorData() {
+        public void InitSensorData()
+        {
             // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
-        public void RefreshUI() {
+        public void RefreshUI()
+        {
             // nothing to do on this sensor
         }
 
         // update location of extended panel if needed
-        public void UpdateLocation() {
+        public void UpdateLocation()
+        {
             ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
         }
 
         // Open or closed more infos panel
-        private void SensorNotepad_MouseClick(object sender, MouseEventArgs e) {
-            if (e.Button == MouseButtons.Right) {
+        private void SensorNotepad_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
                 // Launch prefered text editor
-                if (File.Exists(Properties.Settings.Default.defaultTextEditor)) {
+                if (File.Exists(Properties.Settings.Default.defaultTextEditor))
+                {
                     SystemUtils.StartProcess(Properties.Settings.Default.defaultTextEditor, null, null);
-                } else {
+                }
+                else
+                {
                     MessageBox.Show("Your prefered text editor isn't well defined in ToolBox options and was not found");
                 }
-            } else {
-                if ((extendedPanel == null) || (extendedPanel.IsDisposed)) {
+            }
+            else
+            {
+                if ((extendedPanel == null) || (extendedPanel.IsDisposed))
+                {
                     extendedPanel = new SensorNotepadExtendedPanel();
                 }
 
-                if (extendedPanel.Visible) {
+                if (extendedPanel.Visible)
+                {
                     extendedPanel.Hide();
-                } else {
+                }
+                else
+                {
                     ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
                     extendedPanel.Show();
                 }

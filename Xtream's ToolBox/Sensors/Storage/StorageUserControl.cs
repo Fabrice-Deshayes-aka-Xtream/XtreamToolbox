@@ -9,8 +9,10 @@ using System.Resources;
 using System.IO;
 using Xtream_ToolBox.Utils;
 
-namespace Xtream_ToolBox.Sensors {
-    public partial class StorageUserControl : UserControl {
+namespace Xtream_ToolBox.Sensors
+{
+    public partial class StorageUserControl : UserControl
+    {
 
         // ressource manager pour accéder aux chaines localisées
         private ResourceManager resources = Properties.Resources.ResourceManager;
@@ -18,15 +20,18 @@ namespace Xtream_ToolBox.Sensors {
         private DriveInfo device = null;
 
         // constructeur
-        public StorageUserControl(DriveInfo device) {
+        public StorageUserControl(DriveInfo device)
+        {
             InitializeComponent();
             this.device = device;
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
             UpdateData();
         }
 
-        public void UpdateData() {
-            if ((device != null) && (device.IsReady)) {
+        public void UpdateData()
+        {
+            if ((device != null) && (device.IsReady))
+            {
                 deviceNameLabel.Text = device.Name + " " + device.VolumeLabel;
                 Int64 usedSpace = (100 * (device.TotalSize - device.TotalFreeSpace)) / device.TotalSize;
                 if (usedSpace < 0) usedSpace = 0;
@@ -36,8 +41,10 @@ namespace Xtream_ToolBox.Sensors {
             }
         }
 
-        private void Timer1_Tick(object sender, EventArgs e) {
-            if (this.Visible) {
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
                 UpdateData();
             }
         }

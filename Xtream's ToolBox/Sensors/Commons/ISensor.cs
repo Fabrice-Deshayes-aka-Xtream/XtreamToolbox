@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Xtream_ToolBox {
-    interface ISensor {
+namespace Xtream_ToolBox
+{
+    interface ISensor
+    {
 
         // init UI
         void InitUI();

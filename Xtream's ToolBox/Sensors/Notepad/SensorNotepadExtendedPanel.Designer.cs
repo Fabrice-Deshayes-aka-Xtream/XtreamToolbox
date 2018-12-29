@@ -1,5 +1,7 @@
-﻿namespace Xtream_ToolBox.Sensors {
-    partial class SensorNotepadExtendedPanel {
+﻿namespace Xtream_ToolBox.Sensors
+{
+    partial class SensorNotepadExtendedPanel
+    {
         /// <summary>
         /// Variable nécessaire au concepteur.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Nettoyage des ressources utilisées.
         /// </summary>
         /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +26,8 @@
         /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
         /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SensorNotepadExtendedPanel));
             this.closeExtendedInfosPictureBox = new System.Windows.Forms.PictureBox();
@@ -46,7 +51,7 @@
             this.closeExtendedInfosPictureBox.Name = "closeExtendedInfosPictureBox";
             this.closeExtendedInfosPictureBox.TabStop = false;
             this.helpToolTip.SetToolTip(this.closeExtendedInfosPictureBox, resources.GetString("closeExtendedInfosPictureBox.ToolTip"));
-            this.closeExtendedInfosPictureBox.Click += new System.EventHandler(this.closeExtendedInfosPictureBox_Click);
+            this.closeExtendedInfosPictureBox.Click += new System.EventHandler(this.CloseExtendedInfosPictureBox_Click);
             // 
             // notepadTextBox
             // 
@@ -54,7 +59,7 @@
             this.notepadTextBox.AcceptsTab = true;
             resources.ApplyResources(this.notepadTextBox, "notepadTextBox");
             this.notepadTextBox.Name = "notepadTextBox";
-            this.notepadTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.notepadTextBox_KeyUp);
+            this.notepadTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NotepadTextBox_KeyUp);
             // 
             // helpToolTip
             // 
@@ -67,7 +72,7 @@
             this.loadButton.MinimumSize = new System.Drawing.Size(0, 24);
             this.loadButton.Name = "loadButton";
             this.loadButton.UseVisualStyleBackColor = true;
-            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+            this.loadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
             // saveButton
             // 
@@ -76,7 +81,7 @@
             this.saveButton.MinimumSize = new System.Drawing.Size(0, 24);
             this.saveButton.Name = "saveButton";
             this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // clearButton
             // 
@@ -85,7 +90,7 @@
             this.clearButton.MinimumSize = new System.Drawing.Size(0, 24);
             this.clearButton.Name = "clearButton";
             this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // flowLayoutPanel1
             // 

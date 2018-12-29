@@ -1,5 +1,7 @@
-﻿namespace Xtream_ToolBox.Sensors {
-    partial class SensorQuickLaunchPropertyForm {
+﻿namespace Xtream_ToolBox.Sensors
+{
+    partial class SensorQuickLaunchPropertyForm
+    {
         /// <summary>
         /// Variable nécessaire au concepteur.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Nettoyage des ressources utilisées.
         /// </summary>
         /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +26,8 @@
         /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
         /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SensorQuickLaunchPropertyForm));
             this.commentLabel1 = new System.Windows.Forms.Label();
             this.quickLaunchBrowseImageButton = new System.Windows.Forms.Button();
@@ -74,7 +79,7 @@
             this.quickLaunchBrowseButton.Image = global::Xtream_ToolBox.Properties.Resources.folder_open_16;
             this.quickLaunchBrowseButton.Name = "quickLaunchBrowseButton";
             this.quickLaunchBrowseButton.UseVisualStyleBackColor = true;
-            this.quickLaunchBrowseButton.Click += new System.EventHandler(this.quickLaunchBrowseButton_Click);
+            this.quickLaunchBrowseButton.Click += new System.EventHandler(this.QuickLaunchBrowseButton_Click);
             // 
             // quicklaunchPathTextBox
             // 
@@ -102,7 +107,7 @@
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // saveButton
             // 

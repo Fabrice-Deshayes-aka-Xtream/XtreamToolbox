@@ -11,8 +11,10 @@ using System.Globalization;
 using Xtream_ToolBox.Utils;
 using System.IO;
 
-namespace Xtream_ToolBox.Sensors {
-    public partial class SensorStorage : UserControl, ISensor {
+namespace Xtream_ToolBox.Sensors
+{
+    public partial class SensorStorage : UserControl, ISensor
+    {
 
         // reference on toolbox
         private ToolBox toolbox = null;
@@ -25,66 +27,80 @@ namespace Xtream_ToolBox.Sensors {
         public DriveInfo[] allDrives = null;
 
         // constructor
-        public SensorStorage(ToolBox toolbox) {
+        public SensorStorage(ToolBox toolbox)
+        {
             InitializeComponent();
             this.toolbox = toolbox;
             InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form GetExtendedPanel() {
+        public Form GetExtendedPanel()
+        {
             return extendedPanel;
         }
 
         // init sensor data in asynch mode
-        private void InitialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
+        private void InitialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
             InitSensorData();
         }
 
         // after init sensor data, refresh ui
-        private void InitialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
+        private void InitialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
             RefreshUI();
         }
 
         // init UI
-        public void InitUI() {
+        public void InitUI()
+        {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // tips
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
-            if (!initialisationBackgroundWorker.IsBusy) {
+            if (!initialisationBackgroundWorker.IsBusy)
+            {
                 initialisationBackgroundWorker.RunWorkerAsync();
             }
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void InitSensorData() {
+        public void InitSensorData()
+        {
             allDrives = DriveInfo.GetDrives();
         }
 
         // refresh UI based on sensor Data
-        public void RefreshUI() {
+        public void RefreshUI()
+        {
             // nothing to do on this sensor
         }
 
         // update location of extended panel if needed
-        public void UpdateLocation() {
+        public void UpdateLocation()
+        {
             ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
         }
 
-        private void SensorStorage_Click(object sender, EventArgs e) {
-            if ((extendedPanel == null) || (extendedPanel.IsDisposed)) {
+        private void SensorStorage_Click(object sender, EventArgs e)
+        {
+            if ((extendedPanel == null) || (extendedPanel.IsDisposed))
+            {
                 extendedPanel = new SensorStorageExtendedPanel(this);
                 extendedPanel.Init();
             }
 
-            if (extendedPanel.Visible) {
+            if (extendedPanel.Visible)
+            {
                 extendedPanel.Hide();
-            } else {
+            }
+            else
+            {
                 ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
                 extendedPanel.Show();
             }

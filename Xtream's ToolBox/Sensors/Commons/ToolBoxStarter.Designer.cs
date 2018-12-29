@@ -1,5 +1,7 @@
-﻿namespace Xtream_ToolBox {
-    partial class ToolBoxStarter {
+﻿namespace Xtream_ToolBox
+{
+    partial class ToolBoxStarter
+    {
         /// <summary> 
         /// Variable nécessaire au concepteur.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Nettoyage des ressources utilisées.
         /// </summary>
         /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +26,8 @@
         /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
         /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             this.starterPanel = new System.Windows.Forms.Panel();
             this.moveBox = new System.Windows.Forms.PictureBox();
@@ -52,9 +57,9 @@
             this.moveBox.Size = new System.Drawing.Size(16, 48);
             this.moveBox.TabIndex = 4;
             this.moveBox.TabStop = false;
-            this.moveBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseDown);
-            this.moveBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseMove);
-            this.moveBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseUp);
+            this.moveBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseDown);
+            this.moveBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseMove);
+            this.moveBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseUp);
             // 
             // helpToolTip
             // 

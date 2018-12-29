@@ -7,10 +7,12 @@ using System.Net;
 using System.IO;
 using System.Globalization;
 
-namespace Xtream_ToolBox.Sensors {
+namespace Xtream_ToolBox.Sensors
+{
 
     [XmlRoot("response")]
-    public class Weather {
+    public class Weather
+    {
         // http://api.wunderground.com/api/cc9fa911ce5ea9aa/conditions/q/cabourg,%20france.xml
         private const String serviceUrl = "http://api.wunderground.com/api/cc9fa911ce5ea9aa/conditions/q/";
 
@@ -18,14 +20,17 @@ namespace Xtream_ToolBox.Sensors {
         public TWC_CO currentObservation;
 
         // default constructor
-        public Weather() {
+        public Weather()
+        {
         }
 
-        public static Weather GetCurrentConditionWeather(String codeLocation) {
+        public static Weather GetCurrentConditionWeather(String codeLocation)
+        {
             Weather weather = null;
 
-            try {
-                Uri uri = new Uri(serviceUrl + codeLocation+".xml");
+            try
+            {
+                Uri uri = new Uri(serviceUrl + codeLocation + ".xml");
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(Weather));
 
                 WebResponse webResponse = HttpWebRequest.CreateDefault(uri).GetResponse();
@@ -33,13 +38,18 @@ namespace Xtream_ToolBox.Sensors {
                 weather = (Weather)xmlSerializer.Deserialize(stream);
                 stream.Close();
                 webResponse.Close();
-            } catch (InvalidOperationException invalidOperationException) {
+            }
+            catch (InvalidOperationException invalidOperationException)
+            {
                 Console.WriteLine(invalidOperationException.Message);
-            } catch (Exception exception) {
+            }
+            catch (Exception exception)
+            {
                 Console.WriteLine(exception.Message);
             }
 
-            if (weather != null) {
+            if (weather != null)
+            {
                 DateTime.TryParse(weather.currentObservation.time, out weather.currentObservation.timeDT);
                 DateTime.TryParse(weather.currentObservation.lastupdateTime, out weather.currentObservation.lastupdateTimeDT);
             }
@@ -69,7 +79,7 @@ namespace Xtream_ToolBox.Sensors {
         [XmlElement("pressure_mb")]
         public String pressureMb;
         [XmlElement("pressure_trend")]
-        public String pressureTrend;        
+        public String pressureTrend;
 
         [XmlElement("wind_kph")]
         public String windPower;
@@ -85,7 +95,7 @@ namespace Xtream_ToolBox.Sensors {
 
         [XmlElement("icon")]
         public String icon;
-        
+
 
         [XmlElement("display_location")]
         public DisplayLocation displayLocation;

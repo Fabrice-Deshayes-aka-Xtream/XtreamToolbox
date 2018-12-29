@@ -54,8 +54,8 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         private void DrivesComboBox_SelectedIndexChanged(object sender, EventArgs e) {
-            detailStorageUserControl.setDevice((DriveInfo)drivesComboBox.SelectedItem);
-            detailStorageUserControl.updateData();
+            detailStorageUserControl.SetDevice((DriveInfo)drivesComboBox.SelectedItem);
+            detailStorageUserControl.UpdateData();
             detailStorageUserControl.Refresh();
         }
     }

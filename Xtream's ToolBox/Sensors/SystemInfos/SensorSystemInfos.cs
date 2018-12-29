@@ -14,8 +14,10 @@ using System.Globalization;
 using System.Net.Sockets;
 using System.Diagnostics;
 
-namespace Xtream_ToolBox.Sensors {
-    public partial class SensorSystemInfos : UserControl, ISensor {
+namespace Xtream_ToolBox.Sensors
+{
+    public partial class SensorSystemInfos : UserControl, ISensor
+    {
 
         // reference on toolbox
         private ToolBox toolbox = null;
@@ -83,7 +85,8 @@ namespace Xtream_ToolBox.Sensors {
         private Int64 wanNetworkConnectionSpeedUpload = 0;
 
         // constructor
-        public SensorSystemInfos(ToolBox toolbox) {
+        public SensorSystemInfos(ToolBox toolbox)
+        {
             InitializeComponent();
             this.toolbox = toolbox;
             lineHandleRam = c2DPushGraph.AddLine(LINE_RAM, Color.Yellow);
@@ -102,24 +105,28 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form GetExtendedPanel() {
+        public Form GetExtendedPanel()
+        {
             return extendedPanel;
         }
 
         // init sensor data in asynch mode
-        private void InitialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
+        private void InitialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
             InitSensorData();
         }
 
         // after init sensor data, refresh ui
-        private void InitialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
+        private void InitialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
             cpuRamTimer.Enabled = true;
         }
 
         // init UI
-        public void InitUI() {
+        public void InitUI()
+        {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -156,31 +163,40 @@ namespace Xtream_ToolBox.Sensors {
             lanSendRateToolStripMenuItem.Checked = Properties.Settings.Default.lineLanU;
             wanReceivedRateToolStripMenuItem.Checked = Properties.Settings.Default.lineWanD;
             wanSendRateToolStripMenuItem.Checked = Properties.Settings.Default.lineWanU;
-            
-            if (Properties.Settings.Default.sysInfoDisplayMode == 0) {
+
+            if (Properties.Settings.Default.sysInfoDisplayMode == 0)
+            {
                 c2DPushGraph.Visible = true;
                 this.ContextMenuStrip = graphContextMenuStrip;
-            } else {
+            }
+            else
+            {
                 c2DPushGraph.Visible = false;
                 this.ContextMenuStrip = vumeterContextMenuStrip;
             }
 
-            if (!initialisationBackgroundWorker.IsBusy) {
+            if (!initialisationBackgroundWorker.IsBusy)
+            {
                 initialisationBackgroundWorker.RunWorkerAsync();
             }
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void InitSensorData() {
+        public void InitSensorData()
+        {
             // init network value and card
-            if (NetworkInterface.GetIsNetworkAvailable()) {
-                foreach (NetworkInterface myNetworkInterface in NetworkInterface.GetAllNetworkInterfaces()) {
-                    if (myNetworkInterface.GetPhysicalAddress().ToString().Equals(Properties.Settings.Default.networkLanConnexion)) {
+            if (NetworkInterface.GetIsNetworkAvailable())
+            {
+                foreach (NetworkInterface myNetworkInterface in NetworkInterface.GetAllNetworkInterfaces())
+                {
+                    if (myNetworkInterface.GetPhysicalAddress().ToString().Equals(Properties.Settings.Default.networkLanConnexion))
+                    {
                         lanNetworkInterface = myNetworkInterface;
                         lanBitsReceivedOnLastTick = lanNetworkInterface.GetIPv4Statistics().BytesReceived * 8;
                         lanBitsSentOnLastTick = lanNetworkInterface.GetIPv4Statistics().BytesSent * 8;
                     }
-                    if (myNetworkInterface.GetPhysicalAddress().ToString().Equals(Properties.Settings.Default.networkInternetConnexion)) {
+                    if (myNetworkInterface.GetPhysicalAddress().ToString().Equals(Properties.Settings.Default.networkInternetConnexion))
+                    {
                         wanNetworkInterface = myNetworkInterface;
                         wanBitsReceivedOnLastTick = wanNetworkInterface.GetIPv4Statistics().BytesReceived * 8;
                         wanBitsSentOnLastTick = wanNetworkInterface.GetIPv4Statistics().BytesSent * 8;
@@ -195,7 +211,7 @@ namespace Xtream_ToolBox.Sensors {
             lanVumeterD.Visible = (lanNetworkInterface != null);
             lanVumeterU.Visible = (lanNetworkInterface != null);
             */
-             
+
             /*
             wanReceivedRateToolStripMenuItem.Enabled = (wanNetworkInterface != null);
             wanSendRateToolStripMenuItem.Enabled = (wanNetworkInterface != null);
@@ -213,16 +229,20 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // refresh UI based on sensor Data
-        public void RefreshUI() {
+        public void RefreshUI()
+        {
             // set cpu vumeter
             cpuUsed = (Int64)cpu_used_counter.NextValue();
             if (cpuUsed < 0) cpuUsed = 0;
             if (cpuUsed > 100) cpuUsed = 100;
-            if (cpuLineToolStripMenuItem.Checked) {
-                if (Properties.Settings.Default.sysInfoDisplayMode == 1) {
+            if (cpuLineToolStripMenuItem.Checked)
+            {
+                if (Properties.Settings.Default.sysInfoDisplayMode == 1)
+                {
                     cpuVumeter.Width = Convert.ToInt16(cpuUsed / 2);
                 }
-                else {
+                else
+                {
                     c2DPushGraph.Push((int)cpuUsed, LINE_CPU);
                 }
             }
@@ -233,11 +253,14 @@ namespace Xtream_ToolBox.Sensors {
             ramUsed = Convert.ToInt64((ramUsedbyte * 100) / systemInformations.memoryTotalPhysicalMemory);
             if (ramUsed < 0) ramUsed = 0;
             if (ramUsed > 100) ramUsed = 100;
-            if (ramLineToolStripMenuItem.Checked) {
-                if (Properties.Settings.Default.sysInfoDisplayMode == 1) {
+            if (ramLineToolStripMenuItem.Checked)
+            {
+                if (Properties.Settings.Default.sysInfoDisplayMode == 1)
+                {
                     ramVumeter.Width = Convert.ToInt16(ramUsed / 2);
                 }
-                else {
+                else
+                {
                     c2DPushGraph.Push((int)ramUsed, LINE_RAM);
                 }
             }
@@ -247,7 +270,8 @@ namespace Xtream_ToolBox.Sensors {
             Process[] allProcess = Process.GetProcesses();
             int nbTotalThread = 0;
 
-            foreach (Process process in allProcess) {             
+            foreach (Process process in allProcess)
+            {
                 nbTotalThread += process.Threads.Count;
             }
 
@@ -268,8 +292,10 @@ namespace Xtream_ToolBox.Sensors {
             wanVumeterU.Visible = (wanNetworkInterface != null);
 
             // set lan download
-            if ((lanNetworkInterface != null) && (lanReceivedRateToolStripMenuItem.Enabled) && (lanReceivedRateToolStripMenuItem.Checked)) {
-                try {
+            if ((lanNetworkInterface != null) && (lanReceivedRateToolStripMenuItem.Enabled) && (lanReceivedRateToolStripMenuItem.Checked))
+            {
+                try
+                {
                     lanBitsReceived = lanNetworkInterface.GetIPv4Statistics().BytesReceived * 8;
                     lanBitsReceivedSinceLastTick = lanBitsReceived - lanBitsReceivedOnLastTick;
                     lanBitsReceivedOnLastTick = lanBitsReceived;
@@ -278,29 +304,37 @@ namespace Xtream_ToolBox.Sensors {
                     lanBusyRateByPercent = (Int64)((lanBitsReceivedBySecond * 100) / lanNetworkConnectionSpeed);
                     if (lanBusyRateByPercent < 0) lanBusyRateByPercent = 0;
                     if (lanBusyRateByPercent > 100) lanBusyRateByPercent = 100;
-                    if (Properties.Settings.Default.sysInfoDisplayMode == 1) {
-                        try {
+                    if (Properties.Settings.Default.sysInfoDisplayMode == 1)
+                    {
+                        try
+                        {
                             lanVumeterD.Width = Convert.ToInt16(lanBusyRateByPercent / 2);
                         }
-                        catch (Exception e) {
+                        catch (Exception e)
+                        {
                             lanVumeterD.Width = 0;
                             MessageBox.Show("Problem on lanVumeter.Width. busyRateByPercent=" + lanBusyRateByPercent.ToString() + " / " + e.Message);
                         }
                     }
-                    else {
+                    else
+                    {
                         c2DPushGraph.Push((int)lanBusyRateByPercent, LINE_LAN_D);
                     }
                 }
-                catch (NetworkInformationException networkInformationException) {
+                catch (NetworkInformationException networkInformationException)
+                {
                     Console.WriteLine(networkInformationException);
                 }
-                catch (SocketException socketException) {
+                catch (SocketException socketException)
+                {
                     Console.WriteLine(socketException);
                 }
             }
             // set lan upload
-            if ((lanNetworkInterface != null) && (lanSendRateToolStripMenuItem.Enabled) && (lanSendRateToolStripMenuItem.Checked)) {
-                try {
+            if ((lanNetworkInterface != null) && (lanSendRateToolStripMenuItem.Enabled) && (lanSendRateToolStripMenuItem.Checked))
+            {
+                try
+                {
                     lanBitsSent = lanNetworkInterface.GetIPv4Statistics().BytesSent * 8;
                     lanBitsSentSinceLastTick = lanBitsSent - lanBitsSentOnLastTick;
                     lanBitsSentOnLastTick = lanBitsSent;
@@ -309,28 +343,38 @@ namespace Xtream_ToolBox.Sensors {
                     lanBusyRateByPercent = (Int64)((lanBitsSentBySecond * 100) / lanNetworkConnectionSpeed);
                     if (lanBusyRateByPercent < 0) lanBusyRateByPercent = 0;
                     if (lanBusyRateByPercent > 100) lanBusyRateByPercent = 100;
-                    if (Properties.Settings.Default.sysInfoDisplayMode == 1) {
-                        try {
+                    if (Properties.Settings.Default.sysInfoDisplayMode == 1)
+                    {
+                        try
+                        {
                             lanVumeterU.Width = Convert.ToInt16(lanBusyRateByPercent / 2);
                         }
-                        catch (Exception e) {
+                        catch (Exception e)
+                        {
                             lanVumeterU.Width = 0;
                             MessageBox.Show("Problem on lanVumeter.Width. busyRateByPercent=" + lanBusyRateByPercent.ToString() + " / " + e.Message);
                         }
                     }
-                    else {
+                    else
+                    {
                         c2DPushGraph.Push((int)lanBusyRateByPercent, LINE_LAN_U);
                     }
-                } catch (NetworkInformationException networkInformationException) {
+                }
+                catch (NetworkInformationException networkInformationException)
+                {
                     Console.WriteLine(networkInformationException);
-                } catch (SocketException socketException) {
+                }
+                catch (SocketException socketException)
+                {
                     Console.WriteLine(socketException);
                 }
             }
 
             // set wan download
-            if ((wanNetworkInterface != null) && (wanReceivedRateToolStripMenuItem.Enabled) && (wanReceivedRateToolStripMenuItem.Checked)){
-                try {
+            if ((wanNetworkInterface != null) && (wanReceivedRateToolStripMenuItem.Enabled) && (wanReceivedRateToolStripMenuItem.Checked))
+            {
+                try
+                {
                     wanBitsReceived = wanNetworkInterface.GetIPv4Statistics().BytesReceived * 8;
                     wanBitsReceivedSinceLastTick = wanBitsReceived - wanBitsReceivedOnLastTick;
                     wanBitsReceivedOnLastTick = wanBitsReceived;
@@ -341,30 +385,38 @@ namespace Xtream_ToolBox.Sensors {
                     if (wanBusyRateByPercent < 0) wanBusyRateByPercent = 0;
                     if (wanBusyRateByPercent > 100) wanBusyRateByPercent = 100;
 
-                    if (Properties.Settings.Default.sysInfoDisplayMode == 1) {
-                        try {
+                    if (Properties.Settings.Default.sysInfoDisplayMode == 1)
+                    {
+                        try
+                        {
                             wanVumeterD.Width = Convert.ToInt16(wanBusyRateByPercent / 2);
                         }
-                        catch (Exception e) {
+                        catch (Exception e)
+                        {
                             wanVumeterD.Width = 0;
                             MessageBox.Show("Problem on wanVumeter.Width. busyRateByPercent=" + wanBusyRateByPercent.ToString() + " / " + e.Message);
                         }
                     }
-                    else {
+                    else
+                    {
                         c2DPushGraph.Push((int)wanBusyRateByPercent, LINE_WAN_D);
                     }
                 }
-                catch (NetworkInformationException networkInformationException) {
+                catch (NetworkInformationException networkInformationException)
+                {
                     Console.WriteLine(networkInformationException);
                 }
-                catch (SocketException socketException) {
+                catch (SocketException socketException)
+                {
                     Console.WriteLine(socketException);
                 }
             }
 
             // set wan upload
-            if ((wanNetworkInterface != null) && (wanSendRateToolStripMenuItem.Enabled) && (wanSendRateToolStripMenuItem.Checked)) {
-                try {
+            if ((wanNetworkInterface != null) && (wanSendRateToolStripMenuItem.Enabled) && (wanSendRateToolStripMenuItem.Checked))
+            {
+                try
+                {
                     wanBitsSent = wanNetworkInterface.GetIPv4Statistics().BytesSent * 8;
                     wanBitsSentSinceLastTick = wanBitsSent - wanBitsSentOnLastTick;
                     wanBitsSentOnLastTick = wanBitsSent;
@@ -373,111 +425,138 @@ namespace Xtream_ToolBox.Sensors {
                     wanBusyRateByPercent = (Int64)((wanBitsSentBySecond * 100) / wanNetworkConnectionSpeedUpload);
                     if (wanBusyRateByPercent < 0) wanBusyRateByPercent = 0;
                     if (wanBusyRateByPercent > 100) wanBusyRateByPercent = 100;
-                    if (Properties.Settings.Default.sysInfoDisplayMode == 1) {
-                        try {
+                    if (Properties.Settings.Default.sysInfoDisplayMode == 1)
+                    {
+                        try
+                        {
                             wanVumeterU.Width = Convert.ToInt16(wanBusyRateByPercent / 2);
                         }
-                        catch (Exception e) {
+                        catch (Exception e)
+                        {
                             wanVumeterU.Width = 0;
                             MessageBox.Show("Problem on wanVumeter.Width. busyRateByPercent=" + wanBusyRateByPercent.ToString() + " / " + e.Message);
                         }
                     }
-                    else {
+                    else
+                    {
                         c2DPushGraph.Push((int)wanBusyRateByPercent, LINE_WAN_U);
                     }
-                } catch (NetworkInformationException networkInformationException) {
+                }
+                catch (NetworkInformationException networkInformationException)
+                {
                     Console.WriteLine(networkInformationException);
-                } catch (SocketException socketException) {
+                }
+                catch (SocketException socketException)
+                {
                     Console.WriteLine(socketException);
                 }
             }
 
             // set extendedPanel cpu & ram infos
-            if ((extendedPanel!=null) && (!extendedPanel.IsDisposed) && (extendedPanel.Visible)) {
+            if ((extendedPanel != null) && (!extendedPanel.IsDisposed) && (extendedPanel.Visible))
+            {
                 extendedPanel.RefreshSystemInformation(ramUsedStr, cpuUsedStr, processAndThreadStr);
             }
 
-            if (Properties.Settings.Default.sysInfoDisplayMode == 0) {
+            if (Properties.Settings.Default.sysInfoDisplayMode == 0)
+            {
                 c2DPushGraph.UpdateGraph();
             }
         }
 
         // update location of extended panel if needed
-        public void UpdateLocation() {
+        public void UpdateLocation()
+        {
             ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
         }
 
         // processing on each timer tick
-        private void CpuRamTimer_Tick(object sender, EventArgs e) {
+        private void CpuRamTimer_Tick(object sender, EventArgs e)
+        {
             RefreshUI();
         }
 
         // Open or closed more infos panel
-        private void SensorSystemInfos_Click(object sender, EventArgs e) {
-            if ((extendedPanel == null) || (extendedPanel.IsDisposed)) {
+        private void SensorSystemInfos_Click(object sender, EventArgs e)
+        {
+            if ((extendedPanel == null) || (extendedPanel.IsDisposed))
+            {
                 extendedPanel = new SensorSystemInfosMore(this);
                 extendedPanel.Initialisation();
                 extendedPanel.RefreshSystemInformation("", "", "");
             }
 
-            if (extendedPanel.Visible) {
+            if (extendedPanel.Visible)
+            {
                 extendedPanel.Hide();
-            } else {
+            }
+            else
+            {
                 ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
                 extendedPanel.Show();
             }
         }
 
-        private void CpuLineToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void CpuLineToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
             lineHandleCpu.Visible = cpuLineToolStripMenuItem.Checked;
             Properties.Settings.Default.lineCpu = cpuLineToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
         }
 
-        private void RamLineToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void RamLineToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
             lineHandleRam.Visible = ramLineToolStripMenuItem.Checked;
             Properties.Settings.Default.lineRam = ramLineToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
         }
 
-        private void LanReceivedRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void LanReceivedRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
             lineHandleLanD.Visible = lanReceivedRateToolStripMenuItem.Checked;
             Properties.Settings.Default.lineLanD = lanReceivedRateToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
             if (lanNetworkInterface != null) lanBitsReceivedOnLastTick = lanNetworkInterface.GetIPv4Statistics().BytesReceived * 8;
         }
 
-        private void LanSendRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void LanSendRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
             lineHandleLanU.Visible = lanSendRateToolStripMenuItem.Checked;
             Properties.Settings.Default.lineLanU = lanSendRateToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
             if (lanNetworkInterface != null) lanBitsSentOnLastTick = lanNetworkInterface.GetIPv4Statistics().BytesSent * 8;
         }
 
-        private void WanReceivedRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void WanReceivedRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
             lineHandleWanD.Visible = wanReceivedRateToolStripMenuItem.Checked;
             Properties.Settings.Default.lineWanD = wanReceivedRateToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
-            if (wanNetworkInterface!=null) wanBitsReceivedOnLastTick = wanNetworkInterface.GetIPv4Statistics().BytesReceived * 8;
+            if (wanNetworkInterface != null) wanBitsReceivedOnLastTick = wanNetworkInterface.GetIPv4Statistics().BytesReceived * 8;
         }
 
-        private void WanSendRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void WanSendRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
             lineHandleWanU.Visible = wanSendRateToolStripMenuItem.Checked;
             Properties.Settings.Default.lineWanU = wanSendRateToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
-            if (wanNetworkInterface!=null) wanBitsSentOnLastTick = wanNetworkInterface.GetIPv4Statistics().BytesSent * 8;
+            if (wanNetworkInterface != null) wanBitsSentOnLastTick = wanNetworkInterface.GetIPv4Statistics().BytesSent * 8;
         }
 
-        private void SwitchToGraphModeToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void SwitchToGraphModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             SwitchDisplayMode(MODE_GRAPH);
         }
 
-        private void SwithToVumeterToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void SwithToVumeterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             SwitchDisplayMode(MODE_VUMETERS);
         }
 
-        private void SwitchDisplayMode(int mode) {
-            if (mode == MODE_GRAPH) {
+        private void SwitchDisplayMode(int mode)
+        {
+            if (mode == MODE_GRAPH)
+            {
                 // graph mode
                 c2DPushGraph.Visible = true;
                 this.ContextMenuStrip = graphContextMenuStrip;
@@ -493,7 +572,9 @@ namespace Xtream_ToolBox.Sensors {
                 cpuVumeter.Visible = false;
                 ramVumeterBg.Visible = false;
                 ramVumeter.Visible = false;
-            } else {
+            }
+            else
+            {
                 // vu meter mode
                 c2DPushGraph.Visible = false;
                 this.ContextMenuStrip = vumeterContextMenuStrip;

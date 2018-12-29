@@ -17,7 +17,8 @@
  * -> replace obsolete code for .NET V2 on VS 2005 Express
  */
 
-namespace TimeSync {
+namespace TimeSync
+{
     using System;
     using System.Net;
     using System.Net.Sockets;
@@ -25,7 +26,8 @@ namespace TimeSync {
     using Xtream_ToolBox;
 
     // Leap indicator field values
-    public enum _LeapIndicator {
+    public enum _LeapIndicator
+    {
         NoWarning,		// 0 - No warning
         LastMinute61,	// 1 - Last minute has 61 seconds
         LastMinute59,	// 2 - Last minute has 59 seconds
@@ -33,7 +35,8 @@ namespace TimeSync {
     }
 
     //Mode field values
-    public enum _Mode {
+    public enum _Mode
+    {
         SymmetricActive,	// 1 - Symmetric active
         SymmetricPassive,	// 2 - Symmetric pasive
         Client,				// 3 - Client
@@ -43,7 +46,8 @@ namespace TimeSync {
     }
 
     // Stratum field values
-    public enum _Stratum {
+    public enum _Stratum
+    {
         Unspecified,			// 0 - unspecified or unavailable
         PrimaryReference,		// 1 - primary reference (e.g. radio-clock)
         SecondaryReference,		// 2-15 - secondary reference (via NTP or SNTP)
@@ -149,7 +153,8 @@ namespace TimeSync {
     /// 
     /// </summary>
 
-    public class NTPClient {
+    public class NTPClient
+    {
         // NTP Data Structure Length
         private const byte NTPDataLength = 48;
         // NTP Data Structure (as described in RFC 2030)
@@ -186,11 +191,14 @@ namespace TimeSync {
         // end SYSTEMTIME
 
         // Leap Indicator
-        public _LeapIndicator LeapIndicator {
-            get {
+        public _LeapIndicator LeapIndicator
+        {
+            get
+            {
                 // Isolate the two most significant bits
                 byte val = (byte)(NTPData[0] >> 6);
-                switch (val) {
+                switch (val)
+                {
                     case 0: return _LeapIndicator.NoWarning;
                     case 1: return _LeapIndicator.LastMinute61;
                     case 2: return _LeapIndicator.LastMinute59;
@@ -202,8 +210,10 @@ namespace TimeSync {
         }
 
         // Version Number
-        public byte VersionNumber {
-            get {
+        public byte VersionNumber
+        {
+            get
+            {
                 // Isolate bits 3 - 5
                 byte val = (byte)((NTPData[0] & 0x38) >> 3);
                 return val;
@@ -211,11 +221,14 @@ namespace TimeSync {
         }
 
         // Mode
-        public _Mode Mode {
-            get {
+        public _Mode Mode
+        {
+            get
+            {
                 // Isolate bits 0 - 3
                 byte val = (byte)(NTPData[0] & 0x7);
-                switch (val) {
+                switch (val)
+                {
                     case 0: goto default;
                     case 6: goto default;
                     case 7: goto default;
@@ -236,36 +249,44 @@ namespace TimeSync {
         }
 
         // Stratum
-        public _Stratum Stratum {
-            get {
+        public _Stratum Stratum
+        {
+            get
+            {
                 byte val = (byte)NTPData[1];
                 if (val == 0) return _Stratum.Unspecified;
                 else
                     if (val == 1) return _Stratum.PrimaryReference;
-                    else
+                else
                         if (val <= 15) return _Stratum.SecondaryReference;
-                        else
-                            return _Stratum.Reserved;
+                else
+                    return _Stratum.Reserved;
             }
         }
 
         // Poll Interval
-        public uint PollInterval {
-            get {
+        public uint PollInterval
+        {
+            get
+            {
                 return (uint)Math.Round(Math.Pow(2, NTPData[2]));
             }
         }
 
         // Precision (in milliseconds)
-        public double Precision {
-            get {
+        public double Precision
+        {
+            get
+            {
                 return (1000 * Math.Pow(2, NTPData[3]));
             }
         }
 
         // Root Delay (in milliseconds)
-        public double RootDelay {
-            get {
+        public double RootDelay
+        {
+            get
+            {
                 int temp = 0;
                 temp = 256 * (256 * (256 * NTPData[4] + NTPData[5]) + NTPData[6]) + NTPData[7];
                 return 1000 * (((double)temp) / 0x10000);
@@ -273,8 +294,10 @@ namespace TimeSync {
         }
 
         // Root Dispersion (in milliseconds)
-        public double RootDispersion {
-            get {
+        public double RootDispersion
+        {
+            get
+            {
                 int temp = 0;
                 temp = 256 * (256 * (256 * NTPData[8] + NTPData[9]) + NTPData[10]) + NTPData[11];
                 return 1000 * (((double)temp) / 0x10000);
@@ -282,10 +305,13 @@ namespace TimeSync {
         }
 
         // Reference Identifier
-        public string ReferenceID {
-            get {
+        public string ReferenceID
+        {
+            get
+            {
                 string val = "";
-                switch (Stratum) {
+                switch (Stratum)
+                {
                     case _Stratum.Unspecified:
                         goto case _Stratum.PrimaryReference;
                     case _Stratum.PrimaryReference:
@@ -295,16 +321,20 @@ namespace TimeSync {
                         val += (char)NTPData[offReferenceID + 3];
                         break;
                     case _Stratum.SecondaryReference:
-                        switch (VersionNumber) {
+                        switch (VersionNumber)
+                        {
                             case 3:	// Version 3, Reference ID is an IPv4 address
                                 string Address = NTPData[offReferenceID + 0].ToString() + "." +
                                                  NTPData[offReferenceID + 1].ToString() + "." +
                                                  NTPData[offReferenceID + 2].ToString() + "." +
                                                  NTPData[offReferenceID + 3].ToString();
-                                try {
+                                try
+                                {
                                     IPHostEntry Host = Dns.GetHostEntry(Address);
                                     val = Host.HostName + " (" + Address + ")";
-                                } catch (Exception) {
+                                }
+                                catch (Exception)
+                                {
                                     val = "N/A";
                                 }
                                 break;
@@ -326,8 +356,10 @@ namespace TimeSync {
         }
 
         // Reference Timestamp
-        public DateTime ReferenceTimestamp {
-            get {
+        public DateTime ReferenceTimestamp
+        {
+            get
+            {
                 DateTime time = ComputeDate(GetMilliSeconds(offReferenceTimestamp));
                 // Take care of the time zone
                 TimeSpan offspan = TimeZone.CurrentTimeZone.GetUtcOffset(DateTime.Now);
@@ -336,15 +368,19 @@ namespace TimeSync {
         }
 
         // Originate Timestamp
-        public DateTime OriginateTimestamp {
-            get {
+        public DateTime OriginateTimestamp
+        {
+            get
+            {
                 return ComputeDate(GetMilliSeconds(offOriginateTimestamp));
             }
         }
 
         // Receive Timestamp
-        public DateTime ReceiveTimestamp {
-            get {
+        public DateTime ReceiveTimestamp
+        {
+            get
+            {
                 DateTime time = ComputeDate(GetMilliSeconds(offReceiveTimestamp));
                 // Take care of the time zone
                 TimeSpan offspan = TimeZone.CurrentTimeZone.GetUtcOffset(DateTime.Now);
@@ -353,14 +389,17 @@ namespace TimeSync {
         }
 
         // Transmit Timestamp
-        public DateTime TransmitTimestamp {
-            get {
+        public DateTime TransmitTimestamp
+        {
+            get
+            {
                 DateTime time = ComputeDate(GetMilliSeconds(offTransmitTimestamp));
                 // Take care of the time zone
                 TimeSpan offspan = TimeZone.CurrentTimeZone.GetUtcOffset(DateTime.Now);
                 return time + offspan;
             }
-            set {
+            set
+            {
                 SetDate(offTransmitTimestamp, value);
             }
         }
@@ -369,23 +408,28 @@ namespace TimeSync {
         public DateTime ReceptionTimestamp;
 
         // Round trip delay (in milliseconds)
-        public int RoundTripDelay {
-            get {
+        public int RoundTripDelay
+        {
+            get
+            {
                 TimeSpan span = (ReceiveTimestamp - OriginateTimestamp) + (ReceptionTimestamp - TransmitTimestamp);
                 return (int)span.TotalMilliseconds;
             }
         }
 
         // Local clock offset (in milliseconds)
-        public int LocalClockOffset {
-            get {
+        public int LocalClockOffset
+        {
+            get
+            {
                 TimeSpan span = (ReceiveTimestamp - OriginateTimestamp) - (ReceptionTimestamp - TransmitTimestamp);
                 return (int)(span.TotalMilliseconds / 2);
             }
         }
 
         // Compute date, given the number of milliseconds since January 1, 1900
-        private DateTime ComputeDate(ulong milliseconds) {
+        private DateTime ComputeDate(ulong milliseconds)
+        {
             TimeSpan span = TimeSpan.FromMilliseconds((double)milliseconds);
             DateTime time = new DateTime(1900, 1, 1);
             time += span;
@@ -393,13 +437,16 @@ namespace TimeSync {
         }
 
         // Compute the number of milliseconds, given the offset of a 8-byte array
-        private ulong GetMilliSeconds(byte offset) {
+        private ulong GetMilliSeconds(byte offset)
+        {
             ulong intpart = 0, fractpart = 0;
 
-            for (int i = 0; i <= 3; i++) {
+            for (int i = 0; i <= 3; i++)
+            {
                 intpart = 256 * intpart + NTPData[offset + i];
             }
-            for (int i = 4; i <= 7; i++) {
+            for (int i = 4; i <= 7; i++)
+            {
                 fractpart = 256 * fractpart + NTPData[offset + i];
             }
             ulong milliseconds = intpart * 1000 + (fractpart * 1000) / 0x100000000L;
@@ -407,7 +454,8 @@ namespace TimeSync {
         }
 
         // Compute the 8-byte array, given the date
-        private void SetDate(byte offset, DateTime date) {
+        private void SetDate(byte offset, DateTime date)
+        {
             ulong intpart = 0, fractpart = 0;
             DateTime StartOfCentury = new DateTime(1900, 1, 1, 0, 0, 0);	// January 1, 1900 12:00 AM
 
@@ -416,37 +464,44 @@ namespace TimeSync {
             fractpart = ((milliseconds % 1000) * 0x100000000L) / 1000;
 
             ulong temp = intpart;
-            for (int i = 3; i >= 0; i--) {
+            for (int i = 3; i >= 0; i--)
+            {
                 NTPData[offset + i] = (byte)(temp % 256);
                 temp = temp / 256;
             }
 
             temp = fractpart;
-            for (int i = 7; i >= 4; i--) {
+            for (int i = 7; i >= 4; i--)
+            {
                 NTPData[offset + i] = (byte)(temp % 256);
                 temp = temp / 256;
             }
         }
 
         // Initialize the NTPClient data
-        private void Initialize() {
+        private void Initialize()
+        {
             // Set version number to 4 and Mode to 3 (client)
             NTPData[0] = 0x1B;
             // Initialize all other fields with 0
-            for (int i = 1; i < 48; i++) {
+            for (int i = 1; i < 48; i++)
+            {
                 NTPData[i] = 0;
             }
             // Initialize the transmit timestamp
             TransmitTimestamp = DateTime.Now;
         }
 
-        public NTPClient(string host) {
+        public NTPClient(string host)
+        {
             TimeServer = host;
         }
 
         // Connect to the time server and update system time
-        public void Connect(bool UpdateSystemTime) {
-            try {
+        public void Connect(bool UpdateSystemTime)
+        {
+            try
+            {
                 // Resolve server address
                 IPHostEntry hostadd = Dns.GetHostEntry(TimeServer);
                 IPEndPoint EPhost = new IPEndPoint(hostadd.AddressList[0], 123);
@@ -460,35 +515,45 @@ namespace TimeSync {
                 TimeSocket.Send(NTPData, NTPData.Length);
                 NTPData = TimeSocket.Receive(ref EPhost);
                 TimeSocket.Close();
-                if (!IsResponseValid()) {
+                if (!IsResponseValid())
+                {
                     throw new Exception("Invalid response from " + TimeServer);
                 }
                 ReceptionTimestamp = DateTime.Now;
-            } catch (SocketException e) {
+            }
+            catch (SocketException e)
+            {
                 throw new Exception(e.Message);
             }
 
             // Update system time
-            if (UpdateSystemTime) {
+            if (UpdateSystemTime)
+            {
                 SetTime();
             }
         }
 
         // Check if the response from server is valid
-        public bool IsResponseValid() {
-            if (NTPData.Length < NTPDataLength || Mode != _Mode.Server) {
+        public bool IsResponseValid()
+        {
+            if (NTPData.Length < NTPDataLength || Mode != _Mode.Server)
+            {
                 return false;
-            } else {
+            }
+            else
+            {
                 return true;
             }
         }
 
         // Converts the object to string
-        public override string ToString() {
+        public override string ToString()
+        {
             string str;
 
             str = "Leap Indicator: ";
-            switch (LeapIndicator) {
+            switch (LeapIndicator)
+            {
                 case _LeapIndicator.NoWarning:
                     str += "No warning";
                     break;
@@ -504,7 +569,8 @@ namespace TimeSync {
             }
             str += "\r\nVersion number: " + VersionNumber.ToString() + "\r\n";
             str += "Mode: ";
-            switch (Mode) {
+            switch (Mode)
+            {
                 case _Mode.Unknown:
                     str += "Unknown";
                     break;
@@ -525,7 +591,8 @@ namespace TimeSync {
                     break;
             }
             str += "\r\nStratum: ";
-            switch (Stratum) {
+            switch (Stratum)
+            {
                 case _Stratum.Unspecified:
                 case _Stratum.Reserved:
                     str += "Unspecified";
@@ -550,7 +617,8 @@ namespace TimeSync {
         }
 
         // Set system time according to transmit timestamp
-        private void SetTime() {
+        private void SetTime()
+        {
             SYSTEMTIME st;
 
             DateTime trts = TransmitTimestamp;

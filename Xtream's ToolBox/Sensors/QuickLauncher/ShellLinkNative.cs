@@ -22,10 +22,12 @@ using System;
 using System.Text;
 using System.Runtime.InteropServices;
 
-namespace MSjogren.Samples.ShellLink {
+namespace MSjogren.Samples.ShellLink
+{
     // IShellLink.Resolve fFlags
     [Flags()]
-    public enum SLR_FLAGS {
+    public enum SLR_FLAGS
+    {
         SLR_NO_UI = 0x1,
         SLR_ANY_MATCH = 0x2,
         SLR_UPDATE = 0x4,
@@ -38,14 +40,16 @@ namespace MSjogren.Samples.ShellLink {
 
     // IShellLink.GetPath fFlags
     [Flags()]
-    public enum SLGP_FLAGS {
+    public enum SLGP_FLAGS
+    {
         SLGP_SHORTPATH = 0x1,
         SLGP_UNCPRIORITY = 0x2,
         SLGP_RAWPATH = 0x4
     }
 
     [StructLayoutAttribute(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-    public struct WIN32_FIND_DATAA {
+    public struct WIN32_FIND_DATAA
+    {
         public int dwFileAttributes;
         public System.Runtime.InteropServices.ComTypes.FILETIME ftCreationTime;
         public System.Runtime.InteropServices.ComTypes.FILETIME ftLastAccessTime;
@@ -62,7 +66,8 @@ namespace MSjogren.Samples.ShellLink {
     }
 
     [StructLayoutAttribute(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
-    public struct WIN32_FIND_DATAW {
+    public struct WIN32_FIND_DATAW
+    {
         public int dwFileAttributes;
         public System.Runtime.InteropServices.ComTypes.FILETIME ftCreationTime;
         public System.Runtime.InteropServices.ComTypes.FILETIME ftLastAccessTime;
@@ -83,7 +88,8 @@ namespace MSjogren.Samples.ShellLink {
       InterfaceType(ComInterfaceType.InterfaceIsIUnknown),
       Guid("0000010B-0000-0000-C000-000000000046")
     ]
-    public interface IPersistFile {
+    public interface IPersistFile
+    {
         #region Methods inherited from IPersist
 
         void GetClassID(
@@ -115,7 +121,8 @@ namespace MSjogren.Samples.ShellLink {
       InterfaceType(ComInterfaceType.InterfaceIsIUnknown),
       Guid("000214EE-0000-0000-C000-000000000046")
     ]
-    public interface IShellLinkA {
+    public interface IShellLinkA
+    {
         void GetPath(
           [Out(), MarshalAs(UnmanagedType.LPStr)] StringBuilder pszFile,
           int cchMaxPath,
@@ -188,7 +195,8 @@ namespace MSjogren.Samples.ShellLink {
       InterfaceType(ComInterfaceType.InterfaceIsIUnknown),
       Guid("000214F9-0000-0000-C000-000000000046")
     ]
-    public interface IShellLinkW {
+    public interface IShellLinkW
+    {
         void GetPath(
           [Out(), MarshalAs(UnmanagedType.LPWStr)] StringBuilder pszFile,
           int cchMaxPath,

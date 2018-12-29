@@ -1,5 +1,7 @@
-﻿namespace Xtream_ToolBox.Sensors {
-    partial class SensorMyComputer {
+﻿namespace Xtream_ToolBox.Sensors
+{
+    partial class SensorMyComputer
+    {
         /// <summary> 
         /// Variable nécessaire au concepteur.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Nettoyage des ressources utilisées.
         /// </summary>
         /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +26,8 @@
         /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
         /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SensorMyComputer));
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -75,7 +80,7 @@
             this.openControlPanelToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_ControlPanel;
             this.openControlPanelToolStripMenuItem.Name = "openControlPanelToolStripMenuItem";
             this.openControlPanelToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.openControlPanelToolStripMenuItem.Click += new System.EventHandler(this.openControlPanelToolStripMenuItem_Click);
+            this.openControlPanelToolStripMenuItem.Click += new System.EventHandler(this.OpenControlPanelToolStripMenuItem_Click);
             // 
             // addOrRemoveProgramToolStripMenuItem
             // 
@@ -86,7 +91,7 @@
             this.addOrRemoveProgramToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_AddOrRemovePrograms;
             this.addOrRemoveProgramToolStripMenuItem.Name = "addOrRemoveProgramToolStripMenuItem";
             this.addOrRemoveProgramToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.addOrRemoveProgramToolStripMenuItem.Click += new System.EventHandler(this.addOrRemoveProgramToolStripMenuItem_Click);
+            this.addOrRemoveProgramToolStripMenuItem.Click += new System.EventHandler(this.AddOrRemoveProgramToolStripMenuItem_Click);
             // 
             // systemPropertiesToolStripMenuItem
             // 
@@ -97,7 +102,7 @@
             this.systemPropertiesToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_SystemProperties;
             this.systemPropertiesToolStripMenuItem.Name = "systemPropertiesToolStripMenuItem";
             this.systemPropertiesToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.systemPropertiesToolStripMenuItem.Click += new System.EventHandler(this.systemPropertiesToolStripMenuItem_Click);
+            this.systemPropertiesToolStripMenuItem.Click += new System.EventHandler(this.SystemPropertiesToolStripMenuItem_Click);
             // 
             // viewDisplayAndDesktopPropertiesToolStripMenuItem
             // 
@@ -108,7 +113,7 @@
             this.viewDisplayAndDesktopPropertiesToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_DisplayAndDesktopProperties;
             this.viewDisplayAndDesktopPropertiesToolStripMenuItem.Name = "viewDisplayAndDesktopPropertiesToolStripMenuItem";
             this.viewDisplayAndDesktopPropertiesToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.viewDisplayAndDesktopPropertiesToolStripMenuItem.Click += new System.EventHandler(this.viewDisplayAndDesktopPropertiesToolStripMenuItem_Click);
+            this.viewDisplayAndDesktopPropertiesToolStripMenuItem.Click += new System.EventHandler(this.ViewDisplayAndDesktopPropertiesToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -126,7 +131,7 @@
             this.microsoftUpdateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_MicrosoftUpdate;
             this.microsoftUpdateToolStripMenuItem.Name = "microsoftUpdateToolStripMenuItem";
             this.microsoftUpdateToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.microsoftUpdateToolStripMenuItem.Click += new System.EventHandler(this.microsoftUpdateToolStripMenuItem_Click);
+            this.microsoftUpdateToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftUpdateToolStripMenuItem_Click);
             // 
             // windowsUpdateToolStripMenuItem
             // 
@@ -137,7 +142,7 @@
             this.windowsUpdateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_WindowsUpdate;
             this.windowsUpdateToolStripMenuItem.Name = "windowsUpdateToolStripMenuItem";
             this.windowsUpdateToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.windowsUpdateToolStripMenuItem.Click += new System.EventHandler(this.windowsUpdateToolStripMenuItem_Click);
+            this.windowsUpdateToolStripMenuItem.Click += new System.EventHandler(this.WindowsUpdateToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -155,7 +160,7 @@
             this.microsoftManagmentConsoleMMCToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_MMC;
             this.microsoftManagmentConsoleMMCToolStripMenuItem.Name = "microsoftManagmentConsoleMMCToolStripMenuItem";
             this.microsoftManagmentConsoleMMCToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.microsoftManagmentConsoleMMCToolStripMenuItem.Click += new System.EventHandler(this.microsoftManagmentConsoleMMCToolStripMenuItem_Click);
+            this.microsoftManagmentConsoleMMCToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftManagmentConsoleMMCToolStripMenuItem_Click);
             // 
             // servicesManagementToolStripMenuItem
             // 
@@ -166,7 +171,7 @@
             this.servicesManagementToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_ServicesManagment;
             this.servicesManagementToolStripMenuItem.Name = "servicesManagementToolStripMenuItem";
             this.servicesManagementToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.servicesManagementToolStripMenuItem.Click += new System.EventHandler(this.servicesManagementToolStripMenuItem_Click);
+            this.servicesManagementToolStripMenuItem.Click += new System.EventHandler(this.ServicesManagementToolStripMenuItem_Click);
             // 
             // eventsViewerToolStripMenuItem
             // 
@@ -177,7 +182,7 @@
             this.eventsViewerToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_EventsViewer;
             this.eventsViewerToolStripMenuItem.Name = "eventsViewerToolStripMenuItem";
             this.eventsViewerToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.eventsViewerToolStripMenuItem.Click += new System.EventHandler(this.eventsViewerToolStripMenuItem_Click);
+            this.eventsViewerToolStripMenuItem.Click += new System.EventHandler(this.EventsViewerToolStripMenuItem_Click);
             // 
             // defraToolStripMenuItem
             // 
@@ -188,7 +193,7 @@
             this.defraToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_DiskDefragmenter;
             this.defraToolStripMenuItem.Name = "defraToolStripMenuItem";
             this.defraToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.defraToolStripMenuItem.Click += new System.EventHandler(this.defraToolStripMenuItem_Click);
+            this.defraToolStripMenuItem.Click += new System.EventHandler(this.DefraToolStripMenuItem_Click);
             // 
             // helpToolTip
             // 

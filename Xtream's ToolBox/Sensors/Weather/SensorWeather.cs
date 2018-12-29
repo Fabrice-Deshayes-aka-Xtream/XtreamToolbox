@@ -12,8 +12,10 @@ using System.Threading;
 using System.Globalization;
 using System.Resources;
 
-namespace Xtream_ToolBox.Sensors {
-    public partial class SensorWeather : UserControl, ISensor {
+namespace Xtream_ToolBox.Sensors
+{
+    public partial class SensorWeather : UserControl, ISensor
+    {
 
         // reference on toolbox
         public ToolBox toolbox = null;
@@ -27,31 +29,36 @@ namespace Xtream_ToolBox.Sensors {
         public Weather currentWeather = null;
 
         // constructor
-        public SensorWeather(ToolBox toolbox) {
+        public SensorWeather(ToolBox toolbox)
+        {
             InitializeComponent();
             this.toolbox = toolbox;
             InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form GetExtendedPanel() {
+        public Form GetExtendedPanel()
+        {
             return extendedPanel;
         }
 
         // init sensor data in asynch mode
-        private void InitialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
+        private void InitialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
             InitSensorData();
         }
 
         // after init sensor data, refresh ui
-        private void InitialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
+        private void InitialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
             RefreshUI();
         }
 
         // init UI
-        public void InitUI() {
+        public void InitUI()
+        {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -64,70 +71,87 @@ namespace Xtream_ToolBox.Sensors {
 
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
-            if (!initialisationBackgroundWorker.IsBusy) {
+            if (!initialisationBackgroundWorker.IsBusy)
+            {
                 initialisationBackgroundWorker.RunWorkerAsync();
             }
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void InitSensorData() {
+        public void InitSensorData()
+        {
             currentWeather = Weather.GetCurrentConditionWeather(Properties.Settings.Default.weatherCode);
             currentWeather = Friendly(currentWeather);
         }
 
         // refresh UI based on sensor Data
-        public void RefreshUI() {
-            if (currentWeather == null) {
+        public void RefreshUI()
+        {
+            if (currentWeather == null)
+            {
                 weatherPictureBox.Image = Properties.Resources._na;
                 tempLabel.Text = resources.GetString("not_available");
                 return;
             }
 
-            if ((extendedPanel != null) && (!extendedPanel.IsDisposed)) {
+            if ((extendedPanel != null) && (!extendedPanel.IsDisposed))
+            {
                 extendedPanel.UpdateWeather();
             }
 
             tempLabel.Text = currentWeather.currentObservation.temp + "°C";
 
-            weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject("_"+currentWeather.currentObservation.icon);
+            weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + currentWeather.currentObservation.icon);
         }
 
         // update location of extended panel if needed
-        public void UpdateLocation() {
+        public void UpdateLocation()
+        {
             ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
         }
 
         // update weather each 30 minutes
-        private void UpdateWeatherTimer_Tick(object sender, EventArgs e) {
-            if (!initialisationBackgroundWorker.IsBusy) {
+        private void UpdateWeatherTimer_Tick(object sender, EventArgs e)
+        {
+            if (!initialisationBackgroundWorker.IsBusy)
+            {
                 initialisationBackgroundWorker.RunWorkerAsync();
             }
         }
 
         // hide or show extended panel
-        private void SensorWeather_MouseClick(object sender, MouseEventArgs e) {
-            if ((extendedPanel == null) || (extendedPanel.IsDisposed)) {
+        private void SensorWeather_MouseClick(object sender, MouseEventArgs e)
+        {
+            if ((extendedPanel == null) || (extendedPanel.IsDisposed))
+            {
                 extendedPanel = new SensorWeatherExtendedPanel(this);
                 RefreshUI();
             }
 
-            if (extendedPanel.Visible) {
+            if (extendedPanel.Visible)
+            {
                 extendedPanel.Hide();
-            } else {
+            }
+            else
+            {
                 ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
                 extendedPanel.Show();
             }
         }
 
         // transform dataset for internationnalisation
-        private Weather Friendly(Weather weather) {
-            try {
+        private Weather Friendly(Weather weather)
+        {
+            try
+            {
                 //// Friendly Wind direction
                 weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("N", resources.GetString("Weather_WinDir_N"));
                 weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("S", resources.GetString("Weather_WinDir_S"));
                 weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("E", resources.GetString("Weather_WinDir_E"));
                 weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("W", resources.GetString("Weather_WinDir_W"));
-            } catch (Exception exception) {
+            }
+            catch (Exception exception)
+            {
                 Console.WriteLine(exception.Message);
             }
             return weather;

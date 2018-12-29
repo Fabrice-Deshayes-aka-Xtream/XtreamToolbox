@@ -9,10 +9,12 @@ using System.Collections;
 using Xtream_ToolBox.Utils;
 using System.Resources;
 
-namespace Xtream_ToolBox {
+namespace Xtream_ToolBox
+{
 
-    public partial class ToolBoxStarter : UserControl, ISensor {
-        
+    public partial class ToolBoxStarter : UserControl, ISensor
+    {
+
         // reference on toolbox
         private ToolBox toolbox = null;
 
@@ -25,55 +27,67 @@ namespace Xtream_ToolBox {
         ResourceManager resources = Properties.Resources.ResourceManager;
 
         // constructor
-        public ToolBoxStarter(ToolBox toolbox) {
+        public ToolBoxStarter(ToolBox toolbox)
+        {
             InitializeComponent();
             this.toolbox = toolbox;
             InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form GetExtendedPanel() {
+        public Form GetExtendedPanel()
+        {
             return null;
         }
 
         // init UI
-        public void InitUI() {
+        public void InitUI()
+        {
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             // tooltips & lock move
-            if (Properties.Settings.Default.lockPosition) {
+            if (Properties.Settings.Default.lockPosition)
+            {
                 moveBox.Cursor = Cursors.Default;
-            } else {
+            }
+            else
+            {
                 moveBox.Cursor = Cursors.NoMove2D;
                 helpToolTip.SetToolTip(moveBox, resources.GetString("Toolbox_move"));
             }
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void InitSensorData() {
+        public void InitSensorData()
+        {
             // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
-        public void RefreshUI() {
+        public void RefreshUI()
+        {
             // nothing to do on this sensor
         }
 
         // update location of extended panel if needed
-        public void UpdateLocation() {
+        public void UpdateLocation()
+        {
             // nothing to do on this sensor
         }
 
         // gestion du déplacement de la toolbox : initialisation du déplacement
-        private void moveBox_MouseDown(object sender, MouseEventArgs e) {
+        private void MoveBox_MouseDown(object sender, MouseEventArgs e)
+        {
             mouseIsDown = true;
             lastMousePositionX = e.X;
             lastMousePositionY = e.Y;
         }
 
         // gestion du déplacement de la toolbox : déplacement
-        private void moveBox_MouseMove(object sender, MouseEventArgs e) {
-            if (mouseIsDown && !Properties.Settings.Default.lockPosition) {
+        private void MoveBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseIsDown && !Properties.Settings.Default.lockPosition)
+            {
                 Rectangle toolboxArea = ToolBoxUtils.ManageMagneticPosition(new Rectangle(toolbox.Left - (lastMousePositionX - e.X), toolbox.Top - (lastMousePositionY - e.Y), toolbox.Width, toolbox.Height), toolbox.magneticXPositions, toolbox.magneticYPositions, 16, Properties.Settings.Default.magneticScreenBorder);
                 toolbox.Top = toolboxArea.Top;
                 toolbox.Left = toolboxArea.Left;
@@ -81,7 +95,8 @@ namespace Xtream_ToolBox {
         }
 
         // gestion du déplacement de la toolbox : sauvegarde du déplacement
-        private void moveBox_MouseUp(object sender, MouseEventArgs e) {
+        private void MoveBox_MouseUp(object sender, MouseEventArgs e)
+        {
             mouseIsDown = false;
 
             // save position in property

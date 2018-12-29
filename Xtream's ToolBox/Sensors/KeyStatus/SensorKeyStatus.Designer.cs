@@ -1,5 +1,7 @@
-﻿namespace Xtream_ToolBox.Sensors {
-    partial class SensorKeyStatus {
+﻿namespace Xtream_ToolBox.Sensors
+{
+    partial class SensorKeyStatus
+    {
         /// <summary> 
         /// Variable nécessaire au concepteur.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Nettoyage des ressources utilisées.
         /// </summary>
         /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +26,8 @@
         /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
         /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SensorKeyStatus));
             this.updateKeyStatusTimer = new System.Windows.Forms.Timer(this.components);
@@ -41,7 +46,7 @@
             // 
             this.updateKeyStatusTimer.Enabled = true;
             this.updateKeyStatusTimer.Interval = 400;
-            this.updateKeyStatusTimer.Tick += new System.EventHandler(this.updateKeyStatusTimer_Tick);
+            this.updateKeyStatusTimer.Tick += new System.EventHandler(this.UpdateKeyStatusTimer_Tick);
             // 
             // capsLockStatusPictureBoxON
             // 

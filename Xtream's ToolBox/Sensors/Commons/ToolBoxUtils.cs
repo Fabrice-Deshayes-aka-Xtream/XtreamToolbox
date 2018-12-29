@@ -4,8 +4,10 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace Xtream_ToolBox.Utils {
-    class ToolBoxUtils {
+namespace Xtream_ToolBox.Utils
+{
+    class ToolBoxUtils
+    {
 
         private const int EXTENDED_PANEL_POSITION_TOP = 0;
         private const int EXTENDED_PANEL_POSITION_BOTTOM = 1;
@@ -15,22 +17,35 @@ namespace Xtream_ToolBox.Utils {
         public static int DOWN = 2;
 
         // manage enable status of up/down button
-        public static bool ManageUpDownButton(ListBox listBox, int button) {
+        public static bool ManageUpDownButton(ListBox listBox, int button)
+        {
             bool retour;
 
-            if (listBox.SelectedItem == null) {
+            if (listBox.SelectedItem == null)
+            {
                 retour = false;
-            } else {
-                if (button == UP) {
-                    if (listBox.SelectedIndex > 0) {
+            }
+            else
+            {
+                if (button == UP)
+                {
+                    if (listBox.SelectedIndex > 0)
+                    {
                         retour = true;
-                    } else {
+                    }
+                    else
+                    {
                         retour = false;
                     }
-                } else {
-                    if (listBox.SelectedIndex < (listBox.Items.Count - 1)) {
+                }
+                else
+                {
+                    if (listBox.SelectedIndex < (listBox.Items.Count - 1))
+                    {
                         retour = true;
-                    } else {
+                    }
+                    else
+                    {
                         retour = false;
                     }
                 }
@@ -40,26 +55,34 @@ namespace Xtream_ToolBox.Utils {
         }
 
         // move up or down item in a listBox
-        public static void MoveSelectedItem(ListBox listBox, int direction) {
+        public static void MoveSelectedItem(ListBox listBox, int direction)
+        {
             Object itemToMove = listBox.SelectedItem;
-            if (itemToMove != null) {
+            if (itemToMove != null)
+            {
                 int itemToMoveIndex = listBox.SelectedIndex;
                 listBox.Items.RemoveAt(itemToMoveIndex);
-                if (direction == UP) {
+                if (direction == UP)
+                {
                     listBox.Items.Insert(itemToMoveIndex - 1, itemToMove);
                     listBox.SelectedIndex = itemToMoveIndex - 1;
-                } else {
+                }
+                else
+                {
                     listBox.Items.Insert(itemToMoveIndex + 1, itemToMove);
                     listBox.SelectedIndex = itemToMoveIndex + 1;
                 }
             }
         }
 
-        public static void ManageExtendedPanelPosition(UserControl sensor, ToolBox toolbox, Form extendedPanel) {
-            if ((extendedPanel != null) && (!extendedPanel.IsDisposed)) {
+        public static void ManageExtendedPanelPosition(UserControl sensor, ToolBox toolbox, Form extendedPanel)
+        {
+            if ((extendedPanel != null) && (!extendedPanel.IsDisposed))
+            {
                 extendedPanel.TopMost = toolbox.TopMost;
 
-                switch (Properties.Settings.Default.extendedInfosPanel) {
+                switch (Properties.Settings.Default.extendedInfosPanel)
+                {
                     case EXTENDED_PANEL_POSITION_TOP:
                         extendedPanel.Left = toolbox.Left + sensor.Left;
                         extendedPanel.Top = toolbox.Top - extendedPanel.Height;
@@ -70,11 +93,14 @@ namespace Xtream_ToolBox.Utils {
                         break;
                     case EXTENDED_PANEL_POSITION_AUTOMATIC:
                     default:
-                        if ((toolbox.Top + (toolbox.Height / 2)) > (System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height / 2)) {
+                        if ((toolbox.Top + (toolbox.Height / 2)) > (System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height / 2))
+                        {
                             // top
                             extendedPanel.Left = toolbox.Left + sensor.Left;
                             extendedPanel.Top = toolbox.Top - extendedPanel.Height;
-                        } else {
+                        }
+                        else
+                        {
                             // bottom
                             extendedPanel.Left = toolbox.Left + sensor.Left;
                             extendedPanel.Top = toolbox.Bottom;
@@ -86,34 +112,43 @@ namespace Xtream_ToolBox.Utils {
             }
         }
 
-        public static Rectangle ManageMagneticPosition(Rectangle toolboxArea, List<int> magneticXPositions, List<int> magneticYPositions, int precision, bool magneticActive) {
+        public static Rectangle ManageMagneticPosition(Rectangle toolboxArea, List<int> magneticXPositions, List<int> magneticYPositions, int precision, bool magneticActive)
+        {
             Rectangle retour = toolboxArea;
 
-            if (magneticActive) {
-                foreach (int currentMagneticPosition in magneticXPositions) {
+            if (magneticActive)
+            {
+                foreach (int currentMagneticPosition in magneticXPositions)
+                {
                     // magnetisme de centrage horizontal
-                    if (Math.Abs((retour.Left + (retour.Width / 2)) - currentMagneticPosition) < precision) {
+                    if (Math.Abs((retour.Left + (retour.Width / 2)) - currentMagneticPosition) < precision)
+                    {
                         retour.X = currentMagneticPosition - (retour.Width / 2);
                     }
                     // magnetisme à gauche
-                    if (Math.Abs(retour.Left - currentMagneticPosition) < precision) {
+                    if (Math.Abs(retour.Left - currentMagneticPosition) < precision)
+                    {
                         retour.X = currentMagneticPosition;
                     }
 
                     // magnetisme à droite
-                    if (Math.Abs(retour.Right - currentMagneticPosition) < precision) {
+                    if (Math.Abs(retour.Right - currentMagneticPosition) < precision)
+                    {
                         retour.X = currentMagneticPosition - retour.Width;
                     }
                 }
 
-                foreach (int currentMagneticPosition in magneticYPositions) {
+                foreach (int currentMagneticPosition in magneticYPositions)
+                {
                     // magnetisme en haut
-                    if (Math.Abs(retour.Top - currentMagneticPosition) < precision) {
+                    if (Math.Abs(retour.Top - currentMagneticPosition) < precision)
+                    {
                         retour.Y = currentMagneticPosition;
                     }
 
                     // magnetisme en bas
-                    if (Math.Abs(retour.Bottom - currentMagneticPosition) < precision) {
+                    if (Math.Abs(retour.Bottom - currentMagneticPosition) < precision)
+                    {
                         retour.Y = currentMagneticPosition - retour.Height;
                     }
                 }
@@ -121,25 +156,31 @@ namespace Xtream_ToolBox.Utils {
             return retour;
         }
 
-        public static String WordWrap(String chaine, int width) {
+        public static String WordWrap(String chaine, int width)
+        {
             String[] splittedString = chaine.Split(' ');
             String finalString = "";
             int nbChar = 0;
 
-            foreach (String currentStr in splittedString) {
+            foreach (String currentStr in splittedString)
+            {
                 finalString += currentStr;
                 nbChar += currentStr.Length;
-                if (nbChar > width) {
+                if (nbChar > width)
+                {
                     finalString += Environment.NewLine;
                     nbChar = 0;
-                } else {
+                }
+                else
+                {
                     finalString += " ";
                 }
             }
             return finalString;
         }
 
-        public static void ConfigureTooltips(ToolTip tooltip) {
+        public static void ConfigureTooltips(ToolTip tooltip)
+        {
             tooltip.AutomaticDelay = Properties.Settings.Default.hintsAfter;
             tooltip.AutoPopDelay = Properties.Settings.Default.hintsLength;
             tooltip.ReshowDelay = Properties.Settings.Default.hintsReshow;
@@ -147,8 +188,10 @@ namespace Xtream_ToolBox.Utils {
             tooltip.Active = Properties.Settings.Default.hintsActive;
         }
 
-        public static void SetTooltips(ToolTip tooltip, Control control, String message) {
-            if (Properties.Settings.Default.hintsActive) {
+        public static void SetTooltips(ToolTip tooltip, Control control, String message)
+        {
+            if (Properties.Settings.Default.hintsActive)
+            {
                 tooltip.SetToolTip(control, message);
             }
         }

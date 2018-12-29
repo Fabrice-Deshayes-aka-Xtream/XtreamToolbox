@@ -34,35 +34,35 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // Close Notepad sensor
-        private void closeExtendedInfosPictureBox_Click(object sender, EventArgs e) {
+        private void CloseExtendedInfosPictureBox_Click(object sender, EventArgs e) {
             Hide();
         }
 
         // Save notepad text in system properties
-        private void saveNotepadInSettings() {
+        private void SaveNotepadInSettings() {
             Properties.Settings.Default.notepadTxt = notepadTextBox.Text;
             Properties.Settings.Default.Save();
         }
 
         // Save notepad text in system properties on each key typed
-        private void notepadTextBox_KeyUp(object sender, KeyEventArgs e) {
-            saveNotepadInSettings();
+        private void NotepadTextBox_KeyUp(object sender, KeyEventArgs e) {
+            SaveNotepadInSettings();
         }
 
         // Clear notepad
-        private void clearButton_Click(object sender, EventArgs e) {
+        private void ClearButton_Click(object sender, EventArgs e) {
             notepadTextBox.Clear();
-            saveNotepadInSettings();
+            SaveNotepadInSettings();
         }
 
         // Load text file in notepad
-        private void loadButton_Click(object sender, EventArgs e) {
+        private void LoadButton_Click(object sender, EventArgs e) {
             try {
                 if (openFileDialog.ShowDialog() == DialogResult.OK) {
                     saveFileDialog.FileName = openFileDialog.FileName;
                     notepadTextBox.Clear();
                     notepadTextBox.Text = File.ReadAllText(openFileDialog.FileName);
-                    saveNotepadInSettings();
+                    SaveNotepadInSettings();
                 }
             } catch (Exception exception) {
                 MessageBox.Show(exception.Message);
@@ -70,7 +70,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // save notepad to text file
-        private void saveButton_Click(object sender, EventArgs e) {
+        private void SaveButton_Click(object sender, EventArgs e) {
             try {
                 if (saveFileDialog.ShowDialog() == DialogResult.OK) {
                     File.AppendAllText(saveFileDialog.FileName, notepadTextBox.Text);

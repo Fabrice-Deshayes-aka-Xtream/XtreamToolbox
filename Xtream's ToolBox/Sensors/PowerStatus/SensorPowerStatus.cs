@@ -10,9 +10,11 @@ using System.Reflection;
 using System.Resources;
 using Xtream_ToolBox.Utils;
 
-namespace Xtream_ToolBox.Sensors {
-    public partial class SensorPowerStatus : UserControl, ISensor {
-        
+namespace Xtream_ToolBox.Sensors
+{
+    public partial class SensorPowerStatus : UserControl, ISensor
+    {
+
         // reference on toolbox
         private ToolBox toolbox = null;
 
@@ -20,19 +22,22 @@ namespace Xtream_ToolBox.Sensors {
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         // constructor
-        public SensorPowerStatus(ToolBox toolbox) {
+        public SensorPowerStatus(ToolBox toolbox)
+        {
             InitializeComponent();
             this.toolbox = toolbox;
             InitUI();
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form GetExtendedPanel() {
+        public Form GetExtendedPanel()
+        {
             return null;
         }
 
         // init UI
-        public void InitUI() {
+        public void InitUI()
+        {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -46,29 +51,36 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void InitSensorData() {
+        public void InitSensorData()
+        {
             // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
-        public void RefreshUI() {
-            if (SystemInformation.PowerStatus.BatteryChargeStatus != BatteryChargeStatus.NoSystemBattery) {
+        public void RefreshUI()
+        {
+            if (SystemInformation.PowerStatus.BatteryChargeStatus != BatteryChargeStatus.NoSystemBattery)
+            {
                 String batteryFullLifetime = "n/a";
-                if (SystemInformation.PowerStatus.BatteryFullLifetime!=-1) {
+                if (SystemInformation.PowerStatus.BatteryFullLifetime != -1)
+                {
                     batteryFullLifetime = SystemUtils.GetFriendlyTimespan(SystemInformation.PowerStatus.BatteryFullLifetime, "auto");
                 }
                 String batteryLifeRemaining = "n/a";
-                if (SystemInformation.PowerStatus.BatteryLifeRemaining!=-1) {
+                if (SystemInformation.PowerStatus.BatteryLifeRemaining != -1)
+                {
                     batteryLifeRemaining = SystemUtils.GetFriendlyTimespan(SystemInformation.PowerStatus.BatteryLifeRemaining, "auto");
                 }
                 double batteryLifePercent = Math.Truncate(SystemInformation.PowerStatus.BatteryLifePercent * 100);
                 ToolBoxUtils.SetTooltips(helpToolTip, this, String.Format(resources.GetString("PowerStatus_Tips2"), batteryFullLifetime, batteryLifeRemaining, batteryLifePercent, Environment.NewLine));
             }
 
-            switch (SystemInformation.PowerStatus.PowerLineStatus) {
+            switch (SystemInformation.PowerStatus.PowerLineStatus)
+            {
                 case PowerLineStatus.Offline:
                     // unplugged
-                    switch ((int)Math.Truncate(SystemInformation.PowerStatus.BatteryLifePercent * 10)) {
+                    switch ((int)Math.Truncate(SystemInformation.PowerStatus.BatteryLifePercent * 10))
+                    {
                         case 0:
                             this.BackgroundImage = Properties.Resources.battery_0;
                             break;
@@ -100,7 +112,8 @@ namespace Xtream_ToolBox.Sensors {
                     break;
                 case PowerLineStatus.Online:
                     // plugged
-                    switch ((int)Math.Truncate(SystemInformation.PowerStatus.BatteryLifePercent * 10)) {
+                    switch ((int)Math.Truncate(SystemInformation.PowerStatus.BatteryLifePercent * 10))
+                    {
                         case 0:
                             this.BackgroundImage = Properties.Resources.battery_c0;
                             break;
@@ -141,21 +154,25 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // update location of extended panel if needed
-        public void UpdateLocation() {
+        public void UpdateLocation()
+        {
             // nothing to do on this sensor
         }
 
         // rafraichi le power status à chaque évenement lié à l'alimentation
-        private void SystemEvents_PowerModeChanged(object sender, PowerModeChangedEventArgs e) {
+        private void SystemEvents_PowerModeChanged(object sender, PowerModeChangedEventArgs e)
+        {
             RefreshUI();
         }
 
         // Launch power managment configuration panel
-        private void SensorPowerStatus_Click(object sender, EventArgs e) {
+        private void SensorPowerStatus_Click(object sender, EventArgs e)
+        {
             String errMsg = SystemUtils.StartProcess(Environment.SystemDirectory + "\\powercfg.cpl", null, null);
-            if (errMsg != null) {
+            if (errMsg != null)
+            {
                 MessageBox.Show(errMsg);
-            }                                    
+            }
         }
     }
 }

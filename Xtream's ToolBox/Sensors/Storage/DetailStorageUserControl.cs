@@ -9,8 +9,10 @@ using System.Resources;
 using System.IO;
 using Xtream_ToolBox.Utils;
 
-namespace Xtream_ToolBox.Sensors {
-    public partial class DetailStorageUserControl : UserControl {
+namespace Xtream_ToolBox.Sensors
+{
+    public partial class DetailStorageUserControl : UserControl
+    {
 
         // ressource manager pour accéder aux chaines localisées
         private ResourceManager resources = Properties.Resources.ResourceManager;
@@ -27,22 +29,26 @@ namespace Xtream_ToolBox.Sensors {
         private int currentWriteFlow;
 
         // constructeur
-        public DetailStorageUserControl() {
+        public DetailStorageUserControl()
+        {
             InitializeComponent();
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             readMaxLabel.Left = readLegendLabel.Right;
             writeMaxLabel.Left = writeLegendLabel.Right;
         }
-        
-        public void setDevice(DriveInfo device) {
+
+        public void SetDevice(DriveInfo device)
+        {
             this.device = device;
-            initSensorInfos();
-            updateData();
+            InitSensorInfos();
+            UpdateData();
         }
 
-        private void initSensorInfos() {
-            switch (device.DriveType) {
+        private void InitSensorInfos()
+        {
+            switch (device.DriveType)
+            {
                 case DriveType.Fixed:
                     devicePictureBox.Image = Properties.Resources.Drive_harddisc;
                     break;
@@ -63,17 +69,20 @@ namespace Xtream_ToolBox.Sensors {
                     break;
             }
 
-            if (device.Name.StartsWith("A:") || device.Name.StartsWith("B:")) {
+            if (device.Name.StartsWith("A:") || device.Name.StartsWith("B:"))
+            {
                 devicePictureBox.Image = Properties.Resources.Drive_floppy;
             }
 
-            if (readWriteGraph.LineExists(LINE_READ)) {
+            if (readWriteGraph.LineExists(LINE_READ))
+            {
                 readWriteGraph.RemoveLine(LINE_READ);
             }
             lineHandleRead = readWriteGraph.AddLine(LINE_READ, Color.Red);
             lineHandleRead.Thickness = 1;
 
-            if (readWriteGraph.LineExists(LINE_WRITE)) {
+            if (readWriteGraph.LineExists(LINE_WRITE))
+            {
                 readWriteGraph.RemoveLine(LINE_WRITE);
             }
             lineHandleWrite = readWriteGraph.AddLine(LINE_WRITE, Color.Blue);
@@ -83,9 +92,12 @@ namespace Xtream_ToolBox.Sensors {
             maxWrite = 0;
         }
 
-        public void updateData() {
-            if (device != null) {
-                if (device.IsReady) {
+        public void UpdateData()
+        {
+            if (device != null)
+            {
+                if (device.IsReady)
+                {
                     bytesReadBySecPerformanceCounter.InstanceName = device.Name.Substring(0, 2);
                     bytesWriteBySecPerformanceCounter.InstanceName = device.Name.Substring(0, 2);
                     readWriteGraph.Visible = true;
@@ -107,7 +119,7 @@ namespace Xtream_ToolBox.Sensors {
                     deviceSpacePictureBox.Width = (int)(usedSpace / 2);
                     sizeInfoLabel.Text = String.Format(resources.GetString("StorageUserControlSize"), SystemUtils.GetFriendlyBytesSize(device.TotalSize, "auto"), usedSpace, SystemUtils.GetFriendlyBytesSize(device.TotalFreeSpace, "auto"));
                     devicePictureBox.Cursor = Cursors.Hand;
-                    devicePictureBox.Click += new EventHandler(this.devicePictureBox_Click);
+                    devicePictureBox.Click += new EventHandler(this.DevicePictureBox_Click);
 
                     currentReadFlow = (int)Math.Ceiling(bytesReadBySecPerformanceCounter.NextValue() / 1024);
                     currentWriteFlow = (int)Math.Ceiling(bytesWriteBySecPerformanceCounter.NextValue() / 1024);
@@ -119,7 +131,9 @@ namespace Xtream_ToolBox.Sensors {
                     readMaxLabel.Text = "(max " + maxRead + " kb/s)";
                     writeMaxLabel.Text = "(max " + maxWrite + " kb/s)";
                     readWriteGraph.UpdateGraph();
-                } else {
+                }
+                else
+                {
                     bytesReadBySecPerformanceCounter.InstanceName = null; ;
                     bytesWriteBySecPerformanceCounter.InstanceName = null;
                     readWriteGraph.Visible = false;
@@ -141,15 +155,19 @@ namespace Xtream_ToolBox.Sensors {
             }
         }
 
-        private void devicePictureBox_Click(object sender, EventArgs e) {
-            if (device != null) {
+        private void DevicePictureBox_Click(object sender, EventArgs e)
+        {
+            if (device != null)
+            {
                 SystemUtils.StartProcess(device.Name, null, null);
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e) {
-            if (this.Visible) {
-                updateData();
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                UpdateData();
             }
         }
     }

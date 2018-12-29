@@ -12,8 +12,10 @@ using System.Threading;
 using System.Globalization;
 using System.Resources;
 
-namespace Xtream_ToolBox {
-    public partial class PhotosRenamerForm : Form {
+namespace Xtream_ToolBox
+{
+    public partial class PhotosRenamerForm : Form
+    {
 
         // delegate méthode for adding line to listbox in threadsafe mode from background worker
         public delegate void addLogsDelegate(String logs);
@@ -25,7 +27,8 @@ namespace Xtream_ToolBox {
         private String searchPattern = "*.jpg";
 
         // constructor
-        public PhotosRenamerForm() {
+        public PhotosRenamerForm()
+        {
             InitializeComponent();
 
             SimulateButton.Enabled = false;
@@ -35,55 +38,71 @@ namespace Xtream_ToolBox {
         }
 
         // launch simulation
-        private void SimulateButton_Click(object sender, EventArgs e) {
+        private void SimulateButton_Click(object sender, EventArgs e)
+        {
             ManageGUI(false);
             searchPattern = searchPatternComboBox.Text;
-            if (!renamerBackgroundWorker.IsBusy) {
+            if (!renamerBackgroundWorker.IsBusy)
+            {
                 renamerBackgroundWorker.RunWorkerAsync(true);
             }
         }
 
         // launch rename process
-        private void RenameButton_Click(object sender, EventArgs e) {
+        private void RenameButton_Click(object sender, EventArgs e)
+        {
             ManageGUI(false);
             searchPattern = searchPatternComboBox.Text;
-            if (!renamerBackgroundWorker.IsBusy) {
+            if (!renamerBackgroundWorker.IsBusy)
+            {
                 renamerBackgroundWorker.RunWorkerAsync(false);
             }
         }
 
         // browse folder to rename
-        private void BrowseButton_Click(object sender, EventArgs e) {
-            if (imagesFolderBrowserDialog.ShowDialog() == DialogResult.OK) {
+        private void BrowseButton_Click(object sender, EventArgs e)
+        {
+            if (imagesFolderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
                 imagesPathTextBox.Text = imagesFolderBrowserDialog.SelectedPath;
             }
         }
 
         // update rename's directory
-        private void ImagesPathTextBox_TextChanged(object sender, EventArgs e) {
-            if (Directory.Exists(imagesPathTextBox.Text)) {
+        private void ImagesPathTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (Directory.Exists(imagesPathTextBox.Text))
+            {
                 SimulateButton.Enabled = true;
                 renameButton.Enabled = true;
-            } else {
+            }
+            else
+            {
                 SimulateButton.Enabled = false;
                 renameButton.Enabled = false;
             }
         }
 
         // clear result logs
-        private void ClearButton_Click(object sender, EventArgs e) {
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
             progressBar.Value = 0;
             resultListBox.Items.Clear();
         }
 
         // add a line in result logs in thread safe mode
-        private void AddLogs(String logs) {
-            if (InvokeRequired) {
+        private void AddLogs(String logs)
+        {
+            if (InvokeRequired)
+            {
                 Invoke(new addLogsDelegate(AddLogs), new object[] { logs });
-            } else {
+            }
+            else
+            {
                 // Update the UI
                 resultListBox.Items.Add(logs);
-                if (!scrollLockCheckBox.Checked) {
+                if (!scrollLockCheckBox.Checked)
+                {
                     resultListBox.SetSelected(resultListBox.Items.Count - 1, true);
                     resultListBox.SetSelected(resultListBox.Items.Count - 1, false);
                 }
@@ -92,15 +111,18 @@ namespace Xtream_ToolBox {
         }
 
         // cancel simulation or rename process
-        private void CancelButton_Click(object sender, EventArgs e) {
-            if (renamerBackgroundWorker.IsBusy) {
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            if (renamerBackgroundWorker.IsBusy)
+            {
                 renamerBackgroundWorker.CancelAsync();
                 ManageGUI(true);
             }
         }
 
         // manage enable/disable of GUI Button
-        private void ManageGUI(bool enable) {
+        private void ManageGUI(bool enable)
+        {
             cancelButton.Enabled = !enable;
             browseButton.Enabled = enable;
             SimulateButton.Enabled = enable;
@@ -108,15 +130,18 @@ namespace Xtream_ToolBox {
         }
 
         // it's forbidden to close Jpeg renamer when it's busy, must cancel operation before
-        private void PhotosRenamerForm_FormClosing(object sender, FormClosingEventArgs e) {
+        private void PhotosRenamerForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
             e.Cancel = true;
-            if (!renamerBackgroundWorker.IsBusy) {
+            if (!renamerBackgroundWorker.IsBusy)
+            {
                 Hide();
             }
         }
 
         // rename jpg in background
-        private void RenamerBackgroundWorker_DoWork(object sender, DoWorkEventArgs doWorkEventArgs) {
+        private void RenamerBackgroundWorker_DoWork(object sender, DoWorkEventArgs doWorkEventArgs)
+        {
             String currentExifDate = null;
             String currentImageName = null;
             String newImageName = null;
@@ -139,9 +164,12 @@ namespace Xtream_ToolBox {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
 
-            if (simulation) {
+            if (simulation)
+            {
                 AddLogs(String.Format(resources.GetString("JpgRenamer_SimulationStart"), imagesPathTextBox.Text));
-            } else {
+            }
+            else
+            {
                 AddLogs(String.Format(resources.GetString("JpgRenamer_RenameStart"), imagesPathTextBox.Text));
             }
             List<FileSystemInfo> fileSystemInfos = FindFiles(imagesPathTextBox.Text, searchPattern, recursiveMode);
@@ -149,12 +177,15 @@ namespace Xtream_ToolBox {
             AddLogs(String.Format(resources.GetString("JpgRenamer_NPhotosToRename"), progressMaximumValue));
             AddLogs("");
 
-            if (progressMaximumValue != 0) {
+            if (progressMaximumValue != 0)
+            {
                 renamerBackgroundWorker.ReportProgress((progressCurrentValue * 100) / progressMaximumValue);
             }
 
-            foreach (FileSystemInfo fileSystemInfo in fileSystemInfos) {
-                if (renamerBackgroundWorker.CancellationPending) {
+            foreach (FileSystemInfo fileSystemInfo in fileSystemInfos)
+            {
+                if (renamerBackgroundWorker.CancellationPending)
+                {
                     doWorkEventArgs.Cancel = true;
                     break;
                 }
@@ -163,39 +194,52 @@ namespace Xtream_ToolBox {
 
                 currentPhotoStr = String.Format("[{0}/{1}]  ", progressCurrentValue.ToString().PadLeft(progressMaximumValue.ToString().Length, '0'), progressMaximumValue.ToString().PadLeft(progressMaximumValue.ToString().Length, '0'));
 
-                try {
+                try
+                {
                     currentImageName = fileSystemInfo.Name;
                     currentImagePath = new FileInfo(fileSystemInfo.FullName).Directory.FullName;
                     currentExifDate = GetExifDate(fileSystemInfo.FullName);
-                    if (currentExifDate != null) {
+                    if (currentExifDate != null)
+                    {
                         currentExifDate = String.Format("[{0}] ", currentExifDate.Replace(':', '-'));
-                        if (currentImageName.StartsWith("[")) {
+                        if (currentImageName.StartsWith("["))
+                        {
                             originalImageName = currentImageName.Substring(currentImageName.IndexOf(']') + 2);
                             newImageName = currentExifDate + originalImageName;
-                            if (fileSystemInfo.FullName.Equals(currentImagePath + "\\" + newImageName)) {
+                            if (fileSystemInfo.FullName.Equals(currentImagePath + "\\" + newImageName))
+                            {
                                 // no changes to do. Filename is already good
                                 nbImgNoChange++;
                                 AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action1"), currentImageName));
-                            } else {
+                            }
+                            else
+                            {
                                 // correct EXIF date in filename
                                 nbImgCorrectDate++;
                                 AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action2"), currentImageName, newImageName));
                             }
-                        } else {
+                        }
+                        else
+                        {
                             // rename image
                             newImageName = currentExifDate + currentImageName;
                             AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action3"), currentImageName, newImageName));
-                            if (!simulation) {
+                            if (!simulation)
+                            {
                                 File.Move(fileSystemInfo.FullName, currentImagePath + "\\" + newImageName);
                                 nbImgRenamed++;
                             }
                         }
-                    } else {
+                    }
+                    else
+                    {
                         // no EXIF datas. Can't rename this photo
                         AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action4"), currentImageName));
                         nbImgIgnored++;
                     }
-                } catch (Exception exception) {
+                }
+                catch (Exception exception)
+                {
                     // ERROR
                     AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Error"), exception.Message));
                     nbImgError++;
@@ -206,40 +250,52 @@ namespace Xtream_ToolBox {
             AddLogs("_____________________________________________________________________________________________");
             AddLogs("");
             String recursiveModeStr = resources.GetString("JpgRenamer_RecursiveMode");
-            if (!recursiveMode) {
+            if (!recursiveMode)
+            {
                 recursiveModeStr = resources.GetString("JpgRenamer_NormalMode");
             }
 
             String completeStr = resources.GetString("JpgRenamer_Complete");
-            if (renamerBackgroundWorker.CancellationPending) {
+            if (renamerBackgroundWorker.CancellationPending)
+            {
                 completeStr = resources.GetString("JpgRenamer_Canceled");
             }
 
-            if (simulation) {
+            if (simulation)
+            {
                 AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation1"), completeStr, progressMaximumValue, recursiveModeStr, (timeWatcher.ElapsedMilliseconds / 1000)));
                 AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation2"), nbImgRenamed));
-                if (nbImgIgnored > 0) {
+                if (nbImgIgnored > 0)
+                {
                     AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation3"), nbImgIgnored));
                 }
-                if (nbImgNoChange > 0) {
+                if (nbImgNoChange > 0)
+                {
                     AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation4"), nbImgNoChange));
                 }
-                if (nbImgCorrectDate > 0) {
+                if (nbImgCorrectDate > 0)
+                {
                     AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation5"), nbImgCorrectDate));
                 }
-            } else {
+            }
+            else
+            {
                 AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename1"), completeStr, progressMaximumValue, recursiveModeStr, (timeWatcher.ElapsedMilliseconds / 1000)));
                 AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename2"), nbImgRenamed));
-                if (nbImgIgnored > 0) {
+                if (nbImgIgnored > 0)
+                {
                     AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename3"), nbImgIgnored));
                 }
-                if (nbImgNoChange > 0) {
+                if (nbImgNoChange > 0)
+                {
                     AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename4"), nbImgNoChange));
                 }
-                if (nbImgCorrectDate > 0) {
+                if (nbImgCorrectDate > 0)
+                {
                     AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename5"), nbImgCorrectDate));
                 }
-                if (nbImgError > 0) {
+                if (nbImgError > 0)
+                {
                     AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename6"), nbImgError));
                 }
             }
@@ -248,41 +304,56 @@ namespace Xtream_ToolBox {
         }
 
         // update progressBar
-        private void RenamerBackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs progressChangedEventArgs) {
+        private void RenamerBackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs progressChangedEventArgs)
+        {
             progressBar.Value = progressChangedEventArgs.ProgressPercentage;
             progressBar.Refresh();
         }
 
         // occurs when simulation or rename job is completed
-        private void RenamerBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs runWorkerCompletedEventArgs) {
+        private void RenamerBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs runWorkerCompletedEventArgs)
+        {
             ManageGUI(true);
         }
 
         // récupère la liste des fichiers respectant la searchPattern (ex : *.jpg) contenu dans le chemin "path"
-        public static List<FileSystemInfo> FindFiles(String path, String searchPattern, bool recursiveMode) {
+        public static List<FileSystemInfo> FindFiles(String path, String searchPattern, bool recursiveMode)
+        {
             List<FileSystemInfo> retour = new List<FileSystemInfo>();
 
-            try {
+            try
+            {
                 DirectoryInfo directoryInfo = new DirectoryInfo(path);
-                try {
+                try
+                {
                     FileSystemInfo[] fileSystemInfos = directoryInfo.GetFileSystemInfos(searchPattern);
-                    foreach (FileSystemInfo fileSystemInfo in fileSystemInfos) {
+                    foreach (FileSystemInfo fileSystemInfo in fileSystemInfos)
+                    {
                         retour.Add(fileSystemInfo);
                     }
-                } catch (Exception exception) {
+                }
+                catch (Exception exception)
+                {
                     Console.WriteLine(exception.Message, exception);
                 }
-                if (recursiveMode) {
-                    try {
+                if (recursiveMode)
+                {
+                    try
+                    {
                         DirectoryInfo[] directoryInfos = directoryInfo.GetDirectories();
-                        foreach (DirectoryInfo currentDirectoryInfo in directoryInfos) {
+                        foreach (DirectoryInfo currentDirectoryInfo in directoryInfos)
+                        {
                             retour.AddRange(FindFiles(currentDirectoryInfo.FullName, searchPattern, recursiveMode));
                         }
-                    } catch (Exception exception) {
+                    }
+                    catch (Exception exception)
+                    {
                         Console.WriteLine(exception.Message, exception);
                     }
                 }
-            } catch (Exception exception) {
+            }
+            catch (Exception exception)
+            {
                 Console.WriteLine(exception.Message, exception);
             }
 
@@ -290,17 +361,22 @@ namespace Xtream_ToolBox {
         }
 
         // get Exif date for JPEG/TIFF image in format : yyyy:MM:dd hh:mm:ss
-        public static String GetExifDate(String imageFilename) {
+        public static String GetExifDate(String imageFilename)
+        {
             ASCIIEncoding asciiEncoder = new ASCIIEncoding();
             String exifDate = null;
-            try {
+            try
+            {
                 Image img = new Bitmap(@imageFilename);
                 exifDate = asciiEncoder.GetString(img.GetPropertyItem(0x9003).Value);
                 img.Dispose();
-                if (exifDate.EndsWith("\0")) {
+                if (exifDate.EndsWith("\0"))
+                {
                     exifDate = exifDate.Substring(0, exifDate.LastIndexOf("\0"));
                 }
-            } catch (Exception exception) {
+            }
+            catch (Exception exception)
+            {
                 // no exif date... nothing to do
                 Console.WriteLine(exception.Message, exception);
             }

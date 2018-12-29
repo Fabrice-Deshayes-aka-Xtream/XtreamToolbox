@@ -10,8 +10,10 @@ using Xtream_ToolBox.Utils;
 using System.Runtime.InteropServices;
 using System.IO;
 
-namespace Xtream_ToolBox.Sensors {
-    public partial class SensorWeatherExtendedPanel : Form {
+namespace Xtream_ToolBox.Sensors
+{
+    public partial class SensorWeatherExtendedPanel : Form
+    {
 
         private bool initDone = false;
 
@@ -21,7 +23,8 @@ namespace Xtream_ToolBox.Sensors {
         private SensorWeather sensorWeather = null;
 
         // constructor
-        public SensorWeatherExtendedPanel(SensorWeather sensorWeather) {
+        public SensorWeatherExtendedPanel(SensorWeather sensorWeather)
+        {
             InitializeComponent();
             this.sensorWeather = sensorWeather;
             Initialisation();
@@ -29,7 +32,8 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // initialize weather data
-        public void Initialisation() {
+        public void Initialisation()
+        {
             this.Text = resources.GetString("FormName_Weather");
 
             EmptyWeatherInformations();
@@ -44,19 +48,24 @@ namespace Xtream_ToolBox.Sensors {
             initDone = true;
         }
 
-        public void SaveConfiguration() {
-            if (initDone) {
+        public void SaveConfiguration()
+        {
+            if (initDone)
+            {
                 Properties.Settings.Default.weatherCode = locationTextBox.Text;
 
-                if (!sensorWeather.initialisationBackgroundWorker.IsBusy) {
+                if (!sensorWeather.initialisationBackgroundWorker.IsBusy)
+                {
                     sensorWeather.initialisationBackgroundWorker.RunWorkerAsync();
                 }
             }
         }
 
         // update weather display infos
-        public void UpdateWeather(){
-            if (sensorWeather.currentWeather != null) {
+        public void UpdateWeather()
+        {
+            if (sensorWeather.currentWeather != null)
+            {
                 temperatureGroupbox.Enabled = true;
                 pressureAndVisibilityGroupBox.Enabled = true;
                 windGroupBox.Enabled = true;
@@ -64,7 +73,7 @@ namespace Xtream_ToolBox.Sensors {
                 localisationPositionLabel.Text = String.Format(resources.GetString("Weather_02"), sensorWeather.currentWeather.currentObservation.displayLocation.latitude, sensorWeather.currentWeather.currentObservation.displayLocation.longitude);
                 lastMesureLabel.Text = String.Format(resources.GetString("Weather_03"), sensorWeather.currentWeather.currentObservation.lastupdateTimeDT.ToShortTimeString());
                 lastUpdateLabel.Text = String.Format(resources.GetString("Weather_04"), sensorWeather.currentWeather.currentObservation.timeDT.ToShortTimeString());
-                tempLabel.Text = String.Format(resources.GetString("Weather_05"), sensorWeather.currentWeather.currentObservation.temp,"C", sensorWeather.currentWeather.currentObservation.feelike, "C");
+                tempLabel.Text = String.Format(resources.GetString("Weather_05"), sensorWeather.currentWeather.currentObservation.temp, "C", sensorWeather.currentWeather.currentObservation.feelike, "C");
                 humidityDrewLabel.Text = String.Format(resources.GetString("Weather_06"), sensorWeather.currentWeather.currentObservation.relativeHumidity, sensorWeather.currentWeather.currentObservation.dewpoint, "C");
                 barometricPressureLabel.Text = String.Format(resources.GetString("Weather_07"), sensorWeather.currentWeather.currentObservation.pressureMb);
                 uvVisLabel.Text = String.Format(resources.GetString("Weather_08"), sensorWeather.currentWeather.currentObservation.uv, sensorWeather.currentWeather.currentObservation.visibility, "KM");
@@ -72,13 +81,15 @@ namespace Xtream_ToolBox.Sensors {
 
                 weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(sensorWeather.currentWeather.currentObservation.icon);
             }
-            else {
+            else
+            {
                 EmptyWeatherInformations();
                 MessageBox.Show(resources.GetString("Weather_err"));
             }
         }
 
-        private void EmptyWeatherInformations() {
+        private void EmptyWeatherInformations()
+        {
             temperatureGroupbox.Enabled = false;
             pressureAndVisibilityGroupBox.Enabled = false;
             windGroupBox.Enabled = false;
@@ -96,19 +107,23 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // close extended panel
-        private void CloseExtendedInfosPictureBox_Click(object sender, EventArgs e) {
+        private void CloseExtendedInfosPictureBox_Click(object sender, EventArgs e)
+        {
             Hide();
         }
 
-        private void ChangeLocationButton_Click(object sender, EventArgs e) {
+        private void ChangeLocationButton_Click(object sender, EventArgs e)
+        {
             SaveConfiguration();
         }
 
-        private void SystemComboBox_SelectedIndexChanged(object sender, EventArgs e) {
+        private void SystemComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
             SaveConfiguration();
         }
 
-        private void WeatherLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+        private void WeatherLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
             System.Diagnostics.Process.Start("http://www.weather.com");
         }
     }

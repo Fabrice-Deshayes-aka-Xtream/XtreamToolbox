@@ -12,8 +12,10 @@ using Google.GData.Calendar;
 using Google.GData.Client;
 using Google.GData.Extensions;
 
-namespace Xtream_ToolBox.Sensors {
-    public partial class SensorTimeManagerICalendar : Form {
+namespace Xtream_ToolBox.Sensors
+{
+    public partial class SensorTimeManagerICalendar : Form
+    {
 
         private SensorTimeIcalManager timeIcalManager;
 
@@ -23,52 +25,65 @@ namespace Xtream_ToolBox.Sensors {
         private int lastMousePositionY = 0;
 
         // constructor
-        public SensorTimeManagerICalendar(SensorTimeIcalManager timeIcalManager) {
+        public SensorTimeManagerICalendar(SensorTimeIcalManager timeIcalManager)
+        {
             InitializeComponent();
             this.timeIcalManager = timeIcalManager;
         }
 
         // gestion du déplacement de la toolbox : initialisation du déplacement
-        private void MoveBox_MouseDown(object sender, MouseEventArgs e) {
+        private void MoveBox_MouseDown(object sender, MouseEventArgs e)
+        {
             mouseIsDown = true;
             lastMousePositionX = e.X;
             lastMousePositionY = e.Y;
         }
 
         // gestion du déplacement de la toolbox : déplacement
-        private void MoveBox_MouseMove(object sender, MouseEventArgs e) {
-            if (mouseIsDown) {
+        private void MoveBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseIsDown)
+            {
                 Left = Left - (lastMousePositionX - e.X);
                 Top = Top - (lastMousePositionY - e.Y);
             }
         }
 
         // gestion du déplacement de la toolbox : sauvegarde du déplacement
-        private void MoveBox_MouseUp(object sender, MouseEventArgs e) {
+        private void MoveBox_MouseUp(object sender, MouseEventArgs e)
+        {
             mouseIsDown = false;
         }
 
-        private void CloserPictureBox_Click(object sender, EventArgs e) {
+        private void CloserPictureBox_Click(object sender, EventArgs e)
+        {
             Hide();
         }
 
-        private void MonthCalendar1_DateSelected(object sender, DateRangeEventArgs e) {
+        private void MonthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
             eventsListView.Items.Clear();
 
-            foreach (EventEntry entry in timeIcalManager.entryList) {
-                foreach (When when in entry.Times) {
-                    if (when.StartTime.Ticks >= e.Start.Ticks && when.StartTime.Ticks <= e.End.Ticks) {
+            foreach (EventEntry entry in timeIcalManager.entryList)
+            {
+                foreach (When when in entry.Times)
+                {
+                    if (when.StartTime.Ticks >= e.Start.Ticks && when.StartTime.Ticks <= e.End.Ticks)
+                    {
                         ListViewItem item = new ListViewItem(entry.Title.Text)
                         {
                             Tag = entry
                         };
-                        if (when.AllDay) {
+                        if (when.AllDay)
+                        {
                             item.SubItems.Add(when.StartTime.ToShortDateString());
                         }
-                        else if (when.StartTime.Equals(when.EndTime)) {
+                        else if (when.StartTime.Equals(when.EndTime))
+                        {
                             item.SubItems.Add(when.StartTime.ToShortDateString() + " " + when.StartTime.ToShortTimeString());
                         }
-                        else {
+                        else
+                        {
                             item.SubItems.Add(when.StartTime.ToShortDateString() + " " + when.StartTime.ToShortTimeString() + " - " + when.EndTime.ToShortDateString() + " " + when.EndTime.ToShortTimeString());
                         }
                         item.SubItems.Add(entry.Content.Content);
@@ -78,12 +93,15 @@ namespace Xtream_ToolBox.Sensors {
             }
         }
 
-        private void SensorTimeManagerICalendar_VisibleChanged(object sender, EventArgs e) {
-            if (this.Visible) {
+        private void SensorTimeManagerICalendar_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
                 DateTime[] aDates = new DateTime[timeIcalManager.dates.Count];
 
                 int i = 0;
-                foreach (DateTime d in timeIcalManager.dates) {
+                foreach (DateTime d in timeIcalManager.dates)
+                {
                     aDates[i++] = d;
                 }
 
@@ -94,5 +112,5 @@ namespace Xtream_ToolBox.Sensors {
                 MonthCalendar1_DateSelected(this, new DateRangeEventArgs(monthCalendar1.SelectionStart, monthCalendar1.SelectionEnd));
             }
         }
-   }
+    }
 }
