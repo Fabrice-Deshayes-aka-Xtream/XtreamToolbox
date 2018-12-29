@@ -14,42 +14,92 @@ using System.Diagnostics;
 namespace Xtream_ToolBox {
 
     class SystemUtils {
+
+        #region Native Win32 API functions
+        private class NativeMethods
+        {
+            [DllImport("user32.dll")]
+            internal static extern void LockWorkStation();
+
+            [DllImport("user32.dll")]
+            internal static extern bool ExitWindowsEx(uint flags, uint reason);
+
+            [DllImport("kernel32.dll", ExactSpelling = true)]
+            internal static extern IntPtr GetCurrentProcess();
+
+            [DllImport("wtsapi32.dll", SetLastError = true)]
+            internal static extern bool WTSDisconnectSession(IntPtr hServer, int sessionId, bool bWait);
+
+            [DllImport("advapi32.dll")]
+            internal static extern System.Boolean OpenProcessToken(
+                IntPtr ProcessHandle,
+                uint DesiredAccess,
+                ref IntPtr Tokenhandle
+            );
+
+            [DllImport("advapi32.dll", CharSet = CharSet.Unicode)]
+            internal static extern System.Boolean LookupPrivilegeValue(
+                string lpSsytemName,
+                string lpName,
+                ref LUID pluid
+            );
+
+             [DllImport("advapi32.dll", CharSet = CharSet.Unicode)]
+            internal static extern int AdjustTokenPrivileges(
+                IntPtr TokenHandle,
+                [MarshalAs(UnmanagedType.Bool)]bool DisableAllPrivileges,
+                [MarshalAs(UnmanagedType.Struct)] ref TOKEN_PRIVILEGES NewState,
+                int BufferLength,
+                long PreviousState,
+                long ReturnLength
+            );
+
+            [DllImport("user32.dll")]
+            internal static extern int GetForegroundWindow();
+
+            [DllImport("user32.dll")]
+            internal static extern bool GetWindowPlacement(IntPtr hWnd, ref WINDOWPLACEMENT lpwndpl);
+
+            [DllImport("user32.dll")]
+            internal static extern int GetWindowRect(IntPtr hWnd, ref RECT rect);
+
+            // find a process windows by classname or windows name
+            [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = CharSet.Unicode)]
+            internal static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+            // get windows title
+            [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = CharSet.Unicode)]
+            internal static extern int GetWindowText(IntPtr hwnd, string lpString, int cch);
+
+            // send windows message to other windows
+            [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
+            internal static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+
+            [DllImport("user32", CharSet = CharSet.Auto)]
+            internal static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+
+            [DllImport("user32", CharSet = CharSet.Auto)]
+            internal static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+
+            [DllImport("Shell32.dll", CharSet = CharSet.Unicode)]
+            internal static extern uint SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlags dwFlags);
+
+            [DllImport("Shell32.dll", CharSet = CharSet.Unicode)]
+            internal static extern int SHQueryRecycleBin(string pszRootPath, ref SHQUERYRBINFO pSHQueryRBInfo);
+
+            [DllImport("wininet.dll", SetLastError = true)]
+            internal static extern int InternetAttemptConnect(uint res);
+
+            [DllImport("wininet.dll", SetLastError = true)]
+            internal static extern bool InternetGetConnectedState(long flags, int reserved);
+
+            // Start Get Key Status
+            [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true, CallingConvention = CallingConvention.Winapi)]
+            internal static extern short GetKeyState(Keys keyCode);
+        }
+        #endregion
+
         // Shutdown / Reboot / LogOff / LockWokStation - Start
-        [DllImport("user32.dll")]
-        internal static extern void LockWorkStation();
-
-        [DllImport("user32.dll")]
-        internal static extern bool ExitWindowsEx(uint flags, uint reason);
-        
-        [DllImport("kernel32.dll", ExactSpelling = true)]
-        internal static extern IntPtr GetCurrentProcess();
-
-        [DllImport("wtsapi32.dll", SetLastError = true)]
-        static extern bool WTSDisconnectSession(IntPtr hServer, int sessionId, bool bWait);
- 
-        [DllImport("advapi32.dll")]
-        public static extern System.Boolean OpenProcessToken(
-            IntPtr ProcessHandle,
-            uint DesiredAccess,
-            ref IntPtr Tokenhandle
-        );
-
-        [DllImport("advapi32.dll")]
-        public static extern System.Boolean LookupPrivilegeValue(
-            string lpSsytemName,
-            string lpName,
-            ref LUID pluid
-        );
-
-        [DllImport("advapi32.dll")]
-        public static extern int AdjustTokenPrivileges(
-            IntPtr TokenHandle,
-            int DisableAllPrivileges,
-            [MarshalAs(UnmanagedType.Struct)] ref TOKEN_PRIVILEGES NewState,
-            int BufferLength,
-            int PreviousState,
-            int ReturnLength
-        );
 
         public enum EWX_ENUM {
             EWX_LOGOFF = 0x00000000,
@@ -104,47 +154,22 @@ namespace Xtream_ToolBox {
             public int right;
             public int bottom;
         }
-        [DllImport("user32.dll")]
-        public static extern int GetForegroundWindow();
-        [DllImport("user32.dll")]
-        public static extern bool GetWindowPlacement(IntPtr hWnd, ref WINDOWPLACEMENT lpwndpl);
-        [DllImport("user32.dll")]
-        public static extern IntPtr GetWindowRect(IntPtr hWnd, ref RECT rect);
         // find position & size of foreground windows for screenshot - end
 
-        // find a process windows by classname or windows name
-        [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
-        public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
-
-        // get windows title
-        [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
-        public static extern int GetWindowText(IntPtr hwnd, string lpString, int cch);
-
-        // send windows message to other windows
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
-        public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+        internal static void LockWorkStation()
+        {
+            NativeMethods.LockWorkStation();
+        }
 
         // Begin hide this form from alt tab (overhide activated event)
         private const int GWL_EXSTYLE = (-20);
         private const int WS_EX_TOOLWINDOW = 0x80;
         private const int WS_EX_APPWINDOW = 0x40000;
 
-        [DllImport("user32", CharSet = CharSet.Auto)]
-        private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
-
-        [DllImport("user32", CharSet = CharSet.Auto)]
-        private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
-
         public static void HideFromAltTab(Form form) {
-            SetWindowLong(form.Handle, GWL_EXSTYLE, (GetWindowLong(form.Handle, GWL_EXSTYLE) | WS_EX_TOOLWINDOW) & ~WS_EX_APPWINDOW);
+            NativeMethods.SetWindowLong(form.Handle, GWL_EXSTYLE, (NativeMethods.GetWindowLong(form.Handle, GWL_EXSTYLE) | WS_EX_TOOLWINDOW) & ~WS_EX_APPWINDOW);
         }
         // Endhide this form from alt tab (overhide activated event)
-
-        [DllImport("Shell32.dll", CharSet = CharSet.Unicode)]
-        static extern uint SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath,RecycleFlags dwFlags);
-        
-        [DllImport("Shell32.dll", CharSet = CharSet.Unicode)]
-        static extern int SHQueryRecycleBin(string pszRootPath, ref SHQUERYRBINFO pSHQueryRBInfo);
 
         enum RecycleFlags : uint {
             SHERB_NOCONFIRMATION = 0x00000001,
@@ -162,27 +187,14 @@ namespace Xtream_ToolBox {
         private static readonly int ERROR_SUCCESS = 0;
         public static bool IsInternetConnected() {
             long dwConnectionFlags = 0;
-            if (!InternetGetConnectedState(dwConnectionFlags, 0))
+            if (!NativeMethods.InternetGetConnectedState(dwConnectionFlags, 0))
                 return false;
 
-            if (InternetAttemptConnect(0) != ERROR_SUCCESS)
+            if (NativeMethods.InternetAttemptConnect(0) != ERROR_SUCCESS)
                 return false;
 
             return true;
         }
-
-
-        [DllImport("wininet.dll", SetLastError = true)]
-        public static extern int InternetAttemptConnect(uint res);
-
-
-        [DllImport("wininet.dll", SetLastError = true)]
-        public static extern bool InternetGetConnectedState(long flags, long
-        reserved);
-
-        // Start Get Key Status
-        [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true, CallingConvention = CallingConvention.Winapi)]
-        public static extern short GetKeyState(Keys keyCode);
 
         // ressource manager pour accéder aux chaines localisées
         private static ResourceManager resources = Properties.Resources.ResourceManager;
@@ -204,7 +216,7 @@ namespace Xtream_ToolBox {
 
         // lock le PC
         public static void LockMyWorkStation() {
-            LockWorkStation();
+            NativeMethods.LockWorkStation();
         }
 
         // passe en veille prolongée
@@ -219,7 +231,7 @@ namespace Xtream_ToolBox {
 
         // change d'utilisateur
         public static void SwitchUser() {
-            WTSDisconnectSession(IntPtr.Zero, -1, false);
+            NativeMethods.WTSDisconnectSession(IntPtr.Zero, -1, false);
         }
 
         // mount network drive
@@ -247,23 +259,23 @@ namespace Xtream_ToolBox {
             TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();
             LUID luid = new LUID();
 
-            LookupPrivilegeValue(null, "SeShutdownPrivilege", ref luid);
-            IntPtr processHandle = GetCurrentProcess();
+            NativeMethods.LookupPrivilegeValue(null, "SeShutdownPrivilege", ref luid);
+            IntPtr processHandle = NativeMethods.GetCurrentProcess();
             IntPtr TokenHandle = IntPtr.Zero;
-            OpenProcessToken(processHandle, 0x00000020 | 0x00000008, ref TokenHandle);
+            NativeMethods.OpenProcessToken(processHandle, 0x00000020 | 0x00000008, ref TokenHandle);
 
             tp.PriviledgeCount = 1;
             tp.Attributes = 0x00000002;
             tp.Luid = luid;
 
             int tpsz = Marshal.SizeOf(tp);
-            tpsz = AdjustTokenPrivileges(TokenHandle, 0, ref tp, tpsz, 0, 0);
-            ExitWindowsEx(EWX_VALUE, 0);
+            tpsz = NativeMethods.AdjustTokenPrivileges(TokenHandle, false, ref tp, tpsz, 0, 0);
+            NativeMethods.ExitWindowsEx(EWX_VALUE, 0);
         }
         
         public static bool IsKeyPressedOrToggleOn(Keys testKey) {
             bool keyPressed = false;
-            short result = GetKeyState(testKey);
+            short result = NativeMethods.GetKeyState(testKey);
 
             switch (result) {
                 case 0:
@@ -290,9 +302,9 @@ namespace Xtream_ToolBox {
             uint retour;
 
             if (disableConfirmation) {
-                retour = SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlags.SHERB_NOCONFIRMATION);
+                retour = NativeMethods.SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlags.SHERB_NOCONFIRMATION);
             } else {
-                retour = SHEmptyRecycleBin(IntPtr.Zero, null, 0);
+                retour = NativeMethods.SHEmptyRecycleBin(IntPtr.Zero, null, 0);
             }
 
             return retour;
@@ -304,7 +316,7 @@ namespace Xtream_ToolBox {
             {
                 cbSize = Marshal.SizeOf(typeof(SHQUERYRBINFO))
             };
-            int hresult = SHQueryRecycleBin(string.Empty, ref sqrbi);
+            int hresult = NativeMethods.SHQueryRecycleBin(string.Empty, ref sqrbi);
             return sqrbi;
         }
 
@@ -402,7 +414,6 @@ namespace Xtream_ToolBox {
                 proc.StartInfo.FileName = fileName;
                 proc.Start();
                 proc.Close(); // Attention Close ne met pas fin au processus.
-                proc.Dispose();
             } catch (Exception e) {
                 retour = e.Message + " (filename : " + fileName + " / argument : " + arguments + ")";
             }
@@ -819,7 +830,10 @@ namespace Xtream_ToolBox {
         public void Dispose() {
             // Libération du mutex si il a été acquis
             if (_siMutexOwned)
+            {
                 _siMutex.ReleaseMutex();
+                _siMutex.Dispose();
+            }            
         }
     }
 }

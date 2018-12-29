@@ -22,6 +22,7 @@ namespace TimeSync {
     using System.Net;
     using System.Net.Sockets;
     using System.Runtime.InteropServices;
+    using Xtream_ToolBox;
 
     // Leap indicator field values
     public enum _LeapIndicator {
@@ -160,6 +161,29 @@ namespace TimeSync {
         private const byte offOriginateTimestamp = 24;
         private const byte offReceiveTimestamp = 32;
         private const byte offTransmitTimestamp = 40;
+
+        #region Native Win32 API functions
+        private class NativeMethods
+        {
+            [DllImport("kernel32.dll")]
+            internal static extern bool SetLocalTime(ref SYSTEMTIME time);
+        }
+        #endregion
+
+        // SYSTEMTIME structure used by SetSystemTime
+        [StructLayoutAttribute(LayoutKind.Sequential)]
+        public struct SYSTEMTIME
+        {
+            public short year;
+            public short month;
+            public short dayOfWeek;
+            public short day;
+            public short hour;
+            public short minute;
+            public short second;
+            public short milliseconds;
+        }
+        // end SYSTEMTIME
 
         // Leap Indicator
         public _LeapIndicator LeapIndicator {
@@ -525,23 +549,6 @@ namespace TimeSync {
             return str;
         }
 
-        // SYSTEMTIME structure used by SetSystemTime
-        [StructLayoutAttribute(LayoutKind.Sequential)]
-        private struct SYSTEMTIME {
-            public short year;
-            public short month;
-            public short dayOfWeek;
-            public short day;
-            public short hour;
-            public short minute;
-            public short second;
-            public short milliseconds;
-        }
-
-        [DllImport("kernel32.dll")]
-        static extern bool SetLocalTime(ref SYSTEMTIME time);
-
-
         // Set system time according to transmit timestamp
         private void SetTime() {
             SYSTEMTIME st;
@@ -556,7 +563,8 @@ namespace TimeSync {
             st.second = (short)trts.Second;
             st.milliseconds = (short)trts.Millisecond;
 
-            SetLocalTime(ref st);
+
+            NativeMethods.SetLocalTime(ref st);
         }
 
         // The URL of the time server we're connecting to
