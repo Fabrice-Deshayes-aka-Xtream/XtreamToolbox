@@ -57,13 +57,13 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="weatherCode" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Cabourg, france</Value>
+      <Value Profile="(Default)">London, UK</Value>
     </Setting>
     <Setting Name="spaceBetweenSensor" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
     </Setting>
     <Setting Name="language" Type="System.String" Scope="User">
-      <Value Profile="(Default)">fr-FR</Value>
+      <Value Profile="(Default)">en-US</Value>
     </Setting>
     <Setting Name="lastToolboxWidth" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">640</Value>
