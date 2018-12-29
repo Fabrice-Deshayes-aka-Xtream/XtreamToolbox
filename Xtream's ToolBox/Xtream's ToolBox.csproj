@@ -26,7 +26,7 @@
     </UpgradeBackupLocation>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
-    <PublishUrl>D:\xtr\</PublishUrl>
+    <PublishUrl>D:\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -99,6 +99,7 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
     <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -211,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sensors\QuickLauncher\SensorQuickLaunchPropertyForm.en.resx">
       <DependentUpon>SensorQuickLaunchPropertyForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sensors\ShutdownManager\SensorShutdownManager.en.resx">
-      <DependentUpon>SensorShutdownManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sensors\TimeICalManager\SensorTimeManagerICalendar.fr.resx">
       <SubType>Designer</SubType>
