@@ -1,5 +1,12 @@
+version 2018.12.28
+- code style(end)
+- move p/invoke calls in NativeMethods class
+- fix shutdownManager icon size (regression from 2018.12.26)
+- en-US is now the default language
+- add credits to Mattias Sjögren and Valer BOCAN in about screen
+
 version 2018.12.26
-- clean solution / code style
+- code style (begin)
 - write documentation in markdown format
 - fix some wording
 - find workaround for warning AL1073: Referenced assembly 
