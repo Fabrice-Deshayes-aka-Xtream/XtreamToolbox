@@ -1,5 +1,7 @@
-﻿namespace Xtream_ToolBox {
-    partial class About {
+﻿namespace Xtream_ToolBox
+{
+    partial class About
+    {
         /// <summary>
         /// Variable nécessaire au concepteur.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Nettoyage des ressources utilisées.
         /// </summary>
         /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,27 +26,33 @@
         /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
         /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.closerPictureBox = new System.Windows.Forms.PictureBox();
             this.moverRightPictureBox = new System.Windows.Forms.PictureBox();
             this.moverLeftPictureBox = new System.Windows.Forms.PictureBox();
-            this.toolBoxLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.productNameLabel = new System.Windows.Forms.Label();
-            this.developerLabel = new System.Windows.Forms.Label();
             this.changeLogTextBox = new System.Windows.Forms.TextBox();
-            this.developerValuelabel = new System.Windows.Forms.Label();
             this.homepageLabel = new System.Windows.Forms.LinkLabel();
-            this.designerLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelFramework = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.closerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverRightPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverLeftPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toolBoxLogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // closerPictureBox
@@ -85,71 +95,31 @@
             this.moverLeftPictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseMove);
             this.moverLeftPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseUp);
             // 
-            // toolBoxLogoPictureBox
-            // 
-            this.toolBoxLogoPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.toolBoxLogoPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.RefreshCL;
-            this.toolBoxLogoPictureBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.toolBoxLogoPictureBox.Location = new System.Drawing.Point(17, -9);
-            this.toolBoxLogoPictureBox.Name = "toolBoxLogoPictureBox";
-            this.toolBoxLogoPictureBox.Size = new System.Drawing.Size(171, 180);
-            this.toolBoxLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.toolBoxLogoPictureBox.TabIndex = 35;
-            this.toolBoxLogoPictureBox.TabStop = false;
-            // 
             // productNameLabel
             // 
             this.productNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.productNameLabel.Font = new System.Drawing.Font("Arial Black", 15F);
             this.productNameLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.productNameLabel.Location = new System.Drawing.Point(187, 3);
+            this.productNameLabel.Location = new System.Drawing.Point(20, 3);
             this.productNameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.productNameLabel.Name = "productNameLabel";
-            this.productNameLabel.Size = new System.Drawing.Size(190, 22);
+            this.productNameLabel.Size = new System.Drawing.Size(357, 22);
             this.productNameLabel.TabIndex = 32;
-            this.productNameLabel.Text = "Xtream ToolBox";
+            this.productNameLabel.Text = "Xtream\'s ToolBox";
             this.productNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // developerLabel
-            // 
-            this.developerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.developerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.developerLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.developerLabel.Location = new System.Drawing.Point(187, 61);
-            this.developerLabel.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
-            this.developerLabel.MaximumSize = new System.Drawing.Size(0, 17);
-            this.developerLabel.Name = "developerLabel";
-            this.developerLabel.Size = new System.Drawing.Size(190, 15);
-            this.developerLabel.TabIndex = 33;
-            this.developerLabel.Text = "Conception & Developpement";
-            this.developerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.developerLabel.UseMnemonic = false;
             // 
             // changeLogTextBox
             // 
-            this.changeLogTextBox.Location = new System.Drawing.Point(20, 177);
+            this.changeLogTextBox.Location = new System.Drawing.Point(20, 208);
             this.changeLogTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.changeLogTextBox.Multiline = true;
             this.changeLogTextBox.Name = "changeLogTextBox";
             this.changeLogTextBox.ReadOnly = true;
             this.changeLogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.changeLogTextBox.Size = new System.Drawing.Size(360, 279);
+            this.changeLogTextBox.Size = new System.Drawing.Size(360, 248);
             this.changeLogTextBox.TabIndex = 34;
             this.changeLogTextBox.TabStop = false;
             this.changeLogTextBox.Text = resources.GetString("changeLogTextBox.Text");
-            // 
-            // developerValuelabel
-            // 
-            this.developerValuelabel.BackColor = System.Drawing.Color.Transparent;
-            this.developerValuelabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.developerValuelabel.Location = new System.Drawing.Point(187, 76);
-            this.developerValuelabel.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
-            this.developerValuelabel.MaximumSize = new System.Drawing.Size(0, 17);
-            this.developerValuelabel.Name = "developerValuelabel";
-            this.developerValuelabel.Size = new System.Drawing.Size(190, 17);
-            this.developerValuelabel.TabIndex = 43;
-            this.developerValuelabel.Text = "Fabrice Deshayes aka Xtream";
-            this.developerValuelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // homepageLabel
             // 
@@ -163,86 +133,215 @@
             this.homepageLabel.Text = "http://www.xtream.be";
             this.homepageLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.HomepageLabel_LinkClicked);
             // 
-            // designerLabel
+            // label4
             // 
-            this.designerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.designerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.designerLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.designerLabel.Location = new System.Drawing.Point(187, 101);
-            this.designerLabel.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
-            this.designerLabel.MaximumSize = new System.Drawing.Size(0, 17);
-            this.designerLabel.Name = "designerLabel";
-            this.designerLabel.Size = new System.Drawing.Size(190, 15);
-            this.designerLabel.TabIndex = 47;
-            this.designerLabel.Text = "Graphics extract from";
-            this.designerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Arial", 8F);
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(17, 139);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label4.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(190, 13);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "G.A.N.T. by Mattahan";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // label6
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 8F);
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(187, 129);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
-            this.label2.MaximumSize = new System.Drawing.Size(0, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 13);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "Refreshcl by tpdk";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial", 8F);
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label6.Location = new System.Drawing.Point(17, 126);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label6.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(190, 13);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Refreshcl by tpdk";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // label7
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial", 8F);
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(187, 142);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
-            this.label3.MaximumSize = new System.Drawing.Size(0, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(190, 13);
-            this.label3.TabIndex = 50;
-            this.label3.Text = "Gant by mattahan";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Arial", 8F);
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(17, 113);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label7.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(190, 13);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "IconBuffet studio";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label8.Location = new System.Drawing.Point(17, 98);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label8.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(190, 15);
+            this.label8.TabIndex = 47;
+            this.label8.Text = "Graphics extract from";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label9.Location = new System.Drawing.Point(17, 67);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label9.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(190, 17);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "Fabrice Deshayes aka Xtream";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label10.Location = new System.Drawing.Point(17, 52);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label10.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(190, 15);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Design & Development";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.UseMnemonic = false;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Arial", 8F);
+            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label11.Location = new System.Drawing.Point(17, 152);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label11.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(203, 13);
+            this.label11.TabIndex = 54;
+            this.label11.Text = "Weather iconset by Wojciech Grzanka";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Arial", 8F);
+            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label12.Location = new System.Drawing.Point(190, 93);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label12.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(190, 13);
+            this.label12.TabIndex = 59;
+            this.label12.Text = "Mattias Sjögren (ShellShortcut.cs)";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label13.Location = new System.Drawing.Point(190, 52);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label13.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(190, 15);
+            this.label13.TabIndex = 55;
+            this.label13.Text = "Use some code from";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Arial", 8F);
+            this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label14.Location = new System.Drawing.Point(190, 67);
+            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label14.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(190, 13);
+            this.label14.TabIndex = 58;
+            this.label14.Text = "Stuart Konen (C2DPushGraph)";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Arial", 8F);
+            this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label16.Location = new System.Drawing.Point(190, 80);
+            this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label16.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(190, 13);
+            this.label16.TabIndex = 57;
+            this.label16.Text = "James Newton-King (Newtonsoft)";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 8F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(187, 116);
+            this.label1.Location = new System.Drawing.Point(190, 106);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label1.MaximumSize = new System.Drawing.Size(0, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 13);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "IconBuffet studio";
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Valer BOCAN (NTPClient.cs)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelFramework
+            // label2
             // 
-            this.labelFramework.BackColor = System.Drawing.Color.Transparent;
-            this.labelFramework.Location = new System.Drawing.Point(187, 31);
-            this.labelFramework.Margin = new System.Windows.Forms.Padding(0);
-            this.labelFramework.Name = "labelFramework";
-            this.labelFramework.Size = new System.Drawing.Size(190, 13);
-            this.labelFramework.TabIndex = 53;
-            this.labelFramework.Text = "labelFramework";
-            this.labelFramework.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial", 8F);
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(190, 119);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label2.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 13);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Google Calendar API";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(102, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label3.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(190, 15);
+            this.label3.TabIndex = 62;
+            this.label3.Text = "version 2018.12.29";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Arial", 8F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(187, 155);
+            this.label5.Location = new System.Drawing.Point(17, 190);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label5.MaximumSize = new System.Drawing.Size(0, 17);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(190, 13);
-            this.label5.TabIndex = 54;
-            this.label5.Text = "Weather Iconset by Wojciech Grzanka";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Size = new System.Drawing.Size(190, 15);
+            this.label5.TabIndex = 63;
+            this.label5.Text = "CHANGELOG";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // About
             // 
@@ -251,20 +350,26 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(400, 480);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.labelFramework);
-            this.Controls.Add(this.productNameLabel);
-            this.Controls.Add(this.developerLabel);
-            this.Controls.Add(this.developerValuelabel);
-            this.Controls.Add(this.designerLabel);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.productNameLabel);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.homepageLabel);
             this.Controls.Add(this.closerPictureBox);
             this.Controls.Add(this.moverRightPictureBox);
             this.Controls.Add(this.moverLeftPictureBox);
             this.Controls.Add(this.changeLogTextBox);
-            this.Controls.Add(this.toolBoxLogoPictureBox);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -277,7 +382,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.closerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverRightPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverLeftPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toolBoxLogoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,18 +392,23 @@
         private System.Windows.Forms.PictureBox closerPictureBox;
         private System.Windows.Forms.PictureBox moverRightPictureBox;
         private System.Windows.Forms.PictureBox moverLeftPictureBox;
-        private System.Windows.Forms.PictureBox toolBoxLogoPictureBox;
         private System.Windows.Forms.Label productNameLabel;
-        private System.Windows.Forms.Label developerLabel;
         private System.Windows.Forms.TextBox changeLogTextBox;
-        private System.Windows.Forms.Label developerValuelabel;
         private System.Windows.Forms.LinkLabel homepageLabel;
-        private System.Windows.Forms.Label designerLabel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelFramework;
         private System.Windows.Forms.Label label5;
-
     }
 }
