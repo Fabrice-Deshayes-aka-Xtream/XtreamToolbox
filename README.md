@@ -34,8 +34,9 @@
 - Auteur : Fabrice Deshayes aka Xtream
 - Dll/packages utilisées :
     - [C2DPushGraph by Stuart Konen](https://www.codeproject.com/articles/16634//Articles/16634/C2DPushGraph-A-Push-Graph-Control-2) (graph mode of System Info and Storage Sensor)
-	- [Global mouse key hook by gmamaladze](https://github.com/gmamaladze/globalmousekeyhook)
-	- [Newtonsoft by JamesNK](https://github.com/JamesNK/Newtonsoft.Json)
+	- [Newtonsoft by James Newton-King](https://github.com/JamesNK/Newtonsoft.Json)
+	- ShellShortcut.cs by Mattias Sjögren
+	- NTPClient.cs by Valer BOCAN
     - Google Data API (calendar)
 - Icons :
     - IconBuffet studio
