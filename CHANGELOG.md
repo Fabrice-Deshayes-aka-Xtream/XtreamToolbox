@@ -1,12 +1,14 @@
-version 2018.12.28
-- code style(end)
+version 2018.12.29
+- fix code style(end)
 - move p/invoke calls in NativeMethods class
 - fix shutdownManager icon size (regression from 2018.12.26)
+- fix shutdownManager 
 - en-US is now the default language
 - add credits to Mattias Sjögren and Valer BOCAN in about screen
+- update Newtonsoft package from 4.5.11 to 12.0.1
 
 version 2018.12.26
-- code style (begin)
+- fix code style (begin)
 - write documentation in markdown format
 - fix some wording
 - find workaround for warning AL1073: Referenced assembly 
