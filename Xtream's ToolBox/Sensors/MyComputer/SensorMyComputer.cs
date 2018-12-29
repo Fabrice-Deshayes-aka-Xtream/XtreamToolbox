@@ -37,7 +37,7 @@ namespace Xtream_ToolBox.Sensors {
 
             // Tooltips
             helpToolTip.SetToolTip(this, String.Format(resources.GetString("MyComputer_tip"), Environment.NewLine));
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             // cache les raccourcis non disponibles
             microsoftUpdateToolStripMenuItem.Visible = File.Exists(Environment.SystemDirectory + "\\muweb.dll");

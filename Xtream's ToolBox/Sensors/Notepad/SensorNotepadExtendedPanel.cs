@@ -27,7 +27,7 @@ namespace Xtream_ToolBox.Sensors {
         private void Initialisation() {
             this.Text = resources.GetString("FormName_Notepad");
 
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             notepadTextBox.Clear();
             notepadTextBox.AppendText(Properties.Settings.Default.notepadTxt);

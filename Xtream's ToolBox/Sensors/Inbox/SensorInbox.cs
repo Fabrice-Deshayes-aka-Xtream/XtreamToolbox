@@ -69,7 +69,7 @@ namespace Xtream_ToolBox.Sensors {
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // tips
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             // text color
             emailLabel.ForeColor = Properties.Settings.Default.textColor;
@@ -110,12 +110,12 @@ namespace Xtream_ToolBox.Sensors {
                                 }
                                 
                                 currentMailClient = new Pop3Client();
-                                currentMailClient.connect(location.Loc, user, password, Int16.Parse(port));
+                                currentMailClient.Connect(location.Loc, user, password, Int16.Parse(port));
                                 currentNbEmail = 0;
                                 currentNbSpam = 0;
 
-                                for (int i = 1; i <= currentMailClient.getNbMailInbox(); i++) {
-                                    mailHeader = currentMailClient.getMailHeader(i);
+                                for (int i = 1; i <= currentMailClient.GetNbMailInbox(); i++) {
+                                    mailHeader = currentMailClient.GetMailHeader(i);
                                     switch (applySpamRules(mailHeader)) {
                                         case SPAM_MAIL :                                            
                                             currentNbSpam++;
@@ -125,7 +125,7 @@ namespace Xtream_ToolBox.Sensors {
                                             break;
                                     }
                                 }                                
-                                currentMailClient.disconnect();
+                                currentMailClient.Disconnect();
                                 
                                 nbEmail += currentNbEmail;
                                 nbSpam += currentNbSpam;
@@ -249,9 +249,9 @@ namespace Xtream_ToolBox.Sensors {
             spamLabel.Visible = true;
             progressPictureBox.Visible = false;
             helpToolTip.RemoveAll();
-            ToolBoxUtils.setTooltips(helpToolTip, this, hints);
-            ToolBoxUtils.setTooltips(helpToolTip, emailLabel, hints);
-            ToolBoxUtils.setTooltips(helpToolTip, spamLabel, hints);
+            ToolBoxUtils.SetTooltips(helpToolTip, this, hints);
+            ToolBoxUtils.SetTooltips(helpToolTip, emailLabel, hints);
+            ToolBoxUtils.SetTooltips(helpToolTip, spamLabel, hints);
             if ((nbEmail > 0) || (nbSpam > 0)){
                 this.BackgroundImage = Properties.Resources.InboxFull;
             } else {

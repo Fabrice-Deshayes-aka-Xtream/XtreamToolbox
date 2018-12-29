@@ -36,7 +36,7 @@ namespace Xtream_ToolBox.Sensors.ShutdownManager {
             doItNowRadioButton.Checked = true;
         }
 
-        private void cancelButton_Click(object sender, EventArgs e) {
+        private void CancelButton_Click(object sender, EventArgs e) {
             doTimedActionTimer.Enabled = false;
             cancelButton.Enabled = false;
             countDownLabel.Visible = false;
@@ -46,19 +46,19 @@ namespace Xtream_ToolBox.Sensors.ShutdownManager {
             actionStr = "";
         }
 
-        public void doAction(int action) {
-            doAction(action, false, null);
+        public void DoAction(int action) {
+            DoAction(action, false, null);
         }
 
-        public void doAction(int action, bool withConfirmation) {
-            doAction(action, withConfirmation, null);
+        public void DoAction(int action, bool withConfirmation) {
+            DoAction(action, withConfirmation, null);
         }
 
-        public void doAction(int action, Nullable<DateTime> when) {
-            doAction(action, false, when);
+        public void DoAction(int action, Nullable<DateTime> when) {
+            DoAction(action, false, when);
         }
 
-        public void doAction(int action, bool withConfirmation, Nullable<DateTime> when) {
+        public void DoAction(int action, bool withConfirmation, Nullable<DateTime> when) {
             bool doAction = true;
             if (withConfirmation) {
                 switch (action) {
@@ -147,60 +147,60 @@ namespace Xtream_ToolBox.Sensors.ShutdownManager {
             }            
         }
 
-        private void lockPictureBox_Click(object sender, EventArgs e) {
+        private void LockPictureBox_Click(object sender, EventArgs e) {
             if (doItNowRadioButton.Checked) {
-                doAction(LOCK);
+                DoAction(LOCK);
             } else {
-                doAction(LOCK, doItLaterDateTimePicker.Value);
+                DoAction(LOCK, doItLaterDateTimePicker.Value);
             }
         }
 
-        private void logOffPictureBox_Click(object sender, EventArgs e) {
+        private void LogOffPictureBox_Click(object sender, EventArgs e) {
             if (doItNowRadioButton.Checked) {
-                doAction(LOGOFF);
+                DoAction(LOGOFF);
             }
             else {
-                doAction(LOGOFF, doItLaterDateTimePicker.Value);
+                DoAction(LOGOFF, doItLaterDateTimePicker.Value);
             }
         }
 
-        private void swithUserPictureBox_Click(object sender, EventArgs e) {
+        private void SwithUserPictureBox_Click(object sender, EventArgs e) {
             if (doItNowRadioButton.Checked) {
-                doAction(SWITCH_USER);
+                DoAction(SWITCH_USER);
             }
             else {
-                doAction(SWITCH_USER, doItLaterDateTimePicker.Value);
+                DoAction(SWITCH_USER, doItLaterDateTimePicker.Value);
             }
         }
 
-        private void restartPictureBox_Click(object sender, EventArgs e) {
+        private void RestartPictureBox_Click(object sender, EventArgs e) {
             if (doItNowRadioButton.Checked) {
-                doAction(RESTART);
+                DoAction(RESTART);
             }
             else {
-                doAction(RESTART, doItLaterDateTimePicker.Value);
+                DoAction(RESTART, doItLaterDateTimePicker.Value);
             }
         }
 
-        private void hibernatePictureBox_Click(object sender, EventArgs e) {
+        private void HibernatePictureBox_Click(object sender, EventArgs e) {
             if (doItNowRadioButton.Checked) {
-                doAction(HIBERNATE);
+                DoAction(HIBERNATE);
             }
             else {
-                doAction(HIBERNATE, doItLaterDateTimePicker.Value);
+                DoAction(HIBERNATE, doItLaterDateTimePicker.Value);
             }
         }
 
-        private void shutdownPictureBox_Click(object sender, EventArgs e) {
+        private void ShutdownPictureBox_Click(object sender, EventArgs e) {
             if (doItNowRadioButton.Checked) {
-                doAction(SHUTDOWN);
+                DoAction(SHUTDOWN);
             }
             else {
-                doAction(SHUTDOWN, doItLaterDateTimePicker.Value);
+                DoAction(SHUTDOWN, doItLaterDateTimePicker.Value);
             }
         }
 
-        private void doTimedActionTimer_Tick(object sender, EventArgs e) {
+        private void DoTimedActionTimer_Tick(object sender, EventArgs e) {
             double nbTickBeforeAction = Math.Round((dateTimeAction - DateTime.Now).TotalSeconds);
             double nbDays = 0, nbHour = 0, nbMin = 0, nbSec = 0;
             if (nbTickBeforeAction > 86400) nbDays = Math.Floor(nbTickBeforeAction / 86400);
@@ -215,16 +215,16 @@ namespace Xtream_ToolBox.Sensors.ShutdownManager {
             }
 
             if (DateTime.Now.CompareTo(dateTimeAction) > 0) {
-                cancelButton_Click(sender, e);
-                doAction(action);
+                CancelButton_Click(sender, e);
+                DoAction(action);
             }
         }
 
-        private void closeExtendedInfosPictureBox_Click(object sender, EventArgs e) {
+        private void CloseExtendedInfosPictureBox_Click(object sender, EventArgs e) {
             Hide();
         }
 
-        private void doItLaterDateTimePicker_ValueChanged(object sender, EventArgs e) {
+        private void DoItLaterDateTimePicker_ValueChanged(object sender, EventArgs e) {
             doItLaterRadioButton.Checked = true;
         }
 
@@ -235,7 +235,7 @@ namespace Xtream_ToolBox.Sensors.ShutdownManager {
         }
 
         // gestion du déplacement de la toolbox : initialisation du déplacement
-        private void moveBox_MouseDown(object sender, MouseEventArgs e)
+        private void MoveBox_MouseDown(object sender, MouseEventArgs e)
         {
             mouseIsDown = true;
             lastMousePositionX = e.X;
@@ -243,7 +243,7 @@ namespace Xtream_ToolBox.Sensors.ShutdownManager {
         }
 
         // gestion du déplacement de la toolbox : déplacement
-        private void moveBox_MouseMove(object sender, MouseEventArgs e)
+        private void MoveBox_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseIsDown)
             {
@@ -253,7 +253,7 @@ namespace Xtream_ToolBox.Sensors.ShutdownManager {
         }
 
         // gestion du déplacement de la toolbox : sauvegarde du déplacement
-        private void moveBox_MouseUp(object sender, MouseEventArgs e)
+        private void MoveBox_MouseUp(object sender, MouseEventArgs e)
         {
             mouseIsDown = false;
         }

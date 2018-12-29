@@ -516,12 +516,12 @@ namespace Xtream_ToolBox {
         /* ---------------------- */
         // déplace le sensor selectionné vers le bas
         private void MoveSensorDownButton_Click(object sender, EventArgs e) {
-            ToolBoxUtils.moveSelectedItem(sensorsListBox, ToolBoxUtils.DOWN);
+            ToolBoxUtils.MoveSelectedItem(sensorsListBox, ToolBoxUtils.DOWN);
         }
 
         // déplace le sensor selectionné vers le haut
         private void MoveSensorUpButton_Click(object sender, EventArgs e) {
-            ToolBoxUtils.moveSelectedItem(sensorsListBox, ToolBoxUtils.UP);
+            ToolBoxUtils.MoveSelectedItem(sensorsListBox, ToolBoxUtils.UP);
         }
 
         // ajoute un sensor à la liste des sensors à afficher
@@ -550,8 +550,8 @@ namespace Xtream_ToolBox {
         // active ou desactive les bouton "up"/"down"/"delete" selon l'item selectionné
         private void SensorsListBox_SelectedIndexChanged(object sender, EventArgs e) {
             deleteSensorButton.Enabled = (sensorsListBox.SelectedItem != null);
-            moveSensorUpButton.Enabled = ToolBoxUtils.manageUpDownButton(sensorsListBox, ToolBoxUtils.UP);
-            moveSensorDownButton.Enabled = ToolBoxUtils.manageUpDownButton(sensorsListBox, ToolBoxUtils.DOWN);
+            moveSensorUpButton.Enabled = ToolBoxUtils.ManageUpDownButton(sensorsListBox, ToolBoxUtils.UP);
+            moveSensorDownButton.Enabled = ToolBoxUtils.ManageUpDownButton(sensorsListBox, ToolBoxUtils.DOWN);
         }
 
         /* ----------------------------- */
@@ -563,7 +563,7 @@ namespace Xtream_ToolBox {
         }
 
         private void FileMoveUpButton_Click(object sender, EventArgs e) {
-            ToolBoxUtils.moveSelectedItem(fileLocationListBox, ToolBoxUtils.UP);
+            ToolBoxUtils.MoveSelectedItem(fileLocationListBox, ToolBoxUtils.UP);
         }
 
         private void FileDeleteButton_Click(object sender, EventArgs e) {
@@ -573,7 +573,7 @@ namespace Xtream_ToolBox {
         }
 
         private void FileMoveDownButton_Click(object sender, EventArgs e) {
-            ToolBoxUtils.moveSelectedItem(fileLocationListBox, ToolBoxUtils.DOWN);
+            ToolBoxUtils.MoveSelectedItem(fileLocationListBox, ToolBoxUtils.DOWN);
         }
 
         private void FileAddButton_Click(object sender, EventArgs e) {
@@ -610,8 +610,8 @@ namespace Xtream_ToolBox {
 
         private void FileLocationListBox_SelectedIndexChanged(object sender, EventArgs e) {
             fileDeleteButton.Enabled = (fileLocationListBox.SelectedItem != null);
-            fileMoveUpButton.Enabled = ToolBoxUtils.manageUpDownButton(fileLocationListBox, ToolBoxUtils.UP);
-            fileMoveDownButton.Enabled = ToolBoxUtils.manageUpDownButton(fileLocationListBox, ToolBoxUtils.DOWN);
+            fileMoveUpButton.Enabled = ToolBoxUtils.ManageUpDownButton(fileLocationListBox, ToolBoxUtils.UP);
+            fileMoveDownButton.Enabled = ToolBoxUtils.ManageUpDownButton(fileLocationListBox, ToolBoxUtils.DOWN);
         }
 
         // choix d'un directory comme favorite location
@@ -631,7 +631,7 @@ namespace Xtream_ToolBox {
         }
 
         private void WebMoveUpButton_Click(object sender, EventArgs e) {
-            ToolBoxUtils.moveSelectedItem(webLocationListBox, ToolBoxUtils.UP);
+            ToolBoxUtils.MoveSelectedItem(webLocationListBox, ToolBoxUtils.UP);
         }
 
         private void WebDeleteButton_Click(object sender, EventArgs e) {
@@ -641,7 +641,7 @@ namespace Xtream_ToolBox {
         }
 
         private void WebMoveDownButton_Click(object sender, EventArgs e) {
-            ToolBoxUtils.moveSelectedItem(webLocationListBox, ToolBoxUtils.DOWN);
+            ToolBoxUtils.MoveSelectedItem(webLocationListBox, ToolBoxUtils.DOWN);
         }
 
         private void WebAddButton_Click(object sender, EventArgs e) {
@@ -676,8 +676,8 @@ namespace Xtream_ToolBox {
 
         private void WebLocationListBox_SelectedIndexChanged(object sender, EventArgs e) {
             webDeleteButton.Enabled = (webLocationListBox.SelectedItem != null);
-            webMoveUpButton.Enabled = ToolBoxUtils.manageUpDownButton(webLocationListBox, ToolBoxUtils.UP);
-            webMoveDownButton.Enabled = ToolBoxUtils.manageUpDownButton(webLocationListBox, ToolBoxUtils.DOWN);
+            webMoveUpButton.Enabled = ToolBoxUtils.ManageUpDownButton(webLocationListBox, ToolBoxUtils.UP);
+            webMoveDownButton.Enabled = ToolBoxUtils.ManageUpDownButton(webLocationListBox, ToolBoxUtils.DOWN);
         }
 
         /* ----------------------------- */
@@ -705,7 +705,7 @@ namespace Xtream_ToolBox {
         }
 
         private void PopUpButton_Click(object sender, EventArgs e) {
-            ToolBoxUtils.moveSelectedItem(popListBox, ToolBoxUtils.UP);
+            ToolBoxUtils.MoveSelectedItem(popListBox, ToolBoxUtils.UP);
         }
 
         private void PopDeleteButton_Click(object sender, EventArgs e) {
@@ -715,7 +715,7 @@ namespace Xtream_ToolBox {
         }
 
         private void PopDownButton_Click(object sender, EventArgs e) {
-            ToolBoxUtils.moveSelectedItem(popListBox, ToolBoxUtils.DOWN);
+            ToolBoxUtils.MoveSelectedItem(popListBox, ToolBoxUtils.DOWN);
         }
 
         private void PopAddButton_Click(object sender, EventArgs e) {
@@ -738,8 +738,8 @@ namespace Xtream_ToolBox {
 
         private void PopListBox_SelectedIndexChanged(object sender, EventArgs e) {
             popDeleteButton.Enabled = (popListBox.SelectedItem != null);
-            popUpButton.Enabled = ToolBoxUtils.manageUpDownButton(popListBox, ToolBoxUtils.UP);
-            popDownButton.Enabled = ToolBoxUtils.manageUpDownButton(popListBox, ToolBoxUtils.DOWN);
+            popUpButton.Enabled = ToolBoxUtils.ManageUpDownButton(popListBox, ToolBoxUtils.UP);
+            popDownButton.Enabled = ToolBoxUtils.ManageUpDownButton(popListBox, ToolBoxUtils.DOWN);
         }
 
         private void ProxyOnRadioButton_CheckedChanged(object sender, EventArgs e) {

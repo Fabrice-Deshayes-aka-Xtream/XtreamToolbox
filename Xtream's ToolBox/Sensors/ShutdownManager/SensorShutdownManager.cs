@@ -40,7 +40,7 @@ namespace Xtream_ToolBox {
             // Tooltips
             helpToolTip.SetToolTip(upperButton, String.Format(resources.GetString("ShutdownManager_Tip"), Environment.NewLine));
             helpToolTip.SetToolTip(lowerButton, String.Format(resources.GetString("ShutdownManager_Tip"), Environment.NewLine));
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             switch (Properties.Settings.Default.shutdownManagerDefaultActionUpperButton) {
                 case ShutdownOptions.SHUTDOWN:
@@ -103,10 +103,10 @@ namespace Xtream_ToolBox {
         private void UpperButton_MouseClick(object sender, MouseEventArgs e) {
             if (e.Button.Equals(MouseButtons.Left)) {
                 if (!Properties.Settings.Default.shutdownManagerLowerActionConfirmation) {
-                    shutdownOptions.doAction(Properties.Settings.Default.shutdownManagerDefaultActionUpperButton, true);
+                    shutdownOptions.DoAction(Properties.Settings.Default.shutdownManagerDefaultActionUpperButton, true);
                 }
                 else {
-                    shutdownOptions.doAction(Properties.Settings.Default.shutdownManagerDefaultActionUpperButton, false);
+                    shutdownOptions.DoAction(Properties.Settings.Default.shutdownManagerDefaultActionUpperButton, false);
                 }
             }
             else if (e.Button.Equals(MouseButtons.Right)) {
@@ -118,10 +118,10 @@ namespace Xtream_ToolBox {
         private void LowerButton_MouseClick(object sender, MouseEventArgs e) {
             if (e.Button.Equals(MouseButtons.Left)) {
                 if (!Properties.Settings.Default.shutdownManagerUpperActionConfirmation) {
-                    shutdownOptions.doAction(Properties.Settings.Default.shutdownManagerDefaultActionLowerButton, true);
+                    shutdownOptions.DoAction(Properties.Settings.Default.shutdownManagerDefaultActionLowerButton, true);
                 }
                 else {
-                    shutdownOptions.doAction(Properties.Settings.Default.shutdownManagerDefaultActionLowerButton, false);
+                    shutdownOptions.DoAction(Properties.Settings.Default.shutdownManagerDefaultActionLowerButton, false);
                 }
             }
             else if (e.Button.Equals(MouseButtons.Right)) {

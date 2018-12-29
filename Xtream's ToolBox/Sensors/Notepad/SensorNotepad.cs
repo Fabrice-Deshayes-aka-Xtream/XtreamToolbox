@@ -40,7 +40,7 @@ namespace Xtream_ToolBox.Sensors {
 
             // tips
             helpToolTip.SetToolTip(this, resources.GetString("NotePad_tip"));
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
@@ -55,7 +55,7 @@ namespace Xtream_ToolBox.Sensors {
 
         // update location of extended panel if needed
         public void UpdateLocation() {
-            ToolBoxUtils.manageExtendedPanelPosition(this, toolbox, extendedPanel);
+            ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
         }
 
         // Open or closed more infos panel
@@ -75,7 +75,7 @@ namespace Xtream_ToolBox.Sensors {
                 if (extendedPanel.Visible) {
                     extendedPanel.Hide();
                 } else {
-                    ToolBoxUtils.manageExtendedPanelPosition(this, toolbox, extendedPanel);
+                    ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
                     extendedPanel.Show();
                 }
             }

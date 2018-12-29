@@ -5,11 +5,11 @@ using System.Collections.Specialized;
 
 namespace Xtream_ToolBox.Utils.Mail {
     interface IMailClient {
-        void connect(String hostname, String login, String password, int port, int timeout);
-        void connect(String hostname, String login, String password, int port);
-        void connect(String hostname, String login, String password);
-        int getNbMailInbox();
-        Dictionary<String, StringCollection> getMailHeader(int idMail);
-        void disconnect();
+        void Connect(String hostname, String login, String password, int port, int timeout);
+        void Connect(String hostname, String login, String password, int port);
+        void Connect(String hostname, String login, String password);
+        int GetNbMailInbox();
+        Dictionary<String, StringCollection> GetMailHeader(int idMail);
+        void Disconnect();
     }
 }

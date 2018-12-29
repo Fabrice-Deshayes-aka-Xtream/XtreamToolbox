@@ -35,7 +35,7 @@ namespace Xtream_ToolBox {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             // options
             if (Properties.Settings.Default.recycleBinRefreshTime == 0) {
@@ -59,14 +59,14 @@ namespace Xtream_ToolBox {
                 if (!helpToolTip.Active) {
                     helpToolTip.RemoveAll();
                 }
-                ToolBoxUtils.setTooltips(helpToolTip, this, String.Format(resources.GetString("RecycleBin_Infos"), SystemUtils.GetFriendlyBytesSize(sizeOfItemsInRecycleBin, "auto"), numItemsInRecycleBin.ToString(), Environment.NewLine));                
+                ToolBoxUtils.SetTooltips(helpToolTip, this, String.Format(resources.GetString("RecycleBin_Infos"), SystemUtils.GetFriendlyBytesSize(sizeOfItemsInRecycleBin, "auto"), numItemsInRecycleBin.ToString(), Environment.NewLine));                
                 this.Cursor = Cursors.Hand;
             } else {
                 this.BackgroundImage = Properties.Resources.TrashEmpty;
                 if (!helpToolTip.Active) {
                     helpToolTip.RemoveAll();
                 }
-                ToolBoxUtils.setTooltips(helpToolTip, this, resources.GetString("RecycleBin_Empty"));
+                ToolBoxUtils.SetTooltips(helpToolTip, this, resources.GetString("RecycleBin_Empty"));
                 this.Cursor = Cursors.Default;
             }
         }

@@ -15,7 +15,7 @@ namespace Xtream_ToolBox.Utils {
         public static int DOWN = 2;
 
         // manage enable status of up/down button
-        public static bool manageUpDownButton(ListBox listBox, int button) {
+        public static bool ManageUpDownButton(ListBox listBox, int button) {
             bool retour;
 
             if (listBox.SelectedItem == null) {
@@ -40,7 +40,7 @@ namespace Xtream_ToolBox.Utils {
         }
 
         // move up or down item in a listBox
-        public static void moveSelectedItem(ListBox listBox, int direction) {
+        public static void MoveSelectedItem(ListBox listBox, int direction) {
             Object itemToMove = listBox.SelectedItem;
             if (itemToMove != null) {
                 int itemToMoveIndex = listBox.SelectedIndex;
@@ -55,7 +55,7 @@ namespace Xtream_ToolBox.Utils {
             }
         }
 
-        public static void manageExtendedPanelPosition(UserControl sensor, ToolBox toolbox, Form extendedPanel) {
+        public static void ManageExtendedPanelPosition(UserControl sensor, ToolBox toolbox, Form extendedPanel) {
             if ((extendedPanel != null) && (!extendedPanel.IsDisposed)) {
                 extendedPanel.TopMost = toolbox.TopMost;
 
@@ -86,7 +86,7 @@ namespace Xtream_ToolBox.Utils {
             }
         }
 
-        public static Rectangle manageMagneticPosition(Rectangle toolboxArea, List<int> magneticXPositions, List<int> magneticYPositions, int precision, bool magneticActive) {
+        public static Rectangle ManageMagneticPosition(Rectangle toolboxArea, List<int> magneticXPositions, List<int> magneticYPositions, int precision, bool magneticActive) {
             Rectangle retour = toolboxArea;
 
             if (magneticActive) {
@@ -121,7 +121,7 @@ namespace Xtream_ToolBox.Utils {
             return retour;
         }
 
-        public static String wordWrap(String chaine, int width) {
+        public static String WordWrap(String chaine, int width) {
             String[] splittedString = chaine.Split(' ');
             String finalString = "";
             int nbChar = 0;
@@ -139,7 +139,7 @@ namespace Xtream_ToolBox.Utils {
             return finalString;
         }
 
-        public static void configureTooltips(ToolTip tooltip) {
+        public static void ConfigureTooltips(ToolTip tooltip) {
             tooltip.AutomaticDelay = Properties.Settings.Default.hintsAfter;
             tooltip.AutoPopDelay = Properties.Settings.Default.hintsLength;
             tooltip.ReshowDelay = Properties.Settings.Default.hintsReshow;
@@ -147,7 +147,7 @@ namespace Xtream_ToolBox.Utils {
             tooltip.Active = Properties.Settings.Default.hintsActive;
         }
 
-        public static void setTooltips(ToolTip tooltip, Control control, String message) {
+        public static void SetTooltips(ToolTip tooltip, Control control, String message) {
             if (Properties.Settings.Default.hintsActive) {
                 tooltip.SetToolTip(control, message);
             }

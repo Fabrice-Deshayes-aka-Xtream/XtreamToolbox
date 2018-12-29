@@ -34,12 +34,11 @@
             // 
             // lowerButton
             // 
-            resources.ApplyResources(this.lowerButton, "lowerButton");
             this.lowerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lowerButton.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_shutdown;
+            resources.ApplyResources(this.lowerButton, "lowerButton");
             this.lowerButton.Name = "lowerButton";
             this.lowerButton.TabStop = false;
-            this.helpToolTip.SetToolTip(this.lowerButton, resources.GetString("lowerButton.ToolTip"));
             this.lowerButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LowerButton_MouseClick);
             // 
             // helpToolTip
@@ -52,24 +51,22 @@
             // 
             // upperButton
             // 
-            resources.ApplyResources(this.upperButton, "upperButton");
             this.upperButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.upperButton.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_logoff;
+            resources.ApplyResources(this.upperButton, "upperButton");
             this.upperButton.Name = "upperButton";
             this.upperButton.TabStop = false;
-            this.helpToolTip.SetToolTip(this.upperButton, resources.GetString("upperButton.ToolTip"));
             this.upperButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UpperButton_MouseClick);
             // 
             // SensorShutdownManager
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.lowerButton);
             this.Controls.Add(this.upperButton);
             this.DoubleBuffered = true;
+            resources.ApplyResources(this, "$this");
             this.Name = "SensorShutdownManager";
-            this.helpToolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             ((System.ComponentModel.ISupportInitialize)(this.lowerButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upperButton)).EndInit();
             this.ResumeLayout(false);

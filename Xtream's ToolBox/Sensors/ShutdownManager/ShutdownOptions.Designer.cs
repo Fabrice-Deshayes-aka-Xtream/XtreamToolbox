@@ -65,7 +65,7 @@
             this.lockPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_lock;
             this.lockPictureBox.Name = "lockPictureBox";
             this.lockPictureBox.TabStop = false;
-            this.lockPictureBox.Click += new System.EventHandler(this.lockPictureBox_Click);
+            this.lockPictureBox.Click += new System.EventHandler(this.LockPictureBox_Click);
             // 
             // logOffPictureBox
             // 
@@ -75,7 +75,7 @@
             this.logOffPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_logoff;
             this.logOffPictureBox.Name = "logOffPictureBox";
             this.logOffPictureBox.TabStop = false;
-            this.logOffPictureBox.Click += new System.EventHandler(this.logOffPictureBox_Click);
+            this.logOffPictureBox.Click += new System.EventHandler(this.LogOffPictureBox_Click);
             // 
             // swithUserPictureBox
             // 
@@ -85,7 +85,7 @@
             this.swithUserPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_switch_user;
             this.swithUserPictureBox.Name = "swithUserPictureBox";
             this.swithUserPictureBox.TabStop = false;
-            this.swithUserPictureBox.Click += new System.EventHandler(this.swithUserPictureBox_Click);
+            this.swithUserPictureBox.Click += new System.EventHandler(this.SwithUserPictureBox_Click);
             // 
             // restartPictureBox
             // 
@@ -95,7 +95,7 @@
             this.restartPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_restart;
             this.restartPictureBox.Name = "restartPictureBox";
             this.restartPictureBox.TabStop = false;
-            this.restartPictureBox.Click += new System.EventHandler(this.restartPictureBox_Click);
+            this.restartPictureBox.Click += new System.EventHandler(this.RestartPictureBox_Click);
             // 
             // hibernatePictureBox
             // 
@@ -105,7 +105,7 @@
             this.hibernatePictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_hibernate;
             this.hibernatePictureBox.Name = "hibernatePictureBox";
             this.hibernatePictureBox.TabStop = false;
-            this.hibernatePictureBox.Click += new System.EventHandler(this.hibernatePictureBox_Click);
+            this.hibernatePictureBox.Click += new System.EventHandler(this.HibernatePictureBox_Click);
             // 
             // shutdownPictureBox
             // 
@@ -115,7 +115,7 @@
             this.shutdownPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_shutdown;
             this.shutdownPictureBox.Name = "shutdownPictureBox";
             this.shutdownPictureBox.TabStop = false;
-            this.shutdownPictureBox.Click += new System.EventHandler(this.shutdownPictureBox_Click);
+            this.shutdownPictureBox.Click += new System.EventHandler(this.ShutdownPictureBox_Click);
             // 
             // lockLabel
             // 
@@ -159,7 +159,7 @@
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // doItNowRadioButton
             // 
@@ -183,12 +183,12 @@
             this.doItLaterDateTimePicker.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.doItLaterDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.doItLaterDateTimePicker.Name = "doItLaterDateTimePicker";
-            this.doItLaterDateTimePicker.ValueChanged += new System.EventHandler(this.doItLaterDateTimePicker_ValueChanged);
+            this.doItLaterDateTimePicker.ValueChanged += new System.EventHandler(this.DoItLaterDateTimePicker_ValueChanged);
             // 
             // doTimedActionTimer
             // 
             this.doTimedActionTimer.Interval = 1000;
-            this.doTimedActionTimer.Tick += new System.EventHandler(this.doTimedActionTimer_Tick);
+            this.doTimedActionTimer.Tick += new System.EventHandler(this.DoTimedActionTimer_Tick);
             // 
             // countDownLabel
             // 
@@ -204,7 +204,7 @@
             this.closeExtendedInfosPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeExtendedInfosPictureBox.Name = "closeExtendedInfosPictureBox";
             this.closeExtendedInfosPictureBox.TabStop = false;
-            this.closeExtendedInfosPictureBox.Click += new System.EventHandler(this.closeExtendedInfosPictureBox_Click);
+            this.closeExtendedInfosPictureBox.Click += new System.EventHandler(this.CloseExtendedInfosPictureBox_Click);
             // 
             // moveBoxLeft
             // 
@@ -213,9 +213,9 @@
             this.moveBoxLeft.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.moveBoxLeft.Name = "moveBoxLeft";
             this.moveBoxLeft.TabStop = false;
-            this.moveBoxLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseDown);
-            this.moveBoxLeft.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseMove);
-            this.moveBoxLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseUp);
+            this.moveBoxLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseDown);
+            this.moveBoxLeft.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseMove);
+            this.moveBoxLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseUp);
             // 
             // moveBoxRight
             // 
@@ -224,9 +224,9 @@
             this.moveBoxRight.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.moveBoxRight.Name = "moveBoxRight";
             this.moveBoxRight.TabStop = false;
-            this.moveBoxRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseDown);
-            this.moveBoxRight.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseMove);
-            this.moveBoxRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseUp);
+            this.moveBoxRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseDown);
+            this.moveBoxRight.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseMove);
+            this.moveBoxRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseUp);
             // 
             // ShutdownOptions
             // 

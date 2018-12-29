@@ -39,7 +39,7 @@ namespace Xtream_ToolBox {
         public void InitUI() {
             // tooltips & lock move
             helpToolTip.SetToolTip(closerPictureBox, resources.GetString("Toolbox_close"));
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             if (Properties.Settings.Default.lockPosition) {
                 moveBoxEnder.Cursor = Cursors.Default;
@@ -75,7 +75,7 @@ namespace Xtream_ToolBox {
         // gestion du déplacement de la toolbox : déplacement
         private void MoveBox_MouseMove(object sender, MouseEventArgs e) {
             if (mouseIsDown && !Properties.Settings.Default.lockPosition) {
-                Rectangle toolboxArea = ToolBoxUtils.manageMagneticPosition(new Rectangle(toolbox.Left - (lastMousePositionX - e.X), toolbox.Top - (lastMousePositionY - e.Y), toolbox.Width, toolbox.Height), toolbox.magneticXPositions, toolbox.magneticYPositions, 16, Properties.Settings.Default.magneticScreenBorder);
+                Rectangle toolboxArea = ToolBoxUtils.ManageMagneticPosition(new Rectangle(toolbox.Left - (lastMousePositionX - e.X), toolbox.Top - (lastMousePositionY - e.Y), toolbox.Width, toolbox.Height), toolbox.magneticXPositions, toolbox.magneticYPositions, 16, Properties.Settings.Default.magneticScreenBorder);
                 toolbox.Top = toolboxArea.Top;
                 toolbox.Left = toolboxArea.Left;
             }

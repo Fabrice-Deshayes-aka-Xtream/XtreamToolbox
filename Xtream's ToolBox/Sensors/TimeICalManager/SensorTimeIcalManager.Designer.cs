@@ -44,7 +44,7 @@
             // 
             this.calendarTimer.Enabled = true;
             this.calendarTimer.Interval = 990;
-            this.calendarTimer.Tick += new System.EventHandler(this.calendarTimer_Tick);
+            this.calendarTimer.Tick += new System.EventHandler(this.CalendarTimer_Tick);
             // 
             // dayLabel
             // 
@@ -86,12 +86,12 @@
             // reminderTimer
             // 
             this.reminderTimer.Interval = 60000;
-            this.reminderTimer.Tick += new System.EventHandler(this.reminderTimer_Tick);
+            this.reminderTimer.Tick += new System.EventHandler(this.ReminderTimer_Tick);
             // 
             // reminderBackgroundWorker
             // 
-            this.reminderBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.reminderBackgroundWorker_DoWork);
-            this.reminderBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.reminderBackgroundWorker_RunWorkerCompleted);
+            this.reminderBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.ReminderBackgroundWorker_DoWork);
+            this.reminderBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.ReminderBackgroundWorker_RunWorkerCompleted);
             // 
             // hasBirthdayTodayPictureBox
             // 
@@ -102,14 +102,14 @@
             // 
             // initialisationBackgroundWorker
             // 
-            this.initialisationBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.initialisationBackgroundWorker_DoWork);
-            this.initialisationBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.initialisationBackgroundWorker_RunWorkerCompleted);
+            this.initialisationBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.InitialisationBackgroundWorker_DoWork);
+            this.initialisationBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.InitialisationBackgroundWorker_RunWorkerCompleted);
             // 
             // refreshCalendarDataTimer
             // 
             this.refreshCalendarDataTimer.Enabled = true;
             this.refreshCalendarDataTimer.Interval = 300000;
-            this.refreshCalendarDataTimer.Tick += new System.EventHandler(this.refreshCalendarDataTimer_Tick);
+            this.refreshCalendarDataTimer.Tick += new System.EventHandler(this.RefreshCalendarDataTimer_Tick);
             // 
             // SensorTimeIcalManager
             // 

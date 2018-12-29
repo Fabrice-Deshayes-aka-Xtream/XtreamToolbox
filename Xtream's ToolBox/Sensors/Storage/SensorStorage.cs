@@ -37,14 +37,14 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // init sensor data in asynch mode
-        private void initialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
+        private void InitialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
             InitSensorData();
         }
 
         // after init sensor data, refresh ui
-        private void initialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
+        private void InitialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
             RefreshUI();
         }
 
@@ -54,7 +54,7 @@ namespace Xtream_ToolBox.Sensors {
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // tips
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             if (!initialisationBackgroundWorker.IsBusy) {
                 initialisationBackgroundWorker.RunWorkerAsync();
@@ -73,19 +73,19 @@ namespace Xtream_ToolBox.Sensors {
 
         // update location of extended panel if needed
         public void UpdateLocation() {
-            ToolBoxUtils.manageExtendedPanelPosition(this, toolbox, extendedPanel);
+            ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
         }
 
         private void SensorStorage_Click(object sender, EventArgs e) {
             if ((extendedPanel == null) || (extendedPanel.IsDisposed)) {
                 extendedPanel = new SensorStorageExtendedPanel(this);
-                extendedPanel.init();
+                extendedPanel.Init();
             }
 
             if (extendedPanel.Visible) {
                 extendedPanel.Hide();
             } else {
-                ToolBoxUtils.manageExtendedPanelPosition(this, toolbox, extendedPanel);
+                ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
                 extendedPanel.Show();
             }
         }

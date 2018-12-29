@@ -85,7 +85,7 @@
             // cpuRamTimer
             // 
             this.cpuRamTimer.Interval = 500;
-            this.cpuRamTimer.Tick += new System.EventHandler(this.cpuRamTimer_Tick);
+            this.cpuRamTimer.Tick += new System.EventHandler(this.CpuRamTimer_Tick);
             // 
             // cpuVumeter
             // 
@@ -110,7 +110,7 @@
             // 
             this.switchToGraphModeToolStripMenuItem.Name = "switchToGraphModeToolStripMenuItem";
             resources.ApplyResources(this.switchToGraphModeToolStripMenuItem, "switchToGraphModeToolStripMenuItem");
-            this.switchToGraphModeToolStripMenuItem.Click += new System.EventHandler(this.switchToGraphModeToolStripMenuItem_Click);
+            this.switchToGraphModeToolStripMenuItem.Click += new System.EventHandler(this.SwitchToGraphModeToolStripMenuItem_Click);
             // 
             // ramVumeter
             // 
@@ -325,7 +325,7 @@
             this.cpuLineToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_vert;
             this.cpuLineToolStripMenuItem.Name = "cpuLineToolStripMenuItem";
             resources.ApplyResources(this.cpuLineToolStripMenuItem, "cpuLineToolStripMenuItem");
-            this.cpuLineToolStripMenuItem.CheckedChanged += new System.EventHandler(this.cpuLineToolStripMenuItem_CheckedChanged);
+            this.cpuLineToolStripMenuItem.CheckedChanged += new System.EventHandler(this.CpuLineToolStripMenuItem_CheckedChanged);
             // 
             // ramLineToolStripMenuItem
             // 
@@ -334,7 +334,7 @@
             this.ramLineToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_jaune;
             this.ramLineToolStripMenuItem.Name = "ramLineToolStripMenuItem";
             resources.ApplyResources(this.ramLineToolStripMenuItem, "ramLineToolStripMenuItem");
-            this.ramLineToolStripMenuItem.CheckedChanged += new System.EventHandler(this.ramLineToolStripMenuItem_CheckedChanged);
+            this.ramLineToolStripMenuItem.CheckedChanged += new System.EventHandler(this.RamLineToolStripMenuItem_CheckedChanged);
             // 
             // lanReceivedRateToolStripMenuItem
             // 
@@ -342,7 +342,7 @@
             this.lanReceivedRateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_bleu;
             this.lanReceivedRateToolStripMenuItem.Name = "lanReceivedRateToolStripMenuItem";
             resources.ApplyResources(this.lanReceivedRateToolStripMenuItem, "lanReceivedRateToolStripMenuItem");
-            this.lanReceivedRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.lanReceivedRateToolStripMenuItem_CheckedChanged);
+            this.lanReceivedRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.LanReceivedRateToolStripMenuItem_CheckedChanged);
             // 
             // lanSendRateToolStripMenuItem
             // 
@@ -350,7 +350,7 @@
             this.lanSendRateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_turquoise;
             this.lanSendRateToolStripMenuItem.Name = "lanSendRateToolStripMenuItem";
             resources.ApplyResources(this.lanSendRateToolStripMenuItem, "lanSendRateToolStripMenuItem");
-            this.lanSendRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.lanSendRateToolStripMenuItem_CheckedChanged);
+            this.lanSendRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.LanSendRateToolStripMenuItem_CheckedChanged);
             // 
             // wanReceivedRateToolStripMenuItem
             // 
@@ -358,7 +358,7 @@
             this.wanReceivedRateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_rouge;
             this.wanReceivedRateToolStripMenuItem.Name = "wanReceivedRateToolStripMenuItem";
             resources.ApplyResources(this.wanReceivedRateToolStripMenuItem, "wanReceivedRateToolStripMenuItem");
-            this.wanReceivedRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.wanReceivedRateToolStripMenuItem_CheckedChanged);
+            this.wanReceivedRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.WanReceivedRateToolStripMenuItem_CheckedChanged);
             // 
             // wanSendRateToolStripMenuItem
             // 
@@ -366,7 +366,7 @@
             this.wanSendRateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_rose;
             this.wanSendRateToolStripMenuItem.Name = "wanSendRateToolStripMenuItem";
             resources.ApplyResources(this.wanSendRateToolStripMenuItem, "wanSendRateToolStripMenuItem");
-            this.wanSendRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.wanSendRateToolStripMenuItem_CheckedChanged);
+            this.wanSendRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.WanSendRateToolStripMenuItem_CheckedChanged);
             // 
             // toolStripSeparator1
             // 
@@ -386,8 +386,8 @@
             // 
             // initialisationBackgroundWorker
             // 
-            this.initialisationBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.initialisationBackgroundWorker_DoWork);
-            this.initialisationBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.initialisationBackgroundWorker_RunWorkerCompleted);
+            this.initialisationBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.InitialisationBackgroundWorker_DoWork);
+            this.initialisationBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.InitialisationBackgroundWorker_RunWorkerCompleted);
             // 
             // helpToolTip
             // 

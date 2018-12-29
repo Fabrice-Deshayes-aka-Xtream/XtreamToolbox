@@ -46,7 +46,7 @@
             resources.ApplyResources(this.closerPictureBox, "closerPictureBox");
             this.closerPictureBox.Name = "closerPictureBox";
             this.closerPictureBox.TabStop = false;
-            this.closerPictureBox.Click += new System.EventHandler(this.closerPictureBox_Click);
+            this.closerPictureBox.Click += new System.EventHandler(this.CloserPictureBox_Click);
             // 
             // moverRightPictureBox
             // 
@@ -55,9 +55,9 @@
             resources.ApplyResources(this.moverRightPictureBox, "moverRightPictureBox");
             this.moverRightPictureBox.Name = "moverRightPictureBox";
             this.moverRightPictureBox.TabStop = false;
-            this.moverRightPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseDown);
-            this.moverRightPictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseMove);
-            this.moverRightPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseUp);
+            this.moverRightPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseDown);
+            this.moverRightPictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseMove);
+            this.moverRightPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseUp);
             // 
             // moverLeftPictureBox
             // 
@@ -66,9 +66,9 @@
             resources.ApplyResources(this.moverLeftPictureBox, "moverLeftPictureBox");
             this.moverLeftPictureBox.Name = "moverLeftPictureBox";
             this.moverLeftPictureBox.TabStop = false;
-            this.moverLeftPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseDown);
-            this.moverLeftPictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseMove);
-            this.moverLeftPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.moveBox_MouseUp);
+            this.moverLeftPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseDown);
+            this.moverLeftPictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseMove);
+            this.moverLeftPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseUp);
             // 
             // eventsListView
             // 
@@ -103,8 +103,8 @@
             resources.ApplyResources(this.monthCalendar1, "monthCalendar1");
             this.monthCalendar1.MaxSelectionCount = 40;
             this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
-            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.MonthCalendar1_DateSelected);
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.MonthCalendar1_DateSelected);
             // 
             // SensorTimeManagerICalendar
             // 

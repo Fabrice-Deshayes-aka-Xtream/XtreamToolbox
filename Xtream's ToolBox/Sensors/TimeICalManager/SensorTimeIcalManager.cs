@@ -53,12 +53,14 @@ namespace Xtream_ToolBox.Sensors {
                     myService.setUserCredentials(Properties.Settings.Default.googleAccountEmail, Properties.Settings.Default.googleAccountPassword);
 
                     // query to see if there is event today to display event icon
-                    EventQuery myEventQuery = new EventQuery("http://www.google.com/calendar/feeds/default/private/full");
-                    myEventQuery.SingleEvents = true;
-                    myEventQuery.StartTime = DateTime.Now.AddYears(-1);
-                    myEventQuery.EndTime = DateTime.Now.AddYears(1);
-                    myEventQuery.ExtraParameters = "orderby=starttime";
-                    myEventQuery.SortOrder = CalendarSortOrder.ascending;
+                    EventQuery myEventQuery = new EventQuery("http://www.google.com/calendar/feeds/default/private/full")
+                    {
+                        SingleEvents = true,
+                        StartTime = DateTime.Now.AddYears(-1),
+                        EndTime = DateTime.Now.AddYears(1),
+                        ExtraParameters = "orderby=starttime",
+                        SortOrder = CalendarSortOrder.ascending
+                    };
 
                     EventFeed myResultsFeed = myService.Query(myEventQuery);
 
@@ -90,23 +92,23 @@ namespace Xtream_ToolBox.Sensors {
             } 
         }
 
-        private void initialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
+        private void InitialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
             InitSensorData();
         }
 
-        private void initialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {            
+        private void InitialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {            
             // le calendrier est chargé, on force le lancement du reminder
             reminderTimer.Enabled = true;
-            reminderTimer_Tick(this, null);
+            ReminderTimer_Tick(this, null);
         }
 
         public void InitUI() {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             timeLabel.ForeColor = Properties.Settings.Default.textColor;
             dayLabel.ForeColor = Properties.Settings.Default.textColor;
@@ -143,7 +145,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // refresh datetime every timer tick
-        private void calendarTimer_Tick(object sender, EventArgs e) {
+        private void CalendarTimer_Tick(object sender, EventArgs e) {
             RefreshUI();
         }
 
@@ -160,14 +162,14 @@ namespace Xtream_ToolBox.Sensors {
             }
         }
 
-        public void reminderTimer_Tick(object sender, EventArgs e) {
+        public void ReminderTimer_Tick(object sender, EventArgs e) {
             if ((!reminderBackgroundWorker.IsBusy) && (!initialisationBackgroundWorker.IsBusy)) {
                 // on rafraichi le reminder si il est pas déjà en cours et que l'on est pas en train de recharger le calendrier
                 reminderBackgroundWorker.RunWorkerAsync();
             }
         }
 
-        private void reminderBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
+        private void ReminderBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
             DateTime remindMeAfter = DateTime.Now;
             DateTime eventStartTime = DateTime.Now;
             bool newHasEventToday = false;
@@ -199,7 +201,7 @@ namespace Xtream_ToolBox.Sensors {
             hasBirthdayToday = newHasBirthdayToday;
         }
 
-        private void reminderBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
+        private void ReminderBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
             if (hasEventToday) {
                 this.BackgroundImage = Properties.Resources.MCalendarEvent;
             }
@@ -210,7 +212,7 @@ namespace Xtream_ToolBox.Sensors {
             hasBirthdayTodayPictureBox.Visible = hasBirthdayToday;
         }
 
-        private void refreshCalendarDataTimer_Tick(object sender, EventArgs e) {
+        private void RefreshCalendarDataTimer_Tick(object sender, EventArgs e) {
             if (SystemUtils.IsInternetConnected() && !initialisationBackgroundWorker.IsBusy) {
                 initialisationBackgroundWorker.RunWorkerAsync();
             }

@@ -6,7 +6,7 @@ using System.IO;
 using System.Collections.Specialized;
 
 namespace Xtream_ToolBox.Utils.Mail {
-    class Pop3Client : IMailClient {
+    class Pop3Client : IMailClient, IDisposable {
 
         private TcpClient sockServer = null;
         private NetworkStream ns = null;
@@ -20,15 +20,15 @@ namespace Xtream_ToolBox.Utils.Mail {
 
         private bool connected = false;
 
-        public void connect(String phostname, String plogin, String ppassword){
-            connect(phostname, plogin, ppassword, port, timeout);
+        public void Connect(String phostname, String plogin, String ppassword){
+            Connect(phostname, plogin, ppassword, port, timeout);
         }
 
-        public void connect(String phostname, String plogin, String ppassword, int pport) {
-            connect(phostname, plogin, ppassword, pport, timeout);
+        public void Connect(String phostname, String plogin, String ppassword, int pport) {
+            Connect(phostname, plogin, ppassword, pport, timeout);
         }
 
-        public void connect(String phostname, String plogin, String ppassword, int pport, int ptimeout) {
+        public void Connect(String phostname, String plogin, String ppassword, int pport, int ptimeout) {
             hostname = phostname;
             login = plogin;
             password = ppassword;
@@ -36,15 +36,17 @@ namespace Xtream_ToolBox.Utils.Mail {
             timeout = ptimeout;
 
             try {
-                sockServer = new TcpClient(hostname, port);
-                sockServer.ReceiveTimeout = timeout;
+                sockServer = new TcpClient(hostname, port)
+                {
+                    ReceiveTimeout = timeout
+                };
                 ns = sockServer.GetStream();
                 sr = new StreamReader(ns);
-                receive(sr);
-                send("user " + login + "\r\n", ns);
-                receive(sr);
-                send("pass " + password + "\r\n", ns);
-                receive(sr);
+                Receive(sr);
+                Send("user " + login + "\r\n", ns);
+                Receive(sr);
+                Send("pass " + password + "\r\n", ns);
+                Receive(sr);
                 connected = true;
             } catch(Exception exception) {
                 connected = false;
@@ -52,13 +54,13 @@ namespace Xtream_ToolBox.Utils.Mail {
             }
         }
 
-        public int getNbMailInbox() {
+        public int GetNbMailInbox() {
             int nbMsg = 0;
 
             if (connected) {
-                send("stat\r\n", ns);
+                Send("stat\r\n", ns);
                 try {
-                    String[] tempS = receive(sr).Split(' ');
+                    String[] tempS = Receive(sr).Split(' ');
                     nbMsg = int.Parse(tempS[1]);
                 } catch (Exception exception) {
                     Console.WriteLine(exception.Message);
@@ -68,15 +70,15 @@ namespace Xtream_ToolBox.Utils.Mail {
             return nbMsg;
         }
 
-        public Dictionary<String, StringCollection> getMailHeader(int idMail) {
+        public Dictionary<String, StringCollection> GetMailHeader(int idMail) {
             String popResponse, key, tmpValue;
             StringCollection value;
             int positionOfDoubleDot;
             Dictionary<String, StringCollection> header = new Dictionary<String, StringCollection>();
 
             if (connected) {
-                send("top " + idMail + " 0\r\n", ns);
-                popResponse = receive(sr);
+                Send("top " + idMail + " 0\r\n", ns);
+                popResponse = Receive(sr);
 
                 while ((popResponse!=null) && (!popResponse.Equals("."))) {
                     //Console.WriteLine(popResponse);
@@ -92,21 +94,23 @@ namespace Xtream_ToolBox.Utils.Mail {
                             header.Remove(key);
                             header.Add(key, value);
                         } else {
-                            value = new StringCollection();
-                            value.Add(tmpValue);
+                            value = new StringCollection
+                            {
+                                tmpValue
+                            };
                             header.Add(key, value);
                         }
                     }
-                    popResponse = receive(sr);
+                    popResponse = Receive(sr);
                 }
             }
 
             return header;
         }
         
-        public void disconnect() {
+        public void Disconnect() {
             if (connected) {
-                send("quit\r\n", ns);
+                Send("quit\r\n", ns);
             }
             connected = false;
 
@@ -124,7 +128,7 @@ namespace Xtream_ToolBox.Utils.Mail {
         }
 
         // Envoi une commande pop
-        private void send(String bToSend, NetworkStream ns) {
+        private void Send(String bToSend, NetworkStream ns) {
             try {
                 Byte[] bOutStream;
                 if ((ns != null) && (ns.CanWrite)) {
@@ -137,7 +141,7 @@ namespace Xtream_ToolBox.Utils.Mail {
         }
 
         // Récupère la réponse à une commande pop
-        private String receive(StreamReader sr) {
+        private String Receive(StreamReader sr) {
             String response = "";
             try {
                 response = sr.ReadLine();
@@ -146,6 +150,14 @@ namespace Xtream_ToolBox.Utils.Mail {
                 Console.WriteLine(exception.Message);
             }
             return response;
+        }
+
+        public void Dispose()
+        {
+            if (sr != null)
+            {
+                sr.Dispose();
+            }
         }
     }
 }

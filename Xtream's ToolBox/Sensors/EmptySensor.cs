@@ -50,7 +50,7 @@ namespace Xtream_ToolBox.Sensors {
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // tips
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)

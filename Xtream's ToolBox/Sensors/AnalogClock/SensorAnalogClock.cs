@@ -76,7 +76,7 @@ namespace Xtream_ToolBox.Sensors {
             Margin = new Padding(Xtream_ToolBox.Properties.Settings.Default.spaceBetweenSensor, 0, Xtream_ToolBox.Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // tips
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             dateTime = DateTime.Now;
 

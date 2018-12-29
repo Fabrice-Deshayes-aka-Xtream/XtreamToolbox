@@ -29,7 +29,7 @@ namespace Xtream_ToolBox.Sensors {
         // constructeur
         public DetailStorageUserControl() {
             InitializeComponent();
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             readMaxLabel.Left = readLegendLabel.Right;
             writeMaxLabel.Left = writeLegendLabel.Right;

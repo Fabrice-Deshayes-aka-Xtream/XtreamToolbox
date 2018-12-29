@@ -67,7 +67,7 @@
             this.closeExtendedInfosPictureBox.Name = "closeExtendedInfosPictureBox";
             this.closeExtendedInfosPictureBox.TabStop = false;
             this.helpToolTip.SetToolTip(this.closeExtendedInfosPictureBox, resources.GetString("closeExtendedInfosPictureBox.ToolTip"));
-            this.closeExtendedInfosPictureBox.Click += new System.EventHandler(this.closeExtendedInfosPictureBox_Click);
+            this.closeExtendedInfosPictureBox.Click += new System.EventHandler(this.CloseExtendedInfosPictureBox_Click);
             // 
             // helpToolTip
             // 
@@ -209,7 +209,7 @@
             resources.ApplyResources(this.changeLocationButton, "changeLocationButton");
             this.changeLocationButton.Name = "changeLocationButton";
             this.changeLocationButton.UseVisualStyleBackColor = true;
-            this.changeLocationButton.Click += new System.EventHandler(this.changeLocationButton_Click);
+            this.changeLocationButton.Click += new System.EventHandler(this.ChangeLocationButton_Click);
             // 
             // weatherLinkLabel
             // 
@@ -217,7 +217,7 @@
             this.weatherLinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.weatherLinkLabel.Name = "weatherLinkLabel";
             this.weatherLinkLabel.TabStop = true;
-            this.weatherLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.weatherLinkLabel_LinkClicked);
+            this.weatherLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.WeatherLinkLabel_LinkClicked);
             // 
             // SensorWeatherExtendedPanel
             // 

@@ -32,7 +32,6 @@ namespace Xtream_ToolBox.Sensors {
                 Stream stream = webResponse.GetResponseStream();
                 weather = (Weather)xmlSerializer.Deserialize(stream);
                 stream.Close();
-                stream.Dispose();
                 webResponse.Close();
             } catch (InvalidOperationException invalidOperationException) {
                 Console.WriteLine(invalidOperationException.Message);

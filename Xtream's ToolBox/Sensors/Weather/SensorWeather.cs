@@ -62,7 +62,7 @@ namespace Xtream_ToolBox.Sensors {
             helpToolTip.SetToolTip(tempLabel, resources.GetString("Weather_tip"));
             helpToolTip.SetToolTip(this, resources.GetString("Weather_tip"));
 
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             if (!initialisationBackgroundWorker.IsBusy) {
                 initialisationBackgroundWorker.RunWorkerAsync();
@@ -84,7 +84,7 @@ namespace Xtream_ToolBox.Sensors {
             }
 
             if ((extendedPanel != null) && (!extendedPanel.IsDisposed)) {
-                extendedPanel.updateWeather();
+                extendedPanel.UpdateWeather();
             }
 
             tempLabel.Text = currentWeather.currentObservation.temp + "°C";
@@ -94,7 +94,7 @@ namespace Xtream_ToolBox.Sensors {
 
         // update location of extended panel if needed
         public void UpdateLocation() {
-            ToolBoxUtils.manageExtendedPanelPosition(this, toolbox, extendedPanel);
+            ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
         }
 
         // update weather each 30 minutes
@@ -114,7 +114,7 @@ namespace Xtream_ToolBox.Sensors {
             if (extendedPanel.Visible) {
                 extendedPanel.Hide();
             } else {
-                ToolBoxUtils.manageExtendedPanelPosition(this, toolbox, extendedPanel);
+                ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
                 extendedPanel.Show();
             }
         }

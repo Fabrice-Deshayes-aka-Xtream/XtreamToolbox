@@ -36,7 +36,7 @@ namespace Xtream_ToolBox.Sensors {
 
             // tips
             helpToolTip.SetToolTip(this, resources.GetString("Calc_tip"));
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)

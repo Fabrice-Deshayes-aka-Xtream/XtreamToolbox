@@ -39,7 +39,7 @@ namespace Xtream_ToolBox.Sensors {
             helpToolTip.SetToolTip(capsLockStatusPictureBoxOFF, resources.GetString("KeyStatus_Caps_OFF"));
             helpToolTip.SetToolTip(numLockStatusPictureBoxON, resources.GetString("KeyStatus_Num_ON"));
             helpToolTip.SetToolTip(numLockStatusPictureBoxOFF, resources.GetString("KeyStatus_Num_OFF"));
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)

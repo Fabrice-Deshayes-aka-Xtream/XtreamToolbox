@@ -32,9 +32,9 @@ namespace Xtream_ToolBox.Sensors {
         public void Initialisation() {
             this.Text = resources.GetString("FormName_Weather");
 
-            emptyWeatherInformations();
+            EmptyWeatherInformations();
 
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             // Weather options
             locationTextBox.Text = Properties.Settings.Default.weatherCode;
@@ -44,7 +44,7 @@ namespace Xtream_ToolBox.Sensors {
             initDone = true;
         }
 
-        public void saveConfiguration() {
+        public void SaveConfiguration() {
             if (initDone) {
                 Properties.Settings.Default.weatherCode = locationTextBox.Text;
 
@@ -55,7 +55,7 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // update weather display infos
-        public void updateWeather(){
+        public void UpdateWeather(){
             if (sensorWeather.currentWeather != null) {
                 temperatureGroupbox.Enabled = true;
                 pressureAndVisibilityGroupBox.Enabled = true;
@@ -73,12 +73,12 @@ namespace Xtream_ToolBox.Sensors {
                 weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(sensorWeather.currentWeather.currentObservation.icon);
             }
             else {
-                emptyWeatherInformations();
+                EmptyWeatherInformations();
                 MessageBox.Show(resources.GetString("Weather_err"));
             }
         }
 
-        private void emptyWeatherInformations() {
+        private void EmptyWeatherInformations() {
             temperatureGroupbox.Enabled = false;
             pressureAndVisibilityGroupBox.Enabled = false;
             windGroupBox.Enabled = false;
@@ -96,19 +96,19 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // close extended panel
-        private void closeExtendedInfosPictureBox_Click(object sender, EventArgs e) {
+        private void CloseExtendedInfosPictureBox_Click(object sender, EventArgs e) {
             Hide();
         }
 
-        private void changeLocationButton_Click(object sender, EventArgs e) {
-            saveConfiguration();
+        private void ChangeLocationButton_Click(object sender, EventArgs e) {
+            SaveConfiguration();
         }
 
-        private void systemComboBox_SelectedIndexChanged(object sender, EventArgs e) {
-            saveConfiguration();
+        private void SystemComboBox_SelectedIndexChanged(object sender, EventArgs e) {
+            SaveConfiguration();
         }
 
-        private void weatherLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+        private void WeatherLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             System.Diagnostics.Process.Start("http://www.weather.com");
         }
     }

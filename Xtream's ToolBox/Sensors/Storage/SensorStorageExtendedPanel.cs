@@ -20,15 +20,15 @@ namespace Xtream_ToolBox.Sensors {
             SystemUtils.HideFromAltTab(this);
         }
 
-        private void closeExtendedInfosPictureBox_Click(object sender, EventArgs e) {
+        private void CloseExtendedInfosPictureBox_Click(object sender, EventArgs e) {
             Hide();
         }
 
-        public void init() {
+        public void Init() {
             long totalSpace = 0;
             long totalFreeSpace = 0;
             SuspendLayout();            
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             detailStoragePanel.Controls.Add(detailStorageUserControl);
             
@@ -53,7 +53,7 @@ namespace Xtream_ToolBox.Sensors {
             ResumeLayout();
         }
 
-        private void drivesComboBox_SelectedIndexChanged(object sender, EventArgs e) {
+        private void DrivesComboBox_SelectedIndexChanged(object sender, EventArgs e) {
             detailStorageUserControl.setDevice((DriveInfo)drivesComboBox.SelectedItem);
             detailStorageUserControl.updateData();
             detailStorageUserControl.Refresh();

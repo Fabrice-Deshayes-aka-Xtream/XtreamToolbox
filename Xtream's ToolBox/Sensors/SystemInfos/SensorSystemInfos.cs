@@ -107,14 +107,14 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         // init sensor data in asynch mode
-        private void initialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
+        private void InitialisationBackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
             InitSensorData();
         }
 
         // after init sensor data, refresh ui
-        private void initialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
+        private void InitialisationBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
             cpuRamTimer.Enabled = true;
         }
 
@@ -142,7 +142,7 @@ namespace Xtream_ToolBox.Sensors {
             // option            
             cpuRamTimer.Interval = Properties.Settings.Default.sysInfosRefreshTime;
 
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             // couleur du text
             cpuLabel.ForeColor = Properties.Settings.Default.textColor;
@@ -394,7 +394,7 @@ namespace Xtream_ToolBox.Sensors {
 
             // set extendedPanel cpu & ram infos
             if ((extendedPanel!=null) && (!extendedPanel.IsDisposed) && (extendedPanel.Visible)) {
-                extendedPanel.refreshSystemInformation(ramUsedStr, cpuUsedStr, processAndThreadStr);
+                extendedPanel.RefreshSystemInformation(ramUsedStr, cpuUsedStr, processAndThreadStr);
             }
 
             if (Properties.Settings.Default.sysInfoDisplayMode == 0) {
@@ -404,11 +404,11 @@ namespace Xtream_ToolBox.Sensors {
 
         // update location of extended panel if needed
         public void UpdateLocation() {
-            ToolBoxUtils.manageExtendedPanelPosition(this, toolbox, extendedPanel);
+            ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
         }
 
         // processing on each timer tick
-        private void cpuRamTimer_Tick(object sender, EventArgs e) {
+        private void CpuRamTimer_Tick(object sender, EventArgs e) {
             RefreshUI();
         }
 
@@ -416,67 +416,67 @@ namespace Xtream_ToolBox.Sensors {
         private void SensorSystemInfos_Click(object sender, EventArgs e) {
             if ((extendedPanel == null) || (extendedPanel.IsDisposed)) {
                 extendedPanel = new SensorSystemInfosMore(this);
-                extendedPanel.initialisation();
-                extendedPanel.refreshSystemInformation("", "", "");
+                extendedPanel.Initialisation();
+                extendedPanel.RefreshSystemInformation("", "", "");
             }
 
             if (extendedPanel.Visible) {
                 extendedPanel.Hide();
             } else {
-                ToolBoxUtils.manageExtendedPanelPosition(this, toolbox, extendedPanel);
+                ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
                 extendedPanel.Show();
             }
         }
 
-        private void cpuLineToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void CpuLineToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
             lineHandleCpu.Visible = cpuLineToolStripMenuItem.Checked;
             Properties.Settings.Default.lineCpu = cpuLineToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
         }
 
-        private void ramLineToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void RamLineToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
             lineHandleRam.Visible = ramLineToolStripMenuItem.Checked;
             Properties.Settings.Default.lineRam = ramLineToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
         }
 
-        private void lanReceivedRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void LanReceivedRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
             lineHandleLanD.Visible = lanReceivedRateToolStripMenuItem.Checked;
             Properties.Settings.Default.lineLanD = lanReceivedRateToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
             if (lanNetworkInterface != null) lanBitsReceivedOnLastTick = lanNetworkInterface.GetIPv4Statistics().BytesReceived * 8;
         }
 
-        private void lanSendRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void LanSendRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
             lineHandleLanU.Visible = lanSendRateToolStripMenuItem.Checked;
             Properties.Settings.Default.lineLanU = lanSendRateToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
             if (lanNetworkInterface != null) lanBitsSentOnLastTick = lanNetworkInterface.GetIPv4Statistics().BytesSent * 8;
         }
 
-        private void wanReceivedRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void WanReceivedRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
             lineHandleWanD.Visible = wanReceivedRateToolStripMenuItem.Checked;
             Properties.Settings.Default.lineWanD = wanReceivedRateToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
             if (wanNetworkInterface!=null) wanBitsReceivedOnLastTick = wanNetworkInterface.GetIPv4Statistics().BytesReceived * 8;
         }
 
-        private void wanSendRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
+        private void WanSendRateToolStripMenuItem_CheckedChanged(object sender, EventArgs e) {
             lineHandleWanU.Visible = wanSendRateToolStripMenuItem.Checked;
             Properties.Settings.Default.lineWanU = wanSendRateToolStripMenuItem.Checked;
             Properties.Settings.Default.Save();
             if (wanNetworkInterface!=null) wanBitsSentOnLastTick = wanNetworkInterface.GetIPv4Statistics().BytesSent * 8;
         }
 
-        private void switchToGraphModeToolStripMenuItem_Click(object sender, EventArgs e) {
-            switchDisplayMode(MODE_GRAPH);
+        private void SwitchToGraphModeToolStripMenuItem_Click(object sender, EventArgs e) {
+            SwitchDisplayMode(MODE_GRAPH);
         }
 
         private void SwithToVumeterToolStripMenuItem_Click(object sender, EventArgs e) {
-            switchDisplayMode(MODE_VUMETERS);
+            SwitchDisplayMode(MODE_VUMETERS);
         }
 
-        private void switchDisplayMode(int mode) {
+        private void SwitchDisplayMode(int mode) {
             if (mode == MODE_GRAPH) {
                 // graph mode
                 c2DPushGraph.Visible = true;

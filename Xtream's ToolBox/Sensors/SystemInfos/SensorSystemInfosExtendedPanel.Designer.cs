@@ -77,7 +77,7 @@
             this.closeExtendedInfosPictureBox.Name = "closeExtendedInfosPictureBox";
             this.closeExtendedInfosPictureBox.TabStop = false;
             this.helpToolTip.SetToolTip(this.closeExtendedInfosPictureBox, resources.GetString("closeExtendedInfosPictureBox.ToolTip"));
-            this.closeExtendedInfosPictureBox.Click += new System.EventHandler(this.closeExtendedInfosPictureBox_Click);
+            this.closeExtendedInfosPictureBox.Click += new System.EventHandler(this.CloseExtendedInfosPictureBox_Click);
             // 
             // helpToolTip
             // 

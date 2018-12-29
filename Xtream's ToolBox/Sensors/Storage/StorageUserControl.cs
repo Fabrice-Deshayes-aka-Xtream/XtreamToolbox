@@ -21,11 +21,11 @@ namespace Xtream_ToolBox.Sensors {
         public StorageUserControl(DriveInfo device) {
             InitializeComponent();
             this.device = device;
-            ToolBoxUtils.configureTooltips(helpToolTip);
-            updateData();
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
+            UpdateData();
         }
 
-        public void updateData() {
+        public void UpdateData() {
             if ((device != null) && (device.IsReady)) {
                 deviceNameLabel.Text = device.Name + " " + device.VolumeLabel;
                 Int64 usedSpace = (100 * (device.TotalSize - device.TotalFreeSpace)) / device.TotalSize;
@@ -36,9 +36,9 @@ namespace Xtream_ToolBox.Sensors {
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e) {
+        private void Timer1_Tick(object sender, EventArgs e) {
             if (this.Visible) {
-                updateData();
+                UpdateData();
             }
         }
     }

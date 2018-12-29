@@ -24,14 +24,14 @@ namespace Xtream_ToolBox {
         // Consrtructeur
         public SensorSystemInfosMore(SensorSystemInfos psensorSystemInfos) {
             InitializeComponent();
-            ToolBoxUtils.configureTooltips(helpToolTip);
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
             this.Text = resources.GetString("FormName_SysInfos");
             SystemUtils.HideFromAltTab(this);
             sensorSystemInfos = psensorSystemInfos;
         }
 
         // initialisation (one shot)
-        public void initialisation(){
+        public void Initialisation(){
             if (sensorSystemInfos.systemInformations != null) {
                 osLabel1.Text = String.Format(resources.GetString("SysInfos_01"), sensorSystemInfos.systemInformations.osCaption, Environment.OSVersion.ServicePack);
                 osLabel3.Text = String.Format(resources.GetString("SysInfos_02"), sensorSystemInfos.systemInformations.osSerialNumber);
@@ -60,7 +60,7 @@ namespace Xtream_ToolBox {
         }
 
         // initialisation des infos volatiles
-        public void refreshSystemInformation(String ramUsedStr, String cpuUsedStr, String processAndThreadStr) {
+        public void RefreshSystemInformation(String ramUsedStr, String cpuUsedStr, String processAndThreadStr) {
             if (sensorSystemInfos.systemInformations != null) {
                 
                 procRamLabel5.Text = processAndThreadStr;
@@ -73,7 +73,7 @@ namespace Xtream_ToolBox {
         }
 
         // cache le paneau d'extension
-        private void closeExtendedInfosPictureBox_Click(object sender, EventArgs e) {
+        private void CloseExtendedInfosPictureBox_Click(object sender, EventArgs e) {
             Hide();
         }
    }

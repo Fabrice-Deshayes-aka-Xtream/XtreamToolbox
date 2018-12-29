@@ -33,7 +33,7 @@ namespace MSjogren.Samples.ShellLink
     /// <remarks>
     ///   .NET friendly wrapper for the ShellLink class
     /// </remarks>
-    public class ShellShortcut : IDisposable
+    public sealed class ShellShortcut : IDisposable
     {
         private const int INFOTIPSIZE = 1024;
         private const int MAX_PATH = 260;
@@ -206,7 +206,7 @@ namespace MSjogren.Samples.ShellLink
 
                 m_Link.GetIconLocation(sb, sb.Capacity, out int nIconIdx);
                 hInst = Marshal.GetHINSTANCE(this.GetType().Module);
-                hIcon = Native.ExtractIcon(hInst, sb.ToString(), nIconIdx);
+                hIcon = NativeMethods.ExtractIcon(hInst, sb.ToString(), nIconIdx);
                 if (hIcon == IntPtr.Zero)
                     return null;
 
@@ -214,7 +214,7 @@ namespace MSjogren.Samples.ShellLink
                 ico = Icon.FromHandle(hIcon);
                 clone = (Icon)ico.Clone();
                 ico.Dispose();
-                Native.DestroyIcon(hIcon);
+                NativeMethods.DestroyIcon(hIcon);
                 return clone;
             }
         }
@@ -333,9 +333,9 @@ namespace MSjogren.Samples.ShellLink
 
 
         #region Native Win32 API functions
-        private class Native
+        private class NativeMethods
         {
-            [DllImport("shell32.dll", CharSet = CharSet.Auto)]
+            [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
             public static extern IntPtr ExtractIcon(IntPtr hInst, string lpszExeFileName, int nIconIndex);
 
             [DllImport("user32.dll")]

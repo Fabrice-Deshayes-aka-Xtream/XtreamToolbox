@@ -65,9 +65,9 @@
             // 
             this.renamerBackgroundWorker.WorkerReportsProgress = true;
             this.renamerBackgroundWorker.WorkerSupportsCancellation = true;
-            this.renamerBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.renamerBackgroundWorker_DoWork);
-            this.renamerBackgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.renamerBackgroundWorker_ProgressChanged);
-            this.renamerBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.renamerBackgroundWorker_RunWorkerCompleted);
+            this.renamerBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.RenamerBackgroundWorker_DoWork);
+            this.renamerBackgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.RenamerBackgroundWorker_ProgressChanged);
+            this.renamerBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.RenamerBackgroundWorker_RunWorkerCompleted);
             // 
             // panel1
             // 
@@ -121,7 +121,7 @@
             this.renameButton.Image = global::Xtream_ToolBox.Properties.Resources.rename;
             this.renameButton.Name = "renameButton";
             this.renameButton.UseVisualStyleBackColor = true;
-            this.renameButton.Click += new System.EventHandler(this.renameButton_Click);
+            this.renameButton.Click += new System.EventHandler(this.RenameButton_Click);
             // 
             // SimulateButton
             // 
@@ -162,13 +162,13 @@
             resources.ApplyResources(this.browseButton, "browseButton");
             this.browseButton.Name = "browseButton";
             this.browseButton.UseVisualStyleBackColor = true;
-            this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
+            this.browseButton.Click += new System.EventHandler(this.BrowseButton_Click);
             // 
             // imagesPathTextBox
             // 
             resources.ApplyResources(this.imagesPathTextBox, "imagesPathTextBox");
             this.imagesPathTextBox.Name = "imagesPathTextBox";
-            this.imagesPathTextBox.TextChanged += new System.EventHandler(this.imagesPathTextBox_TextChanged);
+            this.imagesPathTextBox.TextChanged += new System.EventHandler(this.ImagesPathTextBox_TextChanged);
             // 
             // panel2
             // 
@@ -188,7 +188,7 @@
             resources.ApplyResources(this.cancelButton, "cancelButton");
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // resultListBox
             // 
@@ -224,7 +224,7 @@
             this.clearButton.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
             this.clearButton.Name = "clearButton";
             this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // panel3
             // 

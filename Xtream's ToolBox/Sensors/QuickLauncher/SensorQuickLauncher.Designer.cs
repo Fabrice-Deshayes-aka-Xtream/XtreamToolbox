@@ -97,7 +97,7 @@
             this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             this.propertiesToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.propertiesToolStripMenuItem.Text = "View or change item\'s properties";
-            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
+            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.PropertiesToolStripMenuItem_Click);
             // 
             // addSeparatorAfterThisItemToolStripMenuItem
             // 
@@ -118,7 +118,7 @@
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.removeToolStripMenuItem.Text = "Remove this item";
-            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.RemoveToolStripMenuItem_Click);
             // 
             // separatorContextMenu
             // 
@@ -134,7 +134,7 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
             this.toolStripMenuItem1.Text = "Remove this separator";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.RemoveToolStripMenuItem_Click);
             // 
             // moveShortcutPictureBox
             // 
