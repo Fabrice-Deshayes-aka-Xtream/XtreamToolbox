@@ -1,11 +1,17 @@
-version 2018.12.29
+version 2018.12.31
+- improve TimeICalManager sensor with left/right click actions
+- fix shutdownManager sensor
+  - icon size (regression from 2018.12.26)
+  - timed actions are working now
+- improve storage sensor by adding all devices (usb, cdrom...)
+- use GANT icon for analog clock sensor
+- en-US is now the default language
 - fix code style(end)
 - move p/invoke calls in NativeMethods class
-- fix shutdownManager icon size (regression from 2018.12.26)
-- fix shutdownManager 
-- en-US is now the default language
-- add credits to Mattias Sjögren and Valer BOCAN in about screen
+- add credits to Mattias Sjögren, Valer BOCAN and 
+  Syed Mehroz Alam in about screen
 - update Newtonsoft package from 4.5.11 to 12.0.1
+- remove dependency to google APIs
 
 version 2018.12.26
 - fix code style (begin)
