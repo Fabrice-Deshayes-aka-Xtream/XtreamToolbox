@@ -34,11 +34,11 @@
 - Auteur : Fabrice Deshayes aka Xtream
 - Compatibilité : Win 10 / 64 bits
 - Dll/packages utilisées :
-    - [C2DPushGraph by Stuart Konen](https://www.codeproject.com/articles/16634//Articles/16634/C2DPushGraph-A-Push-Graph-Control-2) (graph mode of System Info and Storage Sensor)
-	- [Newtonsoft by James Newton-King](https://github.com/JamesNK/Newtonsoft.Json)
-	- ShellShortcut.cs by Mattias Sjögren
+    - [C2DPushGraph by Stuart Konen](https://www.codeproject.com/articles/16634//Articles/16634/C2DPushGraph-A-Push-Graph-Control-2) (used in SystemInfos and Storage sensor)
+	- [Newtonsoft by James Newton-King](https://github.com/JamesNK/Newtonsoft.Json) (used in Weather sensor)
+	- ShellShortcut.cs by Mattias Sjögren (used in QuickLaunch sensor)
 	- NTPClient.cs by Valer BOCAN
-    - Google Data API (calendar)
+	- Analog Clock Control by Syed Mehroz Alam (used in AnalogClock sensor)
 - Icons :
     - IconBuffet studio
     - [Refreshcl by tpdk](https://www.deviantart.com/tpdkcasimir/art/Refresh-CL-Icons-Pack-25565201)
@@ -53,14 +53,14 @@ Les sensors disponibles sont (de gauche à droite sur le screenshot) :
 - KeyStatus
 - PowerStatus
 - SystemInfos
-- Spacer
-- AnalogClock
 - Storage
-- TimeManager
-- Weather
-- Inbox
 - Calc
 - Notepad
+- Inbox
+- Spacer
+- AnalogClock
+- TimeManager
+- Weather
 - Spacer
 - MyComputer
 - FavoriteLocations
@@ -125,7 +125,7 @@ Un clic avec le bouton gauche de la souris permet d’ouvrir le panneau d’exte
 
 ![TimeManager](screenshots/timemanager.png)
 
-Ce sensor affiche la date et l’heure courante. Via un clic sur l’icône, on peut accéder à un calendrier sommaire qui affiches les événements de son calendrier gmail (si on a saisi son login / mdp gmail dans les options) -> fonction expérimentale qui eut fonctionnée mais qui ne marche plus très bien.
+Ce sensor affiche la date et l’heure courante. Un clic gauche sur l’icône permet d'ouvrir le calendrier (google par défaut), un clic droit permet d'ouvrir les contacts (google par défaut). Voir les options pour configurer des URL de calendrier et contacts différentes.
 
 ### Weather
 
