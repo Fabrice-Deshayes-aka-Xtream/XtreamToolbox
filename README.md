@@ -32,6 +32,7 @@
 
 - Langage de dévelopement : C#
 - Auteur : Fabrice Deshayes aka Xtream
+- Compatibilité : Win 10 / 64 bits
 - Dll/packages utilisées :
     - [C2DPushGraph by Stuart Konen](https://www.codeproject.com/articles/16634//Articles/16634/C2DPushGraph-A-Push-Graph-Control-2) (graph mode of System Info and Storage Sensor)
 	- [Newtonsoft by James Newton-King](https://github.com/JamesNK/Newtonsoft.Json)
@@ -53,19 +54,20 @@ Les sensors disponibles sont (de gauche à droite sur le screenshot) :
 - PowerStatus
 - SystemInfos
 - Spacer
-- Storage
 - AnalogClock
+- Storage
 - TimeManager
 - Weather
 - Inbox
 - Calc
 - Notepad
+- Spacer
 - MyComputer
 - FavoriteLocations
 - QuickLauncher
+- Spacer
 - RecycleBin
 - ShutdownManager
-- Spacer
 
 La toolbox contient également des fonctions annexes, accessible depuis l’icône présent dans la barre de tâche. Outre les fonctions classiques « a propos », « paramétrage » et « quitter », vous y trouverez également un renommeur de photos Jpeg basé sur la date EXIF (date de prise du cliché positionnée par l’appareil utilisé pour prendre la photo).
 
