@@ -215,17 +215,14 @@
     <Setting Name="shutdownManagerDefaultActionLowerButton" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="googleAccountEmail" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="googleAccountPassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="googleBirthdayEventKeyword" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="proxyPort" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">8080</Value>
+    </Setting>
+    <Setting Name="calendarUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://calendar.google.com</Value>
+    </Setting>
+    <Setting Name="contactsUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://contacts.google.com</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -118,163 +118,109 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="threatHasBirthdayTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>311, 53</value>
+  <data name="ContactUrlTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 51</value>
   </data>
-  <data name="threatHasBirthdayTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 20</value>
+  <data name="ContactUrlTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>358, 20</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="threatHasBirthdayTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="ContactUrlTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;threatHasBirthdayTextBox.Name" xml:space="preserve">
-    <value>threatHasBirthdayTextBox</value>
+  <data name="&gt;&gt;ContactUrlTextBox.Name" xml:space="preserve">
+    <value>ContactUrlTextBox</value>
   </data>
-  <data name="&gt;&gt;threatHasBirthdayTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;ContactUrlTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;threatHasBirthdayTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ContactUrlTextBox.Parent" xml:space="preserve">
     <value>googleAccountGroupBox</value>
   </data>
-  <data name="&gt;&gt;threatHasBirthdayTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ContactUrlTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="threatHasBirthdayLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="ContactsUrlLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="threatHasBirthdayLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="ContactsUrlLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="threatHasBirthdayLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 56</value>
+  <data name="ContactsUrlLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 54</value>
   </data>
-  <data name="threatHasBirthdayLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 13</value>
+  <data name="ContactsUrlLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
   </data>
-  <data name="threatHasBirthdayLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="threatHasBirthdayLabel.Text" xml:space="preserve">
-    <value>Threat event has birthday is this keyword is found in event title</value>
-  </data>
-  <data name="&gt;&gt;threatHasBirthdayLabel.Name" xml:space="preserve">
-    <value>threatHasBirthdayLabel</value>
-  </data>
-  <data name="&gt;&gt;threatHasBirthdayLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;threatHasBirthdayLabel.Parent" xml:space="preserve">
-    <value>googleAccountGroupBox</value>
-  </data>
-  <data name="&gt;&gt;threatHasBirthdayLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="googleAccountPasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>311, 22</value>
-  </data>
-  <data name="googleAccountPasswordTextBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="googleAccountPasswordTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 20</value>
-  </data>
-  <data name="googleAccountPasswordTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;googleAccountPasswordTextBox.Name" xml:space="preserve">
-    <value>googleAccountPasswordTextBox</value>
-  </data>
-  <data name="&gt;&gt;googleAccountPasswordTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;googleAccountPasswordTextBox.Parent" xml:space="preserve">
-    <value>googleAccountGroupBox</value>
-  </data>
-  <data name="&gt;&gt;googleAccountPasswordTextBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="googleAccountPasswordLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="googleAccountPasswordLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="googleAccountPasswordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>253, 25</value>
-  </data>
-  <data name="googleAccountPasswordLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="googleAccountPasswordLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="ContactsUrlLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="googleAccountPasswordLabel.Text" xml:space="preserve">
-    <value>Password</value>
+  <data name="ContactsUrlLabel.Text" xml:space="preserve">
+    <value>Contacts URL</value>
   </data>
-  <data name="&gt;&gt;googleAccountPasswordLabel.Name" xml:space="preserve">
-    <value>googleAccountPasswordLabel</value>
+  <data name="&gt;&gt;ContactsUrlLabel.Name" xml:space="preserve">
+    <value>ContactsUrlLabel</value>
   </data>
-  <data name="&gt;&gt;googleAccountPasswordLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;ContactsUrlLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;googleAccountPasswordLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ContactsUrlLabel.Parent" xml:space="preserve">
     <value>googleAccountGroupBox</value>
   </data>
-  <data name="&gt;&gt;googleAccountPasswordLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;ContactsUrlLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="googleAccountEmailTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 22</value>
+  <data name="CalendarUrlTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 22</value>
   </data>
-  <data name="googleAccountEmailTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 20</value>
+  <data name="CalendarUrlTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>358, 20</value>
   </data>
-  <data name="googleAccountEmailTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="CalendarUrlTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;googleAccountEmailTextBox.Name" xml:space="preserve">
-    <value>googleAccountEmailTextBox</value>
+  <data name="&gt;&gt;CalendarUrlTextBox.Name" xml:space="preserve">
+    <value>CalendarUrlTextBox</value>
   </data>
-  <data name="&gt;&gt;googleAccountEmailTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;CalendarUrlTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;googleAccountEmailTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CalendarUrlTextBox.Parent" xml:space="preserve">
     <value>googleAccountGroupBox</value>
   </data>
-  <data name="&gt;&gt;googleAccountEmailTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;CalendarUrlTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="googleAccountEmailLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="CalendarUrlLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="googleAccountEmailLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="CalendarUrlLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="googleAccountEmailLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="CalendarUrlLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="googleAccountEmailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 13</value>
+  <data name="CalendarUrlLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
   </data>
-  <data name="googleAccountEmailLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="CalendarUrlLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="googleAccountEmailLabel.Text" xml:space="preserve">
-    <value>Email</value>
+  <data name="CalendarUrlLabel.Text" xml:space="preserve">
+    <value>Calendar URL</value>
   </data>
-  <data name="&gt;&gt;googleAccountEmailLabel.Name" xml:space="preserve">
-    <value>googleAccountEmailLabel</value>
+  <data name="&gt;&gt;CalendarUrlLabel.Name" xml:space="preserve">
+    <value>CalendarUrlLabel</value>
   </data>
-  <data name="&gt;&gt;googleAccountEmailLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;CalendarUrlLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;googleAccountEmailLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CalendarUrlLabel.Parent" xml:space="preserve">
     <value>googleAccountGroupBox</value>
   </data>
-  <data name="&gt;&gt;googleAccountEmailLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;CalendarUrlLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="googleAccountGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 255</value>
@@ -286,7 +232,7 @@
     <value>6</value>
   </data>
   <data name="googleAccountGroupBox.Text" xml:space="preserve">
-    <value>Google Account and parameters for Google Calendar Sensor</value>
+    <value>TimeICalManager</value>
   </data>
   <data name="&gt;&gt;googleAccountGroupBox.Name" xml:space="preserve">
     <value>googleAccountGroupBox</value>
@@ -5812,7 +5758,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>91</value>
+    <value>109</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>

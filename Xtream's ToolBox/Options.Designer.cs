@@ -32,12 +32,10 @@
             this.optionsTabControl = new System.Windows.Forms.TabControl();
             this.generalTabPage = new System.Windows.Forms.TabPage();
             this.googleAccountGroupBox = new System.Windows.Forms.GroupBox();
-            this.threatHasBirthdayTextBox = new System.Windows.Forms.TextBox();
-            this.threatHasBirthdayLabel = new System.Windows.Forms.Label();
-            this.googleAccountPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.googleAccountPasswordLabel = new System.Windows.Forms.Label();
-            this.googleAccountEmailTextBox = new System.Windows.Forms.TextBox();
-            this.googleAccountEmailLabel = new System.Windows.Forms.Label();
+            this.ContactUrlTextBox = new System.Windows.Forms.TextBox();
+            this.ContactsUrlLabel = new System.Windows.Forms.Label();
+            this.CalendarUrlTextBox = new System.Windows.Forms.TextBox();
+            this.CalendarUrlLabel = new System.Windows.Forms.Label();
             this.networkDriveGroupBox = new System.Windows.Forms.GroupBox();
             this.nd3_pathTextBox = new System.Windows.Forms.TextBox();
             this.nd3_driveLetterComboBox = new System.Windows.Forms.ComboBox();
@@ -273,45 +271,33 @@
             // 
             // googleAccountGroupBox
             // 
-            this.googleAccountGroupBox.Controls.Add(this.threatHasBirthdayTextBox);
-            this.googleAccountGroupBox.Controls.Add(this.threatHasBirthdayLabel);
-            this.googleAccountGroupBox.Controls.Add(this.googleAccountPasswordTextBox);
-            this.googleAccountGroupBox.Controls.Add(this.googleAccountPasswordLabel);
-            this.googleAccountGroupBox.Controls.Add(this.googleAccountEmailTextBox);
-            this.googleAccountGroupBox.Controls.Add(this.googleAccountEmailLabel);
+            this.googleAccountGroupBox.Controls.Add(this.ContactUrlTextBox);
+            this.googleAccountGroupBox.Controls.Add(this.ContactsUrlLabel);
+            this.googleAccountGroupBox.Controls.Add(this.CalendarUrlTextBox);
+            this.googleAccountGroupBox.Controls.Add(this.CalendarUrlLabel);
             resources.ApplyResources(this.googleAccountGroupBox, "googleAccountGroupBox");
             this.googleAccountGroupBox.Name = "googleAccountGroupBox";
             this.googleAccountGroupBox.TabStop = false;
             // 
-            // threatHasBirthdayTextBox
+            // ContactUrlTextBox
             // 
-            resources.ApplyResources(this.threatHasBirthdayTextBox, "threatHasBirthdayTextBox");
-            this.threatHasBirthdayTextBox.Name = "threatHasBirthdayTextBox";
+            resources.ApplyResources(this.ContactUrlTextBox, "ContactUrlTextBox");
+            this.ContactUrlTextBox.Name = "ContactUrlTextBox";
             // 
-            // threatHasBirthdayLabel
+            // ContactsUrlLabel
             // 
-            resources.ApplyResources(this.threatHasBirthdayLabel, "threatHasBirthdayLabel");
-            this.threatHasBirthdayLabel.Name = "threatHasBirthdayLabel";
+            resources.ApplyResources(this.ContactsUrlLabel, "ContactsUrlLabel");
+            this.ContactsUrlLabel.Name = "ContactsUrlLabel";
             // 
-            // googleAccountPasswordTextBox
+            // CalendarUrlTextBox
             // 
-            resources.ApplyResources(this.googleAccountPasswordTextBox, "googleAccountPasswordTextBox");
-            this.googleAccountPasswordTextBox.Name = "googleAccountPasswordTextBox";
+            resources.ApplyResources(this.CalendarUrlTextBox, "CalendarUrlTextBox");
+            this.CalendarUrlTextBox.Name = "CalendarUrlTextBox";
             // 
-            // googleAccountPasswordLabel
+            // CalendarUrlLabel
             // 
-            resources.ApplyResources(this.googleAccountPasswordLabel, "googleAccountPasswordLabel");
-            this.googleAccountPasswordLabel.Name = "googleAccountPasswordLabel";
-            // 
-            // googleAccountEmailTextBox
-            // 
-            resources.ApplyResources(this.googleAccountEmailTextBox, "googleAccountEmailTextBox");
-            this.googleAccountEmailTextBox.Name = "googleAccountEmailTextBox";
-            // 
-            // googleAccountEmailLabel
-            // 
-            resources.ApplyResources(this.googleAccountEmailLabel, "googleAccountEmailLabel");
-            this.googleAccountEmailLabel.Name = "googleAccountEmailLabel";
+            resources.ApplyResources(this.CalendarUrlLabel, "CalendarUrlLabel");
+            this.CalendarUrlLabel.Name = "CalendarUrlLabel";
             // 
             // networkDriveGroupBox
             // 
@@ -2017,12 +2003,10 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox upperActionComboBox;
         private System.Windows.Forms.GroupBox googleAccountGroupBox;
-        private System.Windows.Forms.TextBox googleAccountPasswordTextBox;
-        private System.Windows.Forms.Label googleAccountPasswordLabel;
-        private System.Windows.Forms.TextBox googleAccountEmailTextBox;
-        private System.Windows.Forms.Label googleAccountEmailLabel;
-        private System.Windows.Forms.TextBox threatHasBirthdayTextBox;
-        private System.Windows.Forms.Label threatHasBirthdayLabel;
+        private System.Windows.Forms.TextBox ContactUrlTextBox;
+        private System.Windows.Forms.Label ContactsUrlLabel;
+        private System.Windows.Forms.TextBox CalendarUrlTextBox;
+        private System.Windows.Forms.Label CalendarUrlLabel;
         private System.Windows.Forms.TextBox proxyPortTextBox;
         private System.Windows.Forms.Label proxyPortLabel;
     }

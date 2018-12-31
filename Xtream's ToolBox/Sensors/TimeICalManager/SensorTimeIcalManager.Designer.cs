@@ -31,13 +31,8 @@
             this.helpToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.ViewCalendarPictureBox = new System.Windows.Forms.PictureBox();
             this.dateLabel = new System.Windows.Forms.Label();
-            this.reminderTimer = new System.Windows.Forms.Timer(this.components);
-            this.reminderBackgroundWorker = new System.ComponentModel.BackgroundWorker();
-            this.hasBirthdayTodayPictureBox = new System.Windows.Forms.PictureBox();
             this.initialisationBackgroundWorker = new System.ComponentModel.BackgroundWorker();
-            this.refreshCalendarDataTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ViewCalendarPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hasBirthdayTodayPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // calendarTimer
@@ -74,7 +69,7 @@
             resources.ApplyResources(this.ViewCalendarPictureBox, "ViewCalendarPictureBox");
             this.ViewCalendarPictureBox.Name = "ViewCalendarPictureBox";
             this.ViewCalendarPictureBox.TabStop = false;
-            this.ViewCalendarPictureBox.Click += new System.EventHandler(this.ViewCalendarPictureBox_Click);
+            this.ViewCalendarPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ViewCalendarPictureBox_MouseClick);
             // 
             // dateLabel
             // 
@@ -83,33 +78,9 @@
             this.dateLabel.ForeColor = System.Drawing.Color.Black;
             this.dateLabel.Name = "dateLabel";
             // 
-            // reminderTimer
-            // 
-            this.reminderTimer.Interval = 60000;
-            this.reminderTimer.Tick += new System.EventHandler(this.ReminderTimer_Tick);
-            // 
-            // reminderBackgroundWorker
-            // 
-            this.reminderBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.ReminderBackgroundWorker_DoWork);
-            this.reminderBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.ReminderBackgroundWorker_RunWorkerCompleted);
-            // 
-            // hasBirthdayTodayPictureBox
-            // 
-            this.hasBirthdayTodayPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.EventBirthday;
-            resources.ApplyResources(this.hasBirthdayTodayPictureBox, "hasBirthdayTodayPictureBox");
-            this.hasBirthdayTodayPictureBox.Name = "hasBirthdayTodayPictureBox";
-            this.hasBirthdayTodayPictureBox.TabStop = false;
-            // 
             // initialisationBackgroundWorker
             // 
             this.initialisationBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.InitialisationBackgroundWorker_DoWork);
-            this.initialisationBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.InitialisationBackgroundWorker_RunWorkerCompleted);
-            // 
-            // refreshCalendarDataTimer
-            // 
-            this.refreshCalendarDataTimer.Enabled = true;
-            this.refreshCalendarDataTimer.Interval = 300000;
-            this.refreshCalendarDataTimer.Tick += new System.EventHandler(this.RefreshCalendarDataTimer_Tick);
             // 
             // SensorTimeIcalManager
             // 
@@ -117,15 +88,14 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.MCalendar;
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.hasBirthdayTodayPictureBox);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.dayLabel);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.ViewCalendarPictureBox);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.Name = "SensorTimeIcalManager";
             ((System.ComponentModel.ISupportInitialize)(this.ViewCalendarPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hasBirthdayTodayPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,11 +109,7 @@
         private System.Windows.Forms.ToolTip helpToolTip;
         private System.Windows.Forms.PictureBox ViewCalendarPictureBox;
         private System.Windows.Forms.Label dateLabel;
-        private System.Windows.Forms.Timer reminderTimer;
-        private System.ComponentModel.BackgroundWorker reminderBackgroundWorker;
-        private System.Windows.Forms.PictureBox hasBirthdayTodayPictureBox;
         public System.ComponentModel.BackgroundWorker initialisationBackgroundWorker;
-        private System.Windows.Forms.Timer refreshCalendarDataTimer;
 
     }
 }

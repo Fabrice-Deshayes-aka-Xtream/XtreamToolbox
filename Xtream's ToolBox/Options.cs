@@ -84,10 +84,9 @@ namespace Xtream_ToolBox
                     break;
             }
 
-            // Google Account
-            googleAccountEmailTextBox.Text = Properties.Settings.Default.googleAccountEmail;
-            googleAccountPasswordTextBox.Text = Properties.Settings.Default.googleAccountPassword;
-            threatHasBirthdayTextBox.Text = Properties.Settings.Default.googleBirthdayEventKeyword;
+            // TimeICalManager
+            CalendarUrlTextBox.Text = Properties.Settings.Default.calendarUrl;
+            ContactUrlTextBox.Text = Properties.Settings.Default.contactsUrl;
 
             // auto mount network drive
             nd1_driveLetterComboBox.Text = Properties.Settings.Default.nd1DriveLetter;
@@ -374,10 +373,9 @@ namespace Xtream_ToolBox
                     break;
             }
 
-            // Google Account
-            Properties.Settings.Default.googleAccountEmail = googleAccountEmailTextBox.Text;
-            Properties.Settings.Default.googleAccountPassword = googleAccountPasswordTextBox.Text;
-            Properties.Settings.Default.googleBirthdayEventKeyword = threatHasBirthdayTextBox.Text;
+            // TimeICalManager
+            Properties.Settings.Default.calendarUrl = CalendarUrlTextBox.Text;
+            Properties.Settings.Default.contactsUrl = ContactUrlTextBox.Text;
 
             // auto mount network drive
             Properties.Settings.Default.nd1DriveLetter = nd1_driveLetterComboBox.Text;

@@ -874,42 +874,6 @@ namespace Xtream_ToolBox.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string googleAccountEmail {
-            get {
-                return ((string)(this["googleAccountEmail"]));
-            }
-            set {
-                this["googleAccountEmail"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string googleAccountPassword {
-            get {
-                return ((string)(this["googleAccountPassword"]));
-            }
-            set {
-                this["googleAccountPassword"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string googleBirthdayEventKeyword {
-            get {
-                return ((string)(this["googleBirthdayEventKeyword"]));
-            }
-            set {
-                this["googleBirthdayEventKeyword"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("8080")]
         public int proxyPort {
             get {
@@ -917,6 +881,30 @@ namespace Xtream_ToolBox.Properties {
             }
             set {
                 this["proxyPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://calendar.google.com")]
+        public string calendarUrl {
+            get {
+                return ((string)(this["calendarUrl"]));
+            }
+            set {
+                this["calendarUrl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://contacts.google.com")]
+        public string contactsUrl {
+            get {
+                return ((string)(this["contactsUrl"]));
+            }
+            set {
+                this["contactsUrl"] = value;
             }
         }
     }
