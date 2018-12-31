@@ -47,9 +47,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.closerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverRightPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverLeftPictureBox)).BeginInit();
@@ -301,20 +301,6 @@
             this.label1.Text = "Valer BOCAN (NTPClient.cs)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 8F);
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(190, 119);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
-            this.label2.MaximumSize = new System.Drawing.Size(0, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 13);
-            this.label2.TabIndex = 61;
-            this.label2.Text = "Google Calendar API";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
@@ -326,7 +312,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 15);
             this.label3.TabIndex = 62;
-            this.label3.Text = "version 2018.12.29";
+            this.label3.Text = "version 2018.12.31";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -342,6 +328,20 @@
             this.label5.TabIndex = 63;
             this.label5.Text = "CHANGELOG";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial", 8F);
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(190, 119);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label2.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 13);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "Syed Mehroz Alam (Analog Clock)";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // About
             // 
@@ -407,8 +407,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
     }
 }
