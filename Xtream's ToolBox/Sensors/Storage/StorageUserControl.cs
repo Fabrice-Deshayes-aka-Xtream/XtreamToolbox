@@ -24,6 +24,22 @@ namespace Xtream_ToolBox.Sensors
         {
             InitializeComponent();
             this.device = device;
+            switch(device.DriveType)
+            {
+                case DriveType.Fixed:
+                    devicePictureBox.Image = Properties.Resources.Drive_harddisc;
+                    break;
+                case DriveType.CDRom:
+                    devicePictureBox.Image = Properties.Resources.Drive_cd_rom;
+                    break;
+                case DriveType.Removable:
+                    devicePictureBox.Image = Properties.Resources.Drive_USB;
+                    break;
+                default:
+                    devicePictureBox.Image = Properties.Resources.Drive_harddisc;
+                    break;
+            }
+
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
             UpdateData();
         }

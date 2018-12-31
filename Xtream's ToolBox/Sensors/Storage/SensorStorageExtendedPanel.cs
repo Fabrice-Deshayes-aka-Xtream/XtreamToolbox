@@ -37,9 +37,11 @@ namespace Xtream_ToolBox.Sensors {
 
             if (sensorStorage.allDrives != null) {
                 foreach (DriveInfo device in sensorStorage.allDrives) {
-                    if (device.DriveType == DriveType.Fixed) {
-                        totalSpace += device.TotalSize;
-                        totalFreeSpace += device.AvailableFreeSpace;
+                    if (device.IsReady) {
+                        if (device.DriveType == DriveType.Fixed) { 
+                            totalSpace += device.TotalSize;
+                            totalFreeSpace += device.AvailableFreeSpace;
+                        }
                         flowLayoutPanel.Controls.Add(new StorageUserControl(device));
                         drivesComboBox.Items.Add(device);
                     }
