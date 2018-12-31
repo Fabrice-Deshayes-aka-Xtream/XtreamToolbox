@@ -453,16 +453,6 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap analogClock {
-            get {
-                object obj = ResourceManager.GetObject("analogClock", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap arrow_back_16 {
             get {
                 object obj = ResourceManager.GetObject("arrow_back_16", resourceCulture);
@@ -822,70 +812,6 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap calendarBackground {
-            get {
-                object obj = ResourceManager.GetObject("calendarBackground", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à MM/dd/yyyy.
-        /// </summary>
-        internal static string CalendarDate {
-            get {
-                return ResourceManager.GetString("CalendarDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à MM/dd/yy hh:mm tt.
-        /// </summary>
-        internal static string CalendarEventDateTime {
-            get {
-                return ResourceManager.GetString("CalendarEventDateTime", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à unique event;recurent event - daily;recurent event - weekly;recurent event - monthly;recurent event - yearly.
-        /// </summary>
-        internal static string CalendarEventType {
-            get {
-                return ResourceManager.GetString("CalendarEventType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à dismiss this event;remind me again in 5 minutes;remind me again in 10 minutes;remind me again in 15 minutes;remind me again in 20 minutes;remind me again in 25 minutes;remind me again in 30 minutes;remind me again in 45 minutes;remind me again in 1 day;remind me again in 2 days;remind me again in 1 week.
-        /// </summary>
-        internal static string CalendarRemindMeType {
-            get {
-                return ResourceManager.GetString("CalendarRemindMeType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à no reminder;5 minutes;10 minutes;15 minutes;20 minutes;25 minutes;30 minutes;45 minutes;1 hour;2 hours;3 hours;1 day;2 days;1 week.
-        /// </summary>
-        internal static string CalendarRemindType {
-            get {
-                return ResourceManager.GetString("CalendarRemindType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à hh:mm tt.
-        /// </summary>
-        internal static string CalendarTime {
-            get {
-                return ResourceManager.GetString("CalendarTime", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap camera {
             get {
                 object obj = ResourceManager.GetObject("camera", resourceCulture);
@@ -956,6 +882,16 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Clock {
+            get {
+                object obj = ResourceManager.GetObject("Clock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cloudy {
             get {
                 object obj = ResourceManager.GetObject("cloudy", resourceCulture);
@@ -1019,26 +955,6 @@ namespace Xtream_ToolBox.Properties {
         internal static System.Drawing.Bitmap Drive_USB {
             get {
                 object obj = ResourceManager.GetObject("Drive_USB", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EventBirthday {
-            get {
-                object obj = ResourceManager.GetObject("EventBirthday", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EventPicto {
-            get {
-                object obj = ResourceManager.GetObject("EventPicto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1540,16 +1456,6 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MCalendarEvent {
-            get {
-                object obj = ResourceManager.GetObject("MCalendarEvent", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap mostlycloudy {
             get {
                 object obj = ResourceManager.GetObject("mostlycloudy", resourceCulture);
@@ -1563,16 +1469,6 @@ namespace Xtream_ToolBox.Properties {
         internal static System.Drawing.Bitmap mostlysunny {
             get {
                 object obj = ResourceManager.GetObject("mostlysunny", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MusicBackground_small {
-            get {
-                object obj = ResourceManager.GetObject("MusicBackground_small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1736,7 +1632,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Left click to open / close notepad, Right click to launch your preffered text editor.
+        ///   Recherche une chaîne localisée semblable à Left click to open / close notepad.{0}Right click to launch your preffered text editor..
         /// </summary>
         internal static string NotePad_tip {
             get {
@@ -2000,7 +1896,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Left click to open your email program, Right click to refresh mail counter.
+        ///   Recherche une chaîne localisée semblable à Left click to open your email program.{0}Right click to refresh mail counter..
         /// </summary>
         internal static string Pop3Checker_OpenIt {
             get {
@@ -2340,6 +2236,16 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shutdownOptionsBackground {
+            get {
+                object obj = ResourceManager.GetObject("shutdownOptionsBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SI_Central_Unit {
             get {
                 object obj = ResourceManager.GetObject("SI_Central_Unit", resourceCulture);
@@ -2430,9 +2336,9 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap stop1 {
+        internal static System.Drawing.Bitmap stop {
             get {
-                object obj = ResourceManager.GetObject("stop1", resourceCulture);
+                object obj = ResourceManager.GetObject("stop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2630,7 +2536,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Serial : {0}.
+        ///   Recherche une chaîne localisée semblable à Serial: {0}.
         /// </summary>
         internal static string SysInfos_02 {
             get {
@@ -2648,7 +2554,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Paging file : {0}.
+        ///   Recherche une chaîne localisée semblable à Paging file: {0}.
         /// </summary>
         internal static string SysInfos_04 {
             get {
@@ -2684,7 +2590,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Card type : {0} {1} Mb/s.
+        ///   Recherche une chaîne localisée semblable à Card type: {0} {1} Mb/s.
         /// </summary>
         internal static string SysInfos_07 {
             get {
@@ -2729,7 +2635,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Type : {0}.
+        ///   Recherche une chaîne localisée semblable à Type: {0}.
         /// </summary>
         internal static string SysInfos_12 {
             get {
@@ -2747,7 +2653,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Physical memory : {0}.
+        ///   Recherche une chaîne localisée semblable à Physical memory: {0}.
         /// </summary>
         internal static string SysInfos_14 {
             get {
@@ -2765,7 +2671,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Installed on : {0} / uptime : {1}:{2}:{3}.
+        ///   Recherche une chaîne localisée semblable à Installed on: {0} / uptime: {1}:{2}:{3}.
         /// </summary>
         internal static string SysInfos_16 {
             get {
@@ -2792,7 +2698,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Sent : {0}/s - Received : {1}/s{4}{2}% of {3}/s download bandwidth used..
+        ///   Recherche une chaîne localisée semblable à Sent: {0}/s - Received: {1}/s{4}{2}% of {3}/s download bandwidth used..
         /// </summary>
         internal static string SysInfos_19 {
             get {
@@ -2801,7 +2707,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Sent : {0}/s - Received : {1}/s{4}{2}% of {3}/s bandwidth used..
+        ///   Recherche une chaîne localisée semblable à Sent: {0}/s - Received: {1}/s{4}{2}% of {3}/s bandwidth used..
         /// </summary>
         internal static string SysInfos_20 {
             get {
@@ -2862,6 +2768,15 @@ namespace Xtream_ToolBox.Properties {
             get {
                 object obj = ResourceManager.GetObject("thermometre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Left click to open online calendar{0}Right click to open online contacts..
+        /// </summary>
+        internal static string TimeICalManager_Tip {
+            get {
+                return ResourceManager.GetString("TimeICalManager_Tip", resourceCulture);
             }
         }
         
@@ -2980,7 +2895,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Last mesure : {0}.
+        ///   Recherche une chaîne localisée semblable à Last mesure: {0}.
         /// </summary>
         internal static string Weather_03 {
             get {
@@ -2989,7 +2904,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Last update : {0}.
+        ///   Recherche une chaîne localisée semblable à Last update: {0}.
         /// </summary>
         internal static string Weather_04 {
             get {
@@ -2998,7 +2913,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Temp : {0}°{1} (feels like {2}°{3}).
+        ///   Recherche une chaîne localisée semblable à Temp: {0}°{1} (feels like {2}°{3}).
         /// </summary>
         internal static string Weather_05 {
             get {
@@ -3007,7 +2922,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Relative Humidity : {0} / Drew point : {1}°{2}.
+        ///   Recherche une chaîne localisée semblable à Relative Humidity: {0} / Drew point : {1}°{2}.
         /// </summary>
         internal static string Weather_06 {
             get {
@@ -3016,7 +2931,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Barometric pressure : {0}.
+        ///   Recherche une chaîne localisée semblable à Barometric pressure: {0}.
         /// </summary>
         internal static string Weather_07 {
             get {
@@ -3025,7 +2940,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à UV index : {0} / Visibility : {1} {2}.
+        ///   Recherche une chaîne localisée semblable à UV index: {0} / Visibility : {1} {2}.
         /// </summary>
         internal static string Weather_08 {
             get {
@@ -3034,21 +2949,11 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Wind speed : from {2} ({3}°) at {0} {1} .
+        ///   Recherche une chaîne localisée semblable à Wind speed: from {2} ({3}°) at {0} {1} .
         /// </summary>
         internal static string Weather_09 {
             get {
                 return ResourceManager.GetString("Weather_09", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Weather_128x128_23 {
-            get {
-                object obj = ResourceManager.GetObject("Weather_128x128_23", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -3081,16 +2986,6 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Weather_small_23 {
-            get {
-                object obj = ResourceManager.GetObject("Weather_small_23", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Recherche une chaîne localisée semblable à Open / Close weather informations.
         /// </summary>
         internal static string Weather_tip {
@@ -3100,7 +2995,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à E.
+        ///   Recherche une chaîne localisée semblable à East.
         /// </summary>
         internal static string Weather_WinDir_E {
             get {
@@ -3109,7 +3004,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à N.
+        ///   Recherche une chaîne localisée semblable à North.
         /// </summary>
         internal static string Weather_WinDir_N {
             get {
@@ -3118,7 +3013,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à S.
+        ///   Recherche une chaîne localisée semblable à South.
         /// </summary>
         internal static string Weather_WinDir_S {
             get {
@@ -3127,11 +3022,21 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à W.
+        ///   Recherche une chaîne localisée semblable à West.
         /// </summary>
         internal static string Weather_WinDir_W {
             get {
                 return ResourceManager.GetString("Weather_WinDir_W", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wind_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Wind_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

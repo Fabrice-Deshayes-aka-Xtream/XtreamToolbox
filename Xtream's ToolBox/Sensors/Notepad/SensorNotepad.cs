@@ -44,7 +44,7 @@ namespace Xtream_ToolBox.Sensors
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // tips
-            helpToolTip.SetToolTip(this, resources.GetString("NotePad_tip"));
+            ToolBoxUtils.SetTooltips(helpToolTip, this, String.Format(resources.GetString("NotePad_tip"),Environment.NewLine));
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
         }
 

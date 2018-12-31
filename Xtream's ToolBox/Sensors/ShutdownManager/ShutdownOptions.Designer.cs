@@ -64,60 +64,60 @@
             // 
             // lockPictureBox
             // 
-            resources.ApplyResources(this.lockPictureBox, "lockPictureBox");
             this.lockPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.lockPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lockPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_lock;
+            resources.ApplyResources(this.lockPictureBox, "lockPictureBox");
             this.lockPictureBox.Name = "lockPictureBox";
             this.lockPictureBox.TabStop = false;
             this.lockPictureBox.Click += new System.EventHandler(this.LockPictureBox_Click);
             // 
             // logOffPictureBox
             // 
-            resources.ApplyResources(this.logOffPictureBox, "logOffPictureBox");
             this.logOffPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.logOffPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logOffPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_logoff;
+            resources.ApplyResources(this.logOffPictureBox, "logOffPictureBox");
             this.logOffPictureBox.Name = "logOffPictureBox";
             this.logOffPictureBox.TabStop = false;
             this.logOffPictureBox.Click += new System.EventHandler(this.LogOffPictureBox_Click);
             // 
             // swithUserPictureBox
             // 
-            resources.ApplyResources(this.swithUserPictureBox, "swithUserPictureBox");
             this.swithUserPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.swithUserPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.swithUserPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_switch_user;
+            resources.ApplyResources(this.swithUserPictureBox, "swithUserPictureBox");
             this.swithUserPictureBox.Name = "swithUserPictureBox";
             this.swithUserPictureBox.TabStop = false;
             this.swithUserPictureBox.Click += new System.EventHandler(this.SwithUserPictureBox_Click);
             // 
             // restartPictureBox
             // 
-            resources.ApplyResources(this.restartPictureBox, "restartPictureBox");
             this.restartPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.restartPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.restartPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_restart;
+            resources.ApplyResources(this.restartPictureBox, "restartPictureBox");
             this.restartPictureBox.Name = "restartPictureBox";
             this.restartPictureBox.TabStop = false;
             this.restartPictureBox.Click += new System.EventHandler(this.RestartPictureBox_Click);
             // 
             // hibernatePictureBox
             // 
-            resources.ApplyResources(this.hibernatePictureBox, "hibernatePictureBox");
             this.hibernatePictureBox.BackColor = System.Drawing.Color.Transparent;
             this.hibernatePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hibernatePictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_hibernate;
+            resources.ApplyResources(this.hibernatePictureBox, "hibernatePictureBox");
             this.hibernatePictureBox.Name = "hibernatePictureBox";
             this.hibernatePictureBox.TabStop = false;
             this.hibernatePictureBox.Click += new System.EventHandler(this.HibernatePictureBox_Click);
             // 
             // shutdownPictureBox
             // 
-            resources.ApplyResources(this.shutdownPictureBox, "shutdownPictureBox");
             this.shutdownPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.shutdownPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.shutdownPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_shutdown;
+            resources.ApplyResources(this.shutdownPictureBox, "shutdownPictureBox");
             this.shutdownPictureBox.Name = "shutdownPictureBox";
             this.shutdownPictureBox.TabStop = false;
             this.shutdownPictureBox.Click += new System.EventHandler(this.ShutdownPictureBox_Click);
@@ -184,8 +184,8 @@
             // 
             // doItLaterDateTimePicker
             // 
-            resources.ApplyResources(this.doItLaterDateTimePicker, "doItLaterDateTimePicker");
             this.doItLaterDateTimePicker.Cursor = System.Windows.Forms.Cursors.Arrow;
+            resources.ApplyResources(this.doItLaterDateTimePicker, "doItLaterDateTimePicker");
             this.doItLaterDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.doItLaterDateTimePicker.Name = "doItLaterDateTimePicker";
             this.doItLaterDateTimePicker.ValueChanged += new System.EventHandler(this.DoItLaterDateTimePicker_ValueChanged);
@@ -197,25 +197,25 @@
             // 
             // countDownLabel
             // 
-            resources.ApplyResources(this.countDownLabel, "countDownLabel");
             this.countDownLabel.BackColor = System.Drawing.Color.Transparent;
             this.countDownLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            resources.ApplyResources(this.countDownLabel, "countDownLabel");
             this.countDownLabel.Name = "countDownLabel";
             // 
             // closeExtendedInfosPictureBox
             // 
-            resources.ApplyResources(this.closeExtendedInfosPictureBox, "closeExtendedInfosPictureBox");
             this.closeExtendedInfosPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.closeExtendedInfosPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.closeExtendedInfosPictureBox, "closeExtendedInfosPictureBox");
             this.closeExtendedInfosPictureBox.Name = "closeExtendedInfosPictureBox";
             this.closeExtendedInfosPictureBox.TabStop = false;
             this.closeExtendedInfosPictureBox.Click += new System.EventHandler(this.CloseExtendedInfosPictureBox_Click);
             // 
             // moveBoxLeft
             // 
-            resources.ApplyResources(this.moveBoxLeft, "moveBoxLeft");
             this.moveBoxLeft.BackColor = System.Drawing.Color.Transparent;
             this.moveBoxLeft.Cursor = System.Windows.Forms.Cursors.NoMove2D;
+            resources.ApplyResources(this.moveBoxLeft, "moveBoxLeft");
             this.moveBoxLeft.Name = "moveBoxLeft";
             this.moveBoxLeft.TabStop = false;
             this.moveBoxLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseDown);
@@ -224,9 +224,9 @@
             // 
             // moveBoxRight
             // 
-            resources.ApplyResources(this.moveBoxRight, "moveBoxRight");
             this.moveBoxRight.BackColor = System.Drawing.Color.Transparent;
             this.moveBoxRight.Cursor = System.Windows.Forms.Cursors.NoMove2D;
+            resources.ApplyResources(this.moveBoxRight, "moveBoxRight");
             this.moveBoxRight.Name = "moveBoxRight";
             this.moveBoxRight.TabStop = false;
             this.moveBoxRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveBox_MouseDown);
@@ -237,7 +237,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.MusicBackground_small;
+            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.shutdownOptionsBackground;
             this.ControlBox = false;
             this.Controls.Add(this.moveBoxRight);
             this.Controls.Add(this.moveBoxLeft);

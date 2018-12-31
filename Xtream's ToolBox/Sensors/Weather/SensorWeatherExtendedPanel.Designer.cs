@@ -175,7 +175,7 @@
             // pictureBox4
             // 
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Image = global::Xtream_ToolBox.Properties.Resources.Weather_small_23;
+            this.pictureBox4.Image = global::Xtream_ToolBox.Properties.Resources.Wind_Logo;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             // 

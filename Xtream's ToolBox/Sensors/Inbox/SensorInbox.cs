@@ -157,7 +157,7 @@ namespace Xtream_ToolBox.Sensors
                 }
             }
 
-            hints = hints + resources.GetString("Pop3Checker_OpenIt");
+            hints = hints + String.Format(resources.GetString("Pop3Checker_OpenIt"),Environment.NewLine);
         }
 
         private int ApplySpamRules(Dictionary<String, StringCollection> mailHeader)

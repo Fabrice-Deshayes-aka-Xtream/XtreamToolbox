@@ -145,10 +145,10 @@ namespace Xtream_ToolBox.Sensors
             try
             {
                 //// Friendly Wind direction
-                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("N", resources.GetString("Weather_WinDir_N"));
-                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("S", resources.GetString("Weather_WinDir_S"));
-                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("E", resources.GetString("Weather_WinDir_E"));
-                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("W", resources.GetString("Weather_WinDir_W"));
+                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("North", resources.GetString("Weather_WinDir_N"));
+                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("South", resources.GetString("Weather_WinDir_S"));
+                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("East", resources.GetString("Weather_WinDir_E"));
+                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("West", resources.GetString("Weather_WinDir_W"));
             }
             catch (Exception exception)
             {

@@ -150,8 +150,8 @@ namespace Xtream_ToolBox.Sensors {
             // SensorAnalogClock
             // 
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.analogClock;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.Clock;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "SensorAnalogClock";

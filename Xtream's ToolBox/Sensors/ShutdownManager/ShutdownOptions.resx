@@ -117,155 +117,242 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;hibernateLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lockPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 52</value>
+  </data>
+  <data name="lockPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lockPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cancelButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lockPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="doItLaterDateTimePicker.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;swithUserPictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="closeExtendedInfosPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>16, 19</value>
-  </data>
-  <data name="doItNowRadioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;logOffPictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;switchUserLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="countDownLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 123</value>
+  <data name="&gt;&gt;lockPictureBox.Name" xml:space="preserve">
+    <value>lockPictureBox</value>
   </data>
   <data name="&gt;&gt;lockPictureBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;doItNowRadioButton.Name" xml:space="preserve">
-    <value>doItNowRadioButton</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ShutdownOptions</value>
-  </data>
-  <data name="doItNowRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="shutdownLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>465, 103</value>
-  </data>
-  <data name="logOffLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 103</value>
-  </data>
-  <data name="&gt;&gt;shutdownPictureBox.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;countDownLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lockPictureBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="moveBoxRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>524, 16</value>
+  <data name="&gt;&gt;lockPictureBox.ZOrder" xml:space="preserve">
+    <value>19</value>
   </data>
-  <data name="&gt;&gt;moveBoxRight.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="logOffPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 52</value>
   </data>
-  <data name="switchUserLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="logOffPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
   </data>
-  <data name="shutdownLabel.Text" xml:space="preserve">
-    <value>shutdown</value>
+  <data name="logOffPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
   </data>
-  <data name="&gt;&gt;shutdownLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;logOffLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="swithUserPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 52</value>
-  </data>
-  <data name="&gt;&gt;logOffLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Shutdown Manager Sensor's Options</value>
-  </data>
-  <data name="&gt;&gt;lockLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;restartPictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;doItLaterDateTimePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="logOffPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;logOffPictureBox.Name" xml:space="preserve">
     <value>logOffPictureBox</value>
   </data>
-  <data name="countDownLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 17</value>
-  </data>
-  <data name="&gt;&gt;restartPictureBox.Name" xml:space="preserve">
-    <value>restartPictureBox</value>
-  </data>
-  <data name="shutdownLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="&gt;&gt;lockLabel.Name" xml:space="preserve">
-    <value>lockLabel</value>
-  </data>
-  <data name="&gt;&gt;swithUserPictureBox.Name" xml:space="preserve">
-    <value>swithUserPictureBox</value>
-  </data>
-  <data name="restartLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;moveBoxLeft.Type" xml:space="preserve">
+  <data name="&gt;&gt;logOffPictureBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="swithUserPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
+  <data name="&gt;&gt;logOffPictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;moveBoxRight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;logOffPictureBox.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
-  <data name="hibernateLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="moveBoxRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 156</value>
+  <data name="swithUserPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 52</value>
   </data>
   <data name="swithUserPictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 48</value>
   </data>
-  <data name="restartLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>302, 103</value>
+  <data name="swithUserPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="swithUserPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;swithUserPictureBox.Name" xml:space="preserve">
+    <value>swithUserPictureBox</value>
+  </data>
+  <data name="&gt;&gt;swithUserPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;swithUserPictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;swithUserPictureBox.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="restartPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>295, 52</value>
+  </data>
+  <data name="restartPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
+  </data>
+  <data name="restartPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="restartPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;restartPictureBox.Name" xml:space="preserve">
+    <value>restartPictureBox</value>
+  </data>
+  <data name="&gt;&gt;restartPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;restartPictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;restartPictureBox.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="hibernatePictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>380, 52</value>
+  </data>
+  <data name="hibernatePictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
   </data>
   <data name="hibernatePictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>AutoSize</value>
   </data>
-  <data name="&gt;&gt;doTimedActionTimer.Name" xml:space="preserve">
-    <value>doTimedActionTimer</value>
+  <data name="hibernatePictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;moveBoxLeft.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;hibernatePictureBox.Name" xml:space="preserve">
+    <value>hibernatePictureBox</value>
   </data>
-  <data name="&gt;&gt;swithUserPictureBox.ZOrder" xml:space="preserve">
-    <value>17</value>
+  <data name="&gt;&gt;hibernatePictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hibernatePictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;hibernatePictureBox.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="shutdownPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>465, 52</value>
+  </data>
+  <data name="shutdownPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
+  </data>
+  <data name="shutdownPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="shutdownPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;shutdownPictureBox.Name" xml:space="preserve">
+    <value>shutdownPictureBox</value>
+  </data>
+  <data name="&gt;&gt;shutdownPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shutdownPictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;shutdownPictureBox.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lockLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lockLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 103</value>
+  </data>
+  <data name="lockLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 13</value>
+  </data>
+  <data name="lockLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lockLabel.Text" xml:space="preserve">
+    <value>lock screen</value>
+  </data>
+  <data name="&gt;&gt;lockLabel.Name" xml:space="preserve">
+    <value>lockLabel</value>
+  </data>
+  <data name="&gt;&gt;lockLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lockLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lockLabel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="logOffLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="logOffLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 103</value>
+  </data>
+  <data name="logOffLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="logOffLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="logOffLabel.Text" xml:space="preserve">
+    <value>log off</value>
+  </data>
+  <data name="&gt;&gt;logOffLabel.Name" xml:space="preserve">
+    <value>logOffLabel</value>
+  </data>
+  <data name="&gt;&gt;logOffLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;logOffLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;logOffLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="switchUserLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="switchUserLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>206, 103</value>
+  </data>
+  <data name="switchUserLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="switchUserLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="switchUserLabel.Text" xml:space="preserve">
+    <value>switch user</value>
+  </data>
+  <data name="&gt;&gt;switchUserLabel.Name" xml:space="preserve">
+    <value>switchUserLabel</value>
+  </data>
+  <data name="&gt;&gt;switchUserLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;switchUserLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;switchUserLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="restartLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="restartLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 103</value>
+  </data>
+  <data name="restartLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
   </data>
   <data name="restartLabel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -273,397 +360,310 @@
   <data name="restartLabel.Text" xml:space="preserve">
     <value>restart</value>
   </data>
-  <data name="hibernateLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;restartLabel.Name" xml:space="preserve">
+    <value>restartLabel</value>
   </data>
-  <data name="shutdownPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="moveBoxRight.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;logOffLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;switchUserLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;moveBoxRight.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="closeExtendedInfosPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>523, 0</value>
-  </data>
-  <data name="switchUserLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 13</value>
-  </data>
-  <data name="&gt;&gt;restartPictureBox.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="hibernatePictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 48</value>
-  </data>
-  <data name="logOffPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;doItLaterRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;closeExtendedInfosPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="doItNowRadioButton.Text" xml:space="preserve">
-    <value>do the action clicked bellow now</value>
-  </data>
-  <data name="shutdownLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lockPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 48</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;switchUserLabel.Name" xml:space="preserve">
-    <value>switchUserLabel</value>
-  </data>
-  <data name="&gt;&gt;lockPictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lockPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="switchUserLabel.Text" xml:space="preserve">
-    <value>switch user</value>
-  </data>
-  <data name="shutdownPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 48</value>
-  </data>
-  <data name="shutdownLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;restartLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;logOffPictureBox.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;countDownLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="restartPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="logOffLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
-  </data>
-  <data name="&gt;&gt;doItLaterDateTimePicker.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;doItNowRadioButton.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;hibernatePictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;moveBoxLeft.Name" xml:space="preserve">
-    <value>moveBoxLeft</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="&gt;&gt;countDownLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="doItLaterDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>382, 15</value>
-  </data>
-  <data name="logOffLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="switchUserLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;closeExtendedInfosPictureBox.Name" xml:space="preserve">
-    <value>closeExtendedInfosPictureBox</value>
-  </data>
-  <data name="switchUserLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 103</value>
-  </data>
-  <data name="&gt;&gt;lockLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;shutdownPictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lockPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 52</value>
-  </data>
-  <data name="doItLaterRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="cancelButton.Text" xml:space="preserve">
-    <value>cancel timed action</value>
-  </data>
-  <data name="swithUserPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;switchUserLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="hibernatePictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="lockPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <data name="&gt;&gt;hibernatePictureBox.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="doItLaterDateTimePicker.CustomFormat" xml:space="preserve">
-    <value>dd/MM/yyyy HH:mm</value>
-  </data>
-  <data name="&gt;&gt;shutdownLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;restartLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;restartLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="doItLaterDateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 20</value>
+  <data name="&gt;&gt;restartLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
-  <data name="lockLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 103</value>
-  </data>
-  <data name="doItLaterRadioButton.Text" xml:space="preserve">
-    <value>do it later at</value>
-  </data>
-  <data name="logOffPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 52</value>
-  </data>
-  <data name="moveBoxRight.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;doItNowRadioButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lockLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 142</value>
-  </data>
-  <data name="shutdownPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <data name="doItLaterRadioButton.AutoSize" type="System.Boolean, mscorlib">
+  <data name="hibernateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;doItLaterDateTimePicker.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;restartLabel.Name" xml:space="preserve">
-    <value>restartLabel</value>
-  </data>
-  <data name="doItLaterRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
-  </data>
-  <data name="&gt;&gt;hibernateLabel.Name" xml:space="preserve">
-    <value>hibernateLabel</value>
-  </data>
-  <data name="&gt;&gt;shutdownLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;shutdownPictureBox.Name" xml:space="preserve">
-    <value>shutdownPictureBox</value>
-  </data>
-  <data name="&gt;&gt;countDownLabel.Name" xml:space="preserve">
-    <value>countDownLabel</value>
-  </data>
-  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 23</value>
-  </data>
-  <data name="&gt;&gt;logOffLabel.Name" xml:space="preserve">
-    <value>logOffLabel</value>
-  </data>
-  <data name="restartPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <data name="closeExtendedInfosPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lockLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="restartPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 48</value>
-  </data>
-  <data name="countDownLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="hibernatePictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 52</value>
-  </data>
-  <data name="logOffPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <data name="logOffLabel.Text" xml:space="preserve">
-    <value>log off</value>
-  </data>
-  <data name="cancelButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="doItNowRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 16</value>
-  </data>
-  <data name="&gt;&gt;moveBoxRight.Name" xml:space="preserve">
-    <value>moveBoxRight</value>
-  </data>
-  <data name="doItNowRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 17</value>
   </data>
   <data name="hibernateLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>380, 103</value>
   </data>
-  <data name="&gt;&gt;hibernatePictureBox.Name" xml:space="preserve">
-    <value>hibernatePictureBox</value>
-  </data>
-  <data name="&gt;&gt;lockLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="doItLaterRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 16</value>
-  </data>
-  <data name="lockLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
-  </data>
-  <data name="&gt;&gt;moveBoxLeft.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="hibernateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 13</value>
+  </data>
+  <data name="hibernateLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="hibernateLabel.Text" xml:space="preserve">
     <value>hibernate</value>
   </data>
-  <data name="&gt;&gt;swithUserPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;hibernateLabel.Name" xml:space="preserve">
+    <value>hibernateLabel</value>
   </data>
-  <data name="moveBoxLeft.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 0</value>
-  </data>
-  <data name="&gt;&gt;lockPictureBox.Name" xml:space="preserve">
-    <value>lockPictureBox</value>
+  <data name="&gt;&gt;hibernateLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;hibernateLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;doItLaterRadioButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;hibernateLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="shutdownLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="shutdownLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>465, 103</value>
+  </data>
+  <data name="shutdownLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="shutdownLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="shutdownLabel.Text" xml:space="preserve">
+    <value>shutdown</value>
   </data>
   <data name="&gt;&gt;shutdownLabel.Name" xml:space="preserve">
     <value>shutdownLabel</value>
   </data>
-  <data name="shutdownPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>465, 52</value>
-  </data>
-  <data name="&gt;&gt;closeExtendedInfosPictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;restartLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;shutdownLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lockPictureBox.ZOrder" xml:space="preserve">
-    <value>19</value>
+  <data name="&gt;&gt;shutdownLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="countDownLabel.Text" xml:space="preserve">
-    <value>countDown</value>
+  <data name="&gt;&gt;shutdownLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
-  <data name="moveBoxLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 172</value>
+  <data name="cancelButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>540, 172</value>
+  <data name="cancelButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 142</value>
+  </data>
+  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 23</value>
+  </data>
+  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="cancelButton.Text" xml:space="preserve">
+    <value>cancel timed action</value>
   </data>
   <data name="&gt;&gt;cancelButton.Name" xml:space="preserve">
     <value>cancelButton</value>
   </data>
-  <data name="restartLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
-  </data>
-  <data name="&gt;&gt;restartPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="closeExtendedInfosPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;closeExtendedInfosPictureBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="restartPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 52</value>
-  </data>
-  <data name="countDownLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;doItLaterRadioButton.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="logOffPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 48</value>
-  </data>
-  <data name="&gt;&gt;hibernatePictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;doTimedActionTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;doItLaterRadioButton.Name" xml:space="preserve">
-    <value>doItLaterRadioButton</value>
-  </data>
-  <data name="lockLabel.Text" xml:space="preserve">
-    <value>lock screen</value>
-  </data>
-  <data name="&gt;&gt;logOffPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="countDownLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="logOffLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;hibernateLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
   <data name="&gt;&gt;cancelButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
+  <data name="&gt;&gt;cancelButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;doItLaterDateTimePicker.Name" xml:space="preserve">
-    <value>doItLaterDateTimePicker</value>
+  <data name="&gt;&gt;cancelButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="doItNowRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="doItNowRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 16</value>
+  </data>
+  <data name="doItNowRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 17</value>
+  </data>
+  <data name="doItNowRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="doItNowRadioButton.Text" xml:space="preserve">
+    <value>do the action clicked bellow now</value>
+  </data>
+  <data name="&gt;&gt;doItNowRadioButton.Name" xml:space="preserve">
+    <value>doItNowRadioButton</value>
   </data>
   <data name="&gt;&gt;doItNowRadioButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="moveBoxLeft.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+  <data name="&gt;&gt;doItNowRadioButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;shutdownPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;doItNowRadioButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="doItLaterRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="doItLaterRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>295, 16</value>
+  </data>
+  <data name="doItLaterRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 17</value>
+  </data>
+  <data name="doItLaterRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="doItLaterRadioButton.Text" xml:space="preserve">
+    <value>do it later at</value>
+  </data>
+  <data name="&gt;&gt;doItLaterRadioButton.Name" xml:space="preserve">
+    <value>doItLaterRadioButton</value>
+  </data>
+  <data name="&gt;&gt;doItLaterRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;doItLaterRadioButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;doItLaterRadioButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="doItLaterDateTimePicker.CustomFormat" xml:space="preserve">
+    <value>dd/MM/yyyy HH:mm</value>
+  </data>
+  <data name="doItLaterDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>382, 15</value>
+  </data>
+  <data name="doItLaterDateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 20</value>
+  </data>
+  <data name="doItLaterDateTimePicker.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;doItLaterDateTimePicker.Name" xml:space="preserve">
+    <value>doItLaterDateTimePicker</value>
+  </data>
+  <data name="&gt;&gt;doItLaterDateTimePicker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;doItLaterDateTimePicker.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;doItLaterDateTimePicker.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <metadata name="doTimedActionTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="countDownLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 123</value>
+  </data>
+  <data name="countDownLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>516, 17</value>
+  </data>
+  <data name="countDownLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="countDownLabel.Text" xml:space="preserve">
+    <value>countDown</value>
+  </data>
+  <data name="countDownLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="countDownLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;countDownLabel.Name" xml:space="preserve">
+    <value>countDownLabel</value>
+  </data>
+  <data name="&gt;&gt;countDownLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;countDownLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;countDownLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="closeExtendedInfosPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="closeExtendedInfosPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>523, 0</value>
+  </data>
+  <data name="closeExtendedInfosPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 19</value>
+  </data>
+  <data name="closeExtendedInfosPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;closeExtendedInfosPictureBox.Name" xml:space="preserve">
+    <value>closeExtendedInfosPictureBox</value>
+  </data>
+  <data name="&gt;&gt;closeExtendedInfosPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;closeExtendedInfosPictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;closeExtendedInfosPictureBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="moveBoxLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 0</value>
+  </data>
+  <data name="moveBoxLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 172</value>
+  </data>
+  <data name="moveBoxLeft.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;moveBoxLeft.Name" xml:space="preserve">
+    <value>moveBoxLeft</value>
+  </data>
+  <data name="&gt;&gt;moveBoxLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveBoxLeft.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;moveBoxLeft.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="moveBoxRight.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="moveBoxRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>524, 16</value>
+  </data>
+  <data name="moveBoxRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 156</value>
+  </data>
+  <data name="moveBoxRight.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;moveBoxRight.Name" xml:space="preserve">
+    <value>moveBoxRight</value>
+  </data>
+  <data name="&gt;&gt;moveBoxRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveBoxRight.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;moveBoxRight.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>540, 172</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Shutdown Manager Sensor's Options</value>
+  </data>
+  <data name="&gt;&gt;doTimedActionTimer.Name" xml:space="preserve">
+    <value>doTimedActionTimer</value>
+  </data>
+  <data name="&gt;&gt;doTimedActionTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ShutdownOptions</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -137,7 +137,7 @@
     <value>..\Resources\battery_6.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SysInfos_02" xml:space="preserve">
-    <value>Serial : {0}</value>
+    <value>Serial: {0}</value>
   </data>
   <data name="JpgRenamer_Action3" xml:space="preserve">
     <value>{0} -&gt; {1}</value>
@@ -152,13 +152,13 @@
     <value>{0} -&gt; No EXIF data. Can't rename this photo.</value>
   </data>
   <data name="SysInfos_04" xml:space="preserve">
-    <value>Paging file : {0}</value>
+    <value>Paging file: {0}</value>
   </data>
   <data name="Drive_USB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Drive_USB.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pop3Checker_OpenIt" xml:space="preserve">
-    <value>Left click to open your email program, Right click to refresh mail counter</value>
+    <value>Left click to open your email program.{0}Right click to refresh mail counter.</value>
   </data>
   <data name="JpgRenamer_ReportSimulation4" xml:space="preserve">
     <value>    {0} photo(s) will be ignored because filename was already good</value>
@@ -167,7 +167,7 @@
     <value>User '{0}' connected on '{1}' computer</value>
   </data>
   <data name="NotePad_tip" xml:space="preserve">
-    <value>Left click to open / close notepad, Right click to launch your preffered text editor</value>
+    <value>Left click to open / close notepad.{0}Right click to launch your preffered text editor.</value>
   </data>
   <data name="SysInfos_06" xml:space="preserve">
     <value>@IPv4 is {0} ({1})</value>
@@ -196,23 +196,11 @@
   <data name="background_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-left.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calendarBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendarBackground.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CalendarRemindType" xml:space="preserve">
-    <value>no reminder;5 minutes;10 minutes;15 minutes;20 minutes;25 minutes;30 minutes;45 minutes;1 hour;2 hours;3 hours;1 day;2 days;1 week</value>
-  </data>
   <data name="key_capslock_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key_capslock_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CalendarDate" xml:space="preserve">
-    <value>MM/dd/yyyy</value>
-  </data>
-  <data name="MusicBackground_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MusicBackground_small.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CalendarTime" xml:space="preserve">
-    <value>hh:mm tt</value>
+  <data name="TimeICalManager_Tip" xml:space="preserve">
+    <value>Left click to open online calendar{0}Right click to open online contacts.</value>
   </data>
   <data name="JpgRenamer_Complete" xml:space="preserve">
     <value>completed</value>
@@ -265,9 +253,6 @@
   <data name="Pop3Checker_nbmails" xml:space="preserve">
     <value>{0} emails</value>
   </data>
-  <data name="MCalendarEvent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MCalendarEvent.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Sys_y" xml:space="preserve">
     <value>year(s)</value>
   </data>
@@ -290,7 +275,7 @@
     <value>    {0} photo(s) have been renamed</value>
   </data>
   <data name="Weather_WinDir_N" xml:space="preserve">
-    <value>N</value>
+    <value>North</value>
   </data>
   <data name="battery_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_0.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -341,7 +326,7 @@
     <value>Do you really want switch user ?</value>
   </data>
   <data name="Weather_WinDir_W" xml:space="preserve">
-    <value>W</value>
+    <value>West</value>
   </data>
   <data name="JpgRenamer_ReportRename5" xml:space="preserve">
     <value>    {0} photo(s) have been corrected because EXIF date in filename wasn't good</value>
@@ -379,9 +364,6 @@
   <data name="Weather_01" xml:space="preserve">
     <value>location not found!</value>
   </data>
-  <data name="CalendarEventType" xml:space="preserve">
-    <value>unique event;recurent event - daily;recurent event - weekly;recurent event - monthly;recurent event - yearly</value>
-  </data>
   <data name="Sys_bit" xml:space="preserve">
     <value>b</value>
   </data>
@@ -401,7 +383,7 @@
     <value>canceled</value>
   </data>
   <data name="Weather_WinDir_E" xml:space="preserve">
-    <value>E</value>
+    <value>East</value>
   </data>
   <data name="box_vert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box_vert.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -425,10 +407,10 @@
     <value>..\Resources\shutdownManager_hibernate.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Weather_03" xml:space="preserve">
-    <value>Last mesure : {0}</value>
+    <value>Last mesure: {0}</value>
   </data>
   <data name="Weather_04" xml:space="preserve">
-    <value>Last update : {0}</value>
+    <value>Last update: {0}</value>
   </data>
   <data name="ShutdownManager_ConfirmeSuspend" xml:space="preserve">
     <value>Do you really want to suspend your computer ?</value>
@@ -447,9 +429,6 @@
   </data>
   <data name="Sys_d" xml:space="preserve">
     <value>day(s)</value>
-  </data>
-  <data name="analogClock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\analogClock.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SI_Key" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SI_Key.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -494,13 +473,13 @@
     <value>Xtream's ToolBox - Exif renamer</value>
   </data>
   <data name="Weather_09" xml:space="preserve">
-    <value>Wind speed : from {2} ({3}°) at {0} {1} </value>
+    <value>Wind speed: from {2} ({3}°) at {0} {1} </value>
   </data>
   <data name="arrow_up_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-up_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Weather_WinDir_S" xml:space="preserve">
-    <value>S</value>
+    <value>South</value>
   </data>
   <data name="FormName_QuickLaunchProperty" xml:space="preserve">
     <value>Xtream's ToolBox - Quicklauch properties</value>
@@ -529,9 +508,6 @@
   <data name="RefreshCL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RefreshCL.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EventPicto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EventPicto.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="KeyStatus_Num_ON" xml:space="preserve">
     <value>Num Lock key is ON</value>
   </data>
@@ -539,7 +515,7 @@
     <value>..\Resources\SI_MyComputer.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SysInfos_14" xml:space="preserve">
-    <value>Physical memory : {0}</value>
+    <value>Physical memory: {0}</value>
   </data>
   <data name="Drive_floppy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Drive_floppy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -560,7 +536,7 @@
     <value>computer suspend</value>
   </data>
   <data name="Weather_07" xml:space="preserve">
-    <value>Barometric pressure : {0}</value>
+    <value>Barometric pressure: {0}</value>
   </data>
   <data name="JpgRenamer_ReportRename1" xml:space="preserve">
     <value>Rename operation {0} on {1} jpg photo(s) {2} in {3} second(s)</value>
@@ -593,7 +569,7 @@
     <value>..\Resources\arrow-forward_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SysInfos_20" xml:space="preserve">
-    <value>Sent : {0}/s - Received : {1}/s{4}{2}% of {3}/s bandwidth used.</value>
+    <value>Sent: {0}/s - Received: {1}/s{4}{2}% of {3}/s bandwidth used.</value>
   </data>
   <data name="shutdownManager_shutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shutdownManager_shutdown.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -614,7 +590,7 @@
     <value>..\Resources\SI_Internet_Connection.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Weather_08" xml:space="preserve">
-    <value>UV index : {0} / Visibility : {1} {2}</value>
+    <value>UV index: {0} / Visibility : {1} {2}</value>
   </data>
   <data name="SysInfos_08" xml:space="preserve">
     <value>{0} - {1} RAM</value>
@@ -626,7 +602,7 @@
     <value>    {0} photo(s) will be corrected because EXIF date in filename wasn't good</value>
   </data>
   <data name="Weather_05" xml:space="preserve">
-    <value>Temp : {0}°{1} (feels like {2}°{3})</value>
+    <value>Temp: {0}°{1} (feels like {2}°{3})</value>
   </data>
   <data name="Calc_tip" xml:space="preserve">
     <value>Launch Windows calculator</value>
@@ -646,7 +622,7 @@
   <data name="background_separator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-separator.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stop1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ShutdownManager_ConfirmeHibernate" xml:space="preserve">
@@ -662,13 +638,10 @@
     <value>..\Resources\battery_c0.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Weather_06" xml:space="preserve">
-    <value>Relative Humidity : {0} / Drew point : {1}°{2}</value>
+    <value>Relative Humidity: {0} / Drew point : {1}°{2}</value>
   </data>
   <data name="FormName_ShutdownManager" xml:space="preserve">
     <value>Xtream's ToolBox - Shutdown manager</value>
-  </data>
-  <data name="CalendarEventDateTime" xml:space="preserve">
-    <value>MM/dd/yy hh:mm tt</value>
   </data>
   <data name="FormName_Option" xml:space="preserve">
     <value>Xtream's ToolBox - Options</value>
@@ -715,14 +688,8 @@
   <data name="Sys_h" xml:space="preserve">
     <value>hour(s)</value>
   </data>
-  <data name="CalendarRemindMeType" xml:space="preserve">
-    <value>dismiss this event;remind me again in 5 minutes;remind me again in 10 minutes;remind me again in 15 minutes;remind me again in 20 minutes;remind me again in 25 minutes;remind me again in 30 minutes;remind me again in 45 minutes;remind me again in 1 day;remind me again in 2 days;remind me again in 1 week</value>
-  </data>
   <data name="ShutdownManager_ConfirmeShutDown" xml:space="preserve">
     <value>Do you really want to shutdown your computer ?</value>
-  </data>
-  <data name="EventBirthday" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EventBirthday.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MyComputer_AddOrRemovePrograms" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyComputer_AddOrRemovePrograms.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -749,7 +716,7 @@
     <value>..\Resources\shutdownManager_restart.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SysInfos_12" xml:space="preserve">
-    <value>Type : {0}</value>
+    <value>Type: {0}</value>
   </data>
   <data name="ShutdownManager_ConfirmeLogOffTitle" xml:space="preserve">
     <value>user logoff</value>
@@ -758,13 +725,13 @@
     <value>@IPv6 is {0}</value>
   </data>
   <data name="SysInfos_07" xml:space="preserve">
-    <value>Card type : {0} {1} Mb/s</value>
+    <value>Card type: {0} {1} Mb/s</value>
   </data>
   <data name="JpgRenamer_Action1" xml:space="preserve">
     <value>{0} -&gt; nothing to do. Filename is already good.</value>
   </data>
   <data name="SysInfos_19" xml:space="preserve">
-    <value>Sent : {0}/s - Received : {1}/s{4}{2}% of {3}/s download bandwidth used.</value>
+    <value>Sent: {0}/s - Received: {1}/s{4}{2}% of {3}/s download bandwidth used.</value>
   </data>
   <data name="Pop3Checker_nomail" xml:space="preserve">
     <value>no mail</value>
@@ -776,7 +743,7 @@
     <value>..\Resources\battery_c6.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SysInfos_16" xml:space="preserve">
-    <value>Installed on : {0} / uptime : {1}:{2}:{3}</value>
+    <value>Installed on: {0} / uptime: {1}:{2}:{3}</value>
   </data>
   <data name="SysInfos_15" xml:space="preserve">
     <value>{0} : {1}</value>
@@ -946,14 +913,8 @@
   <data name="vumeter_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vumeter_background.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Weather_128x128_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Weather_128x128_23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Weather_Logo_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Weather_Logo_32px.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Weather_small_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Weather_small_23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_chanceflurries" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_chanceflurries.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1080,5 +1041,14 @@
   </data>
   <data name="icoToolBoxOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icotoolboxoptions.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shutdownOptionsBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownOptionsBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wind_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wind_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

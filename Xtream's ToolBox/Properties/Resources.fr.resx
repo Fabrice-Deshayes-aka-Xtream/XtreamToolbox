@@ -120,23 +120,8 @@
   <data name="Calc_tip" xml:space="preserve">
     <value>Executer la calculatrice Windows</value>
   </data>
-  <data name="CalendarDate" xml:space="preserve">
-    <value>dd/MM/yyyy</value>
-  </data>
-  <data name="CalendarEventDateTime" xml:space="preserve">
-    <value>dd/MM/yy HH:mm</value>
-  </data>
-  <data name="CalendarEventType" xml:space="preserve">
-    <value>événement unique;événement recurent - journalier;événement recurent - hebdomadaire;événement recurent - mensuel;événement recurent - annuel</value>
-  </data>
-  <data name="CalendarRemindMeType" xml:space="preserve">
-    <value>dismiss this event;remind me again in 5 minutes;remind me again in 10 minutes;remind me again in 15 minutes;remind me again in 20 minutes;remind me again in 25 minutes;remind me again in 30 minutes;remind me again in 45 minutes;remind me again in 1 day;remind me again in 2 days;remind me again in 1 week</value>
-  </data>
-  <data name="CalendarRemindType" xml:space="preserve">
-    <value>pas de rappel;5 minutes avant;10 minutes avant;15 minutes avant;20 minutes avant;25 minutes avant;30 minutes avant;45 minutes avant;1 heure avant;2 heures avant;3 heures avant;1 jour avant;2 jours avant;1 semaine avant</value>
-  </data>
-  <data name="CalendarTime" xml:space="preserve">
-    <value>HH:mm</value>
+  <data name="TimeICalManager_Tip" xml:space="preserve">
+    <value>Clic gauche pour ouvrir le calendrier.{0}Clic droit pour ouvrir les contacts.</value>
   </data>
   <data name="FormName_About" xml:space="preserve">
     <value>Xtream's ToolBox - A propos</value>
@@ -250,7 +235,7 @@
     <value>n/d</value>
   </data>
   <data name="NotePad_tip" xml:space="preserve">
-    <value>Clic gauche pour ouvrir et fermer le bloc note.Clic droit pour executer votre editeur de texte préféré.</value>
+    <value>Clic gauche pour ouvrir et fermer le bloc note.{0}Clic droit pour executer votre editeur de texte préféré.</value>
   </data>
   <data name="Pop3Checker_Hint" xml:space="preserve">
     <value>{2} emails et {3} spams sur le compte {1} du serveur {0}{4}</value>
@@ -268,7 +253,7 @@
     <value>aucun spam</value>
   </data>
   <data name="Pop3Checker_OpenIt" xml:space="preserve">
-    <value>Clic gauche pour ouvrir vôtre logiciel de courrier electronique, Clic droit pour rafraichir le nombre de mails reçu.</value>
+    <value>Clic gauche pour ouvrir vôtre logiciel de courrier electronique.{0}Clic droit pour rafraichir le nombre de mails reçu.</value>
   </data>
   <data name="PowerStatus_Tips1" xml:space="preserve">
     <value>Cliquez ici pour configurer la manière dont votre ordinateur gère l'energie</value>
@@ -472,16 +457,16 @@
     <value>Ouvrir / Fermer les informations météo</value>
   </data>
   <data name="Weather_WinDir_E" xml:space="preserve">
-    <value>E</value>
+    <value>Est</value>
   </data>
   <data name="Weather_WinDir_N" xml:space="preserve">
-    <value>N</value>
+    <value>Nord</value>
   </data>
   <data name="Weather_WinDir_S" xml:space="preserve">
-    <value>S</value>
+    <value>Sud</value>
   </data>
   <data name="Weather_WinDir_W" xml:space="preserve">
-    <value>O</value>
+    <value>Ouest</value>
   </data>
   <data name="ShutdownManager_ConfirmeHibernate" xml:space="preserve">
     <value>Voulez vous vraiment mettre votre ordinateur en veille prolongée ?</value>
