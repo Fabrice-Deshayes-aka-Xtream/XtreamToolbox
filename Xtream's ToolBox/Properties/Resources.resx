@@ -191,7 +191,7 @@
     <value>Move the ToolBox</value>
   </data>
   <data name="Sys_mbyte" xml:space="preserve">
-    <value>mb</value>
+    <value>MB</value>
   </data>
   <data name="background_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-left.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -281,7 +281,7 @@
     <value>..\Resources\battery_0.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ShutdownManager_ConfirmeSwitchUserTitle" xml:space="preserve">
-    <value>switch user</value>
+    <value>switch user confirmation</value>
   </data>
   <data name="battery_c7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_c7.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -323,7 +323,7 @@
     <value>..\Resources\SI_Home.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ShutdownManager_ConfirmeSwitchUser" xml:space="preserve">
-    <value>Do you really want switch user ?</value>
+    <value>Do you really want to switch user ?</value>
   </data>
   <data name="Weather_WinDir_W" xml:space="preserve">
     <value>West</value>
@@ -374,7 +374,7 @@
     <value>Left click to default action (see options){0}Right click for menu</value>
   </data>
   <data name="Sys_mbit" xml:space="preserve">
-    <value>mb</value>
+    <value>Mb</value>
   </data>
   <data name="ShutdownManager_ConfirmeRestart" xml:space="preserve">
     <value>Do you really want to restart your computer ?</value>
@@ -401,7 +401,7 @@
     <value>..\Resources\separator.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ShutdownManager_ConfirmeShutDownTitle" xml:space="preserve">
-    <value>computer shutdown</value>
+    <value>computer shutdown confirmation</value>
   </data>
   <data name="shutdownManager_hibernate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shutdownManager_hibernate.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -416,7 +416,7 @@
     <value>Do you really want to suspend your computer ?</value>
   </data>
   <data name="Sys_kbit" xml:space="preserve">
-    <value>kb</value>
+    <value>Kb</value>
   </data>
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -488,7 +488,7 @@
     <value>..\Resources\MCalculator.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sys_gbit" xml:space="preserve">
-    <value>gb</value>
+    <value>Gb</value>
   </data>
   <data name="battery_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -533,7 +533,7 @@
     <value>{0} spams</value>
   </data>
   <data name="ShutdownManager_ConfirmeSuspendTitle" xml:space="preserve">
-    <value>computer suspend</value>
+    <value>computer suspend confirmation</value>
   </data>
   <data name="Weather_07" xml:space="preserve">
     <value>Barometric pressure: {0}</value>
@@ -554,7 +554,7 @@
     <value>Xtream's ToolBox - About</value>
   </data>
   <data name="ShutdownManager_ConfirmeRestartTitle" xml:space="preserve">
-    <value>computer restart</value>
+    <value>computer restart confirmation</value>
   </data>
   <data name="ShutdownManager_ConfirmeLock" xml:space="preserve">
     <value>Do you really want to lock your computer ?</value>
@@ -629,7 +629,7 @@
     <value>Do you really want put your computer in hibernation ?</value>
   </data>
   <data name="Sys_kbyte" xml:space="preserve">
-    <value>kb</value>
+    <value>KB</value>
   </data>
   <data name="MyComputer_SystemProperties" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyComputer_SystemProperties.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -680,7 +680,7 @@
     <value>..\Resources\box_bleu.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ShutdownManager_ConfirmeLockTitle" xml:space="preserve">
-    <value>computer lock</value>
+    <value>computer lock confirmation</value>
   </data>
   <data name="StorageUserControlNotReady" xml:space="preserve">
     <value>not ready</value>
@@ -719,7 +719,7 @@
     <value>Type: {0}</value>
   </data>
   <data name="ShutdownManager_ConfirmeLogOffTitle" xml:space="preserve">
-    <value>user logoff</value>
+    <value>user logoff confirmation</value>
   </data>
   <data name="SysInfos_06_v6" xml:space="preserve">
     <value>@IPv6 is {0}</value>
@@ -755,7 +755,7 @@
     <value>{0} -&gt; {1} (EXIF date in filename wasn't good).</value>
   </data>
   <data name="ShutdownManager_ConfirmeHibernateTitle" xml:space="preserve">
-    <value>computer hibernation</value>
+    <value>computer hibernation confirmation</value>
   </data>
   <data name="shutdownManager_lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shutdownManager_lock.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -764,10 +764,10 @@
     <value>..\Resources\key_capslock_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sys_gbyte" xml:space="preserve">
-    <value>gb</value>
+    <value>GB</value>
   </data>
   <data name="Sys_byte" xml:space="preserve">
-    <value>b</value>
+    <value>B</value>
   </data>
   <data name="ShutdownManager_Programmed" xml:space="preserve">
     <value>in</value>
@@ -1050,5 +1050,11 @@
   </data>
   <data name="Wind_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wind_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Notepad_ConfirmeClear" xml:space="preserve">
+    <value>Do you really want to clear your notepad?</value>
+  </data>
+  <data name="Notepad_ConfirmeClearTitle" xml:space="preserve">
+    <value>Clear notepad confirmation</value>
   </data>
 </root>

@@ -1632,6 +1632,24 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Do you really want to clear your notepad?.
+        /// </summary>
+        internal static string Notepad_ConfirmeClear {
+            get {
+                return ResourceManager.GetString("Notepad_ConfirmeClear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Clear notepad confirmation.
+        /// </summary>
+        internal static string Notepad_ConfirmeClearTitle {
+            get {
+                return ResourceManager.GetString("Notepad_ConfirmeClearTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Left click to open / close notepad.{0}Right click to launch your preffered text editor..
         /// </summary>
         internal static string NotePad_tip {
@@ -2039,7 +2057,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à computer hibernation.
+        ///   Recherche une chaîne localisée semblable à computer hibernation confirmation.
         /// </summary>
         internal static string ShutdownManager_ConfirmeHibernateTitle {
             get {
@@ -2057,7 +2075,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à computer lock.
+        ///   Recherche une chaîne localisée semblable à computer lock confirmation.
         /// </summary>
         internal static string ShutdownManager_ConfirmeLockTitle {
             get {
@@ -2075,7 +2093,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à user logoff.
+        ///   Recherche une chaîne localisée semblable à user logoff confirmation.
         /// </summary>
         internal static string ShutdownManager_ConfirmeLogOffTitle {
             get {
@@ -2093,7 +2111,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à computer restart.
+        ///   Recherche une chaîne localisée semblable à computer restart confirmation.
         /// </summary>
         internal static string ShutdownManager_ConfirmeRestartTitle {
             get {
@@ -2111,7 +2129,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à computer shutdown.
+        ///   Recherche une chaîne localisée semblable à computer shutdown confirmation.
         /// </summary>
         internal static string ShutdownManager_ConfirmeShutDownTitle {
             get {
@@ -2129,7 +2147,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à computer suspend.
+        ///   Recherche une chaîne localisée semblable à computer suspend confirmation.
         /// </summary>
         internal static string ShutdownManager_ConfirmeSuspendTitle {
             get {
@@ -2138,7 +2156,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Do you really want switch user ?.
+        ///   Recherche une chaîne localisée semblable à Do you really want to switch user ?.
         /// </summary>
         internal static string ShutdownManager_ConfirmeSwitchUser {
             get {
@@ -2147,7 +2165,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à switch user.
+        ///   Recherche une chaîne localisée semblable à switch user confirmation.
         /// </summary>
         internal static string ShutdownManager_ConfirmeSwitchUserTitle {
             get {
@@ -2401,7 +2419,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à b.
+        ///   Recherche une chaîne localisée semblable à B.
         /// </summary>
         internal static string Sys_byte {
             get {
@@ -2419,7 +2437,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à gb.
+        ///   Recherche une chaîne localisée semblable à Gb.
         /// </summary>
         internal static string Sys_gbit {
             get {
@@ -2428,7 +2446,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à gb.
+        ///   Recherche une chaîne localisée semblable à GB.
         /// </summary>
         internal static string Sys_gbyte {
             get {
@@ -2446,7 +2464,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à kb.
+        ///   Recherche une chaîne localisée semblable à Kb.
         /// </summary>
         internal static string Sys_kbit {
             get {
@@ -2455,7 +2473,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à kb.
+        ///   Recherche une chaîne localisée semblable à KB.
         /// </summary>
         internal static string Sys_kbyte {
             get {
@@ -2473,7 +2491,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à mb.
+        ///   Recherche une chaîne localisée semblable à Mb.
         /// </summary>
         internal static string Sys_mbit {
             get {
@@ -2482,7 +2500,7 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à mb.
+        ///   Recherche une chaîne localisée semblable à MB.
         /// </summary>
         internal static string Sys_mbyte {
             get {

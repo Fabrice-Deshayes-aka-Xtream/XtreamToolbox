@@ -271,19 +271,19 @@
     <value>Voulez vous vraiment fermer votre session ?</value>
   </data>
   <data name="ShutdownManager_ConfirmeLogOffTitle" xml:space="preserve">
-    <value>fermeture de la session</value>
+    <value>Confirmation de la fermeture de la session</value>
   </data>
   <data name="ShutdownManager_ConfirmeRestart" xml:space="preserve">
     <value>Vouler vous vraiment redémarrer votre ordinateur ?</value>
   </data>
   <data name="ShutdownManager_ConfirmeRestartTitle" xml:space="preserve">
-    <value>redémarrage de l'ordinateur</value>
+    <value>Confirmation du redémarrage de l'ordinateur</value>
   </data>
   <data name="ShutdownManager_ConfirmeShutDown" xml:space="preserve">
     <value>Voulez vous vraiment éteindre votre ordinateur ?</value>
   </data>
   <data name="ShutdownManager_ConfirmeShutDownTitle" xml:space="preserve">
-    <value>extinction de l'ordinateur</value>
+    <value>Confirmation de l'extinction de l'ordinateur</value>
   </data>
   <data name="StorageUserControlNotReady" xml:space="preserve">
     <value>Périphérique non disponible</value>
@@ -301,28 +301,28 @@
     <value>jour(s)</value>
   </data>
   <data name="Sys_gbit" xml:space="preserve">
-    <value>gb</value>
+    <value>Gb</value>
   </data>
   <data name="Sys_gbyte" xml:space="preserve">
-    <value>go</value>
+    <value>Go</value>
   </data>
   <data name="Sys_h" xml:space="preserve">
     <value>heure(s)</value>
   </data>
   <data name="Sys_kbit" xml:space="preserve">
-    <value>kb</value>
+    <value>Kb</value>
   </data>
   <data name="Sys_kbyte" xml:space="preserve">
-    <value>ko</value>
+    <value>Ko</value>
   </data>
   <data name="Sys_m" xml:space="preserve">
     <value>mois</value>
   </data>
   <data name="Sys_mbit" xml:space="preserve">
-    <value>mb</value>
+    <value>Mb</value>
   </data>
   <data name="Sys_mbyte" xml:space="preserve">
-    <value>mo</value>
+    <value>Mo</value>
   </data>
   <data name="Sys_mn" xml:space="preserve">
     <value>minute(s)</value>
@@ -472,13 +472,13 @@
     <value>Voulez vous vraiment mettre votre ordinateur en veille prolongée ?</value>
   </data>
   <data name="ShutdownManager_ConfirmeHibernateTitle" xml:space="preserve">
-    <value>mise en veille prolongée</value>
+    <value>Confirmation de la mise en veille prolongée</value>
   </data>
   <data name="ShutdownManager_ConfirmeSuspend" xml:space="preserve">
     <value>Voulez vous vraiment mettre votre ordinateur en veille ?</value>
   </data>
   <data name="ShutdownManager_ConfirmeSuspendTitle" xml:space="preserve">
-    <value>mise en veille de l'ordinateur</value>
+    <value>Confirmation de la mise en veille de l'ordinateur</value>
   </data>
   <data name="ShutdownManager_Tip" xml:space="preserve">
     <value>Clic gauche pour effectuer l'action par défaut (voir options){0}Clic droit pour afficher le menu</value>
@@ -490,13 +490,13 @@
     <value>Voulez vous vraiment vérouiller votre session ?</value>
   </data>
   <data name="ShutdownManager_ConfirmeLockTitle" xml:space="preserve">
-    <value>vérouillage de la session</value>
+    <value>Confirmation du vérouillage de la session</value>
   </data>
   <data name="ShutdownManager_ConfirmeSwitchUser" xml:space="preserve">
     <value>Voulez vous vraiment changer d'utilisateur ?</value>
   </data>
   <data name="ShutdownManager_ConfirmeSwitchUserTitle" xml:space="preserve">
-    <value>bascule d'utilisateur</value>
+    <value>Confirmation du changement d'utilisateur</value>
   </data>
   <data name="ShutdownManager_Programmed" xml:space="preserve">
     <value>dans</value>
@@ -509,5 +509,11 @@
   </data>
   <data name="ScreenshotName" xml:space="preserve">
     <value>dd-MM-yy_HH-mm-ss</value>
+  </data>
+  <data name="Notepad_ConfirmeClear" xml:space="preserve">
+    <value>Voulez-vous vraiment effacer le contenu du boc note ?</value>
+  </data>
+  <data name="Notepad_ConfirmeClearTitle" xml:space="preserve">
+    <value>Confirmation de l'effacement du bloc note</value>
   </data>
 </root>

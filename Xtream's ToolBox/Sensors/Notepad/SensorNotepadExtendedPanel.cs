@@ -51,18 +51,24 @@ namespace Xtream_ToolBox.Sensors {
 
         // Clear notepad
         private void ClearButton_Click(object sender, EventArgs e) {
-            notepadTextBox.Clear();
-            SaveNotepadInSettings();
+            if (MessageBox.Show(resources.GetString("Notepad_ConfirmeClear"), resources.GetString("Notepad_ConfirmeClearTitle"), MessageBoxButtons.YesNo).Equals(DialogResult.Yes))
+            {
+                notepadTextBox.Clear();
+            }
+            SaveNotepadInSettings();            
         }
 
         // Load text file in notepad
         private void LoadButton_Click(object sender, EventArgs e) {
             try {
                 if (openFileDialog.ShowDialog() == DialogResult.OK) {
-                    saveFileDialog.FileName = openFileDialog.FileName;
-                    notepadTextBox.Clear();
-                    notepadTextBox.Text = File.ReadAllText(openFileDialog.FileName);
-                    SaveNotepadInSettings();
+                    if (MessageBox.Show(resources.GetString("Notepad_ConfirmeClear"), resources.GetString("Notepad_ConfirmeClearTitle"), MessageBoxButtons.YesNo).Equals(DialogResult.Yes))
+                    {
+                        saveFileDialog.FileName = openFileDialog.FileName;
+                        notepadTextBox.Clear();
+                        notepadTextBox.Text = File.ReadAllText(openFileDialog.FileName);
+                        SaveNotepadInSettings();
+                    }
                 }
             } catch (Exception exception) {
                 MessageBox.Show(exception.Message);

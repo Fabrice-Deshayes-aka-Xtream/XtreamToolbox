@@ -1,3 +1,7 @@
+
+version 2019.03.12
+- [Notepad Sensor] Add confirm dialogbox when clearing notpad [#1](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/1)
+
 version 2018.12.31
 - improve TimeICalManager sensor with left/right click actions
 - fix shutdownManager sensor
