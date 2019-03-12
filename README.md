@@ -32,7 +32,7 @@
 
 - Langage de dévelopement : C#
 - Auteur : Fabrice Deshayes aka Xtream
-- Compatibilité : Win 10 / 64 bits
+- Compatibilité : Win 10 / 64 bits (testé sur version 1809)
 - Dll/packages utilisées :
     - [C2DPushGraph by Stuart Konen](https://www.codeproject.com/articles/16634//Articles/16634/C2DPushGraph-A-Push-Graph-Control-2) (used in SystemInfos and Storage sensor)
 	- [Newtonsoft by James Newton-King](https://github.com/JamesNK/Newtonsoft.Json) (used in Weather sensor)
@@ -72,6 +72,12 @@ Les sensors disponibles sont (de gauche à droite sur le screenshot) :
 La toolbox contient également des fonctions annexes, accessible depuis l’icône présent dans la barre de tâche. Outre les fonctions classiques « a propos », « paramétrage » et « quitter », vous y trouverez également un renommeur de photos Jpeg basé sur la date EXIF (date de prise du cliché positionnée par l’appareil utilisé pour prendre la photo).
 
 ![systray](screenshots/systray.png)
+
+## A propos
+
+La fenêtre "A propos" est disponible via le systray. Elle permet notamment l'accès au changelog sur github.
+
+![systray](screenshots/about.png)
 
 ## Les sensors
 
