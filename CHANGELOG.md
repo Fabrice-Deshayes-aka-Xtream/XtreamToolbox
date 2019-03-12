@@ -2,6 +2,7 @@
 > not released, available if you build from code
 - [Notepad Sensor] Add confirm dialogBox when clearing notepad [#1](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/1)
 - [MyComputer Sensor] Improve MyComputer sensor's contextual menu [#3](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/3)
+- [About Form] Redesign about form and replace changelog by a link to github [#4](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/4)
 
 ## version 2018.12.31
 - improve TimeICalManager sensor with left/right click actions
