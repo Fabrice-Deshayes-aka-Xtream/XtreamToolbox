@@ -33,7 +33,6 @@
             this.moverRightPictureBox = new System.Windows.Forms.PictureBox();
             this.moverLeftPictureBox = new System.Windows.Forms.PictureBox();
             this.productNameLabel = new System.Windows.Forms.Label();
-            this.changeLogTextBox = new System.Windows.Forms.TextBox();
             this.homepageLabel = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,9 +46,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.versionLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.closerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverRightPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverLeftPictureBox)).BeginInit();
@@ -108,24 +107,11 @@
             this.productNameLabel.Text = "Xtream\'s ToolBox";
             this.productNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // changeLogTextBox
-            // 
-            this.changeLogTextBox.Location = new System.Drawing.Point(20, 208);
-            this.changeLogTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
-            this.changeLogTextBox.Multiline = true;
-            this.changeLogTextBox.Name = "changeLogTextBox";
-            this.changeLogTextBox.ReadOnly = true;
-            this.changeLogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.changeLogTextBox.Size = new System.Drawing.Size(360, 248);
-            this.changeLogTextBox.TabIndex = 34;
-            this.changeLogTextBox.TabStop = false;
-            this.changeLogTextBox.Text = resources.GetString("changeLogTextBox.Text");
-            // 
             // homepageLabel
             // 
             this.homepageLabel.AutoSize = true;
             this.homepageLabel.BackColor = System.Drawing.Color.Transparent;
-            this.homepageLabel.Location = new System.Drawing.Point(145, 459);
+            this.homepageLabel.Location = new System.Drawing.Point(143, 276);
             this.homepageLabel.Name = "homepageLabel";
             this.homepageLabel.Size = new System.Drawing.Size(111, 13);
             this.homepageLabel.TabIndex = 46;
@@ -301,33 +287,19 @@
             this.label1.Text = "Valer BOCAN (NTPClient.cs)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // versionLabel
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(102, 25);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
-            this.label3.MaximumSize = new System.Drawing.Size(0, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(190, 15);
-            this.label3.TabIndex = 62;
-            this.label3.Text = "version 2018.12.31";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(17, 190);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
-            this.label5.MaximumSize = new System.Drawing.Size(0, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(190, 15);
-            this.label5.TabIndex = 63;
-            this.label5.Text = "CHANGELOG";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.versionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.versionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.versionLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.versionLabel.Location = new System.Drawing.Point(102, 25);
+            this.versionLabel.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.versionLabel.MaximumSize = new System.Drawing.Size(0, 17);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(190, 15);
+            this.versionLabel.TabIndex = 62;
+            this.versionLabel.Text = "version yyyy.mm.dd";
+            this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -343,14 +315,28 @@
             this.label2.Text = "Syed Mehroz Alam (Analog Clock)";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Xtream_ToolBox.Properties.Resources.GitHubChangeLog;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(42, 185);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(319, 77);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "Display CHANGELOG on GitHub";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.OpenChangeLogOnGithub_Click);
+            // 
             // About
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.extendInfosBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(400, 480);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(400, 302);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label12);
@@ -369,7 +355,6 @@
             this.Controls.Add(this.closerPictureBox);
             this.Controls.Add(this.moverRightPictureBox);
             this.Controls.Add(this.moverLeftPictureBox);
-            this.Controls.Add(this.changeLogTextBox);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -393,7 +378,6 @@
         private System.Windows.Forms.PictureBox moverRightPictureBox;
         private System.Windows.Forms.PictureBox moverLeftPictureBox;
         private System.Windows.Forms.Label productNameLabel;
-        private System.Windows.Forms.TextBox changeLogTextBox;
         private System.Windows.Forms.LinkLabel homepageLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
@@ -407,8 +391,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label versionLabel;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

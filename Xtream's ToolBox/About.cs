@@ -26,6 +26,8 @@ namespace Xtream_ToolBox
 
             this.Text = resources.GetString("FormName_About");
             this.Icon = Properties.Resources.icoHome;
+            this.versionLabel.Text = "version " + Properties.Settings.Default._version;
+
         }
 
         // gestion du déplacement de la toolbox : initialisation du déplacement
@@ -60,6 +62,11 @@ namespace Xtream_ToolBox
         private void HomepageLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SystemUtils.OpenInDefaultBrowser("http://www.xtream.be");
+        }
+
+        private void OpenChangeLogOnGithub_Click(object sender, EventArgs e)
+        {
+            SystemUtils.OpenInDefaultBrowser("https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/blob/master/CHANGELOG.md#version-" + Properties.Settings.Default._version.Replace(".", ""));
         }
     }
 }
