@@ -49,9 +49,11 @@
             this.versionLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.closerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverRightPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverLeftPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // closerPictureBox
@@ -99,7 +101,7 @@
             this.productNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.productNameLabel.Font = new System.Drawing.Font("Arial Black", 15F);
             this.productNameLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.productNameLabel.Location = new System.Drawing.Point(20, 3);
+            this.productNameLabel.Location = new System.Drawing.Point(22, 115);
             this.productNameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.productNameLabel.Name = "productNameLabel";
             this.productNameLabel.Size = new System.Drawing.Size(357, 22);
@@ -111,7 +113,7 @@
             // 
             this.homepageLabel.AutoSize = true;
             this.homepageLabel.BackColor = System.Drawing.Color.Transparent;
-            this.homepageLabel.Location = new System.Drawing.Point(143, 276);
+            this.homepageLabel.Location = new System.Drawing.Point(145, 458);
             this.homepageLabel.Name = "homepageLabel";
             this.homepageLabel.Size = new System.Drawing.Size(111, 13);
             this.homepageLabel.TabIndex = 46;
@@ -124,7 +126,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 8F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(17, 139);
+            this.label4.Location = new System.Drawing.Point(15, 266);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label4.MaximumSize = new System.Drawing.Size(0, 17);
             this.label4.Name = "label4";
@@ -138,7 +140,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 8F);
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(17, 126);
+            this.label6.Location = new System.Drawing.Point(15, 300);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label6.MaximumSize = new System.Drawing.Size(0, 17);
             this.label6.Name = "label6";
@@ -152,7 +154,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Arial", 8F);
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(17, 113);
+            this.label7.Location = new System.Drawing.Point(15, 317);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label7.MaximumSize = new System.Drawing.Size(0, 17);
             this.label7.Name = "label7";
@@ -166,7 +168,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(17, 98);
+            this.label8.Location = new System.Drawing.Point(15, 246);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label8.MaximumSize = new System.Drawing.Size(0, 17);
             this.label8.Name = "label8";
@@ -179,7 +181,7 @@
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(17, 67);
+            this.label9.Location = new System.Drawing.Point(104, 198);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label9.MaximumSize = new System.Drawing.Size(0, 17);
             this.label9.Name = "label9";
@@ -193,7 +195,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(17, 52);
+            this.label10.Location = new System.Drawing.Point(104, 181);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label10.MaximumSize = new System.Drawing.Size(0, 17);
             this.label10.Name = "label10";
@@ -208,13 +210,13 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial", 8F);
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(17, 152);
+            this.label11.Location = new System.Drawing.Point(15, 282);
             this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label11.MaximumSize = new System.Drawing.Size(0, 17);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(203, 13);
+            this.label11.Size = new System.Drawing.Size(190, 17);
             this.label11.TabIndex = 54;
-            this.label11.Text = "Weather iconset by Wojciech Grzanka";
+            this.label11.Text = "Weather icons by Wojciech Grzanka";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
@@ -222,7 +224,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Arial", 8F);
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(190, 93);
+            this.label12.Location = new System.Drawing.Point(198, 297);
             this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label12.MaximumSize = new System.Drawing.Size(0, 17);
             this.label12.Name = "label12";
@@ -236,7 +238,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(190, 52);
+            this.label13.Location = new System.Drawing.Point(198, 246);
             this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label13.MaximumSize = new System.Drawing.Size(0, 17);
             this.label13.Name = "label13";
@@ -250,7 +252,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Arial", 8F);
             this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label14.Location = new System.Drawing.Point(190, 67);
+            this.label14.Location = new System.Drawing.Point(198, 265);
             this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label14.MaximumSize = new System.Drawing.Size(0, 17);
             this.label14.Name = "label14";
@@ -264,7 +266,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Arial", 8F);
             this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label16.Location = new System.Drawing.Point(190, 80);
+            this.label16.Location = new System.Drawing.Point(198, 281);
             this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label16.MaximumSize = new System.Drawing.Size(0, 17);
             this.label16.Name = "label16";
@@ -278,7 +280,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 8F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(190, 106);
+            this.label1.Location = new System.Drawing.Point(198, 313);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label1.MaximumSize = new System.Drawing.Size(0, 17);
             this.label1.Name = "label1";
@@ -292,7 +294,7 @@
             this.versionLabel.BackColor = System.Drawing.Color.Transparent;
             this.versionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.versionLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.versionLabel.Location = new System.Drawing.Point(102, 25);
+            this.versionLabel.Location = new System.Drawing.Point(104, 139);
             this.versionLabel.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.versionLabel.MaximumSize = new System.Drawing.Size(0, 17);
             this.versionLabel.Name = "versionLabel";
@@ -306,7 +308,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 8F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(190, 119);
+            this.label2.Location = new System.Drawing.Point(198, 329);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label2.MaximumSize = new System.Drawing.Size(0, 17);
             this.label2.Name = "label2";
@@ -320,7 +322,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::Xtream_ToolBox.Properties.Resources.GitHubChangeLog;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(42, 185);
+            this.button1.Location = new System.Drawing.Point(44, 369);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(319, 77);
             this.button1.TabIndex = 64;
@@ -329,12 +331,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.OpenChangeLogOnGithub_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Xtream_ToolBox.Properties.Resources.Logo_Xtream;
+            this.pictureBox1.Location = new System.Drawing.Point(51, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 106);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 65;
+            this.pictureBox1.TabStop = false;
+            // 
             // About
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.extendInfosBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(400, 302);
+            this.ClientSize = new System.Drawing.Size(400, 480);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.label2);
@@ -343,7 +358,6 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.productNameLabel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -367,6 +381,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.closerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverRightPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moverLeftPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,5 +409,6 @@
         private System.Windows.Forms.Label versionLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

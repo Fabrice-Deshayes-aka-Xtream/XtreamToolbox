@@ -1446,6 +1446,16 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_Xtream {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Xtream", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MCalculator {
             get {
                 object obj = ResourceManager.GetObject("MCalculator", resourceCulture);
@@ -2064,16 +2074,6 @@ namespace Xtream_ToolBox.Properties {
         internal static System.Drawing.Bitmap redo_16 {
             get {
                 object obj = ResourceManager.GetObject("redo_16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap RefreshCL {
-            get {
-                object obj = ResourceManager.GetObject("RefreshCL", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

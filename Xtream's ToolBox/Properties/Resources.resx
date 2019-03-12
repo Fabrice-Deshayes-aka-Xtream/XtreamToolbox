@@ -157,8 +157,8 @@
   <data name="background_separator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-separator.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Task_Manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Task_Manager.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sleet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sleet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="StorageMyComputer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StorageMyComputer.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +178,8 @@
   <data name="Sys_gbit" xml:space="preserve">
     <value>Gb</value>
   </data>
-  <data name="battery_charged" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\battery_charged.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_mostlycloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_mostlycloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Weather_04" xml:space="preserve">
     <value>Last update: {0}</value>
@@ -214,6 +214,9 @@
   <data name="nt_rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nt_rain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="shutdownManager_shutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_shutdown.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SI_Memory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SI_Memory.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -231,6 +234,9 @@
   </data>
   <data name="nt_chancetstorms" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nt_chancetstorms.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GitHubChangeLog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GitHubChangeLog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nt_fog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nt_fog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -361,9 +367,6 @@
   <data name="box_rouge" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box_rouge.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sleet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sleet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_chancerain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_chancerain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -387,6 +390,9 @@
   </data>
   <data name="ShutdownManager_ConfirmeRestart" xml:space="preserve">
     <value>Do you really want to restart your computer ?</value>
+  </data>
+  <data name="mostlycloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mostlycloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="box_turquoise" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box_turquoise.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -412,8 +418,8 @@
   <data name="nt_tstorms" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nt_tstorms.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Weather_DataProvider" xml:space="preserve">
-    <value>Weather data provide by</value>
+  <data name="Weather_WinDir_N" xml:space="preserve">
+    <value>North</value>
   </data>
   <data name="SysInfos_04" xml:space="preserve">
     <value>Paging file: {0}</value>
@@ -430,11 +436,8 @@
   <data name="folder_open_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder-open_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Weather_WinDir_N" xml:space="preserve">
-    <value>North</value>
-  </data>
-  <data name="RefreshCL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RefreshCL.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MyComputer_Legacy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyComputer_Legacy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SI_Key" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SI_Key.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -462,6 +465,9 @@
   </data>
   <data name="icoCalendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icocalendar.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="battery_charged" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battery_charged.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ShutdownManager_ConfirmeLogOffTitle" xml:space="preserve">
     <value>user logoff confirmation</value>
@@ -565,8 +571,8 @@
   <data name="Sys_byte" xml:space="preserve">
     <value>B</value>
   </data>
-  <data name="Weather_08" xml:space="preserve">
-    <value>UV index: {0} / Visibility : {1} {2}</value>
+  <data name="key_numlock_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_numlock_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MyComputer_InstalledApps" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyComputer_InstalledApps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -649,9 +655,6 @@
   <data name="ShutdownManager_ConfirmeRestartTitle" xml:space="preserve">
     <value>computer restart confirmation</value>
   </data>
-  <data name="MyComputer_Legacy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyComputer_Legacy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="StorageUserControlNotReady" xml:space="preserve">
     <value>not ready</value>
   </data>
@@ -687,9 +690,6 @@
   </data>
   <data name="SysInfos_11" xml:space="preserve">
     <value>{0} (secondary)</value>
-  </data>
-  <data name="shutdownManager_shutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdownManager_shutdown.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="JpgRenamer_Action1" xml:space="preserve">
     <value>{0} -&gt; nothing to do. Filename is already good.</value>
@@ -730,6 +730,9 @@
   <data name="JpgRenamer_RenameStart" xml:space="preserve">
     <value>Starting rename operations on {0}</value>
   </data>
+  <data name="SysInfos_08" xml:space="preserve">
+    <value>{0} - {1} RAM</value>
+  </data>
   <data name="_nt_cloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_nt_cloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -757,8 +760,8 @@
   <data name="notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notepad.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mostlycloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mostlycloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Weather_DataProvider" xml:space="preserve">
+    <value>Weather data provide by</value>
   </data>
   <data name="Pop3Checker_Hint" xml:space="preserve">
     <value>{2} emails and {3} spams on account {1} on server {0}{4}</value>
@@ -814,8 +817,8 @@
   <data name="battery_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_6.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SysInfos_08" xml:space="preserve">
-    <value>{0} - {1} RAM</value>
+  <data name="save_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vumeter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vumeter.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -901,6 +904,9 @@
   <data name="shutdownManager_switch_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shutdownManager_switch_user.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Weather_08" xml:space="preserve">
+    <value>UV index: {0} / Visibility : {1} {2}</value>
+  </data>
   <data name="icoPhotosRenamer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icophotosrenamer.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -939,9 +945,6 @@
   </data>
   <data name="JpgRenamer_ReportSimulation5" xml:space="preserve">
     <value>    {0} photo(s) will be corrected because EXIF date in filename wasn't good</value>
-  </data>
-  <data name="key_numlock_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key_numlock_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icoToolBoxOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icotoolboxoptions.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -988,9 +991,6 @@
   <data name="Weather_01" xml:space="preserve">
     <value>location not found!</value>
   </data>
-  <data name="save_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="JpgRenamer_Canceled" xml:space="preserve">
     <value>canceled</value>
   </data>
@@ -1009,6 +1009,9 @@
   <data name="JpgRenamer_NormalMode" xml:space="preserve">
     <value>(normal mode)</value>
   </data>
+  <data name="Task_Manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Task_Manager.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ShutdownManager_ConfirmeLockTitle" xml:space="preserve">
     <value>computer lock confirmation</value>
   </data>
@@ -1023,9 +1026,6 @@
   </data>
   <data name="battery_c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_c1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_mostlycloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\_mostlycloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_nt_fog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_nt_fog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1072,7 +1072,7 @@
   <data name="SysInfos_17" xml:space="preserve">
     <value>{0}% of cpu used</value>
   </data>
-  <data name="GitHubChangeLog" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GitHubChangeLog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo_Xtream" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_Xtream.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

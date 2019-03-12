@@ -640,7 +640,6 @@
     <EmbeddedResource Include="Resources\not_found.png" />
     <EmbeddedResource Include="Resources\properties.png" />
     <EmbeddedResource Include="Resources\redo_16.png" />
-    <EmbeddedResource Include="Resources\RefreshCL.png" />
     <EmbeddedResource Include="Resources\rename.png" />
     <EmbeddedResource Include="Resources\save_16.png" />
     <EmbeddedResource Include="Resources\separator.png" />
@@ -958,6 +957,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Clock.png" />
+    <None Include="Resources\Logo_Xtream.png" />
     <None Include="Resources\MyComputer_Legacy.png" />
     <None Include="Resources\MyComputer_EventsViewer.png" />
     <None Include="Resources\MyComputer_MMC.png" />
