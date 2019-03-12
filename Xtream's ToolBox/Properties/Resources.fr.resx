@@ -507,9 +507,6 @@
   <data name="SysInfos_11" xml:space="preserve">
     <value>{0} (secondaire)</value>
   </data>
-  <data name="ScreenshotName" xml:space="preserve">
-    <value>dd-MM-yy_HH-mm-ss</value>
-  </data>
   <data name="Notepad_ConfirmeClear" xml:space="preserve">
     <value>Voulez-vous vraiment effacer le contenu du boc note ?</value>
   </data>

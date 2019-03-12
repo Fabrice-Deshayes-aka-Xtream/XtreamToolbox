@@ -2029,15 +2029,6 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à dd-MM-yy_hh-mm-ss.
-        /// </summary>
-        internal static string ScreenshotName {
-            get {
-                return ResourceManager.GetString("ScreenshotName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap separator {
