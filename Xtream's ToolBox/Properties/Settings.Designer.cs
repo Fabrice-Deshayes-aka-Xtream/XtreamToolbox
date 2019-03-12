@@ -907,5 +907,14 @@ namespace Xtream_ToolBox.Properties {
                 this["contactsUrl"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2018.12.31")]
+        public string _version {
+            get {
+                return ((string)(this["_version"]));
+            }
+        }
     }
 }

@@ -102,7 +102,7 @@ namespace Xtream_ToolBox
                 }
                 else if (e.Button.Equals(MouseButtons.Left))
                 {
-                    String errMsg = SystemUtils.StartProcess("Explorer", "/N,::{645FF040-5081-101B-9F08-00AA002F954E}", null);
+                    String errMsg = SystemUtils.StartProcess("shell:RecycleBinFolder", null, null);
                     if (errMsg != null)
                     {
                         MessageBox.Show(errMsg);

@@ -43,10 +43,6 @@ namespace Xtream_ToolBox.Sensors
             // Tooltips
             helpToolTip.SetToolTip(this, String.Format(resources.GetString("MyComputer_tip"), Environment.NewLine));
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
-
-            // cache les raccourcis non disponibles
-            microsoftUpdateToolStripMenuItem.Visible = File.Exists(Environment.SystemDirectory + "\\muweb.dll");
-            windowsUpdateToolStripMenuItem.Visible = File.Exists(Environment.SystemDirectory + "\\wupdmgr.exe") || File.Exists(Environment.SystemDirectory + "\\wuapp.exe");
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
@@ -69,106 +65,92 @@ namespace Xtream_ToolBox.Sensors
 
         private void SystemPropertiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String errMsg = SystemUtils.StartProcess(Environment.SystemDirectory + "\\sysdm.cpl", null, null);
-            if (errMsg != null)
-            {
-                MessageBox.Show(errMsg);
-            }
-        }
-
-        private void MicrosoftUpdateToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            String errMsg = SystemUtils.StartProcess(Environment.SystemDirectory + "\\rundll32.exe", Environment.SystemDirectory + "\\muweb.dll,LaunchMUSite", null);
-            if (errMsg != null)
-            {
-                MessageBox.Show(errMsg);
-            }
+            StartProcess("ms-settings:about", null);
         }
 
         private void WindowsUpdateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String errMsg = null;
-            if (File.Exists(Environment.SystemDirectory + "\\wupdmgr.exe"))
-            {
-                errMsg = SystemUtils.StartProcess(Environment.SystemDirectory + "\\wupdmgr.exe", null, null);
-            }
-            else if (File.Exists(Environment.SystemDirectory + "\\wuapp.exe"))
-            {
-                errMsg = SystemUtils.StartProcess(Environment.SystemDirectory + "\\wuapp.exe", null, null);
-            }
-
-            if (errMsg != null)
-            {
-                MessageBox.Show(errMsg);
-            }
+            StartProcess("ms-settings:windowsupdate", null);
         }
 
         private void MicrosoftManagmentConsoleMMCToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String errMsg = SystemUtils.StartProcess(Environment.SystemDirectory + "\\compmgmt.msc", "/s", null);
-            if (errMsg != null)
-            {
-                MessageBox.Show(errMsg);
-            }
+            StartProcess(Environment.SystemDirectory + "\\compmgmt.msc", "/s");
         }
 
         private void ServicesManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String errMsg = SystemUtils.StartProcess(Environment.SystemDirectory + "\\services.msc", "/s", null);
-            if (errMsg != null)
-            {
-                MessageBox.Show(errMsg);
-            }
+            StartProcess(Environment.SystemDirectory + "\\services.msc", "/s");
         }
 
         private void EventsViewerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String errMsg = SystemUtils.StartProcess(Environment.SystemDirectory + "\\eventvwr.msc", "/s", null);
-            if (errMsg != null)
-            {
-                MessageBox.Show(errMsg);
-            }
+            StartProcess(Environment.SystemDirectory + "\\eventvwr.msc", "/s");
         }
 
         private void SensorMyComputer_Click(object sender, EventArgs e)
         {
-            String errMsg = SystemUtils.StartProcess("Explorer", "/N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}", null);
-            if (errMsg != null)
-            {
-                MessageBox.Show(errMsg);
-            }
+            StartProcess("shell:MyComputerFolder", null);
         }
 
         private void OpenControlPanelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String errMsg = SystemUtils.StartProcess("Explorer", "/N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\\::{21EC2020-3AEA-1069-A2DD-08002B30309D}", null);
-            if (errMsg != null)
-            {
-                MessageBox.Show(errMsg);
-            }
-        }
-
-        private void ViewDisplayAndDesktopPropertiesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            String errMsg = SystemUtils.StartProcess(Environment.SystemDirectory + "\\desk.cpl", null, null);
-            if (errMsg != null)
-            {
-                MessageBox.Show(errMsg);
-            }
+            StartProcess("shell:ControlPanelFolder", null);
         }
 
         private void AddOrRemoveProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String errMsg = SystemUtils.StartProcess(Environment.SystemDirectory + "\\appwiz.cpl", null, null);
-            if (errMsg != null)
-            {
-                MessageBox.Show(errMsg);
-            }
+            StartProcess("shell:ChangeRemoveProgramsFolder", null);
         }
 
-        private void DefraToolStripMenuItem_Click(object sender, EventArgs e)
+        private void WindowsSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String errMsg = SystemUtils.StartProcess(Environment.SystemDirectory + "\\dfrg.msc", "/s", null);
+            StartProcess("ms-settings:", null);
+        }
+
+        private void MicrosoftStoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartProcess("ms-windows-store://home", null);
+        }
+
+        private void DisplaySettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartProcess("ms-settings:display", null);
+        }
+
+        private void PrintersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartProcess("ms-settings:printers", null);
+        }
+
+        private void OptionalFeaturesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartProcess("ms-settings:optionalfeatures", null); 
+        }
+
+        private void DefaultApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartProcess("ms-settings:defaultapps", null);
+        }
+
+        private void ApplicationLaunchedOnStartupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartProcess("ms-settings:startupapps", null);
+        }
+
+        private void ApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartProcess("ms-settings:appsfeatures", null);
+        }
+
+        private void SystemInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartProcess("ms-settings:about", null);
+        }
+
+        private void StartProcess(String process, String arguments)
+        {
+            String errMsg = SystemUtils.StartProcess(process, arguments, null);
             if (errMsg != null)
             {
                 MessageBox.Show(errMsg);

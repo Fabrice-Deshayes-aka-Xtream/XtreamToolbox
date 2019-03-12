@@ -1083,6 +1083,16 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GitHubChangeLog {
+            get {
+                object obj = ResourceManager.GetObject("GitHubChangeLog", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hazy {
             get {
                 object obj = ResourceManager.GetObject("hazy", resourceCulture);
@@ -1506,9 +1516,9 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MyComputer_DiskDefragmenter {
+        internal static System.Drawing.Bitmap MyComputer_DefaultApps {
             get {
-                object obj = ResourceManager.GetObject("MyComputer_DiskDefragmenter", resourceCulture);
+                object obj = ResourceManager.GetObject("MyComputer_DefaultApps", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1516,9 +1526,9 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MyComputer_DisplayAndDesktopProperties {
+        internal static System.Drawing.Bitmap MyComputer_DisplaySettings {
             get {
-                object obj = ResourceManager.GetObject("MyComputer_DisplayAndDesktopProperties", resourceCulture);
+                object obj = ResourceManager.GetObject("MyComputer_DisplaySettings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1536,9 +1546,29 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MyComputer_MicrosoftUpdate {
+        internal static System.Drawing.Bitmap MyComputer_InstalledApps {
             get {
-                object obj = ResourceManager.GetObject("MyComputer_MicrosoftUpdate", resourceCulture);
+                object obj = ResourceManager.GetObject("MyComputer_InstalledApps", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MyComputer_Legacy {
+            get {
+                object obj = ResourceManager.GetObject("MyComputer_Legacy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MyComputer_Microsoft_Store {
+            get {
+                object obj = ResourceManager.GetObject("MyComputer_Microsoft-Store", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1556,6 +1586,36 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MyComputer_OptionalFeatures {
+            get {
+                object obj = ResourceManager.GetObject("MyComputer_OptionalFeatures", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MyComputer_Printer {
+            get {
+                object obj = ResourceManager.GetObject("MyComputer_Printer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MyComputer_Refresh {
+            get {
+                object obj = ResourceManager.GetObject("MyComputer_Refresh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MyComputer_ServicesManagment {
             get {
                 object obj = ResourceManager.GetObject("MyComputer_ServicesManagment", resourceCulture);
@@ -1566,9 +1626,19 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MyComputer_SystemProperties {
+        internal static System.Drawing.Bitmap MyComputer_StartupApp {
             get {
-                object obj = ResourceManager.GetObject("MyComputer_SystemProperties", resourceCulture);
+                object obj = ResourceManager.GetObject("MyComputer_StartupApp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MyComputer_SysInfo {
+            get {
+                object obj = ResourceManager.GetObject("MyComputer_SysInfo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1585,9 +1655,9 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MyComputer_WindowsUpdate {
+        internal static System.Drawing.Bitmap MyComputer_WindowsSettings {
             get {
-                object obj = ResourceManager.GetObject("MyComputer_WindowsUpdate", resourceCulture);
+                object obj = ResourceManager.GetObject("MyComputer_WindowsSettings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

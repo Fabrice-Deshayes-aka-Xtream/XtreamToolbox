@@ -31,169 +31,155 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SensorMyComputer));
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.openControlPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addOrRemoveProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.systemPropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewDisplayAndDesktopPropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.microsoftUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.microsoftManagmentConsoleMMCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.servicesManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eventsViewerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.defraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.microsoftStoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowsSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.systemInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.applicationLaunchedOnStartupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.applicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.defaultApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionalFeaturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.displaySettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.legacyToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addOrRemoveProgramsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.servicesManagementToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.microsoftManagementConsoleMMCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eventsViewerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip
             // 
-            this.contextMenuStrip.AccessibleDescription = null;
-            this.contextMenuStrip.AccessibleName = null;
-            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
-            this.contextMenuStrip.BackgroundImage = null;
-            this.contextMenuStrip.Font = null;
-            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openControlPanelToolStripMenuItem,
-            this.addOrRemoveProgramToolStripMenuItem,
-            this.systemPropertiesToolStripMenuItem,
-            this.viewDisplayAndDesktopPropertiesToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.microsoftUpdateToolStripMenuItem,
             this.windowsUpdateToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.microsoftManagmentConsoleMMCToolStripMenuItem,
-            this.servicesManagementToolStripMenuItem,
-            this.eventsViewerToolStripMenuItem,
-            this.defraToolStripMenuItem});
+            this.microsoftStoreToolStripMenuItem,
+            this.windowsSettingsToolStripMenuItem,
+            this.systemInformationToolStripMenuItem,
+            this.applicationLaunchedOnStartupToolStripMenuItem,
+            this.applicationsToolStripMenuItem,
+            this.defaultApplicationsToolStripMenuItem,
+            this.optionalFeaturesToolStripMenuItem,
+            this.displaySettingsToolStripMenuItem,
+            this.printersToolStripMenuItem,
+            this.legacyToolsToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.helpToolTip.SetToolTip(this.contextMenuStrip, resources.GetString("contextMenuStrip.ToolTip"));
-            // 
-            // openControlPanelToolStripMenuItem
-            // 
-            this.openControlPanelToolStripMenuItem.AccessibleDescription = null;
-            this.openControlPanelToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.openControlPanelToolStripMenuItem, "openControlPanelToolStripMenuItem");
-            this.openControlPanelToolStripMenuItem.BackgroundImage = null;
-            this.openControlPanelToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_ControlPanel;
-            this.openControlPanelToolStripMenuItem.Name = "openControlPanelToolStripMenuItem";
-            this.openControlPanelToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.openControlPanelToolStripMenuItem.Click += new System.EventHandler(this.OpenControlPanelToolStripMenuItem_Click);
-            // 
-            // addOrRemoveProgramToolStripMenuItem
-            // 
-            this.addOrRemoveProgramToolStripMenuItem.AccessibleDescription = null;
-            this.addOrRemoveProgramToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.addOrRemoveProgramToolStripMenuItem, "addOrRemoveProgramToolStripMenuItem");
-            this.addOrRemoveProgramToolStripMenuItem.BackgroundImage = null;
-            this.addOrRemoveProgramToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_AddOrRemovePrograms;
-            this.addOrRemoveProgramToolStripMenuItem.Name = "addOrRemoveProgramToolStripMenuItem";
-            this.addOrRemoveProgramToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.addOrRemoveProgramToolStripMenuItem.Click += new System.EventHandler(this.AddOrRemoveProgramToolStripMenuItem_Click);
-            // 
-            // systemPropertiesToolStripMenuItem
-            // 
-            this.systemPropertiesToolStripMenuItem.AccessibleDescription = null;
-            this.systemPropertiesToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.systemPropertiesToolStripMenuItem, "systemPropertiesToolStripMenuItem");
-            this.systemPropertiesToolStripMenuItem.BackgroundImage = null;
-            this.systemPropertiesToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_SystemProperties;
-            this.systemPropertiesToolStripMenuItem.Name = "systemPropertiesToolStripMenuItem";
-            this.systemPropertiesToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.systemPropertiesToolStripMenuItem.Click += new System.EventHandler(this.SystemPropertiesToolStripMenuItem_Click);
-            // 
-            // viewDisplayAndDesktopPropertiesToolStripMenuItem
-            // 
-            this.viewDisplayAndDesktopPropertiesToolStripMenuItem.AccessibleDescription = null;
-            this.viewDisplayAndDesktopPropertiesToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.viewDisplayAndDesktopPropertiesToolStripMenuItem, "viewDisplayAndDesktopPropertiesToolStripMenuItem");
-            this.viewDisplayAndDesktopPropertiesToolStripMenuItem.BackgroundImage = null;
-            this.viewDisplayAndDesktopPropertiesToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_DisplayAndDesktopProperties;
-            this.viewDisplayAndDesktopPropertiesToolStripMenuItem.Name = "viewDisplayAndDesktopPropertiesToolStripMenuItem";
-            this.viewDisplayAndDesktopPropertiesToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.viewDisplayAndDesktopPropertiesToolStripMenuItem.Click += new System.EventHandler(this.ViewDisplayAndDesktopPropertiesToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.AccessibleDescription = null;
-            this.toolStripSeparator2.AccessibleName = null;
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            // 
-            // microsoftUpdateToolStripMenuItem
-            // 
-            this.microsoftUpdateToolStripMenuItem.AccessibleDescription = null;
-            this.microsoftUpdateToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.microsoftUpdateToolStripMenuItem, "microsoftUpdateToolStripMenuItem");
-            this.microsoftUpdateToolStripMenuItem.BackgroundImage = null;
-            this.microsoftUpdateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_MicrosoftUpdate;
-            this.microsoftUpdateToolStripMenuItem.Name = "microsoftUpdateToolStripMenuItem";
-            this.microsoftUpdateToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.microsoftUpdateToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftUpdateToolStripMenuItem_Click);
+            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
             // 
             // windowsUpdateToolStripMenuItem
             // 
-            this.windowsUpdateToolStripMenuItem.AccessibleDescription = null;
-            this.windowsUpdateToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.windowsUpdateToolStripMenuItem, "windowsUpdateToolStripMenuItem");
-            this.windowsUpdateToolStripMenuItem.BackgroundImage = null;
-            this.windowsUpdateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_WindowsUpdate;
+            this.windowsUpdateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_Refresh;
             this.windowsUpdateToolStripMenuItem.Name = "windowsUpdateToolStripMenuItem";
-            this.windowsUpdateToolStripMenuItem.ShortcutKeyDisplayString = null;
+            resources.ApplyResources(this.windowsUpdateToolStripMenuItem, "windowsUpdateToolStripMenuItem");
             this.windowsUpdateToolStripMenuItem.Click += new System.EventHandler(this.WindowsUpdateToolStripMenuItem_Click);
             // 
-            // toolStripSeparator1
+            // microsoftStoreToolStripMenuItem
             // 
-            this.toolStripSeparator1.AccessibleDescription = null;
-            this.toolStripSeparator1.AccessibleName = null;
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.microsoftStoreToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_Microsoft_Store;
+            this.microsoftStoreToolStripMenuItem.Name = "microsoftStoreToolStripMenuItem";
+            resources.ApplyResources(this.microsoftStoreToolStripMenuItem, "microsoftStoreToolStripMenuItem");
+            this.microsoftStoreToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftStoreToolStripMenuItem_Click);
             // 
-            // microsoftManagmentConsoleMMCToolStripMenuItem
+            // windowsSettingsToolStripMenuItem
             // 
-            this.microsoftManagmentConsoleMMCToolStripMenuItem.AccessibleDescription = null;
-            this.microsoftManagmentConsoleMMCToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.microsoftManagmentConsoleMMCToolStripMenuItem, "microsoftManagmentConsoleMMCToolStripMenuItem");
-            this.microsoftManagmentConsoleMMCToolStripMenuItem.BackgroundImage = null;
-            this.microsoftManagmentConsoleMMCToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_MMC;
-            this.microsoftManagmentConsoleMMCToolStripMenuItem.Name = "microsoftManagmentConsoleMMCToolStripMenuItem";
-            this.microsoftManagmentConsoleMMCToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.microsoftManagmentConsoleMMCToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftManagmentConsoleMMCToolStripMenuItem_Click);
+            this.windowsSettingsToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_WindowsSettings;
+            this.windowsSettingsToolStripMenuItem.Name = "windowsSettingsToolStripMenuItem";
+            resources.ApplyResources(this.windowsSettingsToolStripMenuItem, "windowsSettingsToolStripMenuItem");
+            this.windowsSettingsToolStripMenuItem.Click += new System.EventHandler(this.WindowsSettingsToolStripMenuItem_Click);
             // 
-            // servicesManagementToolStripMenuItem
+            // systemInformationToolStripMenuItem
             // 
-            this.servicesManagementToolStripMenuItem.AccessibleDescription = null;
-            this.servicesManagementToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.servicesManagementToolStripMenuItem, "servicesManagementToolStripMenuItem");
-            this.servicesManagementToolStripMenuItem.BackgroundImage = null;
-            this.servicesManagementToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_ServicesManagment;
-            this.servicesManagementToolStripMenuItem.Name = "servicesManagementToolStripMenuItem";
-            this.servicesManagementToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.servicesManagementToolStripMenuItem.Click += new System.EventHandler(this.ServicesManagementToolStripMenuItem_Click);
+            this.systemInformationToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_SysInfo;
+            this.systemInformationToolStripMenuItem.Name = "systemInformationToolStripMenuItem";
+            resources.ApplyResources(this.systemInformationToolStripMenuItem, "systemInformationToolStripMenuItem");
+            this.systemInformationToolStripMenuItem.Click += new System.EventHandler(this.SystemInformationToolStripMenuItem_Click);
             // 
-            // eventsViewerToolStripMenuItem
+            // applicationLaunchedOnStartupToolStripMenuItem
             // 
-            this.eventsViewerToolStripMenuItem.AccessibleDescription = null;
-            this.eventsViewerToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.eventsViewerToolStripMenuItem, "eventsViewerToolStripMenuItem");
-            this.eventsViewerToolStripMenuItem.BackgroundImage = null;
-            this.eventsViewerToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_EventsViewer;
-            this.eventsViewerToolStripMenuItem.Name = "eventsViewerToolStripMenuItem";
-            this.eventsViewerToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.eventsViewerToolStripMenuItem.Click += new System.EventHandler(this.EventsViewerToolStripMenuItem_Click);
+            this.applicationLaunchedOnStartupToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_StartupApp;
+            this.applicationLaunchedOnStartupToolStripMenuItem.Name = "applicationLaunchedOnStartupToolStripMenuItem";
+            resources.ApplyResources(this.applicationLaunchedOnStartupToolStripMenuItem, "applicationLaunchedOnStartupToolStripMenuItem");
+            this.applicationLaunchedOnStartupToolStripMenuItem.Click += new System.EventHandler(this.ApplicationLaunchedOnStartupToolStripMenuItem_Click);
             // 
-            // defraToolStripMenuItem
+            // applicationsToolStripMenuItem
             // 
-            this.defraToolStripMenuItem.AccessibleDescription = null;
-            this.defraToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.defraToolStripMenuItem, "defraToolStripMenuItem");
-            this.defraToolStripMenuItem.BackgroundImage = null;
-            this.defraToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_DiskDefragmenter;
-            this.defraToolStripMenuItem.Name = "defraToolStripMenuItem";
-            this.defraToolStripMenuItem.ShortcutKeyDisplayString = null;
-            this.defraToolStripMenuItem.Click += new System.EventHandler(this.DefraToolStripMenuItem_Click);
+            this.applicationsToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_InstalledApps;
+            this.applicationsToolStripMenuItem.Name = "applicationsToolStripMenuItem";
+            resources.ApplyResources(this.applicationsToolStripMenuItem, "applicationsToolStripMenuItem");
+            this.applicationsToolStripMenuItem.Click += new System.EventHandler(this.ApplicationsToolStripMenuItem_Click);
+            // 
+            // defaultApplicationsToolStripMenuItem
+            // 
+            this.defaultApplicationsToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_DefaultApps;
+            this.defaultApplicationsToolStripMenuItem.Name = "defaultApplicationsToolStripMenuItem";
+            resources.ApplyResources(this.defaultApplicationsToolStripMenuItem, "defaultApplicationsToolStripMenuItem");
+            this.defaultApplicationsToolStripMenuItem.Click += new System.EventHandler(this.DefaultApplicationsToolStripMenuItem_Click);
+            // 
+            // optionalFeaturesToolStripMenuItem
+            // 
+            this.optionalFeaturesToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_OptionalFeatures;
+            this.optionalFeaturesToolStripMenuItem.Name = "optionalFeaturesToolStripMenuItem";
+            resources.ApplyResources(this.optionalFeaturesToolStripMenuItem, "optionalFeaturesToolStripMenuItem");
+            this.optionalFeaturesToolStripMenuItem.Click += new System.EventHandler(this.OptionalFeaturesToolStripMenuItem_Click);
+            // 
+            // displaySettingsToolStripMenuItem
+            // 
+            this.displaySettingsToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_DisplaySettings;
+            this.displaySettingsToolStripMenuItem.Name = "displaySettingsToolStripMenuItem";
+            resources.ApplyResources(this.displaySettingsToolStripMenuItem, "displaySettingsToolStripMenuItem");
+            this.displaySettingsToolStripMenuItem.Click += new System.EventHandler(this.DisplaySettingsToolStripMenuItem_Click);
+            // 
+            // printersToolStripMenuItem
+            // 
+            this.printersToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_Printer;
+            this.printersToolStripMenuItem.Name = "printersToolStripMenuItem";
+            resources.ApplyResources(this.printersToolStripMenuItem, "printersToolStripMenuItem");
+            this.printersToolStripMenuItem.Click += new System.EventHandler(this.PrintersToolStripMenuItem_Click);
+            // 
+            // legacyToolsToolStripMenuItem
+            // 
+            this.legacyToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.addOrRemoveProgramsToolStripMenuItem,
+            this.servicesManagementToolStripMenuItem1,
+            this.microsoftManagementConsoleMMCToolStripMenuItem,
+            this.eventsViewerToolStripMenuItem1});
+            this.legacyToolsToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_Legacy;
+            this.legacyToolsToolStripMenuItem.Name = "legacyToolsToolStripMenuItem";
+            resources.ApplyResources(this.legacyToolsToolStripMenuItem, "legacyToolsToolStripMenuItem");
+            // 
+            // toolStripMenuItem1
+            // 
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.OpenControlPanelToolStripMenuItem_Click);
+            // 
+            // addOrRemoveProgramsToolStripMenuItem
+            // 
+            resources.ApplyResources(this.addOrRemoveProgramsToolStripMenuItem, "addOrRemoveProgramsToolStripMenuItem");
+            this.addOrRemoveProgramsToolStripMenuItem.Name = "addOrRemoveProgramsToolStripMenuItem";
+            this.addOrRemoveProgramsToolStripMenuItem.Click += new System.EventHandler(this.AddOrRemoveProgramToolStripMenuItem_Click);
+            // 
+            // servicesManagementToolStripMenuItem1
+            // 
+            resources.ApplyResources(this.servicesManagementToolStripMenuItem1, "servicesManagementToolStripMenuItem1");
+            this.servicesManagementToolStripMenuItem1.Name = "servicesManagementToolStripMenuItem1";
+            this.servicesManagementToolStripMenuItem1.Click += new System.EventHandler(this.ServicesManagementToolStripMenuItem_Click);
+            // 
+            // microsoftManagementConsoleMMCToolStripMenuItem
+            // 
+            resources.ApplyResources(this.microsoftManagementConsoleMMCToolStripMenuItem, "microsoftManagementConsoleMMCToolStripMenuItem");
+            this.microsoftManagementConsoleMMCToolStripMenuItem.Name = "microsoftManagementConsoleMMCToolStripMenuItem";
+            this.microsoftManagementConsoleMMCToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftManagmentConsoleMMCToolStripMenuItem_Click);
+            // 
+            // eventsViewerToolStripMenuItem1
+            // 
+            resources.ApplyResources(this.eventsViewerToolStripMenuItem1, "eventsViewerToolStripMenuItem1");
+            this.eventsViewerToolStripMenuItem1.Name = "eventsViewerToolStripMenuItem1";
+            this.eventsViewerToolStripMenuItem1.Click += new System.EventHandler(this.EventsViewerToolStripMenuItem_Click);
             // 
             // helpToolTip
             // 
@@ -205,18 +191,14 @@
             // 
             // SensorMyComputer
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.myComputer;
+            resources.ApplyResources(this, "$this");
             this.ContextMenuStrip = this.contextMenuStrip;
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DoubleBuffered = true;
-            this.Font = null;
             this.Name = "SensorMyComputer";
-            this.helpToolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Click += new System.EventHandler(this.SensorMyComputer_Click);
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -226,18 +208,22 @@
         #endregion
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem systemPropertiesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem microsoftManagmentConsoleMMCToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem servicesManagementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eventsViewerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem microsoftUpdateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem windowsUpdateToolStripMenuItem;
         private System.Windows.Forms.ToolTip helpToolTip;
-        private System.Windows.Forms.ToolStripMenuItem openControlPanelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewDisplayAndDesktopPropertiesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addOrRemoveProgramToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem defraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem windowsSettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem systemInformationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem applicationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem applicationLaunchedOnStartupToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem defaultApplicationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionalFeaturesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem displaySettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem microsoftStoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem legacyToolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem windowsUpdateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem addOrRemoveProgramsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem servicesManagementToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem microsoftManagementConsoleMMCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eventsViewerToolStripMenuItem1;
     }
 }
