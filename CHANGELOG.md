@@ -1,8 +1,19 @@
 ## latest version 
 > not released, available if you build from code
 - [Notepad Sensor] Add confirm dialogBox when clearing notepad [#1](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/1)
+- [Notepad Sensor] Import text file append instead of replace [#5](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/5)
 - [MyComputer Sensor] Improve MyComputer sensor's contextual menu [#3](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/3)
 - [About Form] Redesign about form and replace changelog by a link to github [#4](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/4)
+- [Commons] Better GFX unity, use more GANT icons [#7](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/6)
+- [Options] Fix time servers list (remove somes that don't work and use time.windows.com as default) [#6](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/6)
+- [Storage Sensor] fix some bugs [#8](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/8)
+  - fix icon for network drive
+  - limit performance details for fixed drives, otherwise it cause error for network drives
+  - remove compute of total/free size for CD Rom drive, it cause division by zero
+  - reduce width of drive info to allow nice scroll bars if there is more than 7 drives
+  - display in terrabyte (TB) for big space
+  - fix read/write real time graph to better manage peek magnitude
+- [Weather Sensor] fix exception when weather api return no current condition [#9](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/9)
 
 ## version 2018.12.31
 - improve TimeICalManager sensor with left/right click actions
