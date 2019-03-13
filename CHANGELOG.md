@@ -14,6 +14,9 @@
   - display in terrabyte (TB) for big space
   - fix read/write real time graph to better manage peek magnitude
 - [Weather Sensor] fix exception when weather api return no current condition [#9](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/9)
+- [Photo Renamer] bad count of affected files in simulation mode (always zero) [#10](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/10)
+- [Storage Sensor] refresh drives list each time extended panel is shown [#11](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/11)
+- [System Info Sensor] Reduce CPU usage when extended panel is not displayed
 
 ## version 2018.12.31
 - improve TimeICalManager sensor with left/right click actions
