@@ -19,12 +19,10 @@ namespace Xtream_ToolBox.Sensors
         // reference on toolbox
         private ToolBox toolbox = null;
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accï¿½der aux chaines localisï¿½es
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         private SensorStorageExtendedPanel extendedPanel = null;
-
-        public DriveInfo[] allDrives = null;
 
         // constructor
         public SensorStorage(ToolBox toolbox)
@@ -72,7 +70,7 @@ namespace Xtream_ToolBox.Sensors
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
         public void InitSensorData()
         {
-            allDrives = DriveInfo.GetDrives();
+            // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
@@ -102,6 +100,7 @@ namespace Xtream_ToolBox.Sensors
             else
             {
                 ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
+                extendedPanel.Init();                
                 extendedPanel.Show();
             }
         }

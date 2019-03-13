@@ -12,7 +12,8 @@ namespace Xtream_ToolBox.Sensors {
     public partial class SensorStorageExtendedPanel : Form {
         
         private SensorStorage sensorStorage = null;
-        private DetailStorageUserControl detailStorageUserControl = new DetailStorageUserControl();        
+        private DetailStorageUserControl detailStorageUserControl = new DetailStorageUserControl();
+        public DriveInfo[] allDrives = null;
 
         public SensorStorageExtendedPanel(SensorStorage sensorStorage) {
             InitializeComponent();
@@ -25,7 +26,8 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         public void Init() {
-            SuspendLayout();            
+            SuspendLayout();
+            allDrives = DriveInfo.GetDrives();
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             detailStoragePanel.Controls.Add(detailStorageUserControl);
@@ -33,8 +35,10 @@ namespace Xtream_ToolBox.Sensors {
             flowLayoutPanel.Visible = false;
             flowLayoutPanel.Controls.Clear();
 
-            if (sensorStorage.allDrives != null) {
-                foreach (DriveInfo device in sensorStorage.allDrives) {
+            drivesComboBox.Items.Clear();
+
+            if (allDrives != null) {
+                foreach (DriveInfo device in allDrives) {
                     if (device.IsReady) {
                         if (device.DriveType == DriveType.Fixed) { 
                             drivesComboBox.Items.Add(device);
