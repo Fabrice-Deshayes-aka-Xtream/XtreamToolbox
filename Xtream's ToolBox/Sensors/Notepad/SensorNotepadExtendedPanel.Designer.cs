@@ -36,18 +36,16 @@
             this.loadButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.closeExtendedInfosPictureBox)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // closeExtendedInfosPictureBox
             // 
+            resources.ApplyResources(this.closeExtendedInfosPictureBox, "closeExtendedInfosPictureBox");
             this.closeExtendedInfosPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.closeExtendedInfosPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.closeExtendedInfosPictureBox, "closeExtendedInfosPictureBox");
             this.closeExtendedInfosPictureBox.Name = "closeExtendedInfosPictureBox";
             this.closeExtendedInfosPictureBox.TabStop = false;
             this.helpToolTip.SetToolTip(this.closeExtendedInfosPictureBox, resources.GetString("closeExtendedInfosPictureBox.ToolTip"));
@@ -59,6 +57,7 @@
             this.notepadTextBox.AcceptsTab = true;
             resources.ApplyResources(this.notepadTextBox, "notepadTextBox");
             this.notepadTextBox.Name = "notepadTextBox";
+            this.helpToolTip.SetToolTip(this.notepadTextBox, resources.GetString("notepadTextBox.ToolTip"));
             this.notepadTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NotepadTextBox_KeyUp);
             // 
             // helpToolTip
@@ -69,8 +68,8 @@
             // 
             resources.ApplyResources(this.loadButton, "loadButton");
             this.loadButton.Image = global::Xtream_ToolBox.Properties.Resources.folder_open_16;
-            this.loadButton.MinimumSize = new System.Drawing.Size(0, 24);
             this.loadButton.Name = "loadButton";
+            this.helpToolTip.SetToolTip(this.loadButton, resources.GetString("loadButton.ToolTip"));
             this.loadButton.UseVisualStyleBackColor = true;
             this.loadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
@@ -78,8 +77,8 @@
             // 
             resources.ApplyResources(this.saveButton, "saveButton");
             this.saveButton.Image = global::Xtream_ToolBox.Properties.Resources.save_16;
-            this.saveButton.MinimumSize = new System.Drawing.Size(0, 24);
             this.saveButton.Name = "saveButton";
+            this.helpToolTip.SetToolTip(this.saveButton, resources.GetString("saveButton.ToolTip"));
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
@@ -87,18 +86,10 @@
             // 
             resources.ApplyResources(this.clearButton, "clearButton");
             this.clearButton.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
-            this.clearButton.MinimumSize = new System.Drawing.Size(0, 24);
             this.clearButton.Name = "clearButton";
+            this.helpToolTip.SetToolTip(this.clearButton, resources.GetString("clearButton.ToolTip"));
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.Controls.Add(this.saveButton);
-            this.flowLayoutPanel1.Controls.Add(this.loadButton);
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
             // openFileDialog
             // 
@@ -112,11 +103,12 @@
             // 
             // SensorNotepadExtendedPanel
             // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.extendInfosBackground;
-            resources.ApplyResources(this, "$this");
             this.ControlBox = false;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.loadButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.notepadTextBox);
             this.Controls.Add(this.closeExtendedInfosPictureBox);
@@ -127,9 +119,8 @@
             this.Name = "SensorNotepadExtendedPanel";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.helpToolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             ((System.ComponentModel.ISupportInitialize)(this.closeExtendedInfosPictureBox)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +136,5 @@
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
