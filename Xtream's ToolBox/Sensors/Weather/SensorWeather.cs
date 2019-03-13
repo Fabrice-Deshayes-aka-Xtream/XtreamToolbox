@@ -87,11 +87,15 @@ namespace Xtream_ToolBox.Sensors
         // refresh UI based on sensor Data
         public void RefreshUI()
         {
-            if (currentWeather == null)
+            if (currentWeather == null || currentWeather.currentObservation == null)
             {
                 weatherPictureBox.Image = Properties.Resources._na;
                 tempLabel.Text = resources.GetString("not_available");
                 return;
+            } else
+            {
+                tempLabel.Text = currentWeather.currentObservation.temp + "°C";
+                weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + currentWeather.currentObservation.icon);
             }
 
             if ((extendedPanel != null) && (!extendedPanel.IsDisposed))
@@ -99,9 +103,6 @@ namespace Xtream_ToolBox.Sensors
                 extendedPanel.UpdateWeather();
             }
 
-            tempLabel.Text = currentWeather.currentObservation.temp + "°C";
-
-            weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + currentWeather.currentObservation.icon);
         }
 
         // update location of extended panel if needed

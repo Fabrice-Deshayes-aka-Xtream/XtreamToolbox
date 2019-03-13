@@ -48,7 +48,7 @@ namespace Xtream_ToolBox.Sensors
                 Console.WriteLine(exception.Message);
             }
 
-            if (weather != null)
+            if (weather != null && weather.currentObservation != null)
             {
                 DateTime.TryParse(weather.currentObservation.time, out weather.currentObservation.timeDT);
                 DateTime.TryParse(weather.currentObservation.lastupdateTime, out weather.currentObservation.lastupdateTimeDT);
