@@ -45,13 +45,9 @@ namespace Xtream_ToolBox
 
             timeServerComboBox.Items.Clear();
             timeServerComboBox.Items.Add("time.windows.com");
-            timeServerComboBox.Items.Add("chronos.cru.fr");
-            timeServerComboBox.Items.Add("time.nist.gov");
             timeServerComboBox.Items.Add("ntps1-0.cs.tu-berlin.de");
             timeServerComboBox.Items.Add("swisstime.ethz.ch");
             timeServerComboBox.Items.Add("clock.uregina.ca");
-            timeServerComboBox.Items.Add("ntp0.coreng.com.au");
-            timeServerComboBox.Items.Add("clock.cuhk.edu.hk");
             if ((Properties.Settings.Default.timeServerUrl != null) && (!Properties.Settings.Default.timeServerUrl.Equals("")))
             {
                 if (!timeServerComboBox.Items.Contains(Properties.Settings.Default.timeServerUrl))

@@ -455,6 +455,7 @@
             // 
             // timeSynchronizeButton
             // 
+            this.timeSynchronizeButton.Image = global::Xtream_ToolBox.Properties.Resources.refresh_16;
             resources.ApplyResources(this.timeSynchronizeButton, "timeSynchronizeButton");
             this.timeSynchronizeButton.Name = "timeSynchronizeButton";
             this.timeSynchronizeButton.UseVisualStyleBackColor = true;
@@ -925,6 +926,7 @@
             // webDeleteButton
             // 
             resources.ApplyResources(this.webDeleteButton, "webDeleteButton");
+            this.webDeleteButton.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
             this.webDeleteButton.Name = "webDeleteButton";
             this.webDeleteButton.UseVisualStyleBackColor = true;
             this.webDeleteButton.Click += new System.EventHandler(this.WebDeleteButton_Click);
@@ -1005,6 +1007,7 @@
             // fileDeleteButton
             // 
             resources.ApplyResources(this.fileDeleteButton, "fileDeleteButton");
+            this.fileDeleteButton.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
             this.fileDeleteButton.Name = "fileDeleteButton";
             this.fileDeleteButton.UseVisualStyleBackColor = true;
             this.fileDeleteButton.Click += new System.EventHandler(this.FileDeleteButton_Click);
@@ -1328,6 +1331,7 @@
             // popDeleteButton
             // 
             resources.ApplyResources(this.popDeleteButton, "popDeleteButton");
+            this.popDeleteButton.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
             this.popDeleteButton.Name = "popDeleteButton";
             this.popDeleteButton.UseVisualStyleBackColor = true;
             this.popDeleteButton.Click += new System.EventHandler(this.PopDeleteButton_Click);
@@ -1711,6 +1715,7 @@
             // cancelButton
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancelButton.Image = global::Xtream_ToolBox.Properties.Resources.stop;
             resources.ApplyResources(this.cancelButton, "cancelButton");
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.UseVisualStyleBackColor = true;

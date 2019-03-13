@@ -90,7 +90,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="timeServerUrl" Type="System.String" Scope="User">
-      <Value Profile="(Default)">time.nist.gov</Value>
+      <Value Profile="(Default)">time.windows.com</Value>
     </Setting>
     <Setting Name="timeAutoSynch" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

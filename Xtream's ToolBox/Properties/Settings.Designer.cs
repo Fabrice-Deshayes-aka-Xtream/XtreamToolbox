@@ -371,7 +371,7 @@ namespace Xtream_ToolBox.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("time.nist.gov")]
+        [global::System.Configuration.DefaultSettingValueAttribute("time.windows.com")]
         public string timeServerUrl {
             get {
                 return ((string)(this["timeServerUrl"]));
