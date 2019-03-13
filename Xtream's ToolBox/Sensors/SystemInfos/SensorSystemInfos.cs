@@ -246,7 +246,6 @@ namespace Xtream_ToolBox.Sensors
                     c2DPushGraph.Push((int)cpuUsed, LINE_CPU);
                 }
             }
-            cpuUsedStr = String.Format(resources.GetString("SysInfos_17"), cpuUsed);
 
             // set ram vumeter
             ramUsedbyte = systemInformations.memoryTotalPhysicalMemory - ram_physical_free.RawValue;
@@ -264,20 +263,6 @@ namespace Xtream_ToolBox.Sensors
                     c2DPushGraph.Push((int)ramUsed, LINE_RAM);
                 }
             }
-            ramUsedStr = String.Format(resources.GetString("SysInfos_18"), ramUsed, SystemUtils.GetFriendlyBytesSize(systemInformations.memoryTotalPhysicalMemory, "mbyte"));
-
-            // process & threads informations
-            Process[] allProcess = Process.GetProcesses();
-            int nbTotalThread = 0;
-
-            foreach (Process process in allProcess)
-            {
-                nbTotalThread += process.Threads.Count;
-            }
-
-            if (allProcess.Length > maxProcess) maxProcess = allProcess.Length;
-            if (nbTotalThread > maxThread) maxThread = nbTotalThread;
-            processAndThreadStr = String.Format(resources.GetString("SysInfos_13"), allProcess.Length, maxProcess, nbTotalThread, maxThread);
 
             lanReceivedRateToolStripMenuItem.Enabled = (lanNetworkInterface != null);
             lanSendRateToolStripMenuItem.Enabled = (lanNetworkInterface != null);
@@ -455,6 +440,21 @@ namespace Xtream_ToolBox.Sensors
             // set extendedPanel cpu & ram infos
             if ((extendedPanel != null) && (!extendedPanel.IsDisposed) && (extendedPanel.Visible))
             {
+                // process & threads informations
+                Process[] allProcess = Process.GetProcesses();
+                int nbTotalThread = 0;
+
+                foreach (Process process in allProcess)
+                {
+                    nbTotalThread += process.Threads.Count;
+                }
+
+                if (allProcess.Length > maxProcess) maxProcess = allProcess.Length;
+                if (nbTotalThread > maxThread) maxThread = nbTotalThread;
+                processAndThreadStr = String.Format(resources.GetString("SysInfos_13"), allProcess.Length, maxProcess, nbTotalThread, maxThread);
+
+                cpuUsedStr = String.Format(resources.GetString("SysInfos_17"), cpuUsed);
+                ramUsedStr = String.Format(resources.GetString("SysInfos_18"), ramUsed, SystemUtils.GetFriendlyBytesSize(systemInformations.memoryTotalPhysicalMemory, "mbyte"));
                 extendedPanel.RefreshSystemInformation(ramUsedStr, cpuUsedStr, processAndThreadStr);
             }
 
