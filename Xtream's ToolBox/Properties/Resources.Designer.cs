@@ -1606,9 +1606,9 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MyComputer_Microsoft_Store {
+        internal static System.Drawing.Bitmap MyComputer_MMC {
             get {
-                object obj = ResourceManager.GetObject("MyComputer_Microsoft-Store", resourceCulture);
+                object obj = ResourceManager.GetObject("MyComputer_MMC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1616,9 +1616,9 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MyComputer_MMC {
+        internal static System.Drawing.Bitmap MyComputer_MsStore {
             get {
-                object obj = ResourceManager.GetObject("MyComputer_MMC", resourceCulture);
+                object obj = ResourceManager.GetObject("MyComputer_MsStore", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2121,16 +2121,6 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rename {
-            get {
-                object obj = ResourceManager.GetObject("rename", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap save_16 {
             get {
                 object obj = ResourceManager.GetObject("save_16", resourceCulture);
@@ -2463,16 +2453,6 @@ namespace Xtream_ToolBox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap StorageMyComputer {
-            get {
-                object obj = ResourceManager.GetObject("StorageMyComputer", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Recherche une chaîne localisée semblable à not ready.
         /// </summary>
         internal static string StorageUserControlNotReady {
@@ -2624,6 +2604,24 @@ namespace Xtream_ToolBox.Properties {
         internal static string Sys_s {
             get {
                 return ResourceManager.GetString("Sys_s", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Tb.
+        /// </summary>
+        internal static string Sys_tbit {
+            get {
+                return ResourceManager.GetString("Sys_tbit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à TB.
+        /// </summary>
+        internal static string Sys_tbyte {
+            get {
+                return ResourceManager.GetString("Sys_tbyte", resourceCulture);
             }
         }
         
@@ -2867,16 +2865,6 @@ namespace Xtream_ToolBox.Properties {
         internal static string SysInfosTips {
             get {
                 return ResourceManager.GetString("SysInfosTips", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Task_Manager {
-            get {
-                object obj = ResourceManager.GetObject("Task_Manager", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

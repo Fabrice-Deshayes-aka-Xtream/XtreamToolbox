@@ -352,7 +352,7 @@ namespace Xtream_ToolBox
             return sqrbi;
         }
 
-        // récupère la taille d'un fichier
+        // display friendly size
         public static String GetFriendlyBytesSize(long sizeInByte, String displayMode)
         {
             String friendlyBytesSize = "";
@@ -360,6 +360,7 @@ namespace Xtream_ToolBox
             String kbyteStr = resources.GetString("Sys_kbyte");
             String mbyteStr = resources.GetString("Sys_mbyte");
             String gbyteStr = resources.GetString("Sys_gbyte");
+            String tbyteStr = resources.GetString("Sys_tbyte");
 
             if ((displayMode == null) || ("".Equals(displayMode)))
             {
@@ -381,10 +382,15 @@ namespace Xtream_ToolBox
                 // display in mb
                 friendlyBytesSize = String.Format("{0} {1}", sizeInByte / 1024 / 1024, mbyteStr);
             }
-            else
+            else if (("gbyte".Equals(displayMode)) || (("auto".Equals(displayMode)) && (sizeInByte >= 1024 * 1024 * 1024) && (sizeInByte < 1024L * 1024L * 1024L * 1024L)))
             {
                 // display in gb
                 friendlyBytesSize = String.Format("{0} {1}", Math.Round((decimal)sizeInByte / 1024 / 1024 / 1024, 1), gbyteStr);
+            }
+            else
+            {
+                // display in tb
+                friendlyBytesSize = String.Format("{0} {1}", Math.Round((decimal)sizeInByte / 1024 / 1024 / 1024 / 1024, 1), tbyteStr);
             }
 
             return friendlyBytesSize;

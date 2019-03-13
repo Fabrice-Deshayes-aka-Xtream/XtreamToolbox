@@ -631,14 +631,12 @@
     <EmbeddedResource Include="Resources\MCalendar.png" />
     <EmbeddedResource Include="Resources\MCalculator.png" />
     <EmbeddedResource Include="Resources\myComputer.png" />
-    <EmbeddedResource Include="Resources\MyComputer2.png" />
     <EmbeddedResource Include="Resources\MyComputer_AddOrRemovePrograms.png" />
     <EmbeddedResource Include="Resources\MyComputer_ControlPanel.png" />
     <EmbeddedResource Include="Resources\notepad.png" />
     <EmbeddedResource Include="Resources\not_found.png" />
     <EmbeddedResource Include="Resources\properties.png" />
     <EmbeddedResource Include="Resources\redo_16.png" />
-    <EmbeddedResource Include="Resources\rename.png" />
     <EmbeddedResource Include="Resources\save_16.png" />
     <EmbeddedResource Include="Resources\separator.png" />
     <EmbeddedResource Include="Resources\SI_Central_Unit.png" />
@@ -648,9 +646,7 @@
     <EmbeddedResource Include="Resources\SI_Memory.png" />
     <EmbeddedResource Include="Resources\SI_MyComputer.png" />
     <EmbeddedResource Include="Resources\stop.png" />
-    <EmbeddedResource Include="Resources\StorageMyComputer.png" />
     <EmbeddedResource Include="Resources\sun_moon.png" />
-    <EmbeddedResource Include="Resources\Task_Manager.png" />
     <EmbeddedResource Include="Resources\thermometre.png" />
     <EmbeddedResource Include="Resources\TrashFull.png" />
     <EmbeddedResource Include="Resources\TrashEmpty.png" />

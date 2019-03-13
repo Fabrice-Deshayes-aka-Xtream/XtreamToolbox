@@ -160,9 +160,6 @@
   <data name="sleet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sleet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="StorageMyComputer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StorageMyComputer.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ShutdownManager_ConfirmeShutDownTitle" xml:space="preserve">
     <value>computer shutdown confirmation</value>
   </data>
@@ -385,7 +382,7 @@
   <data name="snow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\snow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MyComputer_Microsoft-Store" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="MyComputer_MsStore" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyComputer_Microsoft-Store.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ShutdownManager_ConfirmeRestart" xml:space="preserve">
@@ -991,9 +988,6 @@
   <data name="_nt_tstorms" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_nt_tstorms.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rename" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rename.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Weather_01" xml:space="preserve">
     <value>location not found!</value>
   </data>
@@ -1017,9 +1011,6 @@
   </data>
   <data name="ImageRenamer_rename" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImageRenamer_rename.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Task_Manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Task_Manager.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ShutdownManager_ConfirmeLockTitle" xml:space="preserve">
     <value>computer lock confirmation</value>
@@ -1086,5 +1077,11 @@
   </data>
   <data name="refresh_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sys_tbit" xml:space="preserve">
+    <value>Tb</value>
+  </data>
+  <data name="Sys_tbyte" xml:space="preserve">
+    <value>TB</value>
   </data>
 </root>

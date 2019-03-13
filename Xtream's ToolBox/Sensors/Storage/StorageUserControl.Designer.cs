@@ -32,6 +32,7 @@
             this.deviceSpaceBackgroundPictureBox = new System.Windows.Forms.PictureBox();
             this.helpToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.deviceFormatLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.devicePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceSpacePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceSpaceBackgroundPictureBox)).BeginInit();
@@ -39,64 +40,46 @@
             // 
             // devicePictureBox
             // 
-            this.devicePictureBox.AccessibleDescription = null;
-            this.devicePictureBox.AccessibleName = null;
-            resources.ApplyResources(this.devicePictureBox, "devicePictureBox");
             this.devicePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.devicePictureBox.BackgroundImage = null;
             this.devicePictureBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.devicePictureBox.Font = null;
             this.devicePictureBox.Image = global::Xtream_ToolBox.Properties.Resources.Drive_harddisc;
-            this.devicePictureBox.ImageLocation = null;
+            resources.ApplyResources(this.devicePictureBox, "devicePictureBox");
             this.devicePictureBox.Name = "devicePictureBox";
             this.devicePictureBox.TabStop = false;
-            this.helpToolTip.SetToolTip(this.devicePictureBox, resources.GetString("devicePictureBox.ToolTip"));
             // 
             // deviceNameLabel
             // 
-            this.deviceNameLabel.AccessibleDescription = null;
-            this.deviceNameLabel.AccessibleName = null;
             resources.ApplyResources(this.deviceNameLabel, "deviceNameLabel");
             this.deviceNameLabel.Name = "deviceNameLabel";
-            this.helpToolTip.SetToolTip(this.deviceNameLabel, resources.GetString("deviceNameLabel.ToolTip"));
             // 
             // deviceSpacePictureBox
             // 
-            this.deviceSpacePictureBox.AccessibleDescription = null;
-            this.deviceSpacePictureBox.AccessibleName = null;
-            resources.ApplyResources(this.deviceSpacePictureBox, "deviceSpacePictureBox");
             this.deviceSpacePictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.vumeter;
-            this.deviceSpacePictureBox.Font = null;
-            this.deviceSpacePictureBox.ImageLocation = null;
+            resources.ApplyResources(this.deviceSpacePictureBox, "deviceSpacePictureBox");
             this.deviceSpacePictureBox.Name = "deviceSpacePictureBox";
             this.deviceSpacePictureBox.TabStop = false;
-            this.helpToolTip.SetToolTip(this.deviceSpacePictureBox, resources.GetString("deviceSpacePictureBox.ToolTip"));
             // 
             // sizeInfoLabel
             // 
-            this.sizeInfoLabel.AccessibleDescription = null;
-            this.sizeInfoLabel.AccessibleName = null;
             resources.ApplyResources(this.sizeInfoLabel, "sizeInfoLabel");
             this.sizeInfoLabel.ForeColor = System.Drawing.Color.MidnightBlue;
             this.sizeInfoLabel.Name = "sizeInfoLabel";
-            this.helpToolTip.SetToolTip(this.sizeInfoLabel, resources.GetString("sizeInfoLabel.ToolTip"));
             // 
             // deviceSpaceBackgroundPictureBox
             // 
-            this.deviceSpaceBackgroundPictureBox.AccessibleDescription = null;
-            this.deviceSpaceBackgroundPictureBox.AccessibleName = null;
-            resources.ApplyResources(this.deviceSpaceBackgroundPictureBox, "deviceSpaceBackgroundPictureBox");
             this.deviceSpaceBackgroundPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.deviceSpaceBackgroundPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.vumeter_background;
-            this.deviceSpaceBackgroundPictureBox.Font = null;
-            this.deviceSpaceBackgroundPictureBox.ImageLocation = null;
+            resources.ApplyResources(this.deviceSpaceBackgroundPictureBox, "deviceSpaceBackgroundPictureBox");
             this.deviceSpaceBackgroundPictureBox.Name = "deviceSpaceBackgroundPictureBox";
             this.deviceSpaceBackgroundPictureBox.TabStop = false;
-            this.helpToolTip.SetToolTip(this.deviceSpaceBackgroundPictureBox, resources.GetString("deviceSpaceBackgroundPictureBox.ToolTip"));
             // 
             // helpToolTip
             // 
-            resources.ApplyResources(this.helpToolTip, "helpToolTip");
+            this.helpToolTip.AutomaticDelay = 1;
+            this.helpToolTip.AutoPopDelay = 10;
+            this.helpToolTip.InitialDelay = 1;
+            this.helpToolTip.ReshowDelay = 0;
+            this.helpToolTip.ShowAlways = true;
             // 
             // timer1
             // 
@@ -104,23 +87,25 @@
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // deviceFormatLabel
+            // 
+            resources.ApplyResources(this.deviceFormatLabel, "deviceFormatLabel");
+            this.deviceFormatLabel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.deviceFormatLabel.Name = "deviceFormatLabel";
+            // 
             // StorageUserControl
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.Silver;
-            this.BackgroundImage = null;
+            this.Controls.Add(this.deviceFormatLabel);
             this.Controls.Add(this.sizeInfoLabel);
             this.Controls.Add(this.deviceSpacePictureBox);
             this.Controls.Add(this.deviceSpaceBackgroundPictureBox);
             this.Controls.Add(this.deviceNameLabel);
             this.Controls.Add(this.devicePictureBox);
             this.DoubleBuffered = true;
-            this.Font = null;
+            resources.ApplyResources(this, "$this");
             this.Name = "StorageUserControl";
-            this.helpToolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             ((System.ComponentModel.ISupportInitialize)(this.devicePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceSpacePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceSpaceBackgroundPictureBox)).EndInit();
@@ -138,5 +123,6 @@
         private System.Windows.Forms.PictureBox deviceSpaceBackgroundPictureBox;
         private System.Windows.Forms.ToolTip helpToolTip;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label deviceFormatLabel;
     }
 }

@@ -35,6 +35,9 @@ namespace Xtream_ToolBox.Sensors
                 case DriveType.Removable:
                     devicePictureBox.Image = Properties.Resources.Drive_USB;
                     break;
+                case DriveType.Network:
+                    devicePictureBox.Image = Properties.Resources.Drive_network;
+                    break;
                 default:
                     devicePictureBox.Image = Properties.Resources.Drive_harddisc;
                     break;
@@ -49,11 +52,20 @@ namespace Xtream_ToolBox.Sensors
             if ((device != null) && (device.IsReady))
             {
                 deviceNameLabel.Text = device.Name + " " + device.VolumeLabel;
-                Int64 usedSpace = (100 * (device.TotalSize - device.TotalFreeSpace)) / device.TotalSize;
-                if (usedSpace < 0) usedSpace = 0;
-                if (usedSpace > 100) usedSpace = 100;
-                deviceSpacePictureBox.Width = (int)(usedSpace / 2);
-                sizeInfoLabel.Text = String.Format(resources.GetString("StorageUserControlSize"), SystemUtils.GetFriendlyBytesSize(device.TotalSize, "auto"), usedSpace, SystemUtils.GetFriendlyBytesSize(device.TotalFreeSpace, "auto"));
+                deviceFormatLabel.Text = device.DriveFormat;
+
+                if (device.DriveType != DriveType.CDRom)
+                {
+                    Int64 usedSpace = (100 * (device.TotalSize - device.TotalFreeSpace)) / device.TotalSize;
+                    if (usedSpace < 0) usedSpace = 0;
+                    if (usedSpace > 100) usedSpace = 100;
+                    deviceSpacePictureBox.Width = (int)(usedSpace / 2);
+                    sizeInfoLabel.Text = String.Format(resources.GetString("StorageUserControlSize"), SystemUtils.GetFriendlyBytesSize(device.TotalSize, "auto"), usedSpace, SystemUtils.GetFriendlyBytesSize(device.TotalFreeSpace, "auto"));
+                } else
+                {
+                    deviceSpacePictureBox.Visible = false;
+                    sizeInfoLabel.Visible = false;
+                }
             }
         }
 

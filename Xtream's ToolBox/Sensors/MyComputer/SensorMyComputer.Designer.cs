@@ -78,7 +78,7 @@
             // 
             // microsoftStoreToolStripMenuItem
             // 
-            this.microsoftStoreToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_Microsoft_Store;
+            this.microsoftStoreToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_MsStore;
             this.microsoftStoreToolStripMenuItem.Name = "microsoftStoreToolStripMenuItem";
             resources.ApplyResources(this.microsoftStoreToolStripMenuItem, "microsoftStoreToolStripMenuItem");
             this.microsoftStoreToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftStoreToolStripMenuItem_Click);

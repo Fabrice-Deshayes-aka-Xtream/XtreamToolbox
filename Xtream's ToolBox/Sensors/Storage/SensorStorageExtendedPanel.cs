@@ -25,8 +25,6 @@ namespace Xtream_ToolBox.Sensors {
         }
 
         public void Init() {
-            long totalSpace = 0;
-            long totalFreeSpace = 0;
             SuspendLayout();            
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
@@ -39,19 +37,14 @@ namespace Xtream_ToolBox.Sensors {
                 foreach (DriveInfo device in sensorStorage.allDrives) {
                     if (device.IsReady) {
                         if (device.DriveType == DriveType.Fixed) { 
-                            totalSpace += device.TotalSize;
-                            totalFreeSpace += device.AvailableFreeSpace;
+                            drivesComboBox.Items.Add(device);
                         }
                         flowLayoutPanel.Controls.Add(new StorageUserControl(device));
-                        drivesComboBox.Items.Add(device);
                     }
                 }
             }
             flowLayoutPanel.Visible = true;
             drivesComboBox.SelectedIndex = 0;
-            totalSizeValueLabel.Text = SystemUtils.GetFriendlyBytesSize(totalSpace, "auto");
-            occupiedSpaceValueLabel.Text = Math.Floor((Double)((totalSpace - totalFreeSpace) * 100) / totalSpace) + "%";
-            deviceSpacePictureBox.Width = (int)Math.Floor((Double)((totalSpace - totalFreeSpace) * 50) / totalSpace);
             ResumeLayout();
         }
 

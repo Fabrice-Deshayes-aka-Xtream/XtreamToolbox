@@ -513,4 +513,10 @@
   <data name="Notepad_ConfirmeClearTitle" xml:space="preserve">
     <value>Confirmation de l'effacement du bloc note</value>
   </data>
+  <data name="Sys_tbit" xml:space="preserve">
+    <value>Tb</value>
+  </data>
+  <data name="Sys_tbyte" xml:space="preserve">
+    <value>To</value>
+  </data>
 </root>

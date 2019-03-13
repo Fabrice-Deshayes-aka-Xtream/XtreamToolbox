@@ -94,10 +94,8 @@ namespace Xtream_ToolBox.Sensors
 
         public void UpdateData()
         {
-            if (device != null)
+            if (device != null && device.IsReady)
             {
-                if (device.IsReady)
-                {
                     bytesReadBySecPerformanceCounter.InstanceName = device.Name.Substring(0, 2);
                     bytesWriteBySecPerformanceCounter.InstanceName = device.Name.Substring(0, 2);
                     readWriteGraph.Visible = true;
@@ -152,7 +150,6 @@ namespace Xtream_ToolBox.Sensors
                     devicePictureBox.Cursor = Cursors.Arrow;
                     helpToolTip.SetToolTip(devicePictureBox, null);
                 }
-            }
         }
 
         private void DevicePictureBox_Click(object sender, EventArgs e)
