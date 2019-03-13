@@ -76,7 +76,6 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.searchPatternComboBox);
             this.panel1.Controls.Add(this.searchPattenrLabel);
             this.panel1.Controls.Add(this.cameraPictureBox);
@@ -89,11 +88,11 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.browseButton);
             this.panel1.Controls.Add(this.imagesPathTextBox);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // searchPatternComboBox
             // 
-            resources.ApplyResources(this.searchPatternComboBox, "searchPatternComboBox");
             this.searchPatternComboBox.FormattingEnabled = true;
             this.searchPatternComboBox.Items.AddRange(new object[] {
             resources.GetString("searchPatternComboBox.Items"),
@@ -101,6 +100,7 @@
             resources.GetString("searchPatternComboBox.Items2"),
             resources.GetString("searchPatternComboBox.Items3"),
             resources.GetString("searchPatternComboBox.Items4")});
+            resources.ApplyResources(this.searchPatternComboBox, "searchPatternComboBox");
             this.searchPatternComboBox.Name = "searchPatternComboBox";
             // 
             // searchPattenrLabel
@@ -110,8 +110,8 @@
             // 
             // cameraPictureBox
             // 
-            resources.ApplyResources(this.cameraPictureBox, "cameraPictureBox");
             this.cameraPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.ImageRenamer_logo1;
+            resources.ApplyResources(this.cameraPictureBox, "cameraPictureBox");
             this.cameraPictureBox.Name = "cameraPictureBox";
             this.cameraPictureBox.TabStop = false;
             // 
@@ -163,8 +163,8 @@
             // 
             // browseButton
             // 
-            resources.ApplyResources(this.browseButton, "browseButton");
             this.browseButton.Image = global::Xtream_ToolBox.Properties.Resources.folder_open_16;
+            resources.ApplyResources(this.browseButton, "browseButton");
             this.browseButton.Name = "browseButton";
             this.browseButton.UseVisualStyleBackColor = true;
             this.browseButton.Click += new System.EventHandler(this.BrowseButton_Click);
@@ -177,9 +177,9 @@
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.progressBar);
             this.panel2.Controls.Add(this.cancelButton);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // progressBar
@@ -210,18 +210,18 @@
             // 
             // label4
             // 
-            resources.ApplyResources(this.label4, "label4");
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label4.Name = "label4";
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.scrollLockCheckBox);
             this.panel4.Controls.Add(this.clearButton);
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // clearButton
@@ -234,14 +234,14 @@
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.resultListBox);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // PhotosRenamerForm
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);

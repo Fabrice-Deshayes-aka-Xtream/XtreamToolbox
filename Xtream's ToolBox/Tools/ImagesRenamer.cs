@@ -224,10 +224,10 @@ namespace Xtream_ToolBox
                             // rename image
                             newImageName = currentExifDate + currentImageName;
                             AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action3"), currentImageName, newImageName));
+                            nbImgRenamed++;
                             if (!simulation)
                             {
                                 File.Move(fileSystemInfo.FullName, currentImagePath + "\\" + newImageName);
-                                nbImgRenamed++;
                             }
                         }
                     }
