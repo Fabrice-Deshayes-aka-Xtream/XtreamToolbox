@@ -154,7 +154,7 @@
     <value>True</value>
   </data>
   <data name="flowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 36</value>
+    <value>20, 36</value>
   </data>
   <data name="flowLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -208,7 +208,7 @@
     <value>4</value>
   </data>
   <data name="detailStoragePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 386</value>
+    <value>20, 386</value>
   </data>
   <data name="detailStoragePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>

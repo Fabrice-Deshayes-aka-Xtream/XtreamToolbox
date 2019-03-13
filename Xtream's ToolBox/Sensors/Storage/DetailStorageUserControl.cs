@@ -96,60 +96,67 @@ namespace Xtream_ToolBox.Sensors
         {
             if (device != null && device.IsReady)
             {
-                    bytesReadBySecPerformanceCounter.InstanceName = device.Name.Substring(0, 2);
-                    bytesWriteBySecPerformanceCounter.InstanceName = device.Name.Substring(0, 2);
-                    readWriteGraph.Visible = true;
-                    readLegendLabel.Visible = true;
-                    writeLegendLabel.Visible = true;
-                    readLegendPictureBox.Visible = true;
-                    writeLegendPictureBox.Visible = true;
-                    readMaxLabel.Visible = true;
-                    writeMaxLabel.Visible = true;
-                    deviceSpacePictureBox.Visible = true;
-                    deviceSpaceBackgroundPictureBox.Visible = true;
-                    sizeInfoLabel.Visible = true;
+                bytesReadBySecPerformanceCounter.InstanceName = device.Name.Substring(0, 2);
+                bytesWriteBySecPerformanceCounter.InstanceName = device.Name.Substring(0, 2);
+                readWriteGraph.Visible = true;
+                readLegendLabel.Visible = true;
+                writeLegendLabel.Visible = true;
+                readLegendPictureBox.Visible = true;
+                writeLegendPictureBox.Visible = true;
+                readMaxLabel.Visible = true;
+                writeMaxLabel.Visible = true;
+                deviceSpacePictureBox.Visible = true;
+                deviceSpaceBackgroundPictureBox.Visible = true;
+                sizeInfoLabel.Visible = true;
 
-                    deviceNameLabel.Text = device.Name + " " + device.VolumeLabel;
-                    deviceFormatLabel.Text = device.DriveFormat;
-                    Int64 usedSpace = (100 * (device.TotalSize - device.TotalFreeSpace)) / device.TotalSize;
-                    if (usedSpace < 0) usedSpace = 0;
-                    if (usedSpace > 100) usedSpace = 100;
-                    deviceSpacePictureBox.Width = (int)(usedSpace / 2);
-                    sizeInfoLabel.Text = String.Format(resources.GetString("StorageUserControlSize"), SystemUtils.GetFriendlyBytesSize(device.TotalSize, "auto"), usedSpace, SystemUtils.GetFriendlyBytesSize(device.TotalFreeSpace, "auto"));
-                    devicePictureBox.Cursor = Cursors.Hand;
-                    devicePictureBox.Click += new EventHandler(this.DevicePictureBox_Click);
+                deviceNameLabel.Text = device.Name + " " + device.VolumeLabel;
+                deviceFormatLabel.Text = device.DriveFormat;
+                Int64 usedSpace = (100 * (device.TotalSize - device.TotalFreeSpace)) / device.TotalSize;
+                if (usedSpace < 0) usedSpace = 0;
+                if (usedSpace > 100) usedSpace = 100;
+                deviceSpacePictureBox.Width = (int)(usedSpace / 2);
+                sizeInfoLabel.Text = String.Format(resources.GetString("StorageUserControlSize"), SystemUtils.GetFriendlyBytesSize(device.TotalSize, "auto"), usedSpace, SystemUtils.GetFriendlyBytesSize(device.TotalFreeSpace, "auto"));
+                devicePictureBox.Cursor = Cursors.Hand;
+                devicePictureBox.Click += new EventHandler(this.DevicePictureBox_Click);
 
-                    currentReadFlow = (int)Math.Ceiling(bytesReadBySecPerformanceCounter.NextValue() / 1024);
-                    currentWriteFlow = (int)Math.Ceiling(bytesWriteBySecPerformanceCounter.NextValue() / 1024);
+                currentReadFlow = (int)Math.Ceiling(bytesReadBySecPerformanceCounter.NextValue());
+                currentWriteFlow = (int)Math.Ceiling(bytesWriteBySecPerformanceCounter.NextValue());
 
-                    if (currentReadFlow > maxRead) maxRead = currentReadFlow;
-                    if (currentWriteFlow > maxWrite) maxWrite = currentWriteFlow;
-                    readWriteGraph.Push(currentReadFlow, LINE_READ);
-                    readWriteGraph.Push(currentWriteFlow, LINE_WRITE);
-                    readMaxLabel.Text = "(max " + maxRead + " kb/s)";
-                    writeMaxLabel.Text = "(max " + maxWrite + " kb/s)";
-                    readWriteGraph.UpdateGraph();
-                }
-                else
+                if (currentReadFlow > maxRead) maxRead = currentReadFlow;
+                if (currentWriteFlow > maxWrite) maxWrite = currentWriteFlow;
+
+                int maxPeak = maxRead > maxWrite ? maxRead : maxWrite;
+                if (maxPeak > 0)
                 {
-                    bytesReadBySecPerformanceCounter.InstanceName = null; ;
-                    bytesWriteBySecPerformanceCounter.InstanceName = null;
-                    readWriteGraph.Visible = false;
-                    readLegendLabel.Visible = false;
-                    writeLegendLabel.Visible = false;
-                    readLegendPictureBox.Visible = false;
-                    writeLegendPictureBox.Visible = false;
-                    readMaxLabel.Visible = false;
-                    writeMaxLabel.Visible = false;
-                    deviceSpacePictureBox.Visible = false;
-                    deviceSpaceBackgroundPictureBox.Visible = false;
-                    sizeInfoLabel.Visible = false;
-
-                    deviceNameLabel.Text = device.Name;
-                    deviceFormatLabel.Text = resources.GetString("StorageUserControlNotReady");
-                    devicePictureBox.Cursor = Cursors.Arrow;
-                    helpToolTip.SetToolTip(devicePictureBox, null);
+                    readWriteGraph.MaxPeekMagnitude = maxPeak/1024;
                 }
+                readWriteGraph.Push(currentReadFlow/1024, LINE_READ);
+                readWriteGraph.Push(currentWriteFlow/1024, LINE_WRITE);
+
+                readMaxLabel.Text = "(max " + SystemUtils.GetFriendlyBytesSize(maxRead, "auto") + "/s)";
+                writeMaxLabel.Text = "(max " + SystemUtils.GetFriendlyBytesSize(maxWrite, "auto") + "/s)";
+                readWriteGraph.UpdateGraph();
+            }
+            else
+            {
+                bytesReadBySecPerformanceCounter.InstanceName = null; ;
+                bytesWriteBySecPerformanceCounter.InstanceName = null;
+                readWriteGraph.Visible = false;
+                readLegendLabel.Visible = false;
+                writeLegendLabel.Visible = false;
+                readLegendPictureBox.Visible = false;
+                writeLegendPictureBox.Visible = false;
+                readMaxLabel.Visible = false;
+                writeMaxLabel.Visible = false;
+                deviceSpacePictureBox.Visible = false;
+                deviceSpaceBackgroundPictureBox.Visible = false;
+                sizeInfoLabel.Visible = false;
+
+                deviceNameLabel.Text = device.Name;
+                deviceFormatLabel.Text = resources.GetString("StorageUserControlNotReady");
+                devicePictureBox.Cursor = Cursors.Arrow;
+                helpToolTip.SetToolTip(devicePictureBox, null);
+            }
         }
 
         private void DevicePictureBox_Click(object sender, EventArgs e)

@@ -112,43 +112,43 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="closeExtendedInfosPictureBox.ToolTip" xml:space="preserve">
     <value>fermer</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="flowLayoutPanel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 18</value>
+    <value>188, 18</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Poste de travail</value>
+    <value>Mes devices de stockage</value>
   </data>
-  <data name="totalSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 15</value>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="totalSizeLabel.Text" xml:space="preserve">
-    <value>Espace disque total  :</value>
+  <data name="detailStoragePanel.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="occupiedSpaceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 15</value>
-  </data>
-  <data name="occupiedSpaceLabel.Text" xml:space="preserve">
-    <value>Espace disque occupé :</value>
+  <data name="drivesComboBox.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 13</value>
+    <value>216, 13</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Voir le détail de ce lecteur</value>
+    <value>Voir le détail des performances de ce device</value>
   </data>
-  <data name="totalSizeValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 44</value>
+  <data name="label4.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="occupiedSpaceValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 68</value>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

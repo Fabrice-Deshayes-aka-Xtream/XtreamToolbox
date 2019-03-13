@@ -325,13 +325,13 @@
     <value>Arial, 6.75pt</value>
   </data>
   <data name="readWriteGraph.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 3</value>
+    <value>242, 3</value>
   </data>
   <data name="readWriteGraph.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>117, 80</value>
+    <value>115, 80</value>
   </data>
   <data name="readWriteGraph.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 80</value>
+    <value>115, 80</value>
   </data>
   <data name="readWriteGraph.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -448,13 +448,13 @@
     <value>20, 69</value>
   </data>
   <data name="writeLegendLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 12</value>
+    <value>91, 12</value>
   </data>
   <data name="writeLegendLabel.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="writeLegendLabel.Text" xml:space="preserve">
-    <value>KBytes write/seconde</value>
+    <value>KBytes write/second</value>
   </data>
   <data name="&gt;&gt;writeLegendLabel.Name" xml:space="preserve">
     <value>writeLegendLabel</value>
@@ -478,7 +478,7 @@
     <value>NoControl</value>
   </data>
   <data name="readMaxLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 51</value>
+    <value>109, 51</value>
   </data>
   <data name="readMaxLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 12</value>
@@ -511,7 +511,7 @@
     <value>NoControl</value>
   </data>
   <data name="writeMaxLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 69</value>
+    <value>110, 69</value>
   </data>
   <data name="writeMaxLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 12</value>

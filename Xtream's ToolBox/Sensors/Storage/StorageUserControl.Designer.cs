@@ -24,7 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StorageUserControl));
             this.devicePictureBox = new System.Windows.Forms.PictureBox();
             this.deviceNameLabel = new System.Windows.Forms.Label();
             this.deviceSpacePictureBox = new System.Windows.Forms.PictureBox();
@@ -43,34 +42,53 @@
             this.devicePictureBox.BackColor = System.Drawing.Color.Transparent;
             this.devicePictureBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.devicePictureBox.Image = global::Xtream_ToolBox.Properties.Resources.Drive_harddisc;
-            resources.ApplyResources(this.devicePictureBox, "devicePictureBox");
+            this.devicePictureBox.Location = new System.Drawing.Point(0, 0);
+            this.devicePictureBox.Margin = new System.Windows.Forms.Padding(0);
             this.devicePictureBox.Name = "devicePictureBox";
+            this.devicePictureBox.Size = new System.Drawing.Size(36, 36);
+            this.devicePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.devicePictureBox.TabIndex = 0;
             this.devicePictureBox.TabStop = false;
             // 
             // deviceNameLabel
             // 
-            resources.ApplyResources(this.deviceNameLabel, "deviceNameLabel");
+            this.deviceNameLabel.AutoSize = true;
+            this.deviceNameLabel.Font = new System.Drawing.Font("Arial", 8F);
+            this.deviceNameLabel.Location = new System.Drawing.Point(51, 2);
             this.deviceNameLabel.Name = "deviceNameLabel";
+            this.deviceNameLabel.Size = new System.Drawing.Size(65, 14);
+            this.deviceNameLabel.TabIndex = 1;
+            this.deviceNameLabel.Text = "C:\\ Système";
             // 
             // deviceSpacePictureBox
             // 
             this.deviceSpacePictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.vumeter;
-            resources.ApplyResources(this.deviceSpacePictureBox, "deviceSpacePictureBox");
+            this.deviceSpacePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.deviceSpacePictureBox.Location = new System.Drawing.Point(54, 21);
             this.deviceSpacePictureBox.Name = "deviceSpacePictureBox";
+            this.deviceSpacePictureBox.Size = new System.Drawing.Size(40, 9);
+            this.deviceSpacePictureBox.TabIndex = 2;
             this.deviceSpacePictureBox.TabStop = false;
             // 
             // sizeInfoLabel
             // 
-            resources.ApplyResources(this.sizeInfoLabel, "sizeInfoLabel");
+            this.sizeInfoLabel.AutoSize = true;
+            this.sizeInfoLabel.Font = new System.Drawing.Font("Arial", 8F);
             this.sizeInfoLabel.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.sizeInfoLabel.Location = new System.Drawing.Point(110, 18);
             this.sizeInfoLabel.Name = "sizeInfoLabel";
+            this.sizeInfoLabel.Size = new System.Drawing.Size(148, 14);
+            this.sizeInfoLabel.TabIndex = 3;
+            this.sizeInfoLabel.Text = "40 GB : 3% used, 12 GB free";
             // 
             // deviceSpaceBackgroundPictureBox
             // 
             this.deviceSpaceBackgroundPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.deviceSpaceBackgroundPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.vumeter_background;
-            resources.ApplyResources(this.deviceSpaceBackgroundPictureBox, "deviceSpaceBackgroundPictureBox");
+            this.deviceSpaceBackgroundPictureBox.Location = new System.Drawing.Point(54, 21);
             this.deviceSpaceBackgroundPictureBox.Name = "deviceSpaceBackgroundPictureBox";
+            this.deviceSpaceBackgroundPictureBox.Size = new System.Drawing.Size(50, 9);
+            this.deviceSpaceBackgroundPictureBox.TabIndex = 5;
             this.deviceSpaceBackgroundPictureBox.TabStop = false;
             // 
             // helpToolTip
@@ -89,9 +107,15 @@
             // 
             // deviceFormatLabel
             // 
-            resources.ApplyResources(this.deviceFormatLabel, "deviceFormatLabel");
+            this.deviceFormatLabel.AutoSize = true;
+            this.deviceFormatLabel.Font = new System.Drawing.Font("Arial", 8F);
             this.deviceFormatLabel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.deviceFormatLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.deviceFormatLabel.Location = new System.Drawing.Point(300, 2);
             this.deviceFormatLabel.Name = "deviceFormatLabel";
+            this.deviceFormatLabel.Size = new System.Drawing.Size(37, 14);
+            this.deviceFormatLabel.TabIndex = 6;
+            this.deviceFormatLabel.Text = "FAT32";
             // 
             // StorageUserControl
             // 
@@ -104,8 +128,9 @@
             this.Controls.Add(this.deviceNameLabel);
             this.Controls.Add(this.devicePictureBox);
             this.DoubleBuffered = true;
-            resources.ApplyResources(this, "$this");
+            this.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.Name = "StorageUserControl";
+            this.Size = new System.Drawing.Size(340, 36);
             ((System.ComponentModel.ISupportInitialize)(this.devicePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceSpacePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceSpaceBackgroundPictureBox)).EndInit();

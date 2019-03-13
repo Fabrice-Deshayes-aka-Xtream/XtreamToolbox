@@ -112,25 +112,76 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="devicePictureBox.ToolTip" xml:space="preserve">
     <value>Afficher le contenu du périphérique</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="deviceNameLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="deviceSpacePictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sizeInfoLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="deviceFormatLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="deviceSpaceBackgroundPictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="typeLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="readWriteGraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 3</value>
+  </data>
+  <data name="readWriteGraph.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="readLegendPictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="writeLegendPictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="readLegendLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 12</value>
   </data>
   <data name="readLegendLabel.Text" xml:space="preserve">
     <value>KiloOctets lus par seconde</value>
   </data>
+  <data name="readLegendLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="writeLegendLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 12</value>
   </data>
   <data name="writeLegendLabel.Text" xml:space="preserve">
     <value>KiloOctets écrits par seconde</value>
+  </data>
+  <data name="writeLegendLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="readMaxLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 51</value>
+  </data>
+  <data name="readMaxLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="writeMaxLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 69</value>
+  </data>
+  <data name="writeMaxLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

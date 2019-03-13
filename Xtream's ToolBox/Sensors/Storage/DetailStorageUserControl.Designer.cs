@@ -109,7 +109,7 @@
             // 
             // readWriteGraph
             // 
-            this.readWriteGraph.AutoAdjustPeek = true;
+            this.readWriteGraph.AutoAdjustPeek = false;
             this.readWriteGraph.BackColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.readWriteGraph, "readWriteGraph");
             this.readWriteGraph.GridColor = System.Drawing.Color.DarkGreen;
@@ -117,7 +117,7 @@
             this.readWriteGraph.HighQuality = true;
             this.readWriteGraph.LineInterval = ((ushort)(1));
             this.readWriteGraph.MaxLabel = "";
-            this.readWriteGraph.MaxPeekMagnitude = 100;
+            this.readWriteGraph.MaxPeekMagnitude = 1;
             this.readWriteGraph.MinLabel = "";
             this.readWriteGraph.MinPeekMagnitude = 0;
             this.readWriteGraph.Name = "readWriteGraph";
