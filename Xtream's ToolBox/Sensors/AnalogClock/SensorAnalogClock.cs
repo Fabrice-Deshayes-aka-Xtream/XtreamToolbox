@@ -53,7 +53,7 @@ namespace Xtream_ToolBox.Sensors {
         private Color circleColor = Color.Red;
         private Color ticksColor = Color.Black;
 
-        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Timer AnalogClockTimer;
         private ToolTip helpToolTip;
         private System.ComponentModel.IContainer components;
 
@@ -129,15 +129,15 @@ namespace Xtream_ToolBox.Sensors {
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.AnalogClockTimer = new System.Windows.Forms.Timer(this.components);
             this.helpToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
-            // timer
+            // AnalogClockTimer
             // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.Timer1_Tick);
+            this.AnalogClockTimer.Enabled = true;
+            this.AnalogClockTimer.Interval = 1000;
+            this.AnalogClockTimer.Tick += new System.EventHandler(this.AnalogClockTimer_Tick);
             // 
             // helpToolTip
             // 
@@ -245,6 +245,11 @@ namespace Xtream_ToolBox.Sensors {
         public bool Draw5MinuteTicks {
             get { return this.bDraw5MinuteTicks; }
             set { this.bDraw5MinuteTicks = value; }
+        }
+
+        private void AnalogClockTimer_Tick(object sender, EventArgs e)
+        {
+            RefreshUI();
         }
     }
 }
