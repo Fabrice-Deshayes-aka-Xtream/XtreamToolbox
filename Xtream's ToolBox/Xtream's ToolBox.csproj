@@ -576,7 +576,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\add_16.png" />
     <BaseApplicationManifest Include="Properties\app.manifest" />
-    <EmbeddedResource Include="Resources\analogClock.png" />
     <EmbeddedResource Include="Resources\arrow-back_16.png" />
     <EmbeddedResource Include="Resources\arrow-down_16.png" />
     <EmbeddedResource Include="Resources\arrow-forward_16.png" />
@@ -612,7 +611,6 @@
     <EmbeddedResource Include="Resources\box_rose.png" />
     <EmbeddedResource Include="Resources\box_rouge.png" />
     <EmbeddedResource Include="Resources\box_turquoise.png" />
-    <EmbeddedResource Include="Resources\camera.png" />
     <EmbeddedResource Include="Resources\Drive_USB.png" />
     <EmbeddedResource Include="Resources\Drive_cd_rom.png" />
     <EmbeddedResource Include="Resources\Drive_floppy.png" />
@@ -643,7 +641,6 @@
     <EmbeddedResource Include="Resources\rename.png" />
     <EmbeddedResource Include="Resources\save_16.png" />
     <EmbeddedResource Include="Resources\separator.png" />
-    <EmbeddedResource Include="Resources\simulate.png" />
     <EmbeddedResource Include="Resources\SI_Central_Unit.png" />
     <EmbeddedResource Include="Resources\SI_Home.png" />
     <EmbeddedResource Include="Resources\SI_Internet_Connection.png" />
@@ -957,6 +954,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Clock.png" />
+    <None Include="Resources\refresh_16.png" />
+    <None Include="Resources\ImageRenamer_rename.png" />
+    <None Include="Resources\ImageRenamer_simulate.png" />
+    <None Include="Resources\ImageRenamer_logo.png" />
     <None Include="Resources\Logo_Xtream.png" />
     <None Include="Resources\MyComputer_Legacy.png" />
     <None Include="Resources\MyComputer_EventsViewer.png" />
