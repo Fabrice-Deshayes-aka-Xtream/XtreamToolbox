@@ -17,6 +17,7 @@
 - [Photo Renamer] bad count of affected files in simulation mode (always zero) [#10](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/10)
 - [Storage Sensor] refresh drives list each time extended panel is shown [#11](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/11)
 - [System Info Sensor] Reduce CPU usage when extended panel is not displayed
+- [FavoriteLocation Sensor] Replace old sensor with new one to go quickly to my music, my document, my images, my video, my downloads... [#2](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/2)
 
 ## version 2018.12.31
 - improve TimeICalManager sensor with left/right click actions
