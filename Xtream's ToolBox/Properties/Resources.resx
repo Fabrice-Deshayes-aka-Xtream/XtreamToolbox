@@ -475,9 +475,6 @@
   <data name="properties" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\properties.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icoCalendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\icocalendar.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="battery_charged" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_charged.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -507,9 +504,6 @@
   </data>
   <data name="battery_c0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_c0.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stop1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KeyStatus_Num_ON" xml:space="preserve">
     <value>Num Lock key is ON</value>
@@ -678,9 +672,6 @@
   </data>
   <data name="MyComputer_MMC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyComputer_MMC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="redo_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\redo_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="JpgRenamer_ReportSimulation4" xml:space="preserve">
     <value>    {0} photo(s) will be ignored because filename was already good</value>
@@ -1098,5 +1089,23 @@
   </data>
   <data name="fav_videos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fav_videos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shutdownManager_hibernate_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_hibernate_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shutdownManager_lock_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_lock_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shutdownManager_logoff_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_logoff_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shutdownManager_restart_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_restart_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shutdownManager_shutdown_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_shutdown_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shutdownManager_switch_user_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_switch_user_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

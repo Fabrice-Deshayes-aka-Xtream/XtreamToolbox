@@ -1143,16 +1143,6 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
         /// </summary>
-        internal static System.Drawing.Icon icoCalendar {
-            get {
-                object obj = ResourceManager.GetObject("icoCalendar", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
-        /// </summary>
         internal static System.Drawing.Icon icoHome {
             get {
                 object obj = ResourceManager.GetObject("icoHome", resourceCulture);
@@ -2151,16 +2141,6 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap redo_16 {
-            get {
-                object obj = ResourceManager.GetObject("redo_16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap refresh_16 {
             get {
                 object obj = ResourceManager.GetObject("refresh_16", resourceCulture);
@@ -2327,6 +2307,16 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shutdownManager_hibernate_small {
+            get {
+                object obj = ResourceManager.GetObject("shutdownManager_hibernate_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shutdownManager_lock {
             get {
                 object obj = ResourceManager.GetObject("shutdownManager_lock", resourceCulture);
@@ -2337,9 +2327,29 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shutdownManager_lock_small {
+            get {
+                object obj = ResourceManager.GetObject("shutdownManager_lock_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shutdownManager_logoff {
             get {
                 object obj = ResourceManager.GetObject("shutdownManager_logoff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shutdownManager_logoff_small {
+            get {
+                object obj = ResourceManager.GetObject("shutdownManager_logoff_small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2366,6 +2376,16 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shutdownManager_restart_small {
+            get {
+                object obj = ResourceManager.GetObject("shutdownManager_restart_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shutdownManager_shutdown {
             get {
                 object obj = ResourceManager.GetObject("shutdownManager_shutdown", resourceCulture);
@@ -2376,9 +2396,29 @@ namespace Xtream_ToolBox.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shutdownManager_shutdown_small {
+            get {
+                object obj = ResourceManager.GetObject("shutdownManager_shutdown_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shutdownManager_switch_user {
             get {
                 object obj = ResourceManager.GetObject("shutdownManager_switch_user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shutdownManager_switch_user_small {
+            get {
+                object obj = ResourceManager.GetObject("shutdownManager_switch_user_small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2488,16 +2528,6 @@ namespace Xtream_ToolBox.Properties {
         internal static System.Drawing.Bitmap stop {
             get {
                 object obj = ResourceManager.GetObject("stop", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap stop1 {
-            get {
-                object obj = ResourceManager.GetObject("stop1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

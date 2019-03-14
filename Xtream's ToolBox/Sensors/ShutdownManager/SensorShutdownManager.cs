@@ -50,44 +50,44 @@ namespace Xtream_ToolBox
             switch (Properties.Settings.Default.shutdownManagerDefaultActionUpperButton)
             {
                 case ShutdownOptions.SHUTDOWN:
-                    upperButton.Image = Properties.Resources.shutdownManager_shutdown;
+                    upperButton.Image = Properties.Resources.shutdownManager_shutdown_small;
                     break;
                 case ShutdownOptions.RESTART:
-                    upperButton.Image = Properties.Resources.shutdownManager_restart;
+                    upperButton.Image = Properties.Resources.shutdownManager_restart_small;
                     break;
                 case ShutdownOptions.HIBERNATE:
-                    upperButton.Image = Properties.Resources.shutdownManager_hibernate;
+                    upperButton.Image = Properties.Resources.shutdownManager_hibernate_small;
                     break;
                 case ShutdownOptions.LOGOFF:
-                    upperButton.Image = Properties.Resources.shutdownManager_logoff;
+                    upperButton.Image = Properties.Resources.shutdownManager_logoff_small;
                     break;
                 case ShutdownOptions.LOCK:
-                    upperButton.Image = Properties.Resources.shutdownManager_lock;
+                    upperButton.Image = Properties.Resources.shutdownManager_lock_small;
                     break;
                 case ShutdownOptions.SWITCH_USER:
-                    upperButton.Image = Properties.Resources.shutdownManager_switch_user;
+                    upperButton.Image = Properties.Resources.shutdownManager_switch_user_small;
                     break;
             }
 
             switch (Properties.Settings.Default.shutdownManagerDefaultActionLowerButton)
             {
                 case ShutdownOptions.SHUTDOWN:
-                    lowerButton.Image = Properties.Resources.shutdownManager_shutdown;
+                    lowerButton.Image = Properties.Resources.shutdownManager_shutdown_small;
                     break;
                 case ShutdownOptions.RESTART:
-                    lowerButton.Image = Properties.Resources.shutdownManager_restart;
+                    lowerButton.Image = Properties.Resources.shutdownManager_restart_small;
                     break;
                 case ShutdownOptions.HIBERNATE:
-                    lowerButton.Image = Properties.Resources.shutdownManager_hibernate;
+                    lowerButton.Image = Properties.Resources.shutdownManager_hibernate_small;
                     break;
                 case ShutdownOptions.LOGOFF:
-                    lowerButton.Image = Properties.Resources.shutdownManager_logoff;
+                    lowerButton.Image = Properties.Resources.shutdownManager_logoff_small;
                     break;
                 case ShutdownOptions.LOCK:
-                    lowerButton.Image = Properties.Resources.shutdownManager_lock;
+                    lowerButton.Image = Properties.Resources.shutdownManager_lock_small;
                     break;
                 case ShutdownOptions.SWITCH_USER:
-                    lowerButton.Image = Properties.Resources.shutdownManager_switch_user;
+                    lowerButton.Image = Properties.Resources.shutdownManager_switch_user_small;
                     break;
             }
         }

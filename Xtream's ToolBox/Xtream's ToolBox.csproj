@@ -694,9 +694,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\shutdownManager_standby.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\shutdownManager_switch_user.png" />
   </ItemGroup>
   <ItemGroup>
@@ -950,6 +947,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Clock.png" />
+    <Content Include="Resources\shutdownManager_hibernate_small.png" />
+    <Content Include="Resources\shutdownManager_lock_small.png" />
+    <Content Include="Resources\shutdownManager_logoff_small.png" />
+    <Content Include="Resources\shutdownManager_restart_small.png" />
+    <Content Include="Resources\shutdownManager_shutdown_small.png" />
+    <Content Include="Resources\shutdownManager_switch_user_small.png" />
     <None Include="Resources\refresh_16.png" />
     <None Include="Resources\ImageRenamer_rename.png" />
     <None Include="Resources\ImageRenamer_simulate.png" />
