@@ -1,5 +1,4 @@
-## latest version 
-> not released, available if you build from code
+## version 2018.03.14
 - [Notepad Sensor] Add confirm dialogBox when clearing notepad [#1](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/1)
 - [Notepad Sensor] Import text file append instead of replace [#5](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/5)
 - [MyComputer Sensor] Improve MyComputer sensor's contextual menu [#3](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/3)
