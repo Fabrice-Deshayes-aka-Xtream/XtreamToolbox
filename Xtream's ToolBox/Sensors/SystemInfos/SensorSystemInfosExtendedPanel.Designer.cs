@@ -38,14 +38,15 @@
             this.osLabel2 = new System.Windows.Forms.Label();
             this.osLabel1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.procRamLabel5 = new System.Windows.Forms.Label();
             this.procRamLabel4 = new System.Windows.Forms.Label();
             this.procRamLabel3 = new System.Windows.Forms.Label();
             this.procRamLabel2 = new System.Windows.Forms.Label();
             this.procRamLabel1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.netUserLabel4 = new System.Windows.Forms.Label();
             this.netUserLabel3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.netUserLabel2 = new System.Windows.Forms.Label();
@@ -59,13 +60,12 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.biosLabel2 = new System.Windows.Forms.Label();
             this.biosLabel1 = new System.Windows.Forms.Label();
-            this.netUserLabel4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.closeExtendedInfosPictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -129,8 +129,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.pictureBox6);
             this.groupBox2.Controls.Add(this.pictureBox2);
+            this.groupBox2.Controls.Add(this.pictureBox6);
             this.groupBox2.Controls.Add(this.procRamLabel5);
             this.groupBox2.Controls.Add(this.procRamLabel4);
             this.groupBox2.Controls.Add(this.procRamLabel3);
@@ -141,14 +141,6 @@
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pictureBox6, "pictureBox6");
-            this.pictureBox6.Image = global::Xtream_ToolBox.Properties.Resources.SI_Memory;
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -156,6 +148,14 @@
             this.pictureBox2.Image = global::Xtream_ToolBox.Properties.Resources.SI_Central_Unit;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Image = global::Xtream_ToolBox.Properties.Resources.SI_Memory;
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
             // 
             // procRamLabel5
             // 
@@ -199,6 +199,12 @@
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
+            // 
+            // netUserLabel4
+            // 
+            this.netUserLabel4.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.netUserLabel4, "netUserLabel4");
+            this.netUserLabel4.Name = "netUserLabel4";
             // 
             // netUserLabel3
             // 
@@ -295,12 +301,6 @@
             resources.ApplyResources(this.biosLabel1, "biosLabel1");
             this.biosLabel1.Name = "biosLabel1";
             // 
-            // netUserLabel4
-            // 
-            this.netUserLabel4.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.netUserLabel4, "netUserLabel4");
-            this.netUserLabel4.Name = "netUserLabel4";
-            // 
             // SensorSystemInfosMore
             // 
             resources.ApplyResources(this, "$this");
@@ -319,15 +319,20 @@
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.closeExtendedInfosPictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 

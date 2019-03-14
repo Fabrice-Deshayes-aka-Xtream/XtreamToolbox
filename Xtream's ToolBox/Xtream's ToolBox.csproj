@@ -622,7 +622,6 @@
     <EmbeddedResource Include="Resources\InboxEmpty.png" />
     <EmbeddedResource Include="Resources\InboxFull.png" />
     <EmbeddedResource Include="Resources\icoToolBoxOptions.ico" />
-    <EmbeddedResource Include="Resources\icoCalendar.ico" />
     <EmbeddedResource Include="Resources\icoPhotosRenamer.ico" />
     <EmbeddedResource Include="Resources\key_capslock_off.png" />
     <EmbeddedResource Include="Resources\key_capslock_on.png" />
@@ -636,7 +635,6 @@
     <EmbeddedResource Include="Resources\notepad.png" />
     <EmbeddedResource Include="Resources\not_found.png" />
     <EmbeddedResource Include="Resources\properties.png" />
-    <EmbeddedResource Include="Resources\redo_16.png" />
     <EmbeddedResource Include="Resources\save_16.png" />
     <EmbeddedResource Include="Resources\separator.png" />
     <EmbeddedResource Include="Resources\SI_Central_Unit.png" />

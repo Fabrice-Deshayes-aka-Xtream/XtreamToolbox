@@ -191,7 +191,7 @@
             // cancelButton
             // 
             resources.ApplyResources(this.cancelButton, "cancelButton");
-            this.cancelButton.Image = global::Xtream_ToolBox.Properties.Resources.stop1;
+            this.cancelButton.Image = global::Xtream_ToolBox.Properties.Resources.stop;
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
