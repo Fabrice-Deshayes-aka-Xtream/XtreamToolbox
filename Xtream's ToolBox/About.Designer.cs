@@ -319,6 +319,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::Xtream_ToolBox.Properties.Resources.GitHubChangeLog;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
