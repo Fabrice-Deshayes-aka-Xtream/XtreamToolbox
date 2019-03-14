@@ -55,16 +55,16 @@ Les sensors disponibles sont (de gauche à droite sur le screenshot) :
 - PowerStatus
 - SystemInfos
 - Storage
-- Calc
-- Notepad
-- Inbox
-- Spacer
 - AnalogClock
 - TimeManager
 - Weather
 - Spacer
-- MyComputer
 - FavoriteLocations
+- Calc
+- Notepad
+- Inbox
+- Spacer
+- MyComputer
 - QuickLauncher
 - Spacer
 - RecycleBin
@@ -92,7 +92,7 @@ Ce sensor permet d’afficher le status des touches verrouillage majuscule (caps
 
 ![PowerStatus](screenshots/powerstatus.png)
 
-Ce sensor permet d’afficher le mode d’alimentation du PC ainsi que le niveau de charge de la batterie.
+Ce sensor permet d’afficher le mode d’alimentation du PC (en charge ou non) ainsi que le niveau de charge de la batterie.
 
 Un clic avec le bouton gauche de la souris ouvre le panneau de configuration de l’alimentation du PC.
 
@@ -174,7 +174,7 @@ Ce sensor est un raccourci permettant de lancer l'explorateur de fichiers. Un cl
 
 ![FavoriteLocations](screenshots/favoriteslocations.png)
 
-Ce sensor permet d'accéder rapidement à un emplacement sur le disque dur ou à un site web. C'est donc une sorte de mini bookmark (les répertoires et les sites web peuvent être renseigné dans les paramètres)
+Ce sensor permet d'accéder rapidement aux repertoires utilisés très souvent : mes documents, mes musiques, mes images, mes vidéos, mes téléchargements
 
 ### QuickLauncher
 
@@ -211,7 +211,6 @@ Les screenshots parlant d'eux même, je vous laisse découvrir :-)
 ![options2](screenshots/options2.png)
 ![options3](screenshots/options3.png)
 ![options4](screenshots/options4.png)
-![options5](screenshots/options5.png)
 
 ## Renommeur de photo JPEG basé sur la date EXIF
 
