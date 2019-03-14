@@ -104,28 +104,6 @@
             this.availableSensorsComboBox = new System.Windows.Forms.ComboBox();
             this.addSensorLabel = new System.Windows.Forms.Label();
             this.sensorsListBox = new System.Windows.Forms.ListBox();
-            this.favLocationsTabPage = new System.Windows.Forms.TabPage();
-            this.webLocationsGroupBox = new System.Windows.Forms.GroupBox();
-            this.webDeleteButton = new System.Windows.Forms.Button();
-            this.webMoveDownButton = new System.Windows.Forms.Button();
-            this.webMoveUpButton = new System.Windows.Forms.Button();
-            this.webAddButton = new System.Windows.Forms.Button();
-            this.webURLTextBox = new System.Windows.Forms.TextBox();
-            this.webDisplayNameLabel = new System.Windows.Forms.Label();
-            this.webDisplayNameTextBox = new System.Windows.Forms.TextBox();
-            this.webURLLabel = new System.Windows.Forms.Label();
-            this.webLocationListBox = new System.Windows.Forms.ListBox();
-            this.directoryLocationGroupBox = new System.Windows.Forms.GroupBox();
-            this.browseDirButton = new System.Windows.Forms.Button();
-            this.fileDeleteButton = new System.Windows.Forms.Button();
-            this.fileMoveDownButton = new System.Windows.Forms.Button();
-            this.fileMoveUpButton = new System.Windows.Forms.Button();
-            this.fileAddButton = new System.Windows.Forms.Button();
-            this.filePathTextBox = new System.Windows.Forms.TextBox();
-            this.flePathLabel = new System.Windows.Forms.Label();
-            this.fileDisplayNameTextBox = new System.Windows.Forms.TextBox();
-            this.fileDisplayNameLabel = new System.Windows.Forms.Label();
-            this.fileLocationListBox = new System.Windows.Forms.ListBox();
             this.popCheckerTabPage = new System.Windows.Forms.TabPage();
             this.pop3SpamManagerGroupBox = new System.Windows.Forms.GroupBox();
             this.spamRuleComboBox6 = new System.Windows.Forms.ComboBox();
@@ -232,9 +210,6 @@
             this.displayPreferenceGroupBox.SuspendLayout();
             this.chooseSensoreGroupeBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spaceBetweenSensorsNumericUpDown)).BeginInit();
-            this.favLocationsTabPage.SuspendLayout();
-            this.webLocationsGroupBox.SuspendLayout();
-            this.directoryLocationGroupBox.SuspendLayout();
             this.popCheckerTabPage.SuspendLayout();
             this.pop3SpamManagerGroupBox.SuspendLayout();
             this.popAccountGroupBox.SuspendLayout();
@@ -251,7 +226,6 @@
             // 
             this.optionsTabControl.Controls.Add(this.generalTabPage);
             this.optionsTabControl.Controls.Add(this.displayTabPage);
-            this.optionsTabControl.Controls.Add(this.favLocationsTabPage);
             this.optionsTabControl.Controls.Add(this.popCheckerTabPage);
             this.optionsTabControl.Controls.Add(this.miscTabPage);
             resources.ApplyResources(this.optionsTabControl, "optionsTabControl");
@@ -899,167 +873,6 @@
             this.sensorsListBox.Name = "sensorsListBox";
             this.sensorsListBox.SelectedIndexChanged += new System.EventHandler(this.SensorsListBox_SelectedIndexChanged);
             this.sensorsListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SensorsListBox_KeyDown);
-            // 
-            // favLocationsTabPage
-            // 
-            this.favLocationsTabPage.Controls.Add(this.webLocationsGroupBox);
-            this.favLocationsTabPage.Controls.Add(this.directoryLocationGroupBox);
-            resources.ApplyResources(this.favLocationsTabPage, "favLocationsTabPage");
-            this.favLocationsTabPage.Name = "favLocationsTabPage";
-            this.favLocationsTabPage.UseVisualStyleBackColor = true;
-            // 
-            // webLocationsGroupBox
-            // 
-            this.webLocationsGroupBox.Controls.Add(this.webDeleteButton);
-            this.webLocationsGroupBox.Controls.Add(this.webMoveDownButton);
-            this.webLocationsGroupBox.Controls.Add(this.webMoveUpButton);
-            this.webLocationsGroupBox.Controls.Add(this.webAddButton);
-            this.webLocationsGroupBox.Controls.Add(this.webURLTextBox);
-            this.webLocationsGroupBox.Controls.Add(this.webDisplayNameLabel);
-            this.webLocationsGroupBox.Controls.Add(this.webDisplayNameTextBox);
-            this.webLocationsGroupBox.Controls.Add(this.webURLLabel);
-            this.webLocationsGroupBox.Controls.Add(this.webLocationListBox);
-            resources.ApplyResources(this.webLocationsGroupBox, "webLocationsGroupBox");
-            this.webLocationsGroupBox.Name = "webLocationsGroupBox";
-            this.webLocationsGroupBox.TabStop = false;
-            // 
-            // webDeleteButton
-            // 
-            resources.ApplyResources(this.webDeleteButton, "webDeleteButton");
-            this.webDeleteButton.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
-            this.webDeleteButton.Name = "webDeleteButton";
-            this.webDeleteButton.UseVisualStyleBackColor = true;
-            this.webDeleteButton.Click += new System.EventHandler(this.WebDeleteButton_Click);
-            // 
-            // webMoveDownButton
-            // 
-            resources.ApplyResources(this.webMoveDownButton, "webMoveDownButton");
-            this.webMoveDownButton.Name = "webMoveDownButton";
-            this.webMoveDownButton.UseVisualStyleBackColor = true;
-            this.webMoveDownButton.Click += new System.EventHandler(this.WebMoveDownButton_Click);
-            // 
-            // webMoveUpButton
-            // 
-            resources.ApplyResources(this.webMoveUpButton, "webMoveUpButton");
-            this.webMoveUpButton.Name = "webMoveUpButton";
-            this.webMoveUpButton.UseVisualStyleBackColor = true;
-            this.webMoveUpButton.Click += new System.EventHandler(this.WebMoveUpButton_Click);
-            // 
-            // webAddButton
-            // 
-            resources.ApplyResources(this.webAddButton, "webAddButton");
-            this.webAddButton.Name = "webAddButton";
-            this.webAddButton.UseVisualStyleBackColor = true;
-            this.webAddButton.Click += new System.EventHandler(this.WebAddButton_Click);
-            // 
-            // webURLTextBox
-            // 
-            resources.ApplyResources(this.webURLTextBox, "webURLTextBox");
-            this.webURLTextBox.Name = "webURLTextBox";
-            // 
-            // webDisplayNameLabel
-            // 
-            resources.ApplyResources(this.webDisplayNameLabel, "webDisplayNameLabel");
-            this.webDisplayNameLabel.Name = "webDisplayNameLabel";
-            // 
-            // webDisplayNameTextBox
-            // 
-            resources.ApplyResources(this.webDisplayNameTextBox, "webDisplayNameTextBox");
-            this.webDisplayNameTextBox.Name = "webDisplayNameTextBox";
-            // 
-            // webURLLabel
-            // 
-            resources.ApplyResources(this.webURLLabel, "webURLLabel");
-            this.webURLLabel.Name = "webURLLabel";
-            // 
-            // webLocationListBox
-            // 
-            this.webLocationListBox.DisplayMember = "completeName";
-            resources.ApplyResources(this.webLocationListBox, "webLocationListBox");
-            this.webLocationListBox.Name = "webLocationListBox";
-            this.webLocationListBox.SelectedIndexChanged += new System.EventHandler(this.WebLocationListBox_SelectedIndexChanged);
-            this.webLocationListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WebLocationListBox_KeyDown);
-            // 
-            // directoryLocationGroupBox
-            // 
-            this.directoryLocationGroupBox.Controls.Add(this.browseDirButton);
-            this.directoryLocationGroupBox.Controls.Add(this.fileDeleteButton);
-            this.directoryLocationGroupBox.Controls.Add(this.fileMoveDownButton);
-            this.directoryLocationGroupBox.Controls.Add(this.fileMoveUpButton);
-            this.directoryLocationGroupBox.Controls.Add(this.fileAddButton);
-            this.directoryLocationGroupBox.Controls.Add(this.filePathTextBox);
-            this.directoryLocationGroupBox.Controls.Add(this.flePathLabel);
-            this.directoryLocationGroupBox.Controls.Add(this.fileDisplayNameTextBox);
-            this.directoryLocationGroupBox.Controls.Add(this.fileDisplayNameLabel);
-            this.directoryLocationGroupBox.Controls.Add(this.fileLocationListBox);
-            resources.ApplyResources(this.directoryLocationGroupBox, "directoryLocationGroupBox");
-            this.directoryLocationGroupBox.Name = "directoryLocationGroupBox";
-            this.directoryLocationGroupBox.TabStop = false;
-            // 
-            // browseDirButton
-            // 
-            this.browseDirButton.Image = global::Xtream_ToolBox.Properties.Resources.folder_open_16;
-            resources.ApplyResources(this.browseDirButton, "browseDirButton");
-            this.browseDirButton.Name = "browseDirButton";
-            this.browseDirButton.UseVisualStyleBackColor = true;
-            this.browseDirButton.Click += new System.EventHandler(this.BrowseDirButton_Click);
-            // 
-            // fileDeleteButton
-            // 
-            resources.ApplyResources(this.fileDeleteButton, "fileDeleteButton");
-            this.fileDeleteButton.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
-            this.fileDeleteButton.Name = "fileDeleteButton";
-            this.fileDeleteButton.UseVisualStyleBackColor = true;
-            this.fileDeleteButton.Click += new System.EventHandler(this.FileDeleteButton_Click);
-            // 
-            // fileMoveDownButton
-            // 
-            resources.ApplyResources(this.fileMoveDownButton, "fileMoveDownButton");
-            this.fileMoveDownButton.Name = "fileMoveDownButton";
-            this.fileMoveDownButton.UseVisualStyleBackColor = true;
-            this.fileMoveDownButton.Click += new System.EventHandler(this.FileMoveDownButton_Click);
-            // 
-            // fileMoveUpButton
-            // 
-            resources.ApplyResources(this.fileMoveUpButton, "fileMoveUpButton");
-            this.fileMoveUpButton.Name = "fileMoveUpButton";
-            this.fileMoveUpButton.UseVisualStyleBackColor = true;
-            this.fileMoveUpButton.Click += new System.EventHandler(this.FileMoveUpButton_Click);
-            // 
-            // fileAddButton
-            // 
-            resources.ApplyResources(this.fileAddButton, "fileAddButton");
-            this.fileAddButton.Name = "fileAddButton";
-            this.fileAddButton.UseVisualStyleBackColor = true;
-            this.fileAddButton.Click += new System.EventHandler(this.FileAddButton_Click);
-            // 
-            // filePathTextBox
-            // 
-            resources.ApplyResources(this.filePathTextBox, "filePathTextBox");
-            this.filePathTextBox.Name = "filePathTextBox";
-            // 
-            // flePathLabel
-            // 
-            resources.ApplyResources(this.flePathLabel, "flePathLabel");
-            this.flePathLabel.Name = "flePathLabel";
-            // 
-            // fileDisplayNameTextBox
-            // 
-            resources.ApplyResources(this.fileDisplayNameTextBox, "fileDisplayNameTextBox");
-            this.fileDisplayNameTextBox.Name = "fileDisplayNameTextBox";
-            // 
-            // fileDisplayNameLabel
-            // 
-            resources.ApplyResources(this.fileDisplayNameLabel, "fileDisplayNameLabel");
-            this.fileDisplayNameLabel.Name = "fileDisplayNameLabel";
-            // 
-            // fileLocationListBox
-            // 
-            this.fileLocationListBox.DisplayMember = "completeName";
-            resources.ApplyResources(this.fileLocationListBox, "fileLocationListBox");
-            this.fileLocationListBox.Name = "fileLocationListBox";
-            this.fileLocationListBox.SelectedIndexChanged += new System.EventHandler(this.FileLocationListBox_SelectedIndexChanged);
-            this.fileLocationListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FileLocationListBox_KeyDown);
             // 
             // popCheckerTabPage
             // 
@@ -1797,11 +1610,6 @@
             this.chooseSensoreGroupeBox.ResumeLayout(false);
             this.chooseSensoreGroupeBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spaceBetweenSensorsNumericUpDown)).EndInit();
-            this.favLocationsTabPage.ResumeLayout(false);
-            this.webLocationsGroupBox.ResumeLayout(false);
-            this.webLocationsGroupBox.PerformLayout();
-            this.directoryLocationGroupBox.ResumeLayout(false);
-            this.directoryLocationGroupBox.PerformLayout();
             this.popCheckerTabPage.ResumeLayout(false);
             this.pop3SpamManagerGroupBox.ResumeLayout(false);
             this.pop3SpamManagerGroupBox.PerformLayout();
@@ -1827,7 +1635,6 @@
         #endregion
 
         private System.Windows.Forms.TabControl optionsTabControl;
-        private System.Windows.Forms.TabPage favLocationsTabPage;
         private System.Windows.Forms.TabPage displayTabPage;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button cancelButton;
@@ -1846,16 +1653,6 @@
         private System.Windows.Forms.Label addSensorLabel;
         private System.Windows.Forms.ListBox sensorsListBox;
         private System.Windows.Forms.Button deleteSensorButton;
-        private System.Windows.Forms.GroupBox directoryLocationGroupBox;
-        private System.Windows.Forms.Button fileDeleteButton;
-        private System.Windows.Forms.Button fileMoveDownButton;
-        private System.Windows.Forms.Button fileMoveUpButton;
-        private System.Windows.Forms.Button fileAddButton;
-        private System.Windows.Forms.TextBox filePathTextBox;
-        private System.Windows.Forms.Label flePathLabel;
-        private System.Windows.Forms.TextBox fileDisplayNameTextBox;
-        private System.Windows.Forms.Label fileDisplayNameLabel;
-        public System.Windows.Forms.ListBox fileLocationListBox;
         private System.Windows.Forms.GroupBox recycleBinGroupBox;
         private System.Windows.Forms.ComboBox refreshTimeRecycleBinComboBox;
         private System.Windows.Forms.Label refreshRecycleBinLabel;
@@ -1866,17 +1663,6 @@
         private System.Windows.Forms.GroupBox shutDownSensorGroupBox;
         private System.Windows.Forms.CheckBox upperActionDisableConfirmationCheckBox;
         private System.Windows.Forms.CheckBox lowerActionDisableConfirmationCheckBox;
-        private System.Windows.Forms.GroupBox webLocationsGroupBox;
-        private System.Windows.Forms.Button webDeleteButton;
-        private System.Windows.Forms.Button webMoveDownButton;
-        private System.Windows.Forms.Button webMoveUpButton;
-        private System.Windows.Forms.Button webAddButton;
-        private System.Windows.Forms.TextBox webURLTextBox;
-        private System.Windows.Forms.Label webDisplayNameLabel;
-        private System.Windows.Forms.TextBox webDisplayNameTextBox;
-        private System.Windows.Forms.Label webURLLabel;
-        public System.Windows.Forms.ListBox webLocationListBox;
-        private System.Windows.Forms.Button browseDirButton;
         private System.Windows.Forms.FolderBrowserDialog favoriteDirfolderBrowserDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.ComboBox displayMoreInfosComboBox;

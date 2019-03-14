@@ -65,96 +65,87 @@ namespace Xtream_ToolBox.Sensors
 
         private void SystemPropertiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("ms-settings:about", null);
+            SystemUtils.StartProcess("ms-settings:about", null);
         }
 
         private void WindowsUpdateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("ms-settings:windowsupdate", null);
+            SystemUtils.StartProcess("ms-settings:windowsupdate", null);
         }
 
         private void MicrosoftManagmentConsoleMMCToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess(Environment.SystemDirectory + "\\compmgmt.msc", "/s");
+            SystemUtils.StartProcess(Environment.SystemDirectory + "\\compmgmt.msc", "/s");
         }
 
         private void ServicesManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess(Environment.SystemDirectory + "\\services.msc", "/s");
+            SystemUtils.StartProcess(Environment.SystemDirectory + "\\services.msc", "/s");
         }
 
         private void EventsViewerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess(Environment.SystemDirectory + "\\eventvwr.msc", "/s");
+            SystemUtils.StartProcess(Environment.SystemDirectory + "\\eventvwr.msc", "/s");
         }
 
         private void SensorMyComputer_Click(object sender, EventArgs e)
         {
-            StartProcess("shell:MyComputerFolder", null);
+            SystemUtils.StartProcess("shell:MyComputerFolder", null);
         }
 
         private void OpenControlPanelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("shell:ControlPanelFolder", null);
+            SystemUtils.StartProcess("shell:ControlPanelFolder", null);
         }
 
         private void AddOrRemoveProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("shell:ChangeRemoveProgramsFolder", null);
+            SystemUtils.StartProcess("shell:ChangeRemoveProgramsFolder", null);
         }
 
         private void WindowsSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("ms-settings:", null);
+            SystemUtils.StartProcess("ms-settings:", null);
         }
 
         private void MicrosoftStoreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("ms-windows-store://home", null);
+            SystemUtils.StartProcess("ms-windows-store://home", null);
         }
 
         private void DisplaySettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("ms-settings:display", null);
+            SystemUtils.StartProcess("ms-settings:display", null);
         }
 
         private void PrintersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("ms-settings:printers", null);
+            SystemUtils.StartProcess("ms-settings:printers", null);
         }
 
         private void OptionalFeaturesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("ms-settings:optionalfeatures", null); 
+            SystemUtils.StartProcess("ms-settings:optionalfeatures", null); 
         }
 
         private void DefaultApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("ms-settings:defaultapps", null);
+            SystemUtils.StartProcess("ms-settings:defaultapps", null);
         }
 
         private void ApplicationLaunchedOnStartupToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("ms-settings:startupapps", null);
+            SystemUtils.StartProcess("ms-settings:startupapps", null);
         }
 
         private void ApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("ms-settings:appsfeatures", null);
+            SystemUtils.StartProcess("ms-settings:appsfeatures", null);
         }
 
         private void SystemInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartProcess("ms-settings:about", null);
-        }
-
-        private void StartProcess(String process, String arguments)
-        {
-            String errMsg = SystemUtils.StartProcess(process, arguments, null);
-            if (errMsg != null)
-            {
-                MessageBox.Show(errMsg);
-            }
+            SystemUtils.StartProcess("ms-settings:about", null);
         }
     }
 }

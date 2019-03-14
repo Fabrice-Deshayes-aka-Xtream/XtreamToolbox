@@ -144,17 +144,6 @@ namespace Xtream_ToolBox.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Collections.Specialized.StringCollection location {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["location"]));
-            }
-            set {
-                this["location"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool quickLauncherOnlyOneLine {
             get {
@@ -914,6 +903,17 @@ namespace Xtream_ToolBox.Properties {
         public string _version {
             get {
                 return ((string)(this["_version"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection location {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["location"]));
+            }
+            set {
+                this["location"] = value;
             }
         }
     }

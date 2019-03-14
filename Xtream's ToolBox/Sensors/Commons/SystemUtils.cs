@@ -466,6 +466,17 @@ namespace Xtream_ToolBox
             return friendlyTimespan;
         }
 
+        // launch process and display error message if any
+        public static void StartProcess(String process, String arguments)
+        {
+            String errMsg = SystemUtils.StartProcess(process, arguments, null);
+            if (errMsg != null)
+            {
+                MessageBox.Show(errMsg);
+            }
+        }
+
+
         // lance un processus
         public static String StartProcess(String fileName, String arguments, String workingDirectory)
         {

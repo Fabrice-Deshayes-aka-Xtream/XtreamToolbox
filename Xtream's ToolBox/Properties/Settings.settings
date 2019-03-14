@@ -32,9 +32,6 @@
     <Setting Name="sensors" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="location" Type="System.Collections.Specialized.StringCollection" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="quickLauncherOnlyOneLine" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
@@ -226,6 +223,9 @@
     </Setting>
     <Setting Name="_version" Type="System.String" Scope="Application">
       <Value Profile="(Default)">2018.12.31</Value>
+    </Setting>
+    <Setting Name="location" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

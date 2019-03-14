@@ -19,8 +19,6 @@ namespace Xtream_ToolBox
         // for quicklaunch location
         public const int PARAMETERS_POSITION_1ST_LINE = 1;
         public const int PARAMETERS_POSITION_2ND_LINE = 2;
-
-        // for quicklaunch location
         public const int PARAMETERS_TYPE_SHORTCUT = 1;
         public const int PARAMETERS_TYPE_SEPARATOR = 2;
 

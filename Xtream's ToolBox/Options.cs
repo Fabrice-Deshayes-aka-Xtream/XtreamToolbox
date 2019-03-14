@@ -159,9 +159,7 @@ namespace Xtream_ToolBox
             internetUploadTextBox.Text = Properties.Settings.Default.networkInternetUpload.ToString();
             defaultDisplayComboBox.SelectedIndex = Properties.Settings.Default.sysInfoDisplayMode;
 
-            // favorites' locations options
-            fileLocationListBox.Items.Clear();
-            webLocationListBox.Items.Clear();
+            // pop3 specific options
             popListBox.Items.Clear();
             if (Properties.Settings.Default.location != null)
             {
@@ -172,12 +170,6 @@ namespace Xtream_ToolBox
                     {
                         switch (location.Type)
                         {
-                            case Xtream_ToolBox.Location.FILESYSTEM:
-                                fileLocationListBox.Items.Add(location);
-                                break;
-                            case Xtream_ToolBox.Location.WEBSITE:
-                                webLocationListBox.Items.Add(location);
-                                break;
                             case Xtream_ToolBox.Location.POP3ACCOUNT:
                                 popListBox.Items.Add(location);
                                 break;
@@ -188,7 +180,6 @@ namespace Xtream_ToolBox
                 }
             }
 
-            // pop3 specific options
             popRefreshTimeComboBox.Text = Properties.Settings.Default.popCheckerRefreshTime.ToString();
             if ((Properties.Settings.Default.defaultEmailClient == null) || (Properties.Settings.Default.defaultEmailClient == ""))
             {
@@ -222,8 +213,6 @@ namespace Xtream_ToolBox
             textEditorPathTextBox.Text = Properties.Settings.Default.defaultTextEditor;
 
             // Empty formulaire
-            EmptyFileLocationForm();
-            EmptyWebLocationForm();
             EmptyPopLocationForm();
         }
 
@@ -471,16 +460,7 @@ namespace Xtream_ToolBox
                     locations.Add(locationStr);
                 }
             }
-            // add File Favorite Location
-            foreach (Location location in fileLocationListBox.Items)
-            {
-                locations.Add(location.ToDelimitedString());
-            }
-            // add Web Favorite Location
-            foreach (Location location in webLocationListBox.Items)
-            {
-                locations.Add(location.ToDelimitedString());
-            }
+
             // add Pop Location
             foreach (Location location in popListBox.Items)
             {
@@ -576,8 +556,6 @@ namespace Xtream_ToolBox
             Properties.Settings.Default.defaultTextEditor = textEditorPathTextBox.Text;
 
             // Empty formulaire
-            EmptyFileLocationForm();
-            EmptyWebLocationForm();
             EmptyPopLocationForm();
 
             // QuickLauncher
@@ -652,168 +630,6 @@ namespace Xtream_ToolBox
             deleteSensorButton.Enabled = (sensorsListBox.SelectedItem != null);
             moveSensorUpButton.Enabled = ToolBoxUtils.ManageUpDownButton(sensorsListBox, ToolBoxUtils.UP);
             moveSensorDownButton.Enabled = ToolBoxUtils.ManageUpDownButton(sensorsListBox, ToolBoxUtils.DOWN);
-        }
-
-        /* ----------------------------- */
-        /* manage File Location list box */
-        /* ----------------------------- */
-        private void EmptyFileLocationForm()
-        {
-            fileDisplayNameTextBox.Text = "";
-            filePathTextBox.Text = "";
-        }
-
-        private void FileMoveUpButton_Click(object sender, EventArgs e)
-        {
-            ToolBoxUtils.MoveSelectedItem(fileLocationListBox, ToolBoxUtils.UP);
-        }
-
-        private void FileDeleteButton_Click(object sender, EventArgs e)
-        {
-            if (fileLocationListBox.SelectedItem != null)
-            {
-                fileLocationListBox.Items.RemoveAt(fileLocationListBox.SelectedIndex);
-            }
-        }
-
-        private void FileMoveDownButton_Click(object sender, EventArgs e)
-        {
-            ToolBoxUtils.MoveSelectedItem(fileLocationListBox, ToolBoxUtils.DOWN);
-        }
-
-        private void FileAddButton_Click(object sender, EventArgs e)
-        {
-            String response = ControlFileLocation();
-            if (response == null)
-            {
-                Location newLocation = new Location(fileDisplayNameTextBox.Text, Xtream_ToolBox.Location.FILESYSTEM, filePathTextBox.Text);
-                fileLocationListBox.Items.Add(newLocation);
-                EmptyFileLocationForm();
-                fileLocationListBox.SelectedIndex = fileLocationListBox.Items.Count - 1;
-            }
-            else
-            {
-                MessageBox.Show(response);
-            }
-        }
-
-        private String ControlFileLocation()
-        {
-            String msg = null;
-
-            if ("".Equals(fileDisplayNameTextBox.Text))
-            {
-                msg = "You must enter a display name";
-            }
-            else if ("".Equals(filePathTextBox.Text))
-            {
-                msg = "You must enter a path";
-            }
-            else if (!System.IO.Directory.Exists(filePathTextBox.Text))
-            {
-                msg = "This location doesn't exist : " + filePathTextBox.Text;
-            }
-
-            return msg;
-        }
-
-        private void FileLocationListBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if ((e.KeyCode.Equals(Keys.Delete)) && (fileLocationListBox.SelectedItem != null))
-            {
-                fileLocationListBox.Items.RemoveAt(fileLocationListBox.SelectedIndex);
-            }
-        }
-
-        private void FileLocationListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            fileDeleteButton.Enabled = (fileLocationListBox.SelectedItem != null);
-            fileMoveUpButton.Enabled = ToolBoxUtils.ManageUpDownButton(fileLocationListBox, ToolBoxUtils.UP);
-            fileMoveDownButton.Enabled = ToolBoxUtils.ManageUpDownButton(fileLocationListBox, ToolBoxUtils.DOWN);
-        }
-
-        // choix d'un directory comme favorite location
-        private void BrowseDirButton_Click(object sender, EventArgs e)
-        {
-            favoriteDirfolderBrowserDialog.Description = "Choose a directory";
-            if (favoriteDirfolderBrowserDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                filePathTextBox.Text = favoriteDirfolderBrowserDialog.SelectedPath;
-            }
-        }
-
-        /* ----------------------------- */
-        /* manage Web Location list box */
-        /* ----------------------------- */
-        private void EmptyWebLocationForm()
-        {
-            webURLTextBox.Text = "http://";
-            webDisplayNameTextBox.Text = "";
-        }
-
-        private void WebMoveUpButton_Click(object sender, EventArgs e)
-        {
-            ToolBoxUtils.MoveSelectedItem(webLocationListBox, ToolBoxUtils.UP);
-        }
-
-        private void WebDeleteButton_Click(object sender, EventArgs e)
-        {
-            if (webLocationListBox.SelectedItem != null)
-            {
-                webLocationListBox.Items.RemoveAt(webLocationListBox.SelectedIndex);
-            }
-        }
-
-        private void WebMoveDownButton_Click(object sender, EventArgs e)
-        {
-            ToolBoxUtils.MoveSelectedItem(webLocationListBox, ToolBoxUtils.DOWN);
-        }
-
-        private void WebAddButton_Click(object sender, EventArgs e)
-        {
-            String response = ControlWebLocation();
-            if (response == null)
-            {
-                Location newLocation = new Location(webDisplayNameTextBox.Text, Xtream_ToolBox.Location.WEBSITE, webURLTextBox.Text);
-                webLocationListBox.Items.Add(newLocation);
-                EmptyWebLocationForm();
-                webLocationListBox.SelectedIndex = webLocationListBox.Items.Count - 1;
-            }
-            else
-            {
-                MessageBox.Show(response);
-            }
-        }
-
-        private String ControlWebLocation()
-        {
-            String msg = null;
-
-            if ("".Equals(webDisplayNameTextBox.Text))
-            {
-                msg = "You must enter a display name";
-            }
-            else if ("".Equals(webURLTextBox.Text))
-            {
-                msg = "You must enter an URL";
-            }
-
-            return msg;
-        }
-
-        private void WebLocationListBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if ((e.KeyCode.Equals(Keys.Delete)) && (webLocationListBox.SelectedItem != null))
-            {
-                webLocationListBox.Items.RemoveAt(webLocationListBox.SelectedIndex);
-            }
-        }
-
-        private void WebLocationListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            webDeleteButton.Enabled = (webLocationListBox.SelectedItem != null);
-            webMoveUpButton.Enabled = ToolBoxUtils.ManageUpDownButton(webLocationListBox, ToolBoxUtils.UP);
-            webMoveDownButton.Enabled = ToolBoxUtils.ManageUpDownButton(webLocationListBox, ToolBoxUtils.DOWN);
         }
 
         /* ----------------------------- */

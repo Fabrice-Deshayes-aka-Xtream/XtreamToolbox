@@ -29,48 +29,90 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SensorFavoriteLocations));
-            this.webLocationComboBox = new System.Windows.Forms.ComboBox();
-            this.fileLocationComboBox = new System.Windows.Forms.ComboBox();
+            this.DocumentsPictureBox = new System.Windows.Forms.PictureBox();
+            this.MusicsPictureBox = new System.Windows.Forms.PictureBox();
+            this.ImagesPictureBox = new System.Windows.Forms.PictureBox();
+            this.DownloadsPictureBox = new System.Windows.Forms.PictureBox();
+            this.VideosPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.DocumentsPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MusicsPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagesPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DownloadsPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideosPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // webLocationComboBox
+            // DocumentsPictureBox
             // 
-            this.webLocationComboBox.DisplayMember = "name";
-            this.webLocationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.webLocationComboBox, "webLocationComboBox");
-            this.webLocationComboBox.Items.AddRange(new object[] {
-            resources.GetString("webLocationComboBox.Items")});
-            this.webLocationComboBox.Name = "webLocationComboBox";
-            this.webLocationComboBox.TabStop = false;
-            this.webLocationComboBox.SelectedIndexChanged += new System.EventHandler(this.WebLocationComboBox_SelectedIndexChanged);
+            this.DocumentsPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.fav_documents;
+            resources.ApplyResources(this.DocumentsPictureBox, "DocumentsPictureBox");
+            this.DocumentsPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DocumentsPictureBox.Name = "DocumentsPictureBox";
+            this.DocumentsPictureBox.TabStop = false;
+            this.DocumentsPictureBox.Click += new System.EventHandler(this.DocumentsPictureBox_Click);
             // 
-            // fileLocationComboBox
+            // MusicsPictureBox
             // 
-            this.fileLocationComboBox.DisplayMember = "name";
-            this.fileLocationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.fileLocationComboBox, "fileLocationComboBox");
-            this.fileLocationComboBox.Items.AddRange(new object[] {
-            resources.GetString("fileLocationComboBox.Items")});
-            this.fileLocationComboBox.Name = "fileLocationComboBox";
-            this.fileLocationComboBox.TabStop = false;
-            this.fileLocationComboBox.SelectedIndexChanged += new System.EventHandler(this.FileLocationComboBox_SelectedIndexChanged);
+            this.MusicsPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.fav_Music;
+            resources.ApplyResources(this.MusicsPictureBox, "MusicsPictureBox");
+            this.MusicsPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MusicsPictureBox.Name = "MusicsPictureBox";
+            this.MusicsPictureBox.TabStop = false;
+            this.MusicsPictureBox.Click += new System.EventHandler(this.MusicsPictureBox_Click);
+            // 
+            // ImagesPictureBox
+            // 
+            this.ImagesPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.fav_images;
+            resources.ApplyResources(this.ImagesPictureBox, "ImagesPictureBox");
+            this.ImagesPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ImagesPictureBox.Name = "ImagesPictureBox";
+            this.ImagesPictureBox.TabStop = false;
+            this.ImagesPictureBox.Click += new System.EventHandler(this.ImagesPictureBox_Click);
+            // 
+            // DownloadsPictureBox
+            // 
+            this.DownloadsPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.fav_downloads;
+            resources.ApplyResources(this.DownloadsPictureBox, "DownloadsPictureBox");
+            this.DownloadsPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DownloadsPictureBox.Name = "DownloadsPictureBox";
+            this.DownloadsPictureBox.TabStop = false;
+            this.DownloadsPictureBox.Click += new System.EventHandler(this.DownloadsPictureBox_Click);
+            // 
+            // VideosPictureBox
+            // 
+            this.VideosPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.fav_videos;
+            resources.ApplyResources(this.VideosPictureBox, "VideosPictureBox");
+            this.VideosPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.VideosPictureBox.Name = "VideosPictureBox";
+            this.VideosPictureBox.TabStop = false;
+            this.VideosPictureBox.Click += new System.EventHandler(this.VideosPictureBox_Click);
             // 
             // SensorFavoriteLocations
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.webLocationComboBox);
-            this.Controls.Add(this.fileLocationComboBox);
+            this.Controls.Add(this.VideosPictureBox);
+            this.Controls.Add(this.DownloadsPictureBox);
+            this.Controls.Add(this.ImagesPictureBox);
+            this.Controls.Add(this.MusicsPictureBox);
+            this.Controls.Add(this.DocumentsPictureBox);
             this.DoubleBuffered = true;
             resources.ApplyResources(this, "$this");
             this.Name = "SensorFavoriteLocations";
+            ((System.ComponentModel.ISupportInitialize)(this.DocumentsPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MusicsPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagesPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DownloadsPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideosPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox webLocationComboBox;
-        private System.Windows.Forms.ComboBox fileLocationComboBox;
+        private System.Windows.Forms.PictureBox DocumentsPictureBox;
+        private System.Windows.Forms.PictureBox MusicsPictureBox;
+        private System.Windows.Forms.PictureBox ImagesPictureBox;
+        private System.Windows.Forms.PictureBox DownloadsPictureBox;
+        private System.Windows.Forms.PictureBox VideosPictureBox;
     }
 }

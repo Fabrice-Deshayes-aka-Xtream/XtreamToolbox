@@ -968,6 +968,11 @@
     <None Include="Resources\MyComputer_WindowsSettings.png" />
     <None Include="Resources\MyComputer_DisplaySettings.png" />
     <None Include="Resources\GitHubChangeLog.png" />
+    <None Include="Resources\fav_documents.png" />
+    <None Include="Resources\fav_images.png" />
+    <None Include="Resources\fav_Music.png" />
+    <None Include="Resources\fav_downloads.png" />
+    <None Include="Resources\fav_videos.png" />
     <Content Include="Resources\icoHome.ico" />
     <None Include="Resources\MyComputer_SysInfo.png" />
     <None Include="Resources\MyComputer_Printer.png" />
