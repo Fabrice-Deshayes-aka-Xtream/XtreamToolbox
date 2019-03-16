@@ -206,6 +206,7 @@
             // 
             // changeLocationButton
             // 
+            this.changeLocationButton.Image = global::Xtream_ToolBox.Properties.Resources.refresh_16;
             resources.ApplyResources(this.changeLocationButton, "changeLocationButton");
             this.changeLocationButton.Name = "changeLocationButton";
             this.changeLocationButton.UseVisualStyleBackColor = true;

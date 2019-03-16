@@ -636,6 +636,9 @@
   <data name="changeLocationButton.Text" xml:space="preserve">
     <value>update weather informations</value>
   </data>
+  <data name="changeLocationButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
   <data name="&gt;&gt;changeLocationButton.Name" xml:space="preserve">
     <value>changeLocationButton</value>
   </data>

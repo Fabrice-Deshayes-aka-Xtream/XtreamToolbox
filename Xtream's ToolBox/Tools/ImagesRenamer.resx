@@ -143,7 +143,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="searchPatternComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>547, 30</value>
+    <value>662, 32</value>
   </data>
   <data name="searchPatternComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 21</value>
@@ -171,7 +171,7 @@
     <value>True</value>
   </data>
   <data name="searchPattenrLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>465, 33</value>
+    <value>578, 35</value>
   </data>
   <data name="searchPattenrLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 13</value>
@@ -199,7 +199,7 @@
     <value>NoControl</value>
   </data>
   <data name="cameraPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>12, 14</value>
   </data>
   <data name="cameraPictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 128</value>
@@ -232,7 +232,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 113</value>
+    <value>149, 113</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 13</value>
@@ -262,7 +262,7 @@
     <value>NoControl</value>
   </data>
   <data name="renameButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>311, 132</value>
+    <value>292, 132</value>
   </data>
   <data name="renameButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 42</value>
@@ -298,7 +298,7 @@
     <value>NoControl</value>
   </data>
   <data name="SimulateButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 132</value>
+    <value>148, 132</value>
   </data>
   <data name="SimulateButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 42</value>
@@ -331,7 +331,7 @@
     <value>NoControl</value>
   </data>
   <data name="normalModeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 82</value>
+    <value>151, 82</value>
   </data>
   <data name="normalModeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 17</value>
@@ -361,7 +361,7 @@
     <value>NoControl</value>
   </data>
   <data name="recursiveModeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>311, 82</value>
+    <value>292, 82</value>
   </data>
   <data name="recursiveModeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 17</value>
@@ -394,7 +394,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 63</value>
+    <value>148, 63</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 13</value>
@@ -427,7 +427,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 11</value>
+    <value>148, 11</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 13</value>
@@ -454,7 +454,7 @@
     <value>NoControl</value>
   </data>
   <data name="browseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>358, 27</value>
+    <value>489, 29</value>
   </data>
   <data name="browseButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 24</value>
@@ -481,10 +481,10 @@
     <value>10</value>
   </data>
   <data name="imagesPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 29</value>
+    <value>152, 31</value>
   </data>
   <data name="imagesPathTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 20</value>
+    <value>331, 20</value>
   </data>
   <data name="imagesPathTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -508,7 +508,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>632, 188</value>
+    <value>744, 188</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -535,7 +535,7 @@
     <value>94, 1</value>
   </data>
   <data name="progressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>536, 24</value>
+    <value>648, 24</value>
   </data>
   <data name="progressBar.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -601,7 +601,7 @@
     <value>2, 1, 2, 1</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>632, 26</value>
+    <value>744, 26</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -621,9 +621,6 @@
   <data name="resultListBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="resultListBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="resultListBox.IntegralHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -631,7 +628,7 @@
     <value>0, 0</value>
   </data>
   <data name="resultListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>632, 207</value>
+    <value>744, 207</value>
   </data>
   <data name="resultListBox.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -658,7 +655,7 @@
     <value>NoControl</value>
   </data>
   <data name="scrollLockCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>448, 2</value>
+    <value>560, 2</value>
   </data>
   <data name="scrollLockCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 24</value>
@@ -694,7 +691,7 @@
     <value>0, 2</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>448, 24</value>
+    <value>560, 24</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -733,7 +730,7 @@
     <value>NoControl</value>
   </data>
   <data name="clearButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>527, 2</value>
+    <value>639, 2</value>
   </data>
   <data name="clearButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 24</value>
@@ -769,7 +766,7 @@
     <value>0, 2, 3, 2</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>632, 30</value>
+    <value>744, 30</value>
   </data>
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -793,7 +790,7 @@
     <value>0, 218</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>632, 207</value>
+    <value>744, 207</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -814,7 +811,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>632, 451</value>
+    <value>744, 451</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1073,7 +1070,7 @@
 </value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>640, 480</value>
+    <value>760, 480</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

@@ -124,6 +124,9 @@
   <data name="Weather_05" xml:space="preserve">
     <value>Temp: {0}°{1} (feels like {2}°{3})</value>
   </data>
+  <data name="shutdownManager_hibernate_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_hibernate_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_nt_chancetstorms" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_nt_chancetstorms.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,8 +184,8 @@
   <data name="Sys_gbit" xml:space="preserve">
     <value>Gb</value>
   </data>
-  <data name="_mostlycloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\_mostlycloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="battery_charged" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battery_charged.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Weather_04" xml:space="preserve">
     <value>Last update: {0}</value>
@@ -217,9 +220,6 @@
   <data name="nt_rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nt_rain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shutdownManager_shutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdownManager_shutdown.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="SI_Memory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SI_Memory.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -244,6 +244,9 @@
   <data name="_clear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_clear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fav_videos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fav_videos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TrashFull" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TrashFull.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -265,9 +268,6 @@
   <data name="JpgRenamer_ReportRename4" xml:space="preserve">
     <value>    {0} photo(s) have been ignored because filename was already good</value>
   </data>
-  <data name="sunny" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sunny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="battery_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_0.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -282,6 +282,9 @@
   </data>
   <data name="box_jaune" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box_jaune.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shutdownManager_switch_user_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_switch_user_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MyComputer_AddOrRemovePrograms" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyComputer_AddOrRemovePrograms.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -316,8 +319,8 @@
   <data name="trash_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trash_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SysInfos_19" xml:space="preserve">
+    <value>Sent: {0}/s - Received: {1}/s{4}{2}% of {3}/s download bandwidth used.</value>
   </data>
   <data name="_nt_mostlysunny" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_nt_mostlysunny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -394,9 +397,6 @@
   <data name="ShutdownManager_ConfirmeRestart" xml:space="preserve">
     <value>Do you really want to restart your computer ?</value>
   </data>
-  <data name="mostlycloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mostlycloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="box_turquoise" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box_turquoise.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -405,9 +405,6 @@
   </data>
   <data name="refresh_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SysInfos_19" xml:space="preserve">
-    <value>Sent: {0}/s - Received: {1}/s{4}{2}% of {3}/s download bandwidth used.</value>
   </data>
   <data name="chanceflurries" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chanceflurries.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -426,6 +423,9 @@
   </data>
   <data name="nt_tstorms" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nt_tstorms.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Weather_DataProvider" xml:space="preserve">
+    <value>Weather data provide by</value>
   </data>
   <data name="Weather_WinDir_N" xml:space="preserve">
     <value>North</value>
@@ -475,20 +475,23 @@
   <data name="properties" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\properties.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="battery_charged" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\battery_charged.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ShutdownManager_ConfirmeLogOffTitle" xml:space="preserve">
     <value>user logoff confirmation</value>
   </data>
   <data name="nt_sunny" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nt_sunny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sys_tbyte" xml:space="preserve">
+    <value>TB</value>
+  </data>
   <data name="MyComputer_OptionalFeatures" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyComputer_OptionalFeatures.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Weather_tip" xml:space="preserve">
     <value>Open / Close weather informations</value>
+  </data>
+  <data name="nt_cloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nt_cloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SysInfoGraph_Tips" xml:space="preserve">
     <value>Left click to open extended system informations{0}Right click choose display lines</value>
@@ -574,8 +577,8 @@
   <data name="Sys_byte" xml:space="preserve">
     <value>B</value>
   </data>
-  <data name="key_numlock_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key_numlock_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Weather_08" xml:space="preserve">
+    <value>UV index: {0} / Visibility : {1} {2}</value>
   </data>
   <data name="MyComputer_InstalledApps" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyComputer_InstalledApps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -667,14 +670,17 @@
   <data name="clear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sys_tbyte" xml:space="preserve">
-    <value>TB</value>
+  <data name="sunny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sunny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MyComputer_MMC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyComputer_MMC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="JpgRenamer_ReportSimulation4" xml:space="preserve">
     <value>    {0} photo(s) will be ignored because filename was already good</value>
+  </data>
+  <data name="shutdownManager_shutdown_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_shutdown_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_chanceflurries" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_chanceflurries.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -693,6 +699,12 @@
   </data>
   <data name="SysInfos_11" xml:space="preserve">
     <value>{0} (secondary)</value>
+  </data>
+  <data name="shutdownManager_shutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_shutdown.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shutdownManager_lock_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_lock_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="JpgRenamer_Action1" xml:space="preserve">
     <value>{0} -&gt; nothing to do. Filename is already good.</value>
@@ -736,9 +748,6 @@
   <data name="JpgRenamer_RenameStart" xml:space="preserve">
     <value>Starting rename operations on {0}</value>
   </data>
-  <data name="SysInfos_08" xml:space="preserve">
-    <value>{0} - {1} RAM</value>
-  </data>
   <data name="_nt_cloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_nt_cloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -750,6 +759,9 @@
   </data>
   <data name="FormName_About" xml:space="preserve">
     <value>Xtream's ToolBox - About</value>
+  </data>
+  <data name="shutdownManager_logoff_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_logoff_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="na" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\na.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -772,8 +784,8 @@
   <data name="fav_documents" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fav_documents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Weather_DataProvider" xml:space="preserve">
-    <value>Weather data provide by</value>
+  <data name="mostlycloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mostlycloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pop3Checker_Hint" xml:space="preserve">
     <value>{2} emails and {3} spams on account {1} on server {0}{4}</value>
@@ -829,8 +841,8 @@
   <data name="battery_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_6.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="save_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SysInfos_08" xml:space="preserve">
+    <value>{0} - {1} RAM</value>
   </data>
   <data name="vumeter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vumeter.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -916,9 +928,6 @@
   <data name="shutdownManager_switch_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shutdownManager_switch_user.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Weather_08" xml:space="preserve">
-    <value>UV index: {0} / Visibility : {1} {2}</value>
-  </data>
   <data name="icoPhotosRenamer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icophotosrenamer.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -936,6 +945,9 @@
   </data>
   <data name="nt_hazy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nt_hazy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ShutdownManager_ConfirmeShutDown" xml:space="preserve">
     <value>Do you really want to shutdown your computer ?</value>
@@ -955,8 +967,8 @@
   <data name="JpgRenamer_ReportSimulation5" xml:space="preserve">
     <value>    {0} photo(s) will be corrected because EXIF date in filename wasn't good</value>
   </data>
-  <data name="nt_fog" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nt_fog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="key_numlock_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_numlock_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icoToolBoxOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icotoolboxoptions.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -975,6 +987,9 @@
   </data>
   <data name="MyComputer_StartupApp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyComputer_StartupApp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shutdownManager_restart_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdownManager_restart_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="InboxEmpty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InboxEmpty.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -999,6 +1014,9 @@
   </data>
   <data name="Weather_01" xml:space="preserve">
     <value>location not found!</value>
+  </data>
+  <data name="save_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="JpgRenamer_Canceled" xml:space="preserve">
     <value>canceled</value>
@@ -1038,6 +1056,9 @@
   </data>
   <data name="battery_c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_c1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_mostlycloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_mostlycloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_nt_fog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_nt_fog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1081,31 +1102,13 @@
   <data name="ImageRenamer_simulate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImageRenamer_simulate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nt_cloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nt_cloudy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nt_fog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nt_fog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SysInfos_17" xml:space="preserve">
     <value>{0}% of cpu used</value>
   </data>
-  <data name="fav_videos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fav_videos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shutdownManager_hibernate_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdownManager_hibernate_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shutdownManager_lock_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdownManager_lock_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shutdownManager_logoff_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdownManager_logoff_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shutdownManager_restart_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdownManager_restart_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shutdownManager_shutdown_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdownManager_shutdown_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shutdownManager_switch_user_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdownManager_switch_user_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="check_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
