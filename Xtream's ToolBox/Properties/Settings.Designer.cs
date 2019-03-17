@@ -899,7 +899,7 @@ namespace Xtream_ToolBox.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2018.03.17")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2019.03.17")]
         public string _version {
             get {
                 return ((string)(this["_version"]));
