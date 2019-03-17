@@ -61,9 +61,9 @@
             // 
             // closeExtendedInfosPictureBox
             // 
+            resources.ApplyResources(this.closeExtendedInfosPictureBox, "closeExtendedInfosPictureBox");
             this.closeExtendedInfosPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.closeExtendedInfosPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.closeExtendedInfosPictureBox, "closeExtendedInfosPictureBox");
             this.closeExtendedInfosPictureBox.Name = "closeExtendedInfosPictureBox";
             this.closeExtendedInfosPictureBox.TabStop = false;
             this.helpToolTip.SetToolTip(this.closeExtendedInfosPictureBox, resources.GetString("closeExtendedInfosPictureBox.ToolTip"));
@@ -75,96 +75,109 @@
             // 
             // weatherPictureBox
             // 
+            resources.ApplyResources(this.weatherPictureBox, "weatherPictureBox");
             this.weatherPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.weatherPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.weather_na;
-            resources.ApplyResources(this.weatherPictureBox, "weatherPictureBox");
             this.weatherPictureBox.Name = "weatherPictureBox";
             this.weatherPictureBox.TabStop = false;
+            this.helpToolTip.SetToolTip(this.weatherPictureBox, resources.GetString("weatherPictureBox.ToolTip"));
             // 
             // localisationLabel
             // 
             resources.ApplyResources(this.localisationLabel, "localisationLabel");
             this.localisationLabel.BackColor = System.Drawing.Color.Transparent;
             this.localisationLabel.Name = "localisationLabel";
+            this.helpToolTip.SetToolTip(this.localisationLabel, resources.GetString("localisationLabel.ToolTip"));
             // 
             // localisationPositionLabel
             // 
             resources.ApplyResources(this.localisationPositionLabel, "localisationPositionLabel");
             this.localisationPositionLabel.BackColor = System.Drawing.Color.Transparent;
             this.localisationPositionLabel.Name = "localisationPositionLabel";
+            this.helpToolTip.SetToolTip(this.localisationPositionLabel, resources.GetString("localisationPositionLabel.ToolTip"));
             // 
             // temperatureGroupbox
             // 
+            resources.ApplyResources(this.temperatureGroupbox, "temperatureGroupbox");
             this.temperatureGroupbox.BackColor = System.Drawing.Color.Transparent;
             this.temperatureGroupbox.Controls.Add(this.humidityLabel);
             this.temperatureGroupbox.Controls.Add(this.tempLabel);
             this.temperatureGroupbox.Controls.Add(this.pictureBox2);
-            resources.ApplyResources(this.temperatureGroupbox, "temperatureGroupbox");
             this.temperatureGroupbox.Name = "temperatureGroupbox";
             this.temperatureGroupbox.TabStop = false;
+            this.helpToolTip.SetToolTip(this.temperatureGroupbox, resources.GetString("temperatureGroupbox.ToolTip"));
             // 
             // humidityLabel
             // 
             resources.ApplyResources(this.humidityLabel, "humidityLabel");
             this.humidityLabel.BackColor = System.Drawing.Color.Transparent;
             this.humidityLabel.Name = "humidityLabel";
+            this.helpToolTip.SetToolTip(this.humidityLabel, resources.GetString("humidityLabel.ToolTip"));
             // 
             // tempLabel
             // 
             resources.ApplyResources(this.tempLabel, "tempLabel");
             this.tempLabel.BackColor = System.Drawing.Color.Transparent;
             this.tempLabel.Name = "tempLabel";
+            this.helpToolTip.SetToolTip(this.tempLabel, resources.GetString("tempLabel.ToolTip"));
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Xtream_ToolBox.Properties.Resources.thermometre;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Image = global::Xtream_ToolBox.Properties.Resources.thermometre;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
+            this.helpToolTip.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip"));
             // 
             // pressureAndVisibilityGroupBox
             // 
+            resources.ApplyResources(this.pressureAndVisibilityGroupBox, "pressureAndVisibilityGroupBox");
             this.pressureAndVisibilityGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.pressureAndVisibilityGroupBox.Controls.Add(this.visibilityLabel);
             this.pressureAndVisibilityGroupBox.Controls.Add(this.pressureLabel);
             this.pressureAndVisibilityGroupBox.Controls.Add(this.pictureBox3);
-            resources.ApplyResources(this.pressureAndVisibilityGroupBox, "pressureAndVisibilityGroupBox");
             this.pressureAndVisibilityGroupBox.Name = "pressureAndVisibilityGroupBox";
             this.pressureAndVisibilityGroupBox.TabStop = false;
+            this.helpToolTip.SetToolTip(this.pressureAndVisibilityGroupBox, resources.GetString("pressureAndVisibilityGroupBox.ToolTip"));
             // 
             // visibilityLabel
             // 
             resources.ApplyResources(this.visibilityLabel, "visibilityLabel");
             this.visibilityLabel.BackColor = System.Drawing.Color.Transparent;
             this.visibilityLabel.Name = "visibilityLabel";
+            this.helpToolTip.SetToolTip(this.visibilityLabel, resources.GetString("visibilityLabel.ToolTip"));
             // 
             // pressureLabel
             // 
             resources.ApplyResources(this.pressureLabel, "pressureLabel");
             this.pressureLabel.BackColor = System.Drawing.Color.Transparent;
             this.pressureLabel.Name = "pressureLabel";
+            this.helpToolTip.SetToolTip(this.pressureLabel, resources.GetString("pressureLabel.ToolTip"));
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Xtream_ToolBox.Properties.Resources.barometer;
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Image = global::Xtream_ToolBox.Properties.Resources.barometer;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
+            this.helpToolTip.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
             // 
             // windGroupBox
             // 
+            resources.ApplyResources(this.windGroupBox, "windGroupBox");
             this.windGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.windGroupBox.Controls.Add(this.windLabel);
             this.windGroupBox.Controls.Add(this.pictureBox4);
-            resources.ApplyResources(this.windGroupBox, "windGroupBox");
             this.windGroupBox.Name = "windGroupBox";
             this.windGroupBox.TabStop = false;
+            this.helpToolTip.SetToolTip(this.windGroupBox, resources.GetString("windGroupBox.ToolTip"));
             // 
             // windLabel
             // 
             resources.ApplyResources(this.windLabel, "windLabel");
             this.windLabel.BackColor = System.Drawing.Color.Transparent;
             this.windLabel.Name = "windLabel";
+            this.helpToolTip.SetToolTip(this.windLabel, resources.GetString("windLabel.ToolTip"));
             // 
             // pictureBox4
             // 
@@ -172,23 +185,27 @@
             this.pictureBox4.Image = global::Xtream_ToolBox.Properties.Resources.Wind_Logo;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
+            this.helpToolTip.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
             // 
             // lastMesureLabel
             // 
             resources.ApplyResources(this.lastMesureLabel, "lastMesureLabel");
             this.lastMesureLabel.BackColor = System.Drawing.Color.Transparent;
             this.lastMesureLabel.Name = "lastMesureLabel";
+            this.helpToolTip.SetToolTip(this.lastMesureLabel, resources.GetString("lastMesureLabel.ToolTip"));
             // 
             // weatherLabel
             // 
             resources.ApplyResources(this.weatherLabel, "weatherLabel");
             this.weatherLabel.BackColor = System.Drawing.Color.Transparent;
             this.weatherLabel.Name = "weatherLabel";
+            this.helpToolTip.SetToolTip(this.weatherLabel, resources.GetString("weatherLabel.ToolTip"));
             // 
             // locationTextBox
             // 
             resources.ApplyResources(this.locationTextBox, "locationTextBox");
             this.locationTextBox.Name = "locationTextBox";
+            this.helpToolTip.SetToolTip(this.locationTextBox, resources.GetString("locationTextBox.ToolTip"));
             // 
             // weatherLinkLabel
             // 
@@ -196,6 +213,7 @@
             this.weatherLinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.weatherLinkLabel.Name = "weatherLinkLabel";
             this.weatherLinkLabel.TabStop = true;
+            this.helpToolTip.SetToolTip(this.weatherLinkLabel, resources.GetString("weatherLinkLabel.ToolTip"));
             this.weatherLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.WeatherLinkLabel_LinkClicked);
             // 
             // cityIdLabel
@@ -203,32 +221,36 @@
             resources.ApplyResources(this.cityIdLabel, "cityIdLabel");
             this.cityIdLabel.BackColor = System.Drawing.Color.Transparent;
             this.cityIdLabel.Name = "cityIdLabel";
+            this.helpToolTip.SetToolTip(this.cityIdLabel, resources.GetString("cityIdLabel.ToolTip"));
             // 
             // sunLabel
             // 
             resources.ApplyResources(this.sunLabel, "sunLabel");
             this.sunLabel.BackColor = System.Drawing.Color.Transparent;
             this.sunLabel.Name = "sunLabel";
+            this.helpToolTip.SetToolTip(this.sunLabel, resources.GetString("sunLabel.ToolTip"));
             // 
             // findCityIdLabel
             // 
             resources.ApplyResources(this.findCityIdLabel, "findCityIdLabel");
             this.findCityIdLabel.BackColor = System.Drawing.Color.Transparent;
             this.findCityIdLabel.Name = "findCityIdLabel";
+            this.helpToolTip.SetToolTip(this.findCityIdLabel, resources.GetString("findCityIdLabel.ToolTip"));
             // 
             // ApplyButton
             // 
             resources.ApplyResources(this.ApplyButton, "ApplyButton");
             this.ApplyButton.Name = "ApplyButton";
+            this.helpToolTip.SetToolTip(this.ApplyButton, resources.GetString("ApplyButton.ToolTip"));
             this.ApplyButton.UseVisualStyleBackColor = true;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // SensorWeatherExtendedPanel
             // 
             this.AcceptButton = this.ApplyButton;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.extendInfosBackground;
-            resources.ApplyResources(this, "$this");
             this.ControlBox = false;
             this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.findCityIdLabel);
@@ -252,6 +274,7 @@
             this.Name = "SensorWeatherExtendedPanel";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.helpToolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             ((System.ComponentModel.ISupportInitialize)(this.closeExtendedInfosPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weatherPictureBox)).EndInit();
             this.temperatureGroupbox.ResumeLayout(false);

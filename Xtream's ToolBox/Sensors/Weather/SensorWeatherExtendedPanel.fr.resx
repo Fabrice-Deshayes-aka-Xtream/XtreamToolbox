@@ -147,7 +147,7 @@
   </data>
   <data name="findCityIdLabel.Text" xml:space="preserve">
     <value>- recherchez votre ville sur openweathermap.org
-- collez ici le nombre présent dans url</value>
+- collez ici le nombre présent dans l'url</value>
   </data>
   <data name="ApplyButton.Text" xml:space="preserve">
     <value>appliquer</value>

@@ -117,612 +117,504 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="closeExtendedInfosPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 0</value>
-  </data>
-  <data name="closeExtendedInfosPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>16, 19</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="closeExtendedInfosPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <metadata name="helpToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="closeExtendedInfosPictureBox.ToolTip" xml:space="preserve">
-    <value>close extended weather's informations</value>
-  </data>
-  <data name="&gt;&gt;closeExtendedInfosPictureBox.Name" xml:space="preserve">
-    <value>closeExtendedInfosPictureBox</value>
-  </data>
-  <data name="&gt;&gt;closeExtendedInfosPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;closeExtendedInfosPictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;closeExtendedInfosPictureBox.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="weatherPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 10</value>
-  </data>
-  <data name="weatherPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 128</value>
-  </data>
-  <data name="weatherPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;weatherPictureBox.Name" xml:space="preserve">
-    <value>weatherPictureBox</value>
-  </data>
-  <data name="&gt;&gt;weatherPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;weatherPictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;weatherPictureBox.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="localisationLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="localisationLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt, style=Bold</value>
-  </data>
-  <data name="localisationLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 10</value>
-  </data>
-  <data name="localisationLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 19</value>
-  </data>
-  <data name="localisationLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="localisationLabel.Text" xml:space="preserve">
-    <value>City, Country</value>
-  </data>
-  <data name="&gt;&gt;localisationLabel.Name" xml:space="preserve">
-    <value>localisationLabel</value>
-  </data>
-  <data name="&gt;&gt;localisationLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;localisationLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;localisationLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="localisationPositionLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="localisationPositionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 31</value>
-  </data>
-  <data name="localisationPositionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 13</value>
-  </data>
-  <data name="localisationPositionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="localisationPositionLabel.Text" xml:space="preserve">
-    <value>Latitude n/a / longitude n/a</value>
-  </data>
-  <data name="&gt;&gt;localisationPositionLabel.Name" xml:space="preserve">
-    <value>localisationPositionLabel</value>
-  </data>
-  <data name="&gt;&gt;localisationPositionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;localisationPositionLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;localisationPositionLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="humidityLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="humidityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 45</value>
-  </data>
-  <data name="humidityLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
-  </data>
-  <data name="humidityLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="humidityLabel.Text" xml:space="preserve">
-    <value>Humidity : 30%</value>
-  </data>
-  <data name="&gt;&gt;humidityLabel.Name" xml:space="preserve">
-    <value>humidityLabel</value>
-  </data>
-  <data name="&gt;&gt;humidityLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;humidityLabel.Parent" xml:space="preserve">
-    <value>temperatureGroupbox</value>
-  </data>
-  <data name="&gt;&gt;humidityLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tempLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tempLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 21</value>
-  </data>
-  <data name="tempLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 13</value>
-  </data>
-  <data name="tempLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="tempLabel.Text" xml:space="preserve">
-    <value>Temp : 23°C (min 15°C, max 25°C)</value>
-  </data>
-  <data name="&gt;&gt;tempLabel.Name" xml:space="preserve">
-    <value>tempLabel</value>
-  </data>
-  <data name="&gt;&gt;tempLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tempLabel.Parent" xml:space="preserve">
-    <value>temperatureGroupbox</value>
-  </data>
-  <data name="&gt;&gt;tempLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 48</value>
-  </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>temperatureGroupbox</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="temperatureGroupbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 142</value>
-  </data>
-  <data name="temperatureGroupbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>359, 70</value>
-  </data>
-  <data name="temperatureGroupbox.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="temperatureGroupbox.Text" xml:space="preserve">
-    <value>Temperature</value>
-  </data>
-  <data name="&gt;&gt;temperatureGroupbox.Name" xml:space="preserve">
-    <value>temperatureGroupbox</value>
-  </data>
-  <data name="&gt;&gt;temperatureGroupbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;temperatureGroupbox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;temperatureGroupbox.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <data name="visibilityLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="visibilityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 45</value>
-  </data>
-  <data name="visibilityLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 13</value>
-  </data>
-  <data name="visibilityLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="visibilityLabel.Text" xml:space="preserve">
-    <value>Visibility : 20 km</value>
-  </data>
-  <data name="&gt;&gt;visibilityLabel.Name" xml:space="preserve">
-    <value>visibilityLabel</value>
-  </data>
-  <data name="&gt;&gt;visibilityLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;visibilityLabel.Parent" xml:space="preserve">
-    <value>pressureAndVisibilityGroupBox</value>
-  </data>
-  <data name="&gt;&gt;visibilityLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pressureLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pressureLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 21</value>
-  </data>
-  <data name="pressureLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 13</value>
-  </data>
-  <data name="pressureLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="pressureLabel.Text" xml:space="preserve">
-    <value>Barometric pressure : 1024mb (steady)</value>
-  </data>
-  <data name="&gt;&gt;pressureLabel.Name" xml:space="preserve">
-    <value>pressureLabel</value>
-  </data>
-  <data name="&gt;&gt;pressureLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pressureLabel.Parent" xml:space="preserve">
-    <value>pressureAndVisibilityGroupBox</value>
-  </data>
-  <data name="&gt;&gt;pressureLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
-  </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 48</value>
-  </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>pressureAndVisibilityGroupBox</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pressureAndVisibilityGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 218</value>
-  </data>
-  <data name="pressureAndVisibilityGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>359, 70</value>
-  </data>
-  <data name="pressureAndVisibilityGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="pressureAndVisibilityGroupBox.Text" xml:space="preserve">
-    <value>Pressure and visibility</value>
-  </data>
-  <data name="&gt;&gt;pressureAndVisibilityGroupBox.Name" xml:space="preserve">
-    <value>pressureAndVisibilityGroupBox</value>
-  </data>
-  <data name="&gt;&gt;pressureAndVisibilityGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pressureAndVisibilityGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pressureAndVisibilityGroupBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="windLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="windLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 21</value>
-  </data>
-  <data name="windLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 13</value>
-  </data>
-  <data name="windLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="windLabel.Text" xml:space="preserve">
-    <value>Wind speed : 20 km/h from NNW (220°)</value>
-  </data>
-  <data name="&gt;&gt;windLabel.Name" xml:space="preserve">
-    <value>windLabel</value>
-  </data>
-  <data name="&gt;&gt;windLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;windLabel.Parent" xml:space="preserve">
-    <value>windGroupBox</value>
+  <data name="weatherLabel.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;windLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox4.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
+  <data name="&gt;&gt;localisationLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
+  <data name="localisationPositionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
   </data>
-  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 48</value>
-  </data>
-  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
-    <value>windGroupBox</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pressureLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="windGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 294</value>
+  <data name="&gt;&gt;localisationLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="temperatureGroupbox.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="tempLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="windGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>359, 70</value>
+  </data>
+  <data name="&gt;&gt;findCityIdLabel.Name" xml:space="preserve">
+    <value>findCityIdLabel</value>
+  </data>
+  <data name="&gt;&gt;humidityLabel.Name" xml:space="preserve">
+    <value>humidityLabel</value>
+  </data>
+  <data name="&gt;&gt;localisationPositionLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="windGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="windGroupBox.Text" xml:space="preserve">
-    <value>Wind</value>
+  <data name="weatherLinkLabel.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;windGroupBox.Name" xml:space="preserve">
-    <value>windGroupBox</value>
-  </data>
-  <data name="&gt;&gt;windGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;windGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;windGroupBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lastMesureLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lastMesureLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 52</value>
-  </data>
-  <data name="lastMesureLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 13</value>
+  <data name="&gt;&gt;helpToolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lastMesureLabel.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="lastMesureLabel.Text" xml:space="preserve">
-    <value>Last mesure : n/a</value>
+  <data name="weatherLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 379</value>
   </data>
-  <data name="&gt;&gt;lastMesureLabel.Name" xml:space="preserve">
-    <value>lastMesureLabel</value>
+  <data name="&gt;&gt;windLabel.Name" xml:space="preserve">
+    <value>windLabel</value>
   </data>
-  <data name="&gt;&gt;lastMesureLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="temperatureGroupbox.Text" xml:space="preserve">
+    <value>Temperature</value>
   </data>
   <data name="&gt;&gt;lastMesureLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lastMesureLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="weatherLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="pictureBox4.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="weatherLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 379</value>
+  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
+    <value>pictureBox4</value>
   </data>
-  <data name="weatherLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 13</value>
+  <data name="closeExtendedInfosPictureBox.ToolTip" xml:space="preserve">
+    <value>close extended weather's informations</value>
   </data>
-  <data name="weatherLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
+  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
   </data>
-  <data name="weatherLabel.Text" xml:space="preserve">
-    <value>Weather data provided by</value>
-  </data>
-  <data name="&gt;&gt;weatherLabel.Name" xml:space="preserve">
-    <value>weatherLabel</value>
-  </data>
-  <data name="&gt;&gt;weatherLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;weatherLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;weatherLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="locationTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 88</value>
-  </data>
-  <data name="locationTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 20</value>
-  </data>
-  <data name="locationTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;locationTextBox.Name" xml:space="preserve">
-    <value>locationTextBox</value>
-  </data>
-  <data name="&gt;&gt;locationTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;locationTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;locationTextBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="weatherLinkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="weatherLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 379</value>
-  </data>
-  <data name="weatherLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 13</value>
-  </data>
-  <data name="weatherLinkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="weatherLinkLabel.Text" xml:space="preserve">
-    <value>https://openweathermap.org</value>
-  </data>
-  <data name="&gt;&gt;weatherLinkLabel.Name" xml:space="preserve">
-    <value>weatherLinkLabel</value>
-  </data>
-  <data name="&gt;&gt;weatherLinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;weatherLinkLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;weatherLinkLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="cityIdLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cityIdLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cityIdLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 91</value>
-  </data>
-  <data name="cityIdLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="cityIdLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="cityIdLabel.Text" xml:space="preserve">
-    <value>City id</value>
-  </data>
-  <data name="&gt;&gt;cityIdLabel.Name" xml:space="preserve">
-    <value>cityIdLabel</value>
-  </data>
-  <data name="&gt;&gt;cityIdLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cityIdLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cityIdLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="sunLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="sunLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="sunLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 67</value>
-  </data>
-  <data name="sunLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 13</value>
-  </data>
-  <data name="sunLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="sunLabel.Text" xml:space="preserve">
-    <value>Sunrise at xx. Sunset at xx.</value>
-  </data>
-  <data name="&gt;&gt;sunLabel.Name" xml:space="preserve">
-    <value>sunLabel</value>
-  </data>
-  <data name="&gt;&gt;sunLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sunLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;sunLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="findCityIdLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="findCityIdLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="findCityIdLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>154, 111</value>
   </data>
-  <data name="findCityIdLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 26</value>
+  <data name="ApplyButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
+  </data>
+  <data name="&gt;&gt;lastMesureLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="findCityIdLabel.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
+  </data>
+  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="temperatureGroupbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 142</value>
+  </data>
+  <data name="locationTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 20</value>
+  </data>
+  <data name="&gt;&gt;cityIdLabel.Name" xml:space="preserve">
+    <value>cityIdLabel</value>
+  </data>
+  <data name="windLabel.Text" xml:space="preserve">
+    <value>Wind speed : 20 km/h from NNW (220°)</value>
+  </data>
+  <data name="&gt;&gt;weatherLinkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="locationTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
+    <value>windGroupBox</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="localisationPositionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pressureAndVisibilityGroupBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tempLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;helpToolTip.Name" xml:space="preserve">
+    <value>helpToolTip</value>
+  </data>
+  <data name="&gt;&gt;weatherPictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cityIdLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;ApplyButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;weatherLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;weatherLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;windGroupBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="pressureLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="windGroupBox.Text" xml:space="preserve">
+    <value>Wind</value>
+  </data>
+  <data name="windLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;closeExtendedInfosPictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="localisationPositionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 31</value>
+  </data>
+  <data name="localisationLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 10</value>
+  </data>
+  <data name="windLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 13</value>
+  </data>
+  <data name="pressureAndVisibilityGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;windGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="findCityIdLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="localisationPositionLabel.Text" xml:space="preserve">
+    <value>Latitude n/a / longitude n/a</value>
+  </data>
+  <data name="&gt;&gt;ApplyButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="weatherLinkLabel.Text" xml:space="preserve">
+    <value>https://openweathermap.org</value>
+  </data>
+  <data name="weatherLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="weatherPictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="visibilityLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="localisationLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="humidityLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;localisationPositionLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pressureAndVisibilityGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="weatherLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 13</value>
+  </data>
+  <data name="pressureAndVisibilityGroupBox.Text" xml:space="preserve">
+    <value>Pressure and visibility</value>
+  </data>
+  <data name="closeExtendedInfosPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>385, 0</value>
+  </data>
+  <data name="ApplyButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 86</value>
+  </data>
+  <data name="visibilityLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="sunLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 13</value>
+  </data>
+  <data name="&gt;&gt;cityIdLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="locationTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 88</value>
+  </data>
+  <data name="&gt;&gt;closeExtendedInfosPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;localisationLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SensorWeatherExtendedPanel</value>
+  </data>
+  <data name="pictureBox4.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;weatherPictureBox.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;temperatureGroupbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;weatherPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;visibilityLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pressureLabel.Name" xml:space="preserve">
+    <value>pressureLabel</value>
+  </data>
+  <data name="&gt;&gt;windGroupBox.Name" xml:space="preserve">
+    <value>windGroupBox</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>temperatureGroupbox</value>
+  </data>
+  <data name="ApplyButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;weatherLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="closeExtendedInfosPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 19</value>
+  </data>
+  <data name="&gt;&gt;ApplyButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;findCityIdLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="cityIdLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 91</value>
+  </data>
+  <data name="weatherLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="tempLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 13</value>
+  </data>
+  <data name="&gt;&gt;pressureAndVisibilityGroupBox.Name" xml:space="preserve">
+    <value>pressureAndVisibilityGroupBox</value>
+  </data>
+  <data name="tempLabel.Text" xml:space="preserve">
+    <value>Temp : 23°C (min 15°C, max 25°C)</value>
+  </data>
+  <data name="cityIdLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="&gt;&gt;closeExtendedInfosPictureBox.Name" xml:space="preserve">
+    <value>closeExtendedInfosPictureBox</value>
+  </data>
+  <data name="&gt;&gt;localisationPositionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;humidityLabel.Parent" xml:space="preserve">
+    <value>temperatureGroupbox</value>
+  </data>
+  <data name="localisationPositionLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;locationTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="weatherPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;pressureAndVisibilityGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;localisationPositionLabel.Name" xml:space="preserve">
+    <value>localisationPositionLabel</value>
+  </data>
+  <data name="sunLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="windGroupBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="localisationLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;sunLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;sunLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="weatherLinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;temperatureGroupbox.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="pressureLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 13</value>
+  </data>
+  <data name="&gt;&gt;locationTextBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="humidityLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="pressureAndVisibilityGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 70</value>
+  </data>
+  <data name="humidityLabel.Text" xml:space="preserve">
+    <value>Humidity : 30%</value>
+  </data>
+  <data name="pictureBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;weatherLabel.Name" xml:space="preserve">
+    <value>weatherLabel</value>
+  </data>
+  <data name="pressureLabel.Text" xml:space="preserve">
+    <value>Barometric pressure : 1024mb (steady)</value>
+  </data>
+  <data name="localisationLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="weatherLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 13</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;findCityIdLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cityIdLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="&gt;&gt;visibilityLabel.Name" xml:space="preserve">
+    <value>visibilityLabel</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
+    <value>pictureBox3</value>
+  </data>
+  <data name="temperatureGroupbox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="temperatureGroupbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 70</value>
+  </data>
+  <data name="&gt;&gt;sunLabel.Name" xml:space="preserve">
+    <value>sunLabel</value>
+  </data>
+  <data name="windGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 294</value>
+  </data>
+  <data name="pressureAndVisibilityGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 218</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ApplyButton.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="localisationLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 19</value>
+  </data>
+  <data name="humidityLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="sunLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lastMesureLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pressureLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="findCityIdLabel.Text" xml:space="preserve">
     <value>- find your city on openweathermap.org site
 - copy your city id in url and paste it there</value>
   </data>
-  <data name="&gt;&gt;findCityIdLabel.Name" xml:space="preserve">
-    <value>findCityIdLabel</value>
+  <data name="sunLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
   </data>
-  <data name="&gt;&gt;findCityIdLabel.Type" xml:space="preserve">
+  <data name="lastMesureLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pressureLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;findCityIdLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;findCityIdLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ApplyButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 86</value>
-  </data>
-  <data name="ApplyButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 23</value>
-  </data>
-  <data name="ApplyButton.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="ApplyButton.Text" xml:space="preserve">
-    <value>apply</value>
-  </data>
-  <data name="&gt;&gt;ApplyButton.Name" xml:space="preserve">
-    <value>ApplyButton</value>
-  </data>
-  <data name="&gt;&gt;ApplyButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ApplyButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ApplyButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;visibilityLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+  <data name="humidityLabel.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>400, 420</value>
+  <data name="&gt;&gt;tempLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pressureAndVisibilityGroupBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="findCityIdLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 26</value>
+  </data>
+  <data name="localisationPositionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 13</value>
+  </data>
+  <data name="&gt;&gt;localisationLabel.Name" xml:space="preserve">
+    <value>localisationLabel</value>
+  </data>
+  <data name="&gt;&gt;pressureLabel.Parent" xml:space="preserve">
+    <value>pressureAndVisibilityGroupBox</value>
+  </data>
+  <data name="visibilityLabel.Text" xml:space="preserve">
+    <value>Visibility : 20 km</value>
+  </data>
+  <data name="&gt;&gt;weatherPictureBox.Name" xml:space="preserve">
+    <value>weatherPictureBox</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2122,19 +2014,196 @@
         wA8AAIAPAACAAwAAwAEAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAMADAADgBwAA8Q8AAP//AAA=
 </value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>Manual</value>
+  <data name="&gt;&gt;humidityLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;helpToolTip.Name" xml:space="preserve">
-    <value>helpToolTip</value>
+  <data name="weatherLinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;helpToolTip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cityIdLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SensorWeatherExtendedPanel</value>
+  <data name="tempLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="findCityIdLabel.ToolTip" xml:space="preserve">
+    <value />
   </data>
+  <data name="&gt;&gt;lastMesureLabel.Name" xml:space="preserve">
+    <value>lastMesureLabel</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="weatherLabel.Text" xml:space="preserve">
+    <value>Weather data provided by</value>
+  </data>
+  <data name="&gt;&gt;tempLabel.Parent" xml:space="preserve">
+    <value>temperatureGroupbox</value>
+  </data>
+  <data name="pressureLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="weatherPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 10</value>
+  </data>
+  <data name="sunLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 67</value>
+  </data>
+  <data name="locationTextBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;locationTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ApplyButton.Name" xml:space="preserve">
+    <value>ApplyButton</value>
+  </data>
+  <data name="&gt;&gt;locationTextBox.Name" xml:space="preserve">
+    <value>locationTextBox</value>
+  </data>
+  <data name="windLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="localisationLabel.Text" xml:space="preserve">
+    <value>City, Country</value>
+  </data>
+  <data name="visibilityLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="cityIdLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sunLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;humidityLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>400, 420</value>
+  </data>
+  <data name="&gt;&gt;temperatureGroupbox.Name" xml:space="preserve">
+    <value>temperatureGroupbox</value>
+  </data>
+  <data name="localisationLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="windLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tempLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="sunLabel.Text" xml:space="preserve">
+    <value>Sunrise at xx. Sunset at xx.</value>
+  </data>
+  <data name="weatherPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 128</value>
+  </data>
+  <data name="findCityIdLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="closeExtendedInfosPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;closeExtendedInfosPictureBox.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;windLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;temperatureGroupbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;weatherLinkLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;findCityIdLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cityIdLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pressureLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="ApplyButton.Text" xml:space="preserve">
+    <value>apply</value>
+  </data>
+  <data name="lastMesureLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pictureBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cityIdLabel.Text" xml:space="preserve">
+    <value>City id</value>
+  </data>
+  <data name="&gt;&gt;windLabel.Parent" xml:space="preserve">
+    <value>windGroupBox</value>
+  </data>
+  <data name="lastMesureLabel.Text" xml:space="preserve">
+    <value>Last mesure : n/a</value>
+  </data>
+  <data name="windLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+    <value>pressureAndVisibilityGroupBox</value>
+  </data>
+  <data name="&gt;&gt;weatherLinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lastMesureLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="&gt;&gt;windGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="weatherLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 379</value>
+  </data>
+  <data name="humidityLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 45</value>
+  </data>
+  <data name="&gt;&gt;sunLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
+  </data>
+  <data name="lastMesureLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 52</value>
+  </data>
+  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
+  </data>
+  <data name="&gt;&gt;tempLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="visibilityLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 45</value>
+  </data>
+  <data name="&gt;&gt;visibilityLabel.Parent" xml:space="preserve">
+    <value>pressureAndVisibilityGroupBox</value>
+  </data>
+  <data name="&gt;&gt;tempLabel.Name" xml:space="preserve">
+    <value>tempLabel</value>
+  </data>
+  <data name="&gt;&gt;weatherLinkLabel.Name" xml:space="preserve">
+    <value>weatherLinkLabel</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="helpToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
