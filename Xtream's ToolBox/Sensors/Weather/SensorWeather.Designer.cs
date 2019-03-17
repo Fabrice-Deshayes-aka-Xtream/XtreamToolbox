@@ -37,7 +37,7 @@
             // 
             resources.ApplyResources(this.weatherPictureBox, "weatherPictureBox");
             this.weatherPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.weatherPictureBox.Image = global::Xtream_ToolBox.Properties.Resources._na;
+            this.weatherPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.weather_small_na;
             this.weatherPictureBox.Name = "weatherPictureBox";
             this.weatherPictureBox.TabStop = false;
             this.weatherPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SensorWeather_MouseClick);
@@ -52,7 +52,7 @@
             // updateWeatherTimer
             // 
             this.updateWeatherTimer.Enabled = true;
-            this.updateWeatherTimer.Interval = 1800000;
+            this.updateWeatherTimer.Interval = 7200000;
             this.updateWeatherTimer.Tick += new System.EventHandler(this.UpdateWeatherTimer_Tick);
             // 
             // initialisationBackgroundWorker

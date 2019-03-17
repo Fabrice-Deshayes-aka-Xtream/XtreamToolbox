@@ -228,13 +228,13 @@ namespace Xtream_ToolBox.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("London, UK")]
-        public string weatherCode {
+        [global::System.Configuration.DefaultSettingValueAttribute("2988507")]
+        public string weatherCityId {
             get {
-                return ((string)(this["weatherCode"]));
+                return ((string)(this["weatherCityId"]));
             }
             set {
-                this["weatherCode"] = value;
+                this["weatherCityId"] = value;
             }
         }
         
@@ -914,6 +914,18 @@ namespace Xtream_ToolBox.Properties {
             }
             set {
                 this["location"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("metric")]
+        public string weatherTempUnit {
+            get {
+                return ((string)(this["weatherTempUnit"]));
+            }
+            set {
+                this["weatherTempUnit"] = value;
             }
         }
     }

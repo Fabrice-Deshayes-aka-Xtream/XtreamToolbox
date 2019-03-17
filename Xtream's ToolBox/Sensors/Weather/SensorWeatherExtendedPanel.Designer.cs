@@ -30,24 +30,25 @@
             this.weatherPictureBox = new System.Windows.Forms.PictureBox();
             this.localisationLabel = new System.Windows.Forms.Label();
             this.localisationPositionLabel = new System.Windows.Forms.Label();
-            this.lastUpdateLabel = new System.Windows.Forms.Label();
             this.temperatureGroupbox = new System.Windows.Forms.GroupBox();
-            this.humidityDrewLabel = new System.Windows.Forms.Label();
+            this.humidityLabel = new System.Windows.Forms.Label();
             this.tempLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pressureAndVisibilityGroupBox = new System.Windows.Forms.GroupBox();
-            this.uvVisLabel = new System.Windows.Forms.Label();
-            this.barometricPressureLabel = new System.Windows.Forms.Label();
+            this.visibilityLabel = new System.Windows.Forms.Label();
+            this.pressureLabel = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.windGroupBox = new System.Windows.Forms.GroupBox();
             this.windLabel = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lastMesureLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.weatherLabel = new System.Windows.Forms.Label();
             this.locationTextBox = new System.Windows.Forms.TextBox();
-            this.changeLocationButton = new System.Windows.Forms.Button();
             this.weatherLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.cityIdLabel = new System.Windows.Forms.Label();
+            this.sunLabel = new System.Windows.Forms.Label();
+            this.findCityIdLabel = new System.Windows.Forms.Label();
+            this.ApplyButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.closeExtendedInfosPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weatherPictureBox)).BeginInit();
             this.temperatureGroupbox.SuspendLayout();
@@ -56,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.windGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // closeExtendedInfosPictureBox
@@ -76,7 +76,7 @@
             // weatherPictureBox
             // 
             this.weatherPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.weatherPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.na;
+            this.weatherPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.weather_na;
             resources.ApplyResources(this.weatherPictureBox, "weatherPictureBox");
             this.weatherPictureBox.Name = "weatherPictureBox";
             this.weatherPictureBox.TabStop = false;
@@ -93,27 +93,21 @@
             this.localisationPositionLabel.BackColor = System.Drawing.Color.Transparent;
             this.localisationPositionLabel.Name = "localisationPositionLabel";
             // 
-            // lastUpdateLabel
-            // 
-            resources.ApplyResources(this.lastUpdateLabel, "lastUpdateLabel");
-            this.lastUpdateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.lastUpdateLabel.Name = "lastUpdateLabel";
-            // 
             // temperatureGroupbox
             // 
             this.temperatureGroupbox.BackColor = System.Drawing.Color.Transparent;
-            this.temperatureGroupbox.Controls.Add(this.humidityDrewLabel);
+            this.temperatureGroupbox.Controls.Add(this.humidityLabel);
             this.temperatureGroupbox.Controls.Add(this.tempLabel);
             this.temperatureGroupbox.Controls.Add(this.pictureBox2);
             resources.ApplyResources(this.temperatureGroupbox, "temperatureGroupbox");
             this.temperatureGroupbox.Name = "temperatureGroupbox";
             this.temperatureGroupbox.TabStop = false;
             // 
-            // humidityDrewLabel
+            // humidityLabel
             // 
-            resources.ApplyResources(this.humidityDrewLabel, "humidityDrewLabel");
-            this.humidityDrewLabel.BackColor = System.Drawing.Color.Transparent;
-            this.humidityDrewLabel.Name = "humidityDrewLabel";
+            resources.ApplyResources(this.humidityLabel, "humidityLabel");
+            this.humidityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.humidityLabel.Name = "humidityLabel";
             // 
             // tempLabel
             // 
@@ -131,24 +125,24 @@
             // pressureAndVisibilityGroupBox
             // 
             this.pressureAndVisibilityGroupBox.BackColor = System.Drawing.Color.Transparent;
-            this.pressureAndVisibilityGroupBox.Controls.Add(this.uvVisLabel);
-            this.pressureAndVisibilityGroupBox.Controls.Add(this.barometricPressureLabel);
+            this.pressureAndVisibilityGroupBox.Controls.Add(this.visibilityLabel);
+            this.pressureAndVisibilityGroupBox.Controls.Add(this.pressureLabel);
             this.pressureAndVisibilityGroupBox.Controls.Add(this.pictureBox3);
             resources.ApplyResources(this.pressureAndVisibilityGroupBox, "pressureAndVisibilityGroupBox");
             this.pressureAndVisibilityGroupBox.Name = "pressureAndVisibilityGroupBox";
             this.pressureAndVisibilityGroupBox.TabStop = false;
             // 
-            // uvVisLabel
+            // visibilityLabel
             // 
-            resources.ApplyResources(this.uvVisLabel, "uvVisLabel");
-            this.uvVisLabel.BackColor = System.Drawing.Color.Transparent;
-            this.uvVisLabel.Name = "uvVisLabel";
+            resources.ApplyResources(this.visibilityLabel, "visibilityLabel");
+            this.visibilityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.visibilityLabel.Name = "visibilityLabel";
             // 
-            // barometricPressureLabel
+            // pressureLabel
             // 
-            resources.ApplyResources(this.barometricPressureLabel, "barometricPressureLabel");
-            this.barometricPressureLabel.BackColor = System.Drawing.Color.Transparent;
-            this.barometricPressureLabel.Name = "barometricPressureLabel";
+            resources.ApplyResources(this.pressureLabel, "pressureLabel");
+            this.pressureLabel.BackColor = System.Drawing.Color.Transparent;
+            this.pressureLabel.Name = "pressureLabel";
             // 
             // pictureBox3
             // 
@@ -185,14 +179,6 @@
             this.lastMesureLabel.BackColor = System.Drawing.Color.Transparent;
             this.lastMesureLabel.Name = "lastMesureLabel";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Xtream_ToolBox.Properties.Resources.Weather_Logo_32px;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // weatherLabel
             // 
             resources.ApplyResources(this.weatherLabel, "weatherLabel");
@@ -204,14 +190,6 @@
             resources.ApplyResources(this.locationTextBox, "locationTextBox");
             this.locationTextBox.Name = "locationTextBox";
             // 
-            // changeLocationButton
-            // 
-            this.changeLocationButton.Image = global::Xtream_ToolBox.Properties.Resources.refresh_16;
-            resources.ApplyResources(this.changeLocationButton, "changeLocationButton");
-            this.changeLocationButton.Name = "changeLocationButton";
-            this.changeLocationButton.UseVisualStyleBackColor = true;
-            this.changeLocationButton.Click += new System.EventHandler(this.ChangeLocationButton_Click);
-            // 
             // weatherLinkLabel
             // 
             resources.ApplyResources(this.weatherLinkLabel, "weatherLinkLabel");
@@ -220,23 +198,49 @@
             this.weatherLinkLabel.TabStop = true;
             this.weatherLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.WeatherLinkLabel_LinkClicked);
             // 
+            // cityIdLabel
+            // 
+            resources.ApplyResources(this.cityIdLabel, "cityIdLabel");
+            this.cityIdLabel.BackColor = System.Drawing.Color.Transparent;
+            this.cityIdLabel.Name = "cityIdLabel";
+            // 
+            // sunLabel
+            // 
+            resources.ApplyResources(this.sunLabel, "sunLabel");
+            this.sunLabel.BackColor = System.Drawing.Color.Transparent;
+            this.sunLabel.Name = "sunLabel";
+            // 
+            // findCityIdLabel
+            // 
+            resources.ApplyResources(this.findCityIdLabel, "findCityIdLabel");
+            this.findCityIdLabel.BackColor = System.Drawing.Color.Transparent;
+            this.findCityIdLabel.Name = "findCityIdLabel";
+            // 
+            // ApplyButton
+            // 
+            resources.ApplyResources(this.ApplyButton, "ApplyButton");
+            this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.UseVisualStyleBackColor = true;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
+            // 
             // SensorWeatherExtendedPanel
             // 
-            this.AcceptButton = this.changeLocationButton;
+            this.AcceptButton = this.ApplyButton;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.extendInfosBackground;
             resources.ApplyResources(this, "$this");
             this.ControlBox = false;
+            this.Controls.Add(this.ApplyButton);
+            this.Controls.Add(this.findCityIdLabel);
+            this.Controls.Add(this.sunLabel);
+            this.Controls.Add(this.cityIdLabel);
             this.Controls.Add(this.weatherLinkLabel);
-            this.Controls.Add(this.changeLocationButton);
             this.Controls.Add(this.locationTextBox);
             this.Controls.Add(this.weatherLabel);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lastMesureLabel);
             this.Controls.Add(this.windGroupBox);
             this.Controls.Add(this.pressureAndVisibilityGroupBox);
             this.Controls.Add(this.temperatureGroupbox);
-            this.Controls.Add(this.lastUpdateLabel);
             this.Controls.Add(this.localisationPositionLabel);
             this.Controls.Add(this.localisationLabel);
             this.Controls.Add(this.weatherPictureBox);
@@ -259,7 +263,6 @@
             this.windGroupBox.ResumeLayout(false);
             this.windGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +275,6 @@
         private System.Windows.Forms.PictureBox weatherPictureBox;
         private System.Windows.Forms.Label localisationLabel;
         private System.Windows.Forms.Label localisationPositionLabel;
-        private System.Windows.Forms.Label lastUpdateLabel;
         private System.Windows.Forms.GroupBox temperatureGroupbox;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox pressureAndVisibilityGroupBox;
@@ -280,15 +282,17 @@
         private System.Windows.Forms.GroupBox windGroupBox;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label tempLabel;
-        private System.Windows.Forms.Label humidityDrewLabel;
-        private System.Windows.Forms.Label uvVisLabel;
-        private System.Windows.Forms.Label barometricPressureLabel;
+        private System.Windows.Forms.Label humidityLabel;
+        private System.Windows.Forms.Label visibilityLabel;
+        private System.Windows.Forms.Label pressureLabel;
         private System.Windows.Forms.Label windLabel;
         private System.Windows.Forms.Label lastMesureLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label weatherLabel;
         private System.Windows.Forms.TextBox locationTextBox;
-        private System.Windows.Forms.Button changeLocationButton;
         private System.Windows.Forms.LinkLabel weatherLinkLabel;
+        private System.Windows.Forms.Label cityIdLabel;
+        private System.Windows.Forms.Label sunLabel;
+        private System.Windows.Forms.Label findCityIdLabel;
+        private System.Windows.Forms.Button ApplyButton;
     }
 }

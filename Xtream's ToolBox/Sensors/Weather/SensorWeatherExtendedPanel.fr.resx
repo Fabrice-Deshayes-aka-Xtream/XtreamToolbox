@@ -112,119 +112,45 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="weatherPictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="localisationLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="localisationPositionLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lastUpdateLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="humidityDrewLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tempLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="temperatureGroupbox.Text" xml:space="preserve">
     <value>Température</value>
-  </data>
-  <data name="temperatureGroupbox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="uvVisLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="barometricPressureLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox3.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="pressureAndVisibilityGroupBox.Text" xml:space="preserve">
     <value>Pression barométrique et visibilité</value>
   </data>
-  <data name="pressureAndVisibilityGroupBox.ToolTip" xml:space="preserve">
-    <value />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pressureLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 13</value>
   </data>
-  <data name="moonLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="sunLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="sunAndMoonGroupBox.Text" xml:space="preserve">
-    <value>Soleil et lune</value>
-  </data>
-  <data name="sunAndMoonGroupBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="windGustSpeedLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="windLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox4.ToolTip" xml:space="preserve">
-    <value />
+  <data name="pressureLabel.Text" xml:space="preserve">
+    <value>Barometric pressure : 1024mb</value>
   </data>
   <data name="windGroupBox.Text" xml:space="preserve">
     <value>Vent</value>
   </data>
-  <data name="windGroupBox.ToolTip" xml:space="preserve">
-    <value />
+  <data name="weatherLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 13</value>
   </data>
-  <data name="lastMesureLabel.ToolTip" xml:space="preserve">
-    <value />
+  <data name="weatherLabel.Text" xml:space="preserve">
+    <value>Données météo fournies par</value>
   </data>
-  <data name="pictureBox1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="weatherLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 378</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 13</value>
+  <data name="findCityIdLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 26</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Informations météo fournies</value>
+  <data name="findCityIdLabel.Text" xml:space="preserve">
+    <value>- recherchez votre ville sur openweathermap.org
+- collez ici le nombre présent dans url</value>
   </data>
-  <data name="label1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="locationTextBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="changeLocationButton.Text" xml:space="preserve">
-    <value>Mettre à jour les informations météo</value>
-  </data>
-  <data name="changeLocationButton.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="systemComboBox.Items" xml:space="preserve">
-    <value>Système Anglo-Saxon</value>
-  </data>
-  <data name="systemComboBox.Items1" xml:space="preserve">
-    <value>Système métrique</value>
-  </data>
-  <data name="systemComboBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="linkLabel1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="ApplyButton.Text" xml:space="preserve">
+    <value>appliquer</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1623,8 +1549,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD+fwAA
         wA8AAIAPAACAAwAAwAEAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAMADAADgBwAA8Q8AAP//AAA=
 </value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
   </data>
 </root>

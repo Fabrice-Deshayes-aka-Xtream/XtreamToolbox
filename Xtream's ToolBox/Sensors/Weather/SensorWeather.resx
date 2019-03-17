@@ -160,13 +160,13 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="tempLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 16</value>
+    <value>24, 16</value>
   </data>
   <data name="tempLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="tempLabel.Text" xml:space="preserve">
-    <value>...</value>
+    <value>....</value>
   </data>
   <data name="tempLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

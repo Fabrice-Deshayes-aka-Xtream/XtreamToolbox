@@ -41,7 +41,7 @@ namespace Xtream_ToolBox.Sensors
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             // Weather options
-            locationTextBox.Text = Properties.Settings.Default.weatherCode;
+            locationTextBox.Text = Properties.Settings.Default.weatherCityId;
 
             weatherLabel.Text = resources.GetString("Weather_DataProvider");
             weatherLinkLabel.Left = weatherLabel.Left + weatherLabel.Width;
@@ -52,7 +52,7 @@ namespace Xtream_ToolBox.Sensors
         {
             if (initDone)
             {
-                Properties.Settings.Default.weatherCode = locationTextBox.Text;
+                Properties.Settings.Default.weatherCityId = locationTextBox.Text;
 
                 if (!sensorWeather.initialisationBackgroundWorker.IsBusy)
                 {
@@ -64,27 +64,26 @@ namespace Xtream_ToolBox.Sensors
         // update weather display infos
         public void UpdateWeather()
         {
-            if (sensorWeather.currentWeather != null)
+            if (sensorWeather.currentCondition != null)
             {
                 temperatureGroupbox.Enabled = true;
                 pressureAndVisibilityGroupBox.Enabled = true;
                 windGroupBox.Enabled = true;
-                localisationLabel.Text = sensorWeather.currentWeather.currentObservation.displayLocation.name;
-                localisationPositionLabel.Text = String.Format(resources.GetString("Weather_02"), sensorWeather.currentWeather.currentObservation.displayLocation.latitude, sensorWeather.currentWeather.currentObservation.displayLocation.longitude);
-                lastMesureLabel.Text = String.Format(resources.GetString("Weather_03"), sensorWeather.currentWeather.currentObservation.lastupdateTimeDT.ToShortTimeString());
-                lastUpdateLabel.Text = String.Format(resources.GetString("Weather_04"), sensorWeather.currentWeather.currentObservation.timeDT.ToShortTimeString());
-                tempLabel.Text = String.Format(resources.GetString("Weather_05"), sensorWeather.currentWeather.currentObservation.temp, "C", sensorWeather.currentWeather.currentObservation.feelike, "C");
-                humidityDrewLabel.Text = String.Format(resources.GetString("Weather_06"), sensorWeather.currentWeather.currentObservation.relativeHumidity, sensorWeather.currentWeather.currentObservation.dewpoint, "C");
-                barometricPressureLabel.Text = String.Format(resources.GetString("Weather_07"), sensorWeather.currentWeather.currentObservation.pressureMb);
-                uvVisLabel.Text = String.Format(resources.GetString("Weather_08"), sensorWeather.currentWeather.currentObservation.uv, sensorWeather.currentWeather.currentObservation.visibility, "KM");
-                windLabel.Text = String.Format(resources.GetString("Weather_09"), sensorWeather.currentWeather.currentObservation.windPower, "KM/H", sensorWeather.currentWeather.currentObservation.windDirection, sensorWeather.currentWeather.currentObservation.windDegrees);
+                localisationLabel.Text = sensorWeather.currentCondition.Name + "/" + sensorWeather.currentCondition.Sys.Country;
+                localisationPositionLabel.Text = String.Format(resources.GetString("Weather_02"), sensorWeather.currentCondition.Coord.Lat, sensorWeather.currentCondition.Coord.Lon);
+                lastMesureLabel.Text = String.Format(resources.GetString("Weather_03"), CurrentCondition.ConvertUnixUTCToLocalDateTime(sensorWeather.currentCondition.Dt).ToShortTimeString());
+                sunLabel.Text = String.Format(resources.GetString("Weather_04"), CurrentCondition.ConvertUnixUTCToLocalDateTime(sensorWeather.currentCondition.Sys.Sunrise).ToShortTimeString(), CurrentCondition.ConvertUnixUTCToLocalDateTime(sensorWeather.currentCondition.Sys.Sunset).ToShortTimeString());
+                tempLabel.Text = String.Format(resources.GetString("Weather_05"), Math.Round(sensorWeather.currentCondition.Main.Temp, 1), Math.Round(sensorWeather.currentCondition.Main.Temp_min, 1), Math.Round(sensorWeather.currentCondition.Main.Temp_max, 1), sensorWeather.currentCondition.TempUnits, "C");
+                humidityLabel.Text = String.Format(resources.GetString("Weather_06"), sensorWeather.currentCondition.Main.Humidity);
+                pressureLabel.Text = String.Format(resources.GetString("Weather_07"), sensorWeather.currentCondition.Main.Pressure, sensorWeather.currentCondition.PressureUnit);
+                visibilityLabel.Text = String.Format(resources.GetString("Weather_08"), sensorWeather.currentCondition.Visibility, "M");
+                windLabel.Text = String.Format(resources.GetString("Weather_09"), sensorWeather.currentCondition.Wind.Speed, sensorWeather.currentCondition.WindSpeedUnit, sensorWeather.currentCondition.Wind.Deg);
 
-                weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(sensorWeather.currentWeather.currentObservation.icon);
+                weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject("weather_" + sensorWeather.currentCondition.Weather[0].Icon);
             }
             else
             {
                 EmptyWeatherInformations();
-                MessageBox.Show(resources.GetString("Weather_err"));
             }
         }
 
@@ -94,16 +93,17 @@ namespace Xtream_ToolBox.Sensors
             pressureAndVisibilityGroupBox.Enabled = false;
             windGroupBox.Enabled = false;
             String naStr = resources.GetString("not_available");
+            weatherPictureBox.Image = weatherPictureBox.Image = Properties.Resources.weather_na;
 
             localisationLabel.Text = resources.GetString("Weather_01");
-            localisationPositionLabel.Text = String.Format(resources.GetString("Weather_02"), naStr, naStr, naStr);
+            localisationPositionLabel.Text = String.Format(resources.GetString("Weather_02"), naStr, naStr);
             lastMesureLabel.Text = String.Format(resources.GetString("Weather_03"), naStr);
-            lastUpdateLabel.Text = String.Format(resources.GetString("Weather_04"), naStr);
+            sunLabel.Text = String.Format(resources.GetString("Weather_04"), naStr, naStr);
             tempLabel.Text = String.Format(resources.GetString("Weather_05"), naStr, naStr, naStr, naStr);
-            humidityDrewLabel.Text = String.Format(resources.GetString("Weather_06"), naStr, naStr, naStr);
-            barometricPressureLabel.Text = String.Format(resources.GetString("Weather_07"), naStr, naStr, naStr);
-            uvVisLabel.Text = String.Format(resources.GetString("Weather_08"), naStr, naStr, naStr);
-            windLabel.Text = String.Format(resources.GetString("Weather_09"), naStr, naStr, naStr, naStr);
+            humidityLabel.Text = String.Format(resources.GetString("Weather_06"), naStr);
+            pressureLabel.Text = String.Format(resources.GetString("Weather_07"), naStr, naStr);
+            visibilityLabel.Text = String.Format(resources.GetString("Weather_08"), naStr, naStr);
+            windLabel.Text = String.Format(resources.GetString("Weather_09"), naStr, naStr, naStr);
         }
 
         // close extended panel
@@ -112,19 +112,14 @@ namespace Xtream_ToolBox.Sensors
             Hide();
         }
 
-        private void ChangeLocationButton_Click(object sender, EventArgs e)
-        {
-            SaveConfiguration();
-        }
-
-        private void SystemComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SaveConfiguration();
-        }
-
         private void WeatherLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.weather.com");
+            System.Diagnostics.Process.Start("https://openweathermap.org/");
+        }
+
+        private void ApplyButton_Click(object sender, EventArgs e)
+        {
+            SaveConfiguration();
         }
     }
 }

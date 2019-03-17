@@ -1,3 +1,6 @@
+## version 2018.03.17
+- [Weather sensor] replace the weather underground api by openweathermap.org [#13](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/13)
+
 ## version 2018.03.14
 - [Notepad Sensor] Add confirm dialogBox when clearing notepad [#1](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/1)
 - [Notepad Sensor] Import text file append instead of replace [#5](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/5)

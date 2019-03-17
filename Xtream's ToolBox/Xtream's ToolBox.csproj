@@ -560,7 +560,7 @@
     <Compile Include="Sensors\Commons\ToolBoxStarter.Designer.cs">
       <DependentUpon>ToolBoxStarter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sensors\Weather\Weather.cs" />
+    <Compile Include="Sensors\Weather\CurrentCondition.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="ToolBox.cs">
       <SubType>Form</SubType>
@@ -716,237 +716,45 @@
     <None Include="Resources\progress.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nt_chancerain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_chanceflurries.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_chanceflurries.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_chancesleet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_chancesleet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_chanceflurries.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_chancerain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_chancesleet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_chancesnow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_chancetstorms.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_clear.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_cloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_flurries.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_fog.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_mostlycloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_mostlysunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_na.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_clear..png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_cloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_fog.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_mostlycloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_mostlysunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_partlycloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_partlysunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_rain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_sleet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_snow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_sunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_tstorms.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_partlycloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_partlysunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_rain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_sleet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_snow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_sunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_tstorms.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\chanceflurries.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\chancerain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\chancesleet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\chancesnow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\chancetstorms.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\clear.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\flurries.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fog.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hazy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mostlycloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mostlysunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\na.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_clear..png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_cloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_flurries.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_fog.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_hazy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_mostlycloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_mostlysunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_partlycloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_partlysunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_rain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_sleet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_snow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_sunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_tstorms.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\partlycloudy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\partlysunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sleet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\snow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sunny.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tstorms.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_chancesnow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_chancesnow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_chancetstorms.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nt_chancetstorms.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_chancerain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_fog1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_nt_fog1.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\openWeatherMapLogo.png" />
+    <Content Include="Resources\weather_01d.png" />
+    <Content Include="Resources\weather_01n.png" />
+    <Content Include="Resources\weather_02d.png" />
+    <Content Include="Resources\weather_02n.png" />
+    <Content Include="Resources\weather_03d.png" />
+    <Content Include="Resources\weather_03n.png" />
+    <Content Include="Resources\weather_04d.png" />
+    <Content Include="Resources\weather_04n.png" />
+    <Content Include="Resources\weather_09d.png" />
+    <Content Include="Resources\weather_09n.png" />
+    <Content Include="Resources\weather_10d.png" />
+    <Content Include="Resources\weather_10n.png" />
+    <Content Include="Resources\weather_11d.png" />
+    <Content Include="Resources\weather_11n.png" />
+    <Content Include="Resources\weather_13d.png" />
+    <Content Include="Resources\weather_13n.png" />
+    <Content Include="Resources\weather_50d.png" />
+    <Content Include="Resources\weather_50n.png" />
+    <Content Include="Resources\weather_na.png" />
+    <Content Include="Resources\weather_small_01d.png" />
+    <Content Include="Resources\weather_small_01n.png" />
+    <Content Include="Resources\weather_small_02d.png" />
+    <Content Include="Resources\weather_small_02n.png" />
+    <Content Include="Resources\weather_small_03d.png" />
+    <Content Include="Resources\weather_small_03n.png" />
+    <Content Include="Resources\weather_small_04d.png" />
+    <Content Include="Resources\weather_small_04n.png" />
+    <Content Include="Resources\weather_small_09d.png" />
+    <Content Include="Resources\weather_small_09n.png" />
+    <Content Include="Resources\weather_small_10d.png" />
+    <Content Include="Resources\weather_small_10n.png" />
+    <Content Include="Resources\weather_small_11d.png" />
+    <Content Include="Resources\weather_small_11n.png" />
+    <Content Include="Resources\weather_small_13d.png" />
+    <Content Include="Resources\weather_small_13n.png" />
+    <Content Include="Resources\weather_small_50d.png" />
+    <Content Include="Resources\weather_small_50n.png" />
+    <Content Include="Resources\weather_small_na.png" />
     <None Include="Resources\check_16.png" />
     <Content Include="Resources\Clock.png" />
     <Content Include="Resources\shutdownManager_hibernate_small.png" />

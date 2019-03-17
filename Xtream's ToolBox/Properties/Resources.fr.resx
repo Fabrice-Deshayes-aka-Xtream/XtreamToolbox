@@ -427,46 +427,28 @@
     <value>Dernière mesure : {0}</value>
   </data>
   <data name="Weather_04" xml:space="preserve">
-    <value>Dernière mise à jour : {0}</value>
-  </data>
-  <data name="Weather_05" xml:space="preserve">
-    <value>Température : {0}°{1} (ressentie {2}°{3})</value>
-  </data>
-  <data name="Weather_06" xml:space="preserve">
-    <value>Humidité relative : {0} / Point de rosée : {1}°{2}</value>
-  </data>
-  <data name="Weather_08" xml:space="preserve">
-    <value>Indice UV : {0} / Visibilité : {1} {2}</value>
-  </data>
-  <data name="Weather_09" xml:space="preserve">
-    <value>Vitesse du vent : {0} {1} en provenance de {2} ({3}°)</value>
-  </data>
-  <data name="Weather_11" xml:space="preserve">
     <value>Le soleil se lève à {0} et se couche à {1}</value>
   </data>
-  <data name="Weather_12" xml:space="preserve">
-    <value>Phase de la lune actuelle : {0}</value>
+  <data name="Weather_05" xml:space="preserve">
+    <value>Température : {0}{3} (min {1}{3}, max {2}{3})</value>
+  </data>
+  <data name="Weather_06" xml:space="preserve">
+    <value>Humidité : {0}%</value>
+  </data>
+  <data name="Weather_08" xml:space="preserve">
+    <value>Visibilité : {0} {1}</value>
+  </data>
+  <data name="Weather_09" xml:space="preserve">
+    <value>Vitesse du vent : {0} {1} (direction : {2}°)</value>
   </data>
   <data name="Weather_DataProvider" xml:space="preserve">
     <value>Infos météo fournies par</value>
   </data>
   <data name="Weather_err" xml:space="preserve">
-    <value>Impossible de récupérer les informations météo. Vérifiez votre code de localisation, votre connection réseau et le bon fonctionnement du site web www.weather.com</value>
+    <value>Impossible de récupérer les informations météo. Vérifiez votre code de localisation, votre connection réseau et le bon fonctionnement du site web openweathermap.org</value>
   </data>
   <data name="Weather_tip" xml:space="preserve">
     <value>Ouvrir / Fermer les informations météo</value>
-  </data>
-  <data name="Weather_WinDir_E" xml:space="preserve">
-    <value>Est</value>
-  </data>
-  <data name="Weather_WinDir_N" xml:space="preserve">
-    <value>Nord</value>
-  </data>
-  <data name="Weather_WinDir_S" xml:space="preserve">
-    <value>Sud</value>
-  </data>
-  <data name="Weather_WinDir_W" xml:space="preserve">
-    <value>Ouest</value>
   </data>
   <data name="ShutdownManager_ConfirmeHibernate" xml:space="preserve">
     <value>Voulez vous vraiment mettre votre ordinateur en veille prolongée ?</value>
@@ -518,5 +500,8 @@
   </data>
   <data name="Sys_tbyte" xml:space="preserve">
     <value>To</value>
+  </data>
+  <data name="Weather_07" xml:space="preserve">
+    <value>Pression : {0} {1}</value>
   </data>
 </root>

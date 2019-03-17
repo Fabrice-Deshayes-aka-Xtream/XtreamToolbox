@@ -53,8 +53,8 @@
     <Setting Name="notificationPopup" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="weatherCode" Type="System.String" Scope="User">
-      <Value Profile="(Default)">London, UK</Value>
+    <Setting Name="weatherCityId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2988507</Value>
     </Setting>
     <Setting Name="spaceBetweenSensor" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
@@ -226,6 +226,9 @@
     </Setting>
     <Setting Name="location" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="weatherTempUnit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">metric</Value>
     </Setting>
   </Settings>
 </SettingsFile>

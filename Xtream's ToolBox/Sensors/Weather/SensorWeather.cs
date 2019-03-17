@@ -26,7 +26,7 @@ namespace Xtream_ToolBox.Sensors
         // information system supplémentaires affichées lors du survol de la souris
         private SensorWeatherExtendedPanel extendedPanel = null;
 
-        public Weather currentWeather = null;
+        public CurrentCondition currentCondition = null;
 
         // constructor
         public SensorWeather(ToolBox toolbox)
@@ -80,22 +80,23 @@ namespace Xtream_ToolBox.Sensors
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
         public void InitSensorData()
         {
-            currentWeather = Weather.GetCurrentConditionWeather(Properties.Settings.Default.weatherCode);
-            currentWeather = Friendly(currentWeather);
+            currentCondition = CurrentCondition.GetCurrentCondition(Properties.Settings.Default.weatherCityId, Properties.Settings.Default.weatherTempUnit);
         }
 
         // refresh UI based on sensor Data
         public void RefreshUI()
         {
-            if (currentWeather == null || currentWeather.currentObservation == null)
+            if (currentCondition == null || currentCondition.Weather == null || currentCondition.Weather.Length == 0)
             {
-                weatherPictureBox.Image = Properties.Resources._na;
+                weatherPictureBox.Image = Properties.Resources.weather_small_na;
                 tempLabel.Text = resources.GetString("not_available");
-                return;
+            } else if (!CurrentCondition.availableIcons.Contains(currentCondition.Weather[0].Icon))
+            {
+                weatherPictureBox.Image = Properties.Resources.weather_small_na;
             } else
             {
-                tempLabel.Text = currentWeather.currentObservation.temp + "°C";
-                weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + currentWeather.currentObservation.icon);
+                tempLabel.Text = Math.Round(currentCondition.Main.Temp,1) + " " + currentCondition.TempUnits;
+                weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject("weather_small_" + currentCondition.Weather[0].Icon);
             }
 
             if ((extendedPanel != null) && (!extendedPanel.IsDisposed))
@@ -138,24 +139,6 @@ namespace Xtream_ToolBox.Sensors
                 ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
                 extendedPanel.Show();
             }
-        }
-
-        // transform dataset for internationnalisation
-        private Weather Friendly(Weather weather)
-        {
-            try
-            {
-                //// Friendly Wind direction
-                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("North", resources.GetString("Weather_WinDir_N"));
-                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("South", resources.GetString("Weather_WinDir_S"));
-                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("East", resources.GetString("Weather_WinDir_E"));
-                weather.currentObservation.windDirection = weather.currentObservation.windDirection.Replace("West", resources.GetString("Weather_WinDir_W"));
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
-            return weather;
         }
     }
 }

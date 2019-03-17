@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;closeExtendedInfosPictureBox.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="weatherPictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 10</value>
@@ -165,7 +165,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;weatherPictureBox.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="localisationLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -195,7 +195,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;localisationLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="localisationPositionLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -204,13 +204,13 @@
     <value>154, 31</value>
   </data>
   <data name="localisationPositionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 13</value>
+    <value>139, 13</value>
   </data>
   <data name="localisationPositionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
   <data name="localisationPositionLabel.Text" xml:space="preserve">
-    <value>Latitude n/a / longitude n/a (zone n/a)</value>
+    <value>Latitude n/a / longitude n/a</value>
   </data>
   <data name="&gt;&gt;localisationPositionLabel.Name" xml:space="preserve">
     <value>localisationPositionLabel</value>
@@ -222,60 +222,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;localisationPositionLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
-  <data name="lastUpdateLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="humidityLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lastUpdateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 69</value>
-  </data>
-  <data name="lastUpdateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 13</value>
-  </data>
-  <data name="lastUpdateLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="lastUpdateLabel.Text" xml:space="preserve">
-    <value>Last update : n/a</value>
-  </data>
-  <data name="&gt;&gt;lastUpdateLabel.Name" xml:space="preserve">
-    <value>lastUpdateLabel</value>
-  </data>
-  <data name="&gt;&gt;lastUpdateLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lastUpdateLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lastUpdateLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="humidityDrewLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="humidityDrewLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="humidityLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>60, 45</value>
   </data>
-  <data name="humidityDrewLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 13</value>
+  <data name="humidityLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
   </data>
-  <data name="humidityDrewLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="humidityLabel.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="humidityDrewLabel.Text" xml:space="preserve">
-    <value>Relative Humidity : 30% / Drew point : 13</value>
+  <data name="humidityLabel.Text" xml:space="preserve">
+    <value>Humidity : 30%</value>
   </data>
-  <data name="&gt;&gt;humidityDrewLabel.Name" xml:space="preserve">
-    <value>humidityDrewLabel</value>
+  <data name="&gt;&gt;humidityLabel.Name" xml:space="preserve">
+    <value>humidityLabel</value>
   </data>
-  <data name="&gt;&gt;humidityDrewLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;humidityLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;humidityDrewLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;humidityLabel.Parent" xml:space="preserve">
     <value>temperatureGroupbox</value>
   </data>
-  <data name="&gt;&gt;humidityDrewLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;humidityLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="tempLabel.AutoSize" type="System.Boolean, mscorlib">
@@ -285,13 +258,13 @@
     <value>60, 21</value>
   </data>
   <data name="tempLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 13</value>
+    <value>168, 13</value>
   </data>
   <data name="tempLabel.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
   <data name="tempLabel.Text" xml:space="preserve">
-    <value>Temp : 23°C (feels like 21°C)</value>
+    <value>Temp : 23°C (min 15°C, max 25°C)</value>
   </data>
   <data name="&gt;&gt;tempLabel.Name" xml:space="preserve">
     <value>tempLabel</value>
@@ -348,60 +321,60 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;temperatureGroupbox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
-  <data name="uvVisLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="visibilityLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="uvVisLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="visibilityLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>60, 45</value>
   </data>
-  <data name="uvVisLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 13</value>
+  <data name="visibilityLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
   </data>
-  <data name="uvVisLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="visibilityLabel.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="uvVisLabel.Text" xml:space="preserve">
-    <value>UV index : 5 / Visibility : 20 km</value>
+  <data name="visibilityLabel.Text" xml:space="preserve">
+    <value>Visibility : 20 km</value>
   </data>
-  <data name="&gt;&gt;uvVisLabel.Name" xml:space="preserve">
-    <value>uvVisLabel</value>
+  <data name="&gt;&gt;visibilityLabel.Name" xml:space="preserve">
+    <value>visibilityLabel</value>
   </data>
-  <data name="&gt;&gt;uvVisLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;visibilityLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;uvVisLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;visibilityLabel.Parent" xml:space="preserve">
     <value>pressureAndVisibilityGroupBox</value>
   </data>
-  <data name="&gt;&gt;uvVisLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;visibilityLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="barometricPressureLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="pressureLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="barometricPressureLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pressureLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>60, 21</value>
   </data>
-  <data name="barometricPressureLabel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pressureLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 13</value>
   </data>
-  <data name="barometricPressureLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="pressureLabel.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
-  <data name="barometricPressureLabel.Text" xml:space="preserve">
+  <data name="pressureLabel.Text" xml:space="preserve">
     <value>Barometric pressure : 1024mb (steady)</value>
   </data>
-  <data name="&gt;&gt;barometricPressureLabel.Name" xml:space="preserve">
-    <value>barometricPressureLabel</value>
+  <data name="&gt;&gt;pressureLabel.Name" xml:space="preserve">
+    <value>pressureLabel</value>
   </data>
-  <data name="&gt;&gt;barometricPressureLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;pressureLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;barometricPressureLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pressureLabel.Parent" xml:space="preserve">
     <value>pressureAndVisibilityGroupBox</value>
   </data>
-  <data name="&gt;&gt;barometricPressureLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pressureLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
@@ -435,7 +408,7 @@
     <value>31</value>
   </data>
   <data name="pressureAndVisibilityGroupBox.Text" xml:space="preserve">
-    <value>Barometric pressure and visibility</value>
+    <value>Pressure and visibility</value>
   </data>
   <data name="&gt;&gt;pressureAndVisibilityGroupBox.Name" xml:space="preserve">
     <value>pressureAndVisibilityGroupBox</value>
@@ -447,7 +420,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pressureAndVisibilityGroupBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="windLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -523,7 +496,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;windGroupBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="lastMesureLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -550,46 +523,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lastMesureLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 368</value>
-  </data>
-  <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="weatherLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="weatherLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 378</value>
+    <value>62, 379</value>
   </data>
   <data name="weatherLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 13</value>
+    <value>130, 13</value>
   </data>
   <data name="weatherLabel.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
   <data name="weatherLabel.Text" xml:space="preserve">
-    <value>Weather data provide by</value>
+    <value>Weather data provided by</value>
   </data>
   <data name="&gt;&gt;weatherLabel.Name" xml:space="preserve">
     <value>weatherLabel</value>
@@ -601,13 +550,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;weatherLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="locationTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 88</value>
+    <value>195, 88</value>
   </data>
   <data name="locationTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 20</value>
+    <value>98, 20</value>
   </data>
   <data name="locationTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -622,49 +571,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;locationTextBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="changeLocationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 114</value>
-  </data>
-  <data name="changeLocationButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 24</value>
-  </data>
-  <data name="changeLocationButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="changeLocationButton.Text" xml:space="preserve">
-    <value>update weather informations</value>
-  </data>
-  <data name="changeLocationButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;changeLocationButton.Name" xml:space="preserve">
-    <value>changeLocationButton</value>
-  </data>
-  <data name="&gt;&gt;changeLocationButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;changeLocationButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;changeLocationButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="weatherLinkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="weatherLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 378</value>
+    <value>192, 379</value>
   </data>
   <data name="weatherLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 13</value>
+    <value>143, 13</value>
   </data>
   <data name="weatherLinkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
   <data name="weatherLinkLabel.Text" xml:space="preserve">
-    <value>http://www.weather.com</value>
+    <value>https://openweathermap.org</value>
   </data>
   <data name="&gt;&gt;weatherLinkLabel.Name" xml:space="preserve">
     <value>weatherLinkLabel</value>
@@ -676,6 +598,121 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;weatherLinkLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cityIdLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cityIdLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cityIdLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 91</value>
+  </data>
+  <data name="cityIdLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="cityIdLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="cityIdLabel.Text" xml:space="preserve">
+    <value>City id</value>
+  </data>
+  <data name="&gt;&gt;cityIdLabel.Name" xml:space="preserve">
+    <value>cityIdLabel</value>
+  </data>
+  <data name="&gt;&gt;cityIdLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cityIdLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cityIdLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="sunLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sunLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="sunLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 67</value>
+  </data>
+  <data name="sunLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 13</value>
+  </data>
+  <data name="sunLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="sunLabel.Text" xml:space="preserve">
+    <value>Sunrise at xx. Sunset at xx.</value>
+  </data>
+  <data name="&gt;&gt;sunLabel.Name" xml:space="preserve">
+    <value>sunLabel</value>
+  </data>
+  <data name="&gt;&gt;sunLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sunLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;sunLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="findCityIdLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="findCityIdLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="findCityIdLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 111</value>
+  </data>
+  <data name="findCityIdLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 26</value>
+  </data>
+  <data name="findCityIdLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="findCityIdLabel.Text" xml:space="preserve">
+    <value>- find your city on openweathermap.org site
+- copy your city id in url and paste it there</value>
+  </data>
+  <data name="&gt;&gt;findCityIdLabel.Name" xml:space="preserve">
+    <value>findCityIdLabel</value>
+  </data>
+  <data name="&gt;&gt;findCityIdLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;findCityIdLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;findCityIdLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ApplyButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 86</value>
+  </data>
+  <data name="ApplyButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
+  </data>
+  <data name="ApplyButton.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="ApplyButton.Text" xml:space="preserve">
+    <value>apply</value>
+  </data>
+  <data name="&gt;&gt;ApplyButton.Name" xml:space="preserve">
+    <value>ApplyButton</value>
+  </data>
+  <data name="&gt;&gt;ApplyButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ApplyButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ApplyButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -685,7 +722,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>400, 410</value>
+    <value>400, 420</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
