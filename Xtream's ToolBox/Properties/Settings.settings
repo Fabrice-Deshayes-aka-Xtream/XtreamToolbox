@@ -222,7 +222,7 @@
       <Value Profile="(Default)">https://contacts.google.com</Value>
     </Setting>
     <Setting Name="_version" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">2018.03.14</Value>
+      <Value Profile="(Default)">2018.03.17</Value>
     </Setting>
     <Setting Name="location" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
