@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Xtream_ToolBox.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="XtreamToolbox.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="posX" Type="System.Int32" Scope="User">
@@ -222,7 +222,7 @@
       <Value Profile="(Default)">https://contacts.google.com</Value>
     </Setting>
     <Setting Name="_version" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">2019.03.17</Value>
+      <Value Profile="(Default)">2019.05.03</Value>
     </Setting>
     <Setting Name="location" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />

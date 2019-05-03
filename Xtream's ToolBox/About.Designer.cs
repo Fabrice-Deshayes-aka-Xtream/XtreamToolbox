@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox
+﻿namespace XtreamToolbox
 {
     partial class About
     {
@@ -106,7 +106,7 @@
             this.productNameLabel.Name = "productNameLabel";
             this.productNameLabel.Size = new System.Drawing.Size(357, 22);
             this.productNameLabel.TabIndex = 32;
-            this.productNameLabel.Text = "Xtream\'s ToolBox";
+            this.productNameLabel.Text = "Xtream\'s Toolbox";
             this.productNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // homepageLabel
@@ -321,7 +321,7 @@
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Xtream_ToolBox.Properties.Resources.GitHubChangeLog;
+            this.button1.Image = global::XtreamToolbox.Properties.Resources.GitHubChangeLog;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(44, 369);
             this.button1.Name = "button1";
@@ -335,7 +335,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Xtream_ToolBox.Properties.Resources.Logo_Xtream;
+            this.pictureBox1.Image = global::XtreamToolbox.Properties.Resources.Logo_Xtream;
             this.pictureBox1.Location = new System.Drawing.Point(51, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(300, 106);
@@ -346,7 +346,7 @@
             // About
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.extendInfosBackground;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.extendInfosBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(400, 480);
             this.Controls.Add(this.label11);

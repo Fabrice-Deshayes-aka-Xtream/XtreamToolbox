@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using System.IO;
 using System.Collections.Specialized;
 
-namespace Xtream_ToolBox.Utils.Mail
+namespace XtreamToolbox.Utils.Mail
 {
     class Pop3Client : IMailClient, IDisposable
     {
@@ -170,7 +170,7 @@ namespace Xtream_ToolBox.Utils.Mail
             }
         }
 
-        // Récupère la réponse à une commande pop
+        // RÃ©cupÃ©re la rÃ©ponse Ã© une commande pop
         private String Receive(StreamReader sr)
         {
             String response = "";

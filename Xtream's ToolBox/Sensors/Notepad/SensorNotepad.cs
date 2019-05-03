@@ -6,25 +6,25 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using System.Resources;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 using System.IO;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class SensorNotepad : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         // Extended notepad panel
         private SensorNotepadExtendedPanel extendedPanel = null;
 
         // constructor
-        public SensorNotepad(ToolBox toolbox)
+        public SensorNotepad(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;

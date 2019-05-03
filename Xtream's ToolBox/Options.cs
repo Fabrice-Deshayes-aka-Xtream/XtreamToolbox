@@ -8,28 +8,28 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Collections.Specialized;
 using System.Net.NetworkInformation;
-using Xtream_ToolBox.Utils;
-using Xtream_ToolBox.Sensors;
+using XtreamToolbox.Utils;
+using XtreamToolbox.Sensors;
 using TimeSync;
 using System.Configuration;
 using System.IO;
 
-namespace Xtream_ToolBox
+namespace XtreamToolbox
 {
 
     public partial class OptionsForm : Form
     {
 
-        ToolBox toolBox = null;
+        Toolbox toolBox = null;
 
         // constructor
-        public OptionsForm(ToolBox toolBox)
+        public OptionsForm(Toolbox toolBox)
         {
             InitializeComponent();
             this.toolBox = toolBox;
         }
 
-        // Initialisation des options et paramètres
+        // Initialisation des options et paramÃ©tres
         public void Initialisation()
         {
             // General options
@@ -48,7 +48,7 @@ namespace Xtream_ToolBox
             timeServerComboBox.Items.Add("ntps1-0.cs.tu-berlin.de");
             timeServerComboBox.Items.Add("swisstime.ethz.ch");
             timeServerComboBox.Items.Add("clock.uregina.ca");
-            if ((Properties.Settings.Default.timeServerUrl != null) && (!Properties.Settings.Default.timeServerUrl.Equals("")))
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.timeServerUrl))
             {
                 if (!timeServerComboBox.Items.Contains(Properties.Settings.Default.timeServerUrl))
                 {
@@ -68,7 +68,7 @@ namespace Xtream_ToolBox
 
             langageComboBox.Items.Clear();
             langageComboBox.Items.Add("english");
-            langageComboBox.Items.Add("français");
+            langageComboBox.Items.Add("franÃ§ais");
             switch (Properties.Settings.Default.language)
             {
                 case "en-US":
@@ -76,7 +76,7 @@ namespace Xtream_ToolBox
                     break;
                 case "fr-FR":
                 default:
-                    langageComboBox.SelectedItem = "français";
+                    langageComboBox.SelectedItem = "franÃ§ais";
                     break;
             }
 
@@ -115,7 +115,7 @@ namespace Xtream_ToolBox
             tooltipsAppearComboBox.Text = Properties.Settings.Default.hintsAfter.ToString();
             tooltipsDisappearComboBox.Text = Properties.Settings.Default.hintsLength.ToString();
 
-            // liste des sensors présent sur la toolbox
+            // liste des sensors prÃ©sent sur la toolbox
             sensorsListBox.Items.Clear();
             foreach (String sensor in Properties.Settings.Default.sensors)
             {
@@ -165,12 +165,12 @@ namespace Xtream_ToolBox
             {
                 foreach (String locationStr in Properties.Settings.Default.location)
                 {
-                    Location location = Xtream_ToolBox.Location.FromString(locationStr);
+                    Location location = XtreamToolbox.Location.FromString(locationStr);
                     if (location != null)
                     {
                         switch (location.Type)
                         {
-                            case Xtream_ToolBox.Location.POP3ACCOUNT:
+                            case XtreamToolbox.Location.POP3ACCOUNT:
                                 popListBox.Items.Add(location);
                                 break;
                             default:
@@ -181,7 +181,7 @@ namespace Xtream_ToolBox
             }
 
             popRefreshTimeComboBox.Text = Properties.Settings.Default.popCheckerRefreshTime.ToString();
-            if ((Properties.Settings.Default.defaultEmailClient == null) || (Properties.Settings.Default.defaultEmailClient == ""))
+            if (string.IsNullOrEmpty(Properties.Settings.Default.defaultEmailClient))
             {
                 Properties.Settings.Default.defaultEmailClient = "default";
             }
@@ -319,7 +319,7 @@ namespace Xtream_ToolBox
             UpdateSystemProperties();
             Close();
 
-            toolBox.action = "relaunch";
+            toolBox.Action = "relaunch";
         }
 
 
@@ -352,7 +352,7 @@ namespace Xtream_ToolBox
                 case "english":
                     Properties.Settings.Default.language = "en-US";
                     break;
-                case "français":
+                case "franÃ§ais":
                 default:
                     Properties.Settings.Default.language = "fr-FR";
                     break;
@@ -454,8 +454,8 @@ namespace Xtream_ToolBox
             Location currentLocation;
             foreach (String locationStr in Properties.Settings.Default.location)
             {
-                currentLocation = Xtream_ToolBox.Location.FromString(locationStr);
-                if ((currentLocation.Type == Xtream_ToolBox.Location.APPLICATION) || (currentLocation.Type == Xtream_ToolBox.Location.CALENDAR))
+                currentLocation = XtreamToolbox.Location.FromString(locationStr);
+                if ((currentLocation.Type == XtreamToolbox.Location.APPLICATION) || (currentLocation.Type == XtreamToolbox.Location.CALENDAR))
                 {
                     locations.Add(locationStr);
                 }
@@ -479,7 +479,7 @@ namespace Xtream_ToolBox
                 Properties.Settings.Default.popCheckerRefreshTime = 5;
             }
 
-            if (emailClientTextBox.Text.Equals(""))
+            if (string.IsNullOrEmpty(emailClientTextBox.Text))
             {
                 emailClientTextBox.Text = "default";
             }
@@ -584,19 +584,19 @@ namespace Xtream_ToolBox
         /* ---------------------- */
         /* manage SENSOR list box */
         /* ---------------------- */
-        // déplace le sensor selectionné vers le bas
+        // dÃ©place le sensor selectionnÃ© vers le bas
         private void MoveSensorDownButton_Click(object sender, EventArgs e)
         {
             ToolBoxUtils.MoveSelectedItem(sensorsListBox, ToolBoxUtils.DOWN);
         }
 
-        // déplace le sensor selectionné vers le haut
+        // dÃ©place le sensor selectionnÃ© vers le haut
         private void MoveSensorUpButton_Click(object sender, EventArgs e)
         {
             ToolBoxUtils.MoveSelectedItem(sensorsListBox, ToolBoxUtils.UP);
         }
 
-        // ajoute un sensor à la liste des sensors à afficher
+        // ajoute un sensor a la liste des sensors a afficher
         private void AddSensorButton_Click(object sender, EventArgs e)
         {
             sensorsListBox.Items.Add(availableSensorsComboBox.SelectedItem);
@@ -624,7 +624,7 @@ namespace Xtream_ToolBox
             }
         }
 
-        // active ou desactive les bouton "up"/"down"/"delete" selon l'item selectionné
+        // active ou desactive les bouton "up"/"down"/"delete" selon l'item selectionnÃ©
         private void SensorsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             deleteSensorButton.Enabled = (sensorsListBox.SelectedItem != null);
@@ -686,10 +686,10 @@ namespace Xtream_ToolBox
             String response = ControlPopLocation();
             if (response == null)
             {
-                Location newLocation = new Location(popServerTextBox.Text + " on account " + popLoginTextBox.Text, Xtream_ToolBox.Location.POP3ACCOUNT, popServerTextBox.Text);
+                Location newLocation = new Location(popServerTextBox.Text + " on account " + popLoginTextBox.Text, XtreamToolbox.Location.POP3ACCOUNT, popServerTextBox.Text);
                 newLocation.Parameters.Add("user", popLoginTextBox.Text);
                 newLocation.Parameters.Add("password", popPasswordTextBox.Text);
-                if (popPortTextBox.Text.Equals(""))
+                if (string.IsNullOrEmpty(popPortTextBox.Text))
                 {
                     popPortTextBox.Text = "110";
                 }
@@ -740,7 +740,7 @@ namespace Xtream_ToolBox
             String retour = null;
             String timeServer = doWorkEventArgs.Argument.ToString();
 
-            if ((timeServer == null) || (timeServer.Equals("")))
+            if (string.IsNullOrEmpty(timeServer))
             {
                 retour = "you must choose a time server";
             }
@@ -804,7 +804,7 @@ namespace Xtream_ToolBox
 
         private void ExportOptionsButton_Click(object sender, EventArgs e)
         {
-            exportOptionFileDialog.FileName = "Xtream_ToolBox_Configuration_" + DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + ".xml";
+            exportOptionFileDialog.FileName = "XtreamToolbox_Configuration_" + DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + ".xml";
             if (exportOptionFileDialog.ShowDialog() == DialogResult.OK)
             {
                 UpdateSystemProperties();

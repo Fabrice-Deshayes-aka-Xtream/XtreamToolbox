@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors {
+﻿namespace XtreamToolbox.Sensors {
     partial class StorageUserControl {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -41,7 +41,7 @@
             // 
             this.devicePictureBox.BackColor = System.Drawing.Color.Transparent;
             this.devicePictureBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.devicePictureBox.Image = global::Xtream_ToolBox.Properties.Resources.Drive_harddisc;
+            this.devicePictureBox.Image = global::XtreamToolbox.Properties.Resources.Drive_harddisc;
             this.devicePictureBox.Location = new System.Drawing.Point(0, 0);
             this.devicePictureBox.Margin = new System.Windows.Forms.Padding(0);
             this.devicePictureBox.Name = "devicePictureBox";
@@ -62,7 +62,7 @@
             // 
             // deviceSpacePictureBox
             // 
-            this.deviceSpacePictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.vumeter;
+            this.deviceSpacePictureBox.BackgroundImage = global::XtreamToolbox.Properties.Resources.vumeter;
             this.deviceSpacePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.deviceSpacePictureBox.Location = new System.Drawing.Point(54, 21);
             this.deviceSpacePictureBox.Name = "deviceSpacePictureBox";
@@ -84,7 +84,7 @@
             // deviceSpaceBackgroundPictureBox
             // 
             this.deviceSpaceBackgroundPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.deviceSpaceBackgroundPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.vumeter_background;
+            this.deviceSpaceBackgroundPictureBox.BackgroundImage = global::XtreamToolbox.Properties.Resources.vumeter_background;
             this.deviceSpaceBackgroundPictureBox.Location = new System.Drawing.Point(54, 21);
             this.deviceSpaceBackgroundPictureBox.Name = "deviceSpaceBackgroundPictureBox";
             this.deviceSpaceBackgroundPictureBox.Size = new System.Drawing.Size(50, 9);

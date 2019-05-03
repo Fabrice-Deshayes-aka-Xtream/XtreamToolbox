@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors
+﻿namespace XtreamToolbox.Sensors
 {
     partial class SensorNotepad
     {
@@ -45,7 +45,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.notepad;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.notepad;
             resources.ApplyResources(this, "$this");
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DoubleBuffered = true;

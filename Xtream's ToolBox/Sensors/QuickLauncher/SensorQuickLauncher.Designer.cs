@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors
+﻿namespace XtreamToolbox.Sensors
 {
     partial class SensorQuickLauncher
     {
@@ -98,7 +98,7 @@
             // 
             // propertiesToolStripMenuItem
             // 
-            this.propertiesToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.properties;
+            this.propertiesToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.properties;
             this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             this.propertiesToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.propertiesToolStripMenuItem.Text = "View or change item\'s properties";
@@ -106,7 +106,7 @@
             // 
             // addSeparatorAfterThisItemToolStripMenuItem
             // 
-            this.addSeparatorAfterThisItemToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.add_16;
+            this.addSeparatorAfterThisItemToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.add_16;
             this.addSeparatorAfterThisItemToolStripMenuItem.Name = "addSeparatorAfterThisItemToolStripMenuItem";
             this.addSeparatorAfterThisItemToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.addSeparatorAfterThisItemToolStripMenuItem.Text = "Insert separator before this item";
@@ -119,7 +119,7 @@
             // 
             // removeToolStripMenuItem
             // 
-            this.removeToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
+            this.removeToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.trash_16;
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.removeToolStripMenuItem.Text = "Remove this item";
@@ -135,7 +135,7 @@
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
+            this.toolStripMenuItem1.Image = global::XtreamToolbox.Properties.Resources.trash_16;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
             this.toolStripMenuItem1.Text = "Remove this separator";

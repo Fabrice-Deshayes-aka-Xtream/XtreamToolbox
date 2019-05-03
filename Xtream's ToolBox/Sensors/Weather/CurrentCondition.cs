@@ -8,7 +8,7 @@ using System.IO;
 using System.Globalization;
 using Newtonsoft.Json;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
 
     public class CurrentCondition
@@ -57,23 +57,20 @@ namespace Xtream_ToolBox.Sensors
         */
         private const String serviceUrl = "http://api.openweathermap.org/data/2.5/weather?APPID=21b1038d06dfc516332435c8477ec327&id=";
 
-        public static List<string> availableIcons = new List<string>()
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public int Visibility { get; set; }
+        public double Dt { get; set; }
+        public Weather_weather[] Weather { get; set; }
+        public Weather_main Main { get; set; }
+        public Weather_coord Coord { get; set; }
+        public Weather_wind Wind { get; set; }
+        public Weather_Sys Sys { get; set; }
+        public string TempUnits { get; set; }
+        public string WindSpeedUnit { get; set; }
+        public string PressureUnit { get; set; }
+        public static List<string> AvailableIcons { get; } = new List<string>()
             { "01d","01n","02d","02n","03d","03n","04d","04n","09d","09n","10d","10n","11d","11n","13d","13n","50d","50n" };
-
-        public string Id;
-        public string Name;
-        // visibility (not in documentation!)
-        public int Visibility;
-        public double Dt;        
-        public Weather_weather[] Weather;
-        public Weather_main Main;
-        public Weather_coord Coord;
-        public Weather_wind Wind;
-        public Weather_Sys Sys;
-
-        public string TempUnits;
-        public string WindSpeedUnit;
-        public string PressureUnit;
 
         // default constructor
         public CurrentCondition()
@@ -95,14 +92,14 @@ namespace Xtream_ToolBox.Sensors
                 switch (tempUnit)
                 {
                     case "metric":
-                        currentCondition.TempUnits = "°C";
+                        currentCondition.TempUnits = "Â°C";
                         currentCondition.WindSpeedUnit = "km/h";
                         currentCondition.PressureUnit = "hPa";
                         // convert wind speed from meter/second to km/second
                         currentCondition.Wind.Speed = (float)Math.Round(currentCondition.Wind.Speed * 3.6f);
                         break;
                     case "imperial":
-                        currentCondition.TempUnits = "°F";
+                        currentCondition.TempUnits = "Â°F";
                         currentCondition.WindSpeedUnit = "mph";
                         currentCondition.PressureUnit = "hPa";
                         break;
@@ -118,7 +115,7 @@ namespace Xtream_ToolBox.Sensors
             }
             catch(WebException we)
             {
-                System.Windows.Forms.MessageBox.Show(we.Message, "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                // log we.Message
                 return null;
             }
 
@@ -135,37 +132,37 @@ namespace Xtream_ToolBox.Sensors
 
     public class Weather_weather
     {
-        public string Id;
-        public string Main;
-        public string Description;
-        public string Icon;
+        public string Description { get; set; }
+        public string Icon { get; set; }
+        public string Main { get; set; }
+        public string Id { get; set; }
     }
 
     public class Weather_main
     {
-        public float Temp;
-        public float Pressure;
-        public float Humidity;
-        public float Temp_min;
-        public float Temp_max;
+        public float Temp_max { get; set; }
+        public float Temp_min { get; set; }
+        public float Humidity { get; set; }
+        public float Pressure { get; set; }
+        public float Temp { get; set; }
     }
 
     public class Weather_coord
     {
-        public float Lon;
-        public float Lat;
+        public float Lat { get; set; }
+        public float Lon { get; set; }
     }
 
     public class Weather_wind
     {
-        public float Speed;
-        public int Deg;
+        public int Deg { get; set; }
+        public float Speed { get; set; }
     }
 
     public class Weather_Sys
     {
-        public string Country;
-        public double Sunrise;
-        public double Sunset;
+        public double Sunset { get; set; }
+        public double Sunrise { get; set; }
+        public string Country { get; set; }
     }
 }

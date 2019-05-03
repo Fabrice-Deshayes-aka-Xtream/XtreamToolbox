@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox
+﻿namespace XtreamToolbox
 {
     partial class ToolBoxStarter
     {
@@ -50,7 +50,7 @@
             // 
             this.moveBox.BackColor = System.Drawing.Color.Transparent;
             this.moveBox.Cursor = System.Windows.Forms.Cursors.NoMove2D;
-            this.moveBox.Image = global::Xtream_ToolBox.Properties.Resources.background_left;
+            this.moveBox.Image = global::XtreamToolbox.Properties.Resources.background_left;
             this.moveBox.Location = new System.Drawing.Point(0, 0);
             this.moveBox.Margin = new System.Windows.Forms.Padding(0);
             this.moveBox.Name = "moveBox";

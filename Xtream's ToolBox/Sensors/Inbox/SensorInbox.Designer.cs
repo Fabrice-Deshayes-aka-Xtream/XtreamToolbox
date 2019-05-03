@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors
+﻿namespace XtreamToolbox.Sensors
 {
     partial class SensorInbox
     {
@@ -76,7 +76,7 @@
             // 
             // progressPictureBox
             // 
-            this.progressPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.progress;
+            this.progressPictureBox.Image = global::XtreamToolbox.Properties.Resources.progress;
             resources.ApplyResources(this.progressPictureBox, "progressPictureBox");
             this.progressPictureBox.Name = "progressPictureBox";
             this.progressPictureBox.TabStop = false;
@@ -86,7 +86,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.InboxEmpty;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.InboxEmpty;
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.progressPictureBox);
             this.Controls.Add(this.spamLabel);

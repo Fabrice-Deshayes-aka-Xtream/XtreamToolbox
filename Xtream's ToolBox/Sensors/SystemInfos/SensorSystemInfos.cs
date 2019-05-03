@@ -8,27 +8,25 @@ using System.Windows.Forms;
 using System.Management;
 using System.Net.NetworkInformation;
 using System.Resources;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 using System.Threading;
 using System.Globalization;
 using System.Net.Sockets;
 using System.Diagnostics;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class SensorSystemInfos : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
-        // information system supplémentaires affichées lors du survol de la souris
+        // information system supplÃ©mentaires affichÃ©es lors du survol de la souris
         private SensorSystemInfosMore extendedPanel = null;
 
-        // resources manager pour accéder aux chaines localisées
+        // resources manager pour accÃ©der aux chaines localisÃ©es
         private ResourceManager resources = Properties.Resources.ResourceManager;
-
-        public SystemInformations systemInformations = null;
 
         private const int LINE_CPU = 1;
         private const int LINE_RAM = 2;
@@ -84,8 +82,10 @@ namespace Xtream_ToolBox.Sensors
         private Int64 wanNetworkConnectionSpeedDownload = 0;
         private Int64 wanNetworkConnectionSpeedUpload = 0;
 
+        public SystemInformations SystemInformations { get; set; } = null;
+
         // constructor
-        public SensorSystemInfos(ToolBox toolbox)
+        public SensorSystemInfos(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;
@@ -130,21 +130,23 @@ namespace Xtream_ToolBox.Sensors
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+
             // tips
-            helpToolTip.SetToolTip(this, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(cpuLabel, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(ramLabel, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(lanLabel, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(wanLabel, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(c2DPushGraph, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(lanVumeterDBg, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(lanVumeterD, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(lanVumeterUBg, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(lanVumeterU, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(cpuVumeterBg, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(cpuVumeter, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(ramVumeterBg, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
-            helpToolTip.SetToolTip(ramVumeter, String.Format(resources.GetString("SysInfosTips"), Environment.NewLine));
+            helpToolTip.SetToolTip(this, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(cpuLabel, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(ramLabel, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(lanLabel, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(wanLabel, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(c2DPushGraph, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(lanVumeterDBg, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(lanVumeterD, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(lanVumeterUBg, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(lanVumeterU, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(cpuVumeterBg, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(cpuVumeter, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(ramVumeterBg, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            helpToolTip.SetToolTip(ramVumeter, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
 
             // option            
             cpuRamTimer.Interval = Properties.Settings.Default.sysInfosRefreshTime;
@@ -204,33 +206,19 @@ namespace Xtream_ToolBox.Sensors
                 }
             }
 
-            /*
-            lanReceivedRateToolStripMenuItem.Enabled = (lanNetworkInterface != null);
-            lanSendRateToolStripMenuItem.Enabled = (lanNetworkInterface != null);
-            lanLabel.Enabled = (lanNetworkInterface != null);
-            lanVumeterD.Visible = (lanNetworkInterface != null);
-            lanVumeterU.Visible = (lanNetworkInterface != null);
-            */
-
-            /*
-            wanReceivedRateToolStripMenuItem.Enabled = (wanNetworkInterface != null);
-            wanSendRateToolStripMenuItem.Enabled = (wanNetworkInterface != null);
-            wanLabel.Enabled = (wanNetworkInterface != null);
-            wanVumeterD.Visible = (wanNetworkInterface != null);
-            wanVumeterU.Visible = (wanNetworkInterface != null);
-            */
-
             lanNetworkConnectionSpeed = Properties.Settings.Default.networkLanBandwith * 1000000;
             wanNetworkConnectionSpeedDownload = Properties.Settings.Default.networkInternetDownload * 1000;
             wanNetworkConnectionSpeedUpload = Properties.Settings.Default.networkInternetUpload * 1000;
 
             // populate system information objects and init extended panel
-            systemInformations = SystemUtils.GetSystemInfo();
+            SystemInformations = SystemUtils.GetSystemInfo();
         }
 
         // refresh UI based on sensor Data
         public void RefreshUI()
         {
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+
             // set cpu vumeter
             cpuUsed = (Int64)cpu_used_counter.NextValue();
             if (cpuUsed < 0) cpuUsed = 0;
@@ -248,8 +236,8 @@ namespace Xtream_ToolBox.Sensors
             }
 
             // set ram vumeter
-            ramUsedbyte = systemInformations.memoryTotalPhysicalMemory - ram_physical_free.RawValue;
-            ramUsed = Convert.ToInt64((ramUsedbyte * 100) / systemInformations.memoryTotalPhysicalMemory);
+            ramUsedbyte = SystemInformations.MemoryTotalPhysicalMemory - ram_physical_free.RawValue;
+            ramUsed = Convert.ToInt64((ramUsedbyte * 100) / SystemInformations.MemoryTotalPhysicalMemory);
             if (ramUsed < 0) ramUsed = 0;
             if (ramUsed > 100) ramUsed = 100;
             if (ramLineToolStripMenuItem.Checked)
@@ -451,10 +439,10 @@ namespace Xtream_ToolBox.Sensors
 
                 if (allProcess.Length > maxProcess) maxProcess = allProcess.Length;
                 if (nbTotalThread > maxThread) maxThread = nbTotalThread;
-                processAndThreadStr = String.Format(resources.GetString("SysInfos_13"), allProcess.Length, maxProcess, nbTotalThread, maxThread);
+                processAndThreadStr = String.Format(resources.GetString("SysInfos_13", culture), allProcess.Length, maxProcess, nbTotalThread, maxThread);
 
-                cpuUsedStr = String.Format(resources.GetString("SysInfos_17"), cpuUsed);
-                ramUsedStr = String.Format(resources.GetString("SysInfos_18"), ramUsed, SystemUtils.GetFriendlyBytesSize(systemInformations.memoryTotalPhysicalMemory, "mbyte"));
+                cpuUsedStr = String.Format(resources.GetString("SysInfos_17", culture), cpuUsed);
+                ramUsedStr = String.Format(resources.GetString("SysInfos_18", culture), ramUsed, SystemUtils.GetFriendlyBytesSize(SystemInformations.MemoryTotalPhysicalMemory, "mbyte"));
                 extendedPanel.RefreshSystemInformation(ramUsedStr, cpuUsedStr, processAndThreadStr);
             }
 

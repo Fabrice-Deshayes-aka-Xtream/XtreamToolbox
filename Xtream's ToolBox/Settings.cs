@@ -1,4 +1,4 @@
-namespace Xtream_ToolBox.Properties
+namespace XtreamToolbox.Properties
 {
 
 

@@ -8,15 +8,15 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.IO;
 using MSjogren.Samples.ShellLink;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class SensorQuickLauncher : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
         private static int iconSize;
         private static int separatorSize;
@@ -34,7 +34,7 @@ namespace Xtream_ToolBox.Sensors
         private Point originalLocation;
 
         // constructor
-        public SensorQuickLauncher(ToolBox toolbox)
+        public SensorQuickLauncher(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;
@@ -88,8 +88,8 @@ namespace Xtream_ToolBox.Sensors
             {
                 foreach (String locationStr in Properties.Settings.Default.location)
                 {
-                    Location location = Xtream_ToolBox.Location.FromString(locationStr);
-                    if ((location != null) && (location.Type == Xtream_ToolBox.Location.APPLICATION))
+                    Location location = XtreamToolbox.Location.FromString(locationStr);
+                    if ((location != null) && (location.Type == XtreamToolbox.Location.APPLICATION))
                     {
                         InsertShortcut(location, -1);
                     }
@@ -123,7 +123,7 @@ namespace Xtream_ToolBox.Sensors
             {
                 currentMovingShortcut = null;
                 PictureBox currentShortcut = (PictureBox)sender;
-                Xtream_ToolBox.Location currentLocation = (Location)currentShortcut.Tag;
+                XtreamToolbox.Location currentLocation = (Location)currentShortcut.Tag;
                 currentShortcut.Enabled = false;
                 Cursor = Cursors.AppStarting;
                 if (File.Exists(currentLocation.Loc))
@@ -153,7 +153,7 @@ namespace Xtream_ToolBox.Sensors
             {
                 ContextMenuStrip contextMenuStrip = (ContextMenuStrip)((ToolStripDropDownItem)sender).Owner;
                 PictureBox currentPictureBox = (PictureBox)contextMenuStrip.SourceControl;
-                Xtream_ToolBox.Location currentLocation = (Location)currentPictureBox.Tag;
+                XtreamToolbox.Location currentLocation = (Location)currentPictureBox.Tag;
                 Properties.Settings.Default.location.Remove(currentLocation.ToDelimitedString());
                 this.SuspendLayout();
                 if (quickLaunchFlowLayoutPanelDown.Controls.Contains(currentPictureBox))
@@ -179,7 +179,7 @@ namespace Xtream_ToolBox.Sensors
         {
             ContextMenuStrip contextMenuStrip = (ContextMenuStrip)((ToolStripDropDownItem)sender).Owner;
             PictureBox currentShortcut = (PictureBox)contextMenuStrip.SourceControl;
-            Xtream_ToolBox.Location currentLocation = (Location)currentShortcut.Tag;
+            XtreamToolbox.Location currentLocation = (Location)currentShortcut.Tag;
             int oldLocationIndex = Properties.Settings.Default.location.IndexOf(currentLocation.ToDelimitedString());
 
             SensorQuickLaunchPropertyForm tmpPropertyForm = new SensorQuickLaunchPropertyForm(currentLocation);
@@ -187,7 +187,7 @@ namespace Xtream_ToolBox.Sensors
             if (tmpPropertyForm.ShowDialog() == DialogResult.OK)
             {
                 Properties.Settings.Default.location.RemoveAt(oldLocationIndex);
-                Properties.Settings.Default.location.Insert(oldLocationIndex, tmpPropertyForm.currentLocation.ToDelimitedString());
+                Properties.Settings.Default.location.Insert(oldLocationIndex, tmpPropertyForm.CurrentLocation.ToDelimitedString());
                 Properties.Settings.Default.Save();
 
                 // repercute le changement
@@ -202,7 +202,7 @@ namespace Xtream_ToolBox.Sensors
                 {
                     helpToolTip.SetToolTip(currentShortcut, currentLocation.Name);
                 }
-                if ((imagePath != null) && (!imagePath.Equals("")) && (System.IO.File.Exists(imagePath)))
+                if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
                 {
                     currentShortcut.ImageLocation = imagePath;
                 }
@@ -232,8 +232,8 @@ namespace Xtream_ToolBox.Sensors
         // manage drop
         private void QuickLaunchFlowLayoutPanelDown_DragDrop(object sender, DragEventArgs e)
         {
-            Location newLocation = null;
-            ShellShortcut shellShortcut = null;
+            Location newLocation;
+            ShellShortcut shellShortcut;
 
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
@@ -245,11 +245,11 @@ namespace Xtream_ToolBox.Sensors
                     if (filename.ToLower().EndsWith(".lnk"))
                     {
                         shellShortcut = new ShellShortcut(filename);
-                        newLocation = Xtream_ToolBox.Location.InsertApplicationLocation(shellShortcut.Path, flowLayoutPanel.Equals(quickLaunchFlowLayoutPanelUp), locationInsertIndex, shellShortcut.Arguments, shellShortcut.Description, shellShortcut.WorkingDirectory);
+                        newLocation = XtreamToolbox.Location.InsertApplicationLocation(shellShortcut.Path, flowLayoutPanel.Equals(quickLaunchFlowLayoutPanelUp), locationInsertIndex, shellShortcut.Arguments, shellShortcut.Description, shellShortcut.WorkingDirectory);
                     }
                     else
                     {
-                        newLocation = Xtream_ToolBox.Location.InsertApplicationLocation(filename, flowLayoutPanel.Equals(quickLaunchFlowLayoutPanelUp), locationInsertIndex, "", "", "");
+                        newLocation = XtreamToolbox.Location.InsertApplicationLocation(filename, flowLayoutPanel.Equals(quickLaunchFlowLayoutPanelUp), locationInsertIndex, "", "", "");
                     }
 
                     // create shortcut picturebox, add and move it to it's correct position
@@ -276,7 +276,7 @@ namespace Xtream_ToolBox.Sensors
                 currentShortcut.MouseMove += new MouseEventHandler(this.Shortcut_MouseMove);
                 currentShortcut.SizeMode = PictureBoxSizeMode.StretchImage;
 
-                if (Convert.ToInt16(typeValue) == Xtream_ToolBox.Location.PARAMETERS_TYPE_SHORTCUT)
+                if (Convert.ToInt16(typeValue) == XtreamToolbox.Location.PARAMETERS_TYPE_SHORTCUT)
                 {
                     currentShortcut.ContextMenuStrip = shortcutContextMenu;
                     currentShortcut.Width = iconSize;
@@ -291,7 +291,7 @@ namespace Xtream_ToolBox.Sensors
                     }
                     currentShortcut.Cursor = Cursors.Hand;
 
-                    if ((imagePath != null) && (!imagePath.Equals("")) && (System.IO.File.Exists(imagePath)))
+                    if (!string.IsNullOrEmpty(imagePath) && (System.IO.File.Exists(imagePath)))
                     {
                         currentShortcut.ImageLocation = imagePath;
                     }
@@ -332,7 +332,7 @@ namespace Xtream_ToolBox.Sensors
                 {
                     // 2 lignes d'icones
                     newLocation.Parameters.TryGetValue("position", out string positionValue);
-                    if (Convert.ToInt16(positionValue) == Xtream_ToolBox.Location.PARAMETERS_POSITION_2ND_LINE)
+                    if (Convert.ToInt16(positionValue) == XtreamToolbox.Location.PARAMETERS_POSITION_2ND_LINE)
                     {
                         currentShortcut.Margin = paddingSecondLine;
                         quickLaunchFlowLayoutPanelDown.Controls.Add(currentShortcut);
@@ -400,17 +400,17 @@ namespace Xtream_ToolBox.Sensors
             }
 
             // find insert position in location list            
-            Location currentLocation = null;
+            Location currentLocation;
             int positionLeft = flowLayoutPanelInsertIndex;
             foreach (String locationStr in Properties.Settings.Default.location)
             {
-                currentLocation = Xtream_ToolBox.Location.FromString(locationStr);
+                currentLocation = XtreamToolbox.Location.FromString(locationStr);
                 locationInsertIndex++;
-                if (currentLocation.Type == Xtream_ToolBox.Location.APPLICATION)
+                if (currentLocation.Type == XtreamToolbox.Location.APPLICATION)
                 {
                     currentLocation.Parameters.TryGetValue("position", out string positionValue);
-                    if (((flowLayoutPanel == quickLaunchFlowLayoutPanelUp) && (Convert.ToInt16(positionValue) == Xtream_ToolBox.Location.PARAMETERS_POSITION_1ST_LINE))
-                    || ((flowLayoutPanel == quickLaunchFlowLayoutPanelDown) && (Convert.ToInt16(positionValue) == Xtream_ToolBox.Location.PARAMETERS_POSITION_2ND_LINE)))
+                    if (((flowLayoutPanel == quickLaunchFlowLayoutPanelUp) && (Convert.ToInt16(positionValue) == XtreamToolbox.Location.PARAMETERS_POSITION_1ST_LINE))
+                    || ((flowLayoutPanel == quickLaunchFlowLayoutPanelDown) && (Convert.ToInt16(positionValue) == XtreamToolbox.Location.PARAMETERS_POSITION_2ND_LINE)))
                     {
                         positionLeft--;
                     }
@@ -428,12 +428,12 @@ namespace Xtream_ToolBox.Sensors
 
             ContextMenuStrip contextMenuStrip = (ContextMenuStrip)((ToolStripDropDownItem)sender).Owner;
             PictureBox currentShortcut = (PictureBox)contextMenuStrip.SourceControl;
-            Xtream_ToolBox.Location currentLocation = (Location)currentShortcut.Tag;
+            XtreamToolbox.Location currentLocation = (Location)currentShortcut.Tag;
             currentLocation.Parameters.TryGetValue("position", out string positionValue);
-            bool firstLine = (Convert.ToInt16(positionValue) == Xtream_ToolBox.Location.PARAMETERS_POSITION_1ST_LINE);
+            bool firstLine = (Convert.ToInt16(positionValue) == XtreamToolbox.Location.PARAMETERS_POSITION_1ST_LINE);
 
             // create new separator location
-            newLocation = Xtream_ToolBox.Location.InsertSeparator(Properties.Settings.Default.location.IndexOf(currentLocation.ToDelimitedString()), firstLine);
+            newLocation = XtreamToolbox.Location.InsertSeparator(Properties.Settings.Default.location.IndexOf(currentLocation.ToDelimitedString()), firstLine);
 
             // add this separator to the flowLayout concerned
             InsertShortcut(newLocation, currentShortcut.Parent.Controls.IndexOf(currentShortcut));
@@ -499,7 +499,7 @@ namespace Xtream_ToolBox.Sensors
                 Location location = (Location)currentMovingShortcut.Tag;
                 Point pt = currentMovingShortcut.PointToScreen(new Point(e.X, e.Y));
 
-                Location newLocation = Xtream_ToolBox.Location.FromString(location.ToDelimitedString());
+                Location newLocation = XtreamToolbox.Location.FromString(location.ToDelimitedString());
 
                 // find in which flowLayoutPanel to insert, in which position, and where to insert in location list
                 FindInsertPosition(pt.X, pt.Y, out FlowLayoutPanel flowLayoutPanel, out int flowLayoutPanelInsertIndex, out int locationInsertIndex);
@@ -508,11 +508,11 @@ namespace Xtream_ToolBox.Sensors
                 newLocation.Parameters.Remove("position");
                 if (flowLayoutPanel.Equals(quickLaunchFlowLayoutPanelUp))
                 {
-                    newLocation.Parameters.Add("position", Convert.ToString(Xtream_ToolBox.Location.PARAMETERS_POSITION_1ST_LINE));
+                    newLocation.Parameters.Add("position", Convert.ToString(XtreamToolbox.Location.PARAMETERS_POSITION_1ST_LINE));
                 }
                 else
                 {
-                    newLocation.Parameters.Add("position", Convert.ToString(Xtream_ToolBox.Location.PARAMETERS_POSITION_2ND_LINE));
+                    newLocation.Parameters.Add("position", Convert.ToString(XtreamToolbox.Location.PARAMETERS_POSITION_2ND_LINE));
                 }
 
                 if (!(((locationIndex == locationInsertIndex - 1) || (locationIndex == locationInsertIndex)) && (location.ToDelimitedString().Equals(newLocation.ToDelimitedString()))))

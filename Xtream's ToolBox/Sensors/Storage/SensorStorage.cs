@@ -8,24 +8,24 @@ using System.Windows.Forms;
 using System.Resources;
 using System.Threading;
 using System.Globalization;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 using System.IO;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class SensorStorage : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
-        // ressource manager pour acc�der aux chaines localis�es
+        // ressource manager pour accéder aux chaines localisées
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         private SensorStorageExtendedPanel extendedPanel = null;
 
         // constructor
-        public SensorStorage(ToolBox toolbox)
+        public SensorStorage(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;

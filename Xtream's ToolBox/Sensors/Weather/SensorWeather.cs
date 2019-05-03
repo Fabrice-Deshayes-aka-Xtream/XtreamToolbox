@@ -6,33 +6,31 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 using System.Runtime.Remoting.Messaging;
 using System.Threading;
 using System.Globalization;
 using System.Resources;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class SensorWeather : UserControl, ISensor
     {
 
-        // reference on toolbox
-        public ToolBox toolbox = null;
-
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
-        // information system supplémentaires affichées lors du survol de la souris
+        // information system supplÃ©mentaires affichÃ©es lors du survol de la souris
         private SensorWeatherExtendedPanel extendedPanel = null;
 
-        public CurrentCondition currentCondition = null;
+        public Toolbox Toolbox { get; set; } = null;
+        public CurrentCondition CurrentCondition { get; set; } = null;
 
         // constructor
-        public SensorWeather(ToolBox toolbox)
+        public SensorWeather(Toolbox toolbox)
         {
             InitializeComponent();
-            this.toolbox = toolbox;
+            this.Toolbox = toolbox;
             InitUI();
         }
 
@@ -80,23 +78,28 @@ namespace Xtream_ToolBox.Sensors
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
         public void InitSensorData()
         {
-            currentCondition = CurrentCondition.GetCurrentCondition(Properties.Settings.Default.weatherCityId, Properties.Settings.Default.weatherTempUnit);
+            CurrentCondition newCurrentCondition = CurrentCondition.GetCurrentCondition(Properties.Settings.Default.weatherCityId, Properties.Settings.Default.weatherTempUnit);
+            if (newCurrentCondition!=null)
+            {
+                CurrentCondition = newCurrentCondition;
+            }
+            
         }
 
         // refresh UI based on sensor Data
         public void RefreshUI()
         {
-            if (currentCondition == null || currentCondition.Weather == null || currentCondition.Weather.Length == 0)
+            if (CurrentCondition == null || CurrentCondition.Weather == null || CurrentCondition.Weather.Length == 0)
             {
                 weatherPictureBox.Image = Properties.Resources.weather_small_na;
                 tempLabel.Text = resources.GetString("not_available");
-            } else if (!CurrentCondition.availableIcons.Contains(currentCondition.Weather[0].Icon))
+            } else if (!CurrentCondition.AvailableIcons.Contains(CurrentCondition.Weather[0].Icon))
             {
                 weatherPictureBox.Image = Properties.Resources.weather_small_na;
             } else
             {
-                tempLabel.Text = Math.Round(currentCondition.Main.Temp,1) + " " + currentCondition.TempUnits;
-                weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject("weather_small_" + currentCondition.Weather[0].Icon);
+                tempLabel.Text = Math.Round(CurrentCondition.Main.Temp,1) + " " + CurrentCondition.TempUnits;
+                weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject("weather_small_" + CurrentCondition.Weather[0].Icon);
             }
 
             if ((extendedPanel != null) && (!extendedPanel.IsDisposed))
@@ -109,7 +112,7 @@ namespace Xtream_ToolBox.Sensors
         // update location of extended panel if needed
         public void UpdateLocation()
         {
-            ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
+            ToolBoxUtils.ManageExtendedPanelPosition(this, Toolbox, extendedPanel);
         }
 
         // update weather each 30 minutes
@@ -136,7 +139,7 @@ namespace Xtream_ToolBox.Sensors
             }
             else
             {
-                ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
+                ToolBoxUtils.ManageExtendedPanelPosition(this, Toolbox, extendedPanel);
                 extendedPanel.Show();
             }
         }

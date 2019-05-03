@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace Xtream_ToolBox
+namespace XtreamToolbox
 {
     [Serializable]
     public class Location
@@ -133,16 +133,16 @@ namespace Xtream_ToolBox
                 // create new location and insert it into location list
                 shortFilename = new FileInfo(filename).Name;
                 shortFilename = shortFilename.Substring(0, shortFilename.Length - new FileInfo(filename).Extension.Length);
-                newLocation = new Location(shortFilename, Xtream_ToolBox.Location.APPLICATION, filename);
-                newLocation.Parameters.Add("type", Convert.ToString(Xtream_ToolBox.Location.PARAMETERS_TYPE_SHORTCUT));
+                newLocation = new Location(shortFilename, XtreamToolbox.Location.APPLICATION, filename);
+                newLocation.Parameters.Add("type", Convert.ToString(XtreamToolbox.Location.PARAMETERS_TYPE_SHORTCUT));
                 newLocation.Parameters.Add("imagePath", "");
                 if (firstLine)
                 {
-                    newLocation.Parameters.Add("position", Convert.ToString(Xtream_ToolBox.Location.PARAMETERS_POSITION_1ST_LINE));
+                    newLocation.Parameters.Add("position", Convert.ToString(XtreamToolbox.Location.PARAMETERS_POSITION_1ST_LINE));
                 }
                 else
                 {
-                    newLocation.Parameters.Add("position", Convert.ToString(Xtream_ToolBox.Location.PARAMETERS_POSITION_2ND_LINE));
+                    newLocation.Parameters.Add("position", Convert.ToString(XtreamToolbox.Location.PARAMETERS_POSITION_2ND_LINE));
                 }
                 newLocation.Parameters.Add("arguments", arguments);
                 newLocation.Parameters.Add("description", description);
@@ -155,15 +155,15 @@ namespace Xtream_ToolBox
 
         public static Location InsertSeparator(int locationInsertIndex, bool firstLine)
         {
-            Location newLocation = new Location(DateTime.Now.ToLongTimeString(), Xtream_ToolBox.Location.APPLICATION, "SEPARATOR");
-            newLocation.Parameters.Add("type", Convert.ToString(Xtream_ToolBox.Location.PARAMETERS_TYPE_SEPARATOR));
+            Location newLocation = new Location(DateTime.Now.ToLongTimeString(), XtreamToolbox.Location.APPLICATION, "SEPARATOR");
+            newLocation.Parameters.Add("type", Convert.ToString(XtreamToolbox.Location.PARAMETERS_TYPE_SEPARATOR));
             if (firstLine)
             {
-                newLocation.Parameters.Add("position", Convert.ToString(Xtream_ToolBox.Location.PARAMETERS_POSITION_1ST_LINE));
+                newLocation.Parameters.Add("position", Convert.ToString(XtreamToolbox.Location.PARAMETERS_POSITION_1ST_LINE));
             }
             else
             {
-                newLocation.Parameters.Add("position", Convert.ToString(Xtream_ToolBox.Location.PARAMETERS_POSITION_2ND_LINE));
+                newLocation.Parameters.Add("position", Convert.ToString(XtreamToolbox.Location.PARAMETERS_POSITION_2ND_LINE));
             }
             Properties.Settings.Default.location.Insert(locationInsertIndex, newLocation.ToDelimitedString());
             Properties.Settings.Default.Save();

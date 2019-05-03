@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors {
+﻿namespace XtreamToolbox.Sensors {
     partial class SensorSystemInfos {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -91,7 +91,7 @@
             // 
             this.cpuVumeter.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.cpuVumeter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cpuVumeter.Image = global::Xtream_ToolBox.Properties.Resources.vumeter;
+            this.cpuVumeter.Image = global::XtreamToolbox.Properties.Resources.vumeter;
             resources.ApplyResources(this.cpuVumeter, "cpuVumeter");
             this.cpuVumeter.MaximumSize = new System.Drawing.Size(50, 7);
             this.cpuVumeter.MinimumSize = new System.Drawing.Size(3, 7);
@@ -116,7 +116,7 @@
             // 
             this.ramVumeter.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.ramVumeter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ramVumeter.Image = global::Xtream_ToolBox.Properties.Resources.vumeter;
+            this.ramVumeter.Image = global::XtreamToolbox.Properties.Resources.vumeter;
             resources.ApplyResources(this.ramVumeter, "ramVumeter");
             this.ramVumeter.MaximumSize = new System.Drawing.Size(50, 7);
             this.ramVumeter.MinimumSize = new System.Drawing.Size(3, 7);
@@ -155,7 +155,7 @@
             // 
             this.lanVumeterD.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.lanVumeterD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lanVumeterD.Image = global::Xtream_ToolBox.Properties.Resources.vumeter;
+            this.lanVumeterD.Image = global::XtreamToolbox.Properties.Resources.vumeter;
             resources.ApplyResources(this.lanVumeterD, "lanVumeterD");
             this.lanVumeterD.MaximumSize = new System.Drawing.Size(50, 5);
             this.lanVumeterD.MinimumSize = new System.Drawing.Size(3, 5);
@@ -167,7 +167,7 @@
             // 
             this.wanVumeterD.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.wanVumeterD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.wanVumeterD.Image = global::Xtream_ToolBox.Properties.Resources.vumeter;
+            this.wanVumeterD.Image = global::XtreamToolbox.Properties.Resources.vumeter;
             resources.ApplyResources(this.wanVumeterD, "wanVumeterD");
             this.wanVumeterD.MaximumSize = new System.Drawing.Size(50, 5);
             this.wanVumeterD.MinimumSize = new System.Drawing.Size(3, 5);
@@ -188,7 +188,7 @@
             // 
             this.lanVumeterU.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.lanVumeterU.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lanVumeterU.Image = global::Xtream_ToolBox.Properties.Resources.vumeter;
+            this.lanVumeterU.Image = global::XtreamToolbox.Properties.Resources.vumeter;
             resources.ApplyResources(this.lanVumeterU, "lanVumeterU");
             this.lanVumeterU.MaximumSize = new System.Drawing.Size(50, 5);
             this.lanVumeterU.MinimumSize = new System.Drawing.Size(3, 5);
@@ -200,7 +200,7 @@
             // 
             this.wanVumeterU.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.wanVumeterU.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.wanVumeterU.Image = global::Xtream_ToolBox.Properties.Resources.vumeter;
+            this.wanVumeterU.Image = global::XtreamToolbox.Properties.Resources.vumeter;
             resources.ApplyResources(this.wanVumeterU, "wanVumeterU");
             this.wanVumeterU.MaximumSize = new System.Drawing.Size(50, 5);
             this.wanVumeterU.MinimumSize = new System.Drawing.Size(3, 5);
@@ -212,7 +212,7 @@
             // 
             this.cpuVumeterBg.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.cpuVumeterBg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cpuVumeterBg.Image = global::Xtream_ToolBox.Properties.Resources.vumeter_background;
+            this.cpuVumeterBg.Image = global::XtreamToolbox.Properties.Resources.vumeter_background;
             resources.ApplyResources(this.cpuVumeterBg, "cpuVumeterBg");
             this.cpuVumeterBg.MaximumSize = new System.Drawing.Size(50, 7);
             this.cpuVumeterBg.MinimumSize = new System.Drawing.Size(3, 7);
@@ -224,7 +224,7 @@
             // 
             this.ramVumeterBg.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.ramVumeterBg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ramVumeterBg.Image = global::Xtream_ToolBox.Properties.Resources.vumeter_background;
+            this.ramVumeterBg.Image = global::XtreamToolbox.Properties.Resources.vumeter_background;
             resources.ApplyResources(this.ramVumeterBg, "ramVumeterBg");
             this.ramVumeterBg.MaximumSize = new System.Drawing.Size(50, 7);
             this.ramVumeterBg.MinimumSize = new System.Drawing.Size(3, 7);
@@ -236,7 +236,7 @@
             // 
             this.lanVumeterDBg.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.lanVumeterDBg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lanVumeterDBg.Image = global::Xtream_ToolBox.Properties.Resources.vumeter_background;
+            this.lanVumeterDBg.Image = global::XtreamToolbox.Properties.Resources.vumeter_background;
             resources.ApplyResources(this.lanVumeterDBg, "lanVumeterDBg");
             this.lanVumeterDBg.MaximumSize = new System.Drawing.Size(50, 5);
             this.lanVumeterDBg.MinimumSize = new System.Drawing.Size(3, 5);
@@ -248,7 +248,7 @@
             // 
             this.lanVumeterUBg.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.lanVumeterUBg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lanVumeterUBg.Image = global::Xtream_ToolBox.Properties.Resources.vumeter_background;
+            this.lanVumeterUBg.Image = global::XtreamToolbox.Properties.Resources.vumeter_background;
             resources.ApplyResources(this.lanVumeterUBg, "lanVumeterUBg");
             this.lanVumeterUBg.MaximumSize = new System.Drawing.Size(50, 5);
             this.lanVumeterUBg.MinimumSize = new System.Drawing.Size(3, 5);
@@ -260,7 +260,7 @@
             // 
             this.wanVumeterDBg.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.wanVumeterDBg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.wanVumeterDBg.Image = global::Xtream_ToolBox.Properties.Resources.vumeter_background;
+            this.wanVumeterDBg.Image = global::XtreamToolbox.Properties.Resources.vumeter_background;
             resources.ApplyResources(this.wanVumeterDBg, "wanVumeterDBg");
             this.wanVumeterDBg.MaximumSize = new System.Drawing.Size(50, 5);
             this.wanVumeterDBg.MinimumSize = new System.Drawing.Size(3, 5);
@@ -272,7 +272,7 @@
             // 
             this.wanVumeterUBg.ContextMenuStrip = this.vumeterContextMenuStrip;
             this.wanVumeterUBg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.wanVumeterUBg.Image = global::Xtream_ToolBox.Properties.Resources.vumeter_background;
+            this.wanVumeterUBg.Image = global::XtreamToolbox.Properties.Resources.vumeter_background;
             resources.ApplyResources(this.wanVumeterUBg, "wanVumeterUBg");
             this.wanVumeterUBg.MaximumSize = new System.Drawing.Size(50, 5);
             this.wanVumeterUBg.MinimumSize = new System.Drawing.Size(3, 5);
@@ -322,7 +322,7 @@
             // 
             this.cpuLineToolStripMenuItem.CheckOnClick = true;
             this.cpuLineToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cpuLineToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_vert;
+            this.cpuLineToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.box_vert;
             this.cpuLineToolStripMenuItem.Name = "cpuLineToolStripMenuItem";
             resources.ApplyResources(this.cpuLineToolStripMenuItem, "cpuLineToolStripMenuItem");
             this.cpuLineToolStripMenuItem.CheckedChanged += new System.EventHandler(this.CpuLineToolStripMenuItem_CheckedChanged);
@@ -331,7 +331,7 @@
             // 
             this.ramLineToolStripMenuItem.CheckOnClick = true;
             this.ramLineToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ramLineToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_jaune;
+            this.ramLineToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.box_jaune;
             this.ramLineToolStripMenuItem.Name = "ramLineToolStripMenuItem";
             resources.ApplyResources(this.ramLineToolStripMenuItem, "ramLineToolStripMenuItem");
             this.ramLineToolStripMenuItem.CheckedChanged += new System.EventHandler(this.RamLineToolStripMenuItem_CheckedChanged);
@@ -339,7 +339,7 @@
             // lanReceivedRateToolStripMenuItem
             // 
             this.lanReceivedRateToolStripMenuItem.CheckOnClick = true;
-            this.lanReceivedRateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_bleu;
+            this.lanReceivedRateToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.box_bleu;
             this.lanReceivedRateToolStripMenuItem.Name = "lanReceivedRateToolStripMenuItem";
             resources.ApplyResources(this.lanReceivedRateToolStripMenuItem, "lanReceivedRateToolStripMenuItem");
             this.lanReceivedRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.LanReceivedRateToolStripMenuItem_CheckedChanged);
@@ -347,7 +347,7 @@
             // lanSendRateToolStripMenuItem
             // 
             this.lanSendRateToolStripMenuItem.CheckOnClick = true;
-            this.lanSendRateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_turquoise;
+            this.lanSendRateToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.box_turquoise;
             this.lanSendRateToolStripMenuItem.Name = "lanSendRateToolStripMenuItem";
             resources.ApplyResources(this.lanSendRateToolStripMenuItem, "lanSendRateToolStripMenuItem");
             this.lanSendRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.LanSendRateToolStripMenuItem_CheckedChanged);
@@ -355,7 +355,7 @@
             // wanReceivedRateToolStripMenuItem
             // 
             this.wanReceivedRateToolStripMenuItem.CheckOnClick = true;
-            this.wanReceivedRateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_rouge;
+            this.wanReceivedRateToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.box_rouge;
             this.wanReceivedRateToolStripMenuItem.Name = "wanReceivedRateToolStripMenuItem";
             resources.ApplyResources(this.wanReceivedRateToolStripMenuItem, "wanReceivedRateToolStripMenuItem");
             this.wanReceivedRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.WanReceivedRateToolStripMenuItem_CheckedChanged);
@@ -363,7 +363,7 @@
             // wanSendRateToolStripMenuItem
             // 
             this.wanSendRateToolStripMenuItem.CheckOnClick = true;
-            this.wanSendRateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.box_rose;
+            this.wanSendRateToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.box_rose;
             this.wanSendRateToolStripMenuItem.Name = "wanSendRateToolStripMenuItem";
             resources.ApplyResources(this.wanSendRateToolStripMenuItem, "wanSendRateToolStripMenuItem");
             this.wanSendRateToolStripMenuItem.CheckedChanged += new System.EventHandler(this.WanSendRateToolStripMenuItem_CheckedChanged);

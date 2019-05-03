@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox
+﻿namespace XtreamToolbox
 {
     partial class PhotosRenamerForm
     {
@@ -110,7 +110,7 @@
             // 
             // cameraPictureBox
             // 
-            this.cameraPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.ImageRenamer_logo1;
+            this.cameraPictureBox.Image = global::XtreamToolbox.Properties.Resources.ImageRenamer_logo1;
             resources.ApplyResources(this.cameraPictureBox, "cameraPictureBox");
             this.cameraPictureBox.Name = "cameraPictureBox";
             this.cameraPictureBox.TabStop = false;
@@ -123,7 +123,7 @@
             // renameButton
             // 
             resources.ApplyResources(this.renameButton, "renameButton");
-            this.renameButton.Image = global::Xtream_ToolBox.Properties.Resources.ImageRenamer_rename;
+            this.renameButton.Image = global::XtreamToolbox.Properties.Resources.ImageRenamer_rename;
             this.renameButton.Name = "renameButton";
             this.renameButton.UseVisualStyleBackColor = true;
             this.renameButton.Click += new System.EventHandler(this.RenameButton_Click);
@@ -131,7 +131,7 @@
             // SimulateButton
             // 
             resources.ApplyResources(this.SimulateButton, "SimulateButton");
-            this.SimulateButton.Image = global::Xtream_ToolBox.Properties.Resources.ImageRenamer_simulate;
+            this.SimulateButton.Image = global::XtreamToolbox.Properties.Resources.ImageRenamer_simulate;
             this.SimulateButton.Name = "SimulateButton";
             this.SimulateButton.UseVisualStyleBackColor = true;
             this.SimulateButton.Click += new System.EventHandler(this.SimulateButton_Click);
@@ -163,7 +163,7 @@
             // 
             // browseButton
             // 
-            this.browseButton.Image = global::Xtream_ToolBox.Properties.Resources.folder_open_16;
+            this.browseButton.Image = global::XtreamToolbox.Properties.Resources.folder_open_16;
             resources.ApplyResources(this.browseButton, "browseButton");
             this.browseButton.Name = "browseButton";
             this.browseButton.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@
             // cancelButton
             // 
             resources.ApplyResources(this.cancelButton, "cancelButton");
-            this.cancelButton.Image = global::Xtream_ToolBox.Properties.Resources.stop;
+            this.cancelButton.Image = global::XtreamToolbox.Properties.Resources.stop;
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -227,7 +227,7 @@
             // clearButton
             // 
             resources.ApplyResources(this.clearButton, "clearButton");
-            this.clearButton.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
+            this.clearButton.Image = global::XtreamToolbox.Properties.Resources.trash_16;
             this.clearButton.Name = "clearButton";
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);

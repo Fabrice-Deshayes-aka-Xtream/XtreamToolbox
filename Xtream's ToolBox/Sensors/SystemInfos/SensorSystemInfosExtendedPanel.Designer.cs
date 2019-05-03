@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox
+﻿namespace XtreamToolbox
 {
     partial class SensorSystemInfosMore
     {
@@ -104,7 +104,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::Xtream_ToolBox.Properties.Resources.SI_Home;
+            this.pictureBox1.Image = global::XtreamToolbox.Properties.Resources.SI_Home;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
@@ -145,7 +145,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Image = global::Xtream_ToolBox.Properties.Resources.SI_Central_Unit;
+            this.pictureBox2.Image = global::XtreamToolbox.Properties.Resources.SI_Central_Unit;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
@@ -153,7 +153,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.pictureBox6, "pictureBox6");
-            this.pictureBox6.Image = global::Xtream_ToolBox.Properties.Resources.SI_Memory;
+            this.pictureBox6.Image = global::XtreamToolbox.Properties.Resources.SI_Memory;
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
             // 
@@ -216,7 +216,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Image = global::Xtream_ToolBox.Properties.Resources.SI_Internet_Connection;
+            this.pictureBox3.Image = global::XtreamToolbox.Properties.Resources.SI_Internet_Connection;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
@@ -248,7 +248,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Image = global::Xtream_ToolBox.Properties.Resources.SI_MyComputer;
+            this.pictureBox4.Image = global::XtreamToolbox.Properties.Resources.SI_MyComputer;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             // 
@@ -285,7 +285,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Image = global::Xtream_ToolBox.Properties.Resources.SI_Key;
+            this.pictureBox5.Image = global::XtreamToolbox.Properties.Resources.SI_Key;
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
             // 
@@ -305,7 +305,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.extendInfosBackground;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.extendInfosBackground;
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);

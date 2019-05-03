@@ -6,24 +6,24 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using System.Resources;
-using Xtream_ToolBox.Utils;
-using Xtream_ToolBox.Sensors.ShutdownManager;
+using XtreamToolbox.Utils;
+using XtreamToolbox.Sensors.ShutdownManager;
 
-namespace Xtream_ToolBox
+namespace XtreamToolbox
 {
     public partial class SensorShutdownManager : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         private ShutdownOptions shutdownOptions = new ShutdownOptions();
 
         // constructor
-        public SensorShutdownManager(ToolBox toolbox)
+        public SensorShutdownManager(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;

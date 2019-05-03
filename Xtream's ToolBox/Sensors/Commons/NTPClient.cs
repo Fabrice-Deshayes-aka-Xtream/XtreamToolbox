@@ -23,10 +23,10 @@ namespace TimeSync
     using System.Net;
     using System.Net.Sockets;
     using System.Runtime.InteropServices;
-    using Xtream_ToolBox;
+    using XtreamToolbox;
 
     // Leap indicator field values
-    public enum _LeapIndicator
+    public enum LeapIndicator
     {
         NoWarning,		// 0 - No warning
         LastMinute61,	// 1 - Last minute has 61 seconds
@@ -35,7 +35,7 @@ namespace TimeSync
     }
 
     //Mode field values
-    public enum _Mode
+    public enum Mode
     {
         SymmetricActive,	// 1 - Symmetric active
         SymmetricPassive,	// 2 - Symmetric pasive
@@ -46,7 +46,7 @@ namespace TimeSync
     }
 
     // Stratum field values
-    public enum _Stratum
+    public enum Stratum
     {
         Unspecified,			// 0 - unspecified or unavailable
         PrimaryReference,		// 1 - primary reference (e.g. radio-clock)
@@ -177,7 +177,7 @@ namespace TimeSync
 
         // SYSTEMTIME structure used by SetSystemTime
         [StructLayoutAttribute(LayoutKind.Sequential)]
-        public struct SYSTEMTIME
+        private struct SYSTEMTIME
         {
             public short year;
             public short month;
@@ -191,7 +191,7 @@ namespace TimeSync
         // end SYSTEMTIME
 
         // Leap Indicator
-        public _LeapIndicator LeapIndicator
+        public LeapIndicator LeapIndicator
         {
             get
             {
@@ -199,12 +199,12 @@ namespace TimeSync
                 byte val = (byte)(NTPData[0] >> 6);
                 switch (val)
                 {
-                    case 0: return _LeapIndicator.NoWarning;
-                    case 1: return _LeapIndicator.LastMinute61;
-                    case 2: return _LeapIndicator.LastMinute59;
+                    case 0: return LeapIndicator.NoWarning;
+                    case 1: return LeapIndicator.LastMinute61;
+                    case 2: return LeapIndicator.LastMinute59;
                     case 3: goto default;
                     default:
-                        return _LeapIndicator.Alarm;
+                        return LeapIndicator.Alarm;
                 }
             }
         }
@@ -221,7 +221,7 @@ namespace TimeSync
         }
 
         // Mode
-        public _Mode Mode
+        public Mode Mode
         {
             get
             {
@@ -233,34 +233,34 @@ namespace TimeSync
                     case 6: goto default;
                     case 7: goto default;
                     default:
-                        return _Mode.Unknown;
+                        return Mode.Unknown;
                     case 1:
-                        return _Mode.SymmetricActive;
+                        return Mode.SymmetricActive;
                     case 2:
-                        return _Mode.SymmetricPassive;
+                        return Mode.SymmetricPassive;
                     case 3:
-                        return _Mode.Client;
+                        return Mode.Client;
                     case 4:
-                        return _Mode.Server;
+                        return Mode.Server;
                     case 5:
-                        return _Mode.Broadcast;
+                        return Mode.Broadcast;
                 }
             }
         }
 
         // Stratum
-        public _Stratum Stratum
+        public Stratum Stratum
         {
             get
             {
                 byte val = (byte)NTPData[1];
-                if (val == 0) return _Stratum.Unspecified;
+                if (val == 0) return Stratum.Unspecified;
                 else
-                    if (val == 1) return _Stratum.PrimaryReference;
+                    if (val == 1) return Stratum.PrimaryReference;
                 else
-                        if (val <= 15) return _Stratum.SecondaryReference;
+                        if (val <= 15) return Stratum.SecondaryReference;
                 else
-                    return _Stratum.Reserved;
+                    return Stratum.Reserved;
             }
         }
 
@@ -287,8 +287,7 @@ namespace TimeSync
         {
             get
             {
-                int temp = 0;
-                temp = 256 * (256 * (256 * NTPData[4] + NTPData[5]) + NTPData[6]) + NTPData[7];
+                int temp = 256 * (256 * (256 * NTPData[4] + NTPData[5]) + NTPData[6]) + NTPData[7];
                 return 1000 * (((double)temp) / 0x10000);
             }
         }
@@ -298,8 +297,7 @@ namespace TimeSync
         {
             get
             {
-                int temp = 0;
-                temp = 256 * (256 * (256 * NTPData[8] + NTPData[9]) + NTPData[10]) + NTPData[11];
+                int temp = 256 * (256 * (256 * NTPData[8] + NTPData[9]) + NTPData[10]) + NTPData[11];
                 return 1000 * (((double)temp) / 0x10000);
             }
         }
@@ -312,15 +310,15 @@ namespace TimeSync
                 string val = "";
                 switch (Stratum)
                 {
-                    case _Stratum.Unspecified:
-                        goto case _Stratum.PrimaryReference;
-                    case _Stratum.PrimaryReference:
+                    case Stratum.Unspecified:
+                        goto case Stratum.PrimaryReference;
+                    case Stratum.PrimaryReference:
                         val += (char)NTPData[offReferenceID + 0];
                         val += (char)NTPData[offReferenceID + 1];
                         val += (char)NTPData[offReferenceID + 2];
                         val += (char)NTPData[offReferenceID + 3];
                         break;
-                    case _Stratum.SecondaryReference:
+                    case Stratum.SecondaryReference:
                         switch (VersionNumber)
                         {
                             case 3:	// Version 3, Reference ID is an IPv4 address
@@ -405,7 +403,7 @@ namespace TimeSync
         }
 
         // Reception Timestamp
-        public DateTime ReceptionTimestamp;
+        private DateTime ReceptionTimestamp;
 
         // Round trip delay (in milliseconds)
         public int RoundTripDelay
@@ -456,25 +454,24 @@ namespace TimeSync
         // Compute the 8-byte array, given the date
         private void SetDate(byte offset, DateTime date)
         {
-            ulong intpart = 0, fractpart = 0;
             DateTime StartOfCentury = new DateTime(1900, 1, 1, 0, 0, 0);	// January 1, 1900 12:00 AM
 
             ulong milliseconds = (ulong)(date - StartOfCentury).TotalMilliseconds;
-            intpart = milliseconds / 1000;
-            fractpart = ((milliseconds % 1000) * 0x100000000L) / 1000;
-
+            ulong intpart = milliseconds / 1000;
+            ulong fractpart = ((milliseconds % 1000) * 0x100000000L) / 1000;
             ulong temp = intpart;
+
             for (int i = 3; i >= 0; i--)
             {
                 NTPData[offset + i] = (byte)(temp % 256);
-                temp = temp / 256;
+                temp /= 256;
             }
 
             temp = fractpart;
             for (int i = 7; i >= 4; i--)
             {
                 NTPData[offset + i] = (byte)(temp % 256);
-                temp = temp / 256;
+                temp /= 256;
             }
         }
 
@@ -536,7 +533,7 @@ namespace TimeSync
         // Check if the response from server is valid
         public bool IsResponseValid()
         {
-            if (NTPData.Length < NTPDataLength || Mode != _Mode.Server)
+            if (NTPData.Length < NTPDataLength || Mode != Mode.Server)
             {
                 return false;
             }
@@ -554,16 +551,16 @@ namespace TimeSync
             str = "Leap Indicator: ";
             switch (LeapIndicator)
             {
-                case _LeapIndicator.NoWarning:
+                case LeapIndicator.NoWarning:
                     str += "No warning";
                     break;
-                case _LeapIndicator.LastMinute61:
+                case LeapIndicator.LastMinute61:
                     str += "Last minute has 61 seconds";
                     break;
-                case _LeapIndicator.LastMinute59:
+                case LeapIndicator.LastMinute59:
                     str += "Last minute has 59 seconds";
                     break;
-                case _LeapIndicator.Alarm:
+                case LeapIndicator.Alarm:
                     str += "Alarm Condition (clock not synchronized)";
                     break;
             }
@@ -571,36 +568,36 @@ namespace TimeSync
             str += "Mode: ";
             switch (Mode)
             {
-                case _Mode.Unknown:
+                case Mode.Unknown:
                     str += "Unknown";
                     break;
-                case _Mode.SymmetricActive:
+                case Mode.SymmetricActive:
                     str += "Symmetric Active";
                     break;
-                case _Mode.SymmetricPassive:
+                case Mode.SymmetricPassive:
                     str += "Symmetric Pasive";
                     break;
-                case _Mode.Client:
+                case Mode.Client:
                     str += "Client";
                     break;
-                case _Mode.Server:
+                case Mode.Server:
                     str += "Server";
                     break;
-                case _Mode.Broadcast:
+                case Mode.Broadcast:
                     str += "Broadcast";
                     break;
             }
             str += "\r\nStratum: ";
             switch (Stratum)
             {
-                case _Stratum.Unspecified:
-                case _Stratum.Reserved:
+                case Stratum.Unspecified:
+                case Stratum.Reserved:
                     str += "Unspecified";
                     break;
-                case _Stratum.PrimaryReference:
+                case Stratum.PrimaryReference:
                     str += "Primary Reference";
                     break;
-                case _Stratum.SecondaryReference:
+                case Stratum.SecondaryReference:
                     str += "Secondary Reference";
                     break;
             }

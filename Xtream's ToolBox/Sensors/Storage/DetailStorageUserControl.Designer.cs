@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors {
+﻿namespace XtreamToolbox.Sensors {
     partial class DetailStorageUserControl {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -68,7 +68,7 @@
             // 
             // deviceSpacePictureBox
             // 
-            this.deviceSpacePictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.vumeter;
+            this.deviceSpacePictureBox.BackgroundImage = global::XtreamToolbox.Properties.Resources.vumeter;
             resources.ApplyResources(this.deviceSpacePictureBox, "deviceSpacePictureBox");
             this.deviceSpacePictureBox.Name = "deviceSpacePictureBox";
             this.deviceSpacePictureBox.TabStop = false;
@@ -88,7 +88,7 @@
             // deviceSpaceBackgroundPictureBox
             // 
             this.deviceSpaceBackgroundPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.deviceSpaceBackgroundPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.vumeter_background;
+            this.deviceSpaceBackgroundPictureBox.BackgroundImage = global::XtreamToolbox.Properties.Resources.vumeter_background;
             resources.ApplyResources(this.deviceSpaceBackgroundPictureBox, "deviceSpaceBackgroundPictureBox");
             this.deviceSpaceBackgroundPictureBox.Name = "deviceSpaceBackgroundPictureBox";
             this.deviceSpaceBackgroundPictureBox.TabStop = false;
@@ -127,14 +127,14 @@
             // 
             // readLegendPictureBox
             // 
-            this.readLegendPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.box_rouge;
+            this.readLegendPictureBox.Image = global::XtreamToolbox.Properties.Resources.box_rouge;
             resources.ApplyResources(this.readLegendPictureBox, "readLegendPictureBox");
             this.readLegendPictureBox.Name = "readLegendPictureBox";
             this.readLegendPictureBox.TabStop = false;
             // 
             // writeLegendPictureBox
             // 
-            this.writeLegendPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.box_bleu;
+            this.writeLegendPictureBox.Image = global::XtreamToolbox.Properties.Resources.box_bleu;
             resources.ApplyResources(this.writeLegendPictureBox, "writeLegendPictureBox");
             this.writeLegendPictureBox.Name = "writeLegendPictureBox";
             this.writeLegendPictureBox.TabStop = false;

@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors {
+﻿namespace XtreamToolbox.Sensors {
     partial class SensorWeatherExtendedPanel {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -77,7 +77,7 @@
             // 
             resources.ApplyResources(this.weatherPictureBox, "weatherPictureBox");
             this.weatherPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.weatherPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.weather_na;
+            this.weatherPictureBox.Image = global::XtreamToolbox.Properties.Resources.weather_na;
             this.weatherPictureBox.Name = "weatherPictureBox";
             this.weatherPictureBox.TabStop = false;
             this.helpToolTip.SetToolTip(this.weatherPictureBox, resources.GetString("weatherPictureBox.ToolTip"));
@@ -124,7 +124,7 @@
             // pictureBox2
             // 
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Image = global::Xtream_ToolBox.Properties.Resources.thermometre;
+            this.pictureBox2.Image = global::XtreamToolbox.Properties.Resources.thermometre;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             this.helpToolTip.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip"));
@@ -157,7 +157,7 @@
             // pictureBox3
             // 
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Image = global::Xtream_ToolBox.Properties.Resources.barometer;
+            this.pictureBox3.Image = global::XtreamToolbox.Properties.Resources.barometer;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             this.helpToolTip.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
@@ -182,7 +182,7 @@
             // pictureBox4
             // 
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Image = global::Xtream_ToolBox.Properties.Resources.Wind_Logo;
+            this.pictureBox4.Image = global::XtreamToolbox.Properties.Resources.Wind_Logo;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             this.helpToolTip.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
@@ -250,7 +250,7 @@
             this.AcceptButton = this.ApplyButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.extendInfosBackground;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.extendInfosBackground;
             this.ControlBox = false;
             this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.findCityIdLabel);

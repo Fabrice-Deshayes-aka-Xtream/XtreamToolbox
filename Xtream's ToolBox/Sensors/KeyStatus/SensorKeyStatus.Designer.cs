@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors
+﻿namespace XtreamToolbox.Sensors
 {
     partial class SensorKeyStatus
     {
@@ -51,7 +51,7 @@
             // capsLockStatusPictureBoxON
             // 
             this.capsLockStatusPictureBoxON.BackColor = System.Drawing.Color.Transparent;
-            this.capsLockStatusPictureBoxON.Image = global::Xtream_ToolBox.Properties.Resources.key_capslock_on;
+            this.capsLockStatusPictureBoxON.Image = global::XtreamToolbox.Properties.Resources.key_capslock_on;
             resources.ApplyResources(this.capsLockStatusPictureBoxON, "capsLockStatusPictureBoxON");
             this.capsLockStatusPictureBoxON.Name = "capsLockStatusPictureBoxON";
             this.capsLockStatusPictureBoxON.TabStop = false;
@@ -59,7 +59,7 @@
             // capsLockStatusPictureBoxOFF
             // 
             this.capsLockStatusPictureBoxOFF.BackColor = System.Drawing.Color.Transparent;
-            this.capsLockStatusPictureBoxOFF.Image = global::Xtream_ToolBox.Properties.Resources.key_capslock_off;
+            this.capsLockStatusPictureBoxOFF.Image = global::XtreamToolbox.Properties.Resources.key_capslock_off;
             resources.ApplyResources(this.capsLockStatusPictureBoxOFF, "capsLockStatusPictureBoxOFF");
             this.capsLockStatusPictureBoxOFF.Name = "capsLockStatusPictureBoxOFF";
             this.capsLockStatusPictureBoxOFF.TabStop = false;
@@ -67,7 +67,7 @@
             // numLockStatusPictureBoxON
             // 
             this.numLockStatusPictureBoxON.BackColor = System.Drawing.Color.Transparent;
-            this.numLockStatusPictureBoxON.Image = global::Xtream_ToolBox.Properties.Resources.key_numlock_on;
+            this.numLockStatusPictureBoxON.Image = global::XtreamToolbox.Properties.Resources.key_numlock_on;
             resources.ApplyResources(this.numLockStatusPictureBoxON, "numLockStatusPictureBoxON");
             this.numLockStatusPictureBoxON.Name = "numLockStatusPictureBoxON";
             this.numLockStatusPictureBoxON.TabStop = false;
@@ -75,7 +75,7 @@
             // numLockStatusPictureBoxOFF
             // 
             this.numLockStatusPictureBoxOFF.BackColor = System.Drawing.Color.Transparent;
-            this.numLockStatusPictureBoxOFF.Image = global::Xtream_ToolBox.Properties.Resources.key_numlock_off;
+            this.numLockStatusPictureBoxOFF.Image = global::XtreamToolbox.Properties.Resources.key_numlock_off;
             resources.ApplyResources(this.numLockStatusPictureBoxOFF, "numLockStatusPictureBoxOFF");
             this.numLockStatusPictureBoxOFF.Name = "numLockStatusPictureBoxOFF";
             this.numLockStatusPictureBoxOFF.TabStop = false;

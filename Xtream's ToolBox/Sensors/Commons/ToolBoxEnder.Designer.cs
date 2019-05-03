@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox
+﻿namespace XtreamToolbox
 {
     partial class ToolBoxEnder
     {
@@ -41,7 +41,7 @@
             // enderPanel
             // 
             this.enderPanel.BackColor = System.Drawing.Color.Transparent;
-            this.enderPanel.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.background_right;
+            this.enderPanel.BackgroundImage = global::XtreamToolbox.Properties.Resources.background_right;
             this.enderPanel.Controls.Add(this.moveBoxEnder);
             this.enderPanel.Controls.Add(this.closerPictureBox);
             this.enderPanel.Location = new System.Drawing.Point(0, 0);

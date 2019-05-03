@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors
+﻿namespace XtreamToolbox.Sensors
 {
     partial class SensorPowerStatus
     {
@@ -43,7 +43,7 @@
             // SensorPowerStatus
             // 
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.battery_na;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.battery_na;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DoubleBuffered = true;

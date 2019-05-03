@@ -11,7 +11,7 @@ using System.Resources;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace Xtream_ToolBox
+namespace XtreamToolbox
 {
 
     class SystemUtils
@@ -195,7 +195,7 @@ namespace Xtream_ToolBox
             public long i64NumItems;
         }
 
-        private static readonly int ERROR_SUCCESS = 0;
+        private const int ERROR_SUCCESS = 0;
         public static bool IsInternetConnected()
         {
             long dwConnectionFlags = 0;
@@ -208,8 +208,8 @@ namespace Xtream_ToolBox
             return true;
         }
 
-        // ressource manager pour accéder aux chaines localisées
-        private static ResourceManager resources = Properties.Resources.ResourceManager;
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
+        private static readonly ResourceManager resources = Properties.Resources.ResourceManager;
 
         // deconnexion de l'utilisateur
         public static void Logoff()
@@ -217,13 +217,13 @@ namespace Xtream_ToolBox
             ExitSystem(Convert.ToUInt32(EWX_ENUM.EWX_FORCELOGOFF));
         }
 
-        // redémarre le PC
+        // redÃ©marre le PC
         public static void Restart()
         {
             ExitSystem(Convert.ToUInt32(EWX_ENUM.EWX_FORCEREBOOT));
         }
 
-        // éteind le PC
+        // Ã©teind le PC
         public static void Shutdown()
         {
             ExitSystem(Convert.ToUInt32(EWX_ENUM.EWX_FORCEPOWEROFF));
@@ -235,7 +235,7 @@ namespace Xtream_ToolBox
             NativeMethods.LockWorkStation();
         }
 
-        // passe en veille prolongée
+        // passe en veille prolongÃ©e
         public static void Hibernate()
         {
             Application.SetSuspendState(PowerState.Hibernate, true, true);
@@ -294,13 +294,13 @@ namespace Xtream_ToolBox
             tp.Luid = luid;
 
             int tpsz = Marshal.SizeOf(tp);
-            tpsz = NativeMethods.AdjustTokenPrivileges(TokenHandle, false, ref tp, tpsz, 0, 0);
+            NativeMethods.AdjustTokenPrivileges(TokenHandle, false, ref tp, tpsz, 0, 0);
             NativeMethods.ExitWindowsEx(EWX_VALUE, 0);
         }
 
         public static bool IsKeyPressedOrToggleOn(Keys testKey)
         {
-            bool keyPressed = false;
+            bool keyPressed;
             short result = NativeMethods.GetKeyState(testKey);
 
             switch (result)
@@ -341,21 +341,21 @@ namespace Xtream_ToolBox
             return retour;
         }
 
-        // récupère des infos sur le contenu de la poubelle
+        // rÃ©cupÃ©re des infos sur le contenu de la poubelle
         public static SHQUERYRBINFO GetInfosFromRecycleBin()
         {
             SHQUERYRBINFO sqrbi = new SHQUERYRBINFO
             {
                 cbSize = Marshal.SizeOf(typeof(SHQUERYRBINFO))
             };
-            int hresult = NativeMethods.SHQueryRecycleBin(string.Empty, ref sqrbi);
+            NativeMethods.SHQueryRecycleBin(string.Empty, ref sqrbi);
             return sqrbi;
         }
 
         // display friendly size
         public static String GetFriendlyBytesSize(long sizeInByte, String displayMode)
         {
-            String friendlyBytesSize = "";
+            String friendlyBytesSize;
             String byteStr = resources.GetString("Sys_byte");
             String kbyteStr = resources.GetString("Sys_kbyte");
             String mbyteStr = resources.GetString("Sys_mbyte");
@@ -396,10 +396,10 @@ namespace Xtream_ToolBox
             return friendlyBytesSize;
         }
 
-        // récupère une taille formaté à partir d'un nombre de bit
+        // rÃ©cupÃ©re une taille formatÃ© Ã© partir d'un nombre de bit
         public static String GetFriendlyBitsSize(long sizeInBits, String displayMode)
         {
-            String friendlyBitsSize = "";
+            String friendlyBitsSize;
             String bitStr = resources.GetString("Sys_bit");
             String kbitStr = resources.GetString("Sys_kbit");
             String mbitStr = resources.GetString("Sys_mbit");
@@ -434,10 +434,10 @@ namespace Xtream_ToolBox
             return friendlyBitsSize;
         }
 
-        // récupère une durée à partir d'un nombre de secondes
+        // rÃ©cupÃ©re une durÃ©e Ã© partir d'un nombre de secondes
         public static String GetFriendlyTimespan(int spanInSeconde, String displayMode)
         {
-            String friendlyTimespan = "";
+            String friendlyTimespan;
             String hourStr = resources.GetString("Sys_h");
             String minStr = resources.GetString("Sys_mn");
             String secStr = resources.GetString("Sys_s");
@@ -537,7 +537,7 @@ namespace Xtream_ToolBox
             return retour;
         }
 
-        // lance l'application au démarrage
+        // lance l'application au dÃ©marrage
         public static bool RunOnStart(string Libele, string Fichier, string action)
         {
             bool retour = true;
@@ -566,7 +566,6 @@ namespace Xtream_ToolBox
                     }
                     break;
             }
-            Key = null;
 
             return retour;
         }
@@ -577,7 +576,7 @@ namespace Xtream_ToolBox
         public static void LaunchDefaultMailClient(string defaultEmailClient)
         {
 
-            if ((defaultEmailClient == null) || (defaultEmailClient.Equals("")) || (defaultEmailClient.Equals("default")))
+            if (string.IsNullOrEmpty(defaultEmailClient) || defaultEmailClient.Equals("default"))
             {
                 // Open the "HKLM\SOFTWARE\Clients\Mail" key.
                 Microsoft.Win32.RegistryKey mailKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Clients\Mail");
@@ -615,8 +614,8 @@ namespace Xtream_ToolBox
         public static string FormatSpeedInHertz(Int64 lSpeed)
         {
             //Format number to Hz
-            float floatSpeed = 0;
-            string stringSpeed = "";
+            float floatSpeed;
+            string stringSpeed;
 
             if (lSpeed < 1000)
             {
@@ -638,7 +637,7 @@ namespace Xtream_ToolBox
             SystemInformations retour = new SystemInformations();
             ManagementObjectSearcher query = null;
             ManagementObjectCollection queryCollection = null;
-            System.Management.ObjectQuery oq = null;
+            System.Management.ObjectQuery oq;
             ConnectionOptions co = new ConnectionOptions();
             ManagementObjectCollection.ManagementObjectEnumerator managementObjectEnumerator = null;
             ManagementObject managementObject = null;
@@ -659,17 +658,17 @@ namespace Xtream_ToolBox
                     managementObjectEnumerator.MoveNext();
                     managementObject = (ManagementObject)managementObjectEnumerator.Current;
 
-                    retour.osCaption = managementObject["Caption"].ToString();
-                    retour.osVersion = managementObject["Version"].ToString();
-                    retour.osManufacturer = managementObject["Manufacturer"].ToString();
-                    retour.osWinDir = managementObject["WindowsDirectory"].ToString();
-                    retour.osSerialNumber = managementObject["SerialNumber"].ToString();
-                    retour.memoryTotalPhysicalMemory = Convert.ToInt64(managementObject["TotalVisibleMemorySize"]) * 1024;
-                    retour.osInstallDate = ToDateTime(managementObject["InstallDate"].ToString());
+                    retour.OsCaption = managementObject["Caption"].ToString();
+                    retour.OsVersion = managementObject["Version"].ToString();
+                    retour.OsManufacturer = managementObject["Manufacturer"].ToString();
+                    retour.OsWinDir = managementObject["WindowsDirectory"].ToString();
+                    retour.OsSerialNumber = managementObject["SerialNumber"].ToString();
+                    retour.MemoryTotalPhysicalMemory = Convert.ToInt64(managementObject["TotalVisibleMemorySize"]) * 1024;
+                    retour.OsInstallDate = ToDateTime(managementObject["InstallDate"].ToString());
                 }
 
                 // page file memory info
-                retour.memoryTotalPageFileSpace = 0;
+                retour.MemoryTotalPageFileSpace = 0;
                 oq = new System.Management.ObjectQuery("SELECT * FROM Win32_PageFile");
                 query = new ManagementObjectSearcher(ms, oq);
                 queryCollection = query.Get();
@@ -679,7 +678,7 @@ namespace Xtream_ToolBox
                     while (managementObjectEnumerator.MoveNext())
                     {
                         managementObject = (ManagementObject)managementObjectEnumerator.Current;
-                        retour.memoryTotalPageFileSpace += Convert.ToInt64(managementObject["FileSize"]);
+                        retour.MemoryTotalPageFileSpace += Convert.ToInt64(managementObject["FileSize"]);
                     }
                 }
 
@@ -693,12 +692,12 @@ namespace Xtream_ToolBox
                     managementObjectEnumerator.MoveNext();
                     managementObject = (ManagementObject)managementObjectEnumerator.Current;
 
-                    retour.computerManufacturerName = managementObject["Manufacturer"].ToString();
-                    retour.computerModel = managementObject["model"].ToString();
-                    retour.computerSystemType = managementObject["SystemType"].ToString();
-                    retour.computerDomain = managementObject["Domain"].ToString();
-                    retour.computerUserName = Environment.UserName;
-                    retour.computerMachineName = Environment.MachineName.ToLower();
+                    retour.ComputerManufacturerName = managementObject["Manufacturer"].ToString();
+                    retour.ComputerModel = managementObject["model"].ToString();
+                    retour.ComputerSystemType = managementObject["SystemType"].ToString();
+                    retour.ComputerDomain = managementObject["Domain"].ToString();
+                    retour.ComputerUserName = Environment.UserName;
+                    retour.ComputerMachineName = Environment.MachineName.ToLower();
                 }
 
                 // processor info
@@ -711,10 +710,10 @@ namespace Xtream_ToolBox
                     managementObjectEnumerator.MoveNext();
                     managementObject = (ManagementObject)managementObjectEnumerator.Current;
 
-                    retour.processorManufacturer = managementObject["Manufacturer"].ToString();
-                    retour.processorCaption = managementObject["Caption"].ToString();
-                    retour.processorMaxClockSpeed = Convert.ToInt64(managementObject["MaxClockSpeed"]);
-                    retour.processorL2CacheSize = Convert.ToInt64(managementObject["L2CacheSize"]) * 1024;
+                    retour.ProcessorManufacturer = managementObject["Manufacturer"].ToString();
+                    retour.ProcessorCaption = managementObject["Caption"].ToString();
+                    retour.ProcessorMaxClockSpeed = Convert.ToInt64(managementObject["MaxClockSpeed"]);
+                    retour.ProcessorL2CacheSize = Convert.ToInt64(managementObject["L2CacheSize"]) * 1024;
                 }
 
                 // Bios info
@@ -727,25 +726,25 @@ namespace Xtream_ToolBox
                     managementObjectEnumerator.MoveNext();
                     managementObject = (ManagementObject)managementObjectEnumerator.Current;
 
-                    retour.biosCaption = managementObject["Caption"].ToString();
-                    retour.biosVersion = managementObject["version"].ToString();
+                    retour.BiosCaption = managementObject["Caption"].ToString();
+                    retour.BiosVersion = managementObject["version"].ToString();
                 }
 
                 // Display info
-                retour.displayNbScreen = System.Windows.Forms.Screen.AllScreens.Length;
+                retour.DisplayNbScreen = System.Windows.Forms.Screen.AllScreens.Length;
                 System.Windows.Forms.Screen currentScreen;
-                if (retour.displayNbScreen > 0)
+                if (retour.DisplayNbScreen > 0)
                 {
                     currentScreen = System.Windows.Forms.Screen.AllScreens[0];
-                    retour.displayPrimaryScreenInfos = currentScreen.Bounds.Width + "x" + currentScreen.Bounds.Height + "x" + currentScreen.BitsPerPixel;
-                    if (retour.displayNbScreen > 1)
+                    retour.DisplayPrimaryScreenInfos = currentScreen.Bounds.Width + "x" + currentScreen.Bounds.Height + "x" + currentScreen.BitsPerPixel;
+                    if (retour.DisplayNbScreen > 1)
                     {
                         currentScreen = System.Windows.Forms.Screen.AllScreens[1];
-                        retour.displaySecondaryScreenInfos = currentScreen.Bounds.Width + "x" + currentScreen.Bounds.Height + "x" + currentScreen.BitsPerPixel;
+                        retour.DisplaySecondaryScreenInfos = currentScreen.Bounds.Width + "x" + currentScreen.Bounds.Height + "x" + currentScreen.BitsPerPixel;
                     }
                     else
                     {
-                        retour.displaySecondaryScreenInfos = "";
+                        retour.DisplaySecondaryScreenInfos = "";
                     }
                 }
 
@@ -753,22 +752,22 @@ namespace Xtream_ToolBox
                 if ((NetworkInterface.GetIsNetworkAvailable()) && (NetworkInterface.GetAllNetworkInterfaces().Length > 0))
                 {
                     NetworkInterface networkInterface = (NetworkInterface)NetworkInterface.GetAllNetworkInterfaces().GetValue(0);
-                    retour.networkConnectionSpeed = networkInterface.Speed;
-                    retour.networkConnectionName = networkInterface.Name;
-                    retour.networkConnectionDescription = networkInterface.Description;
-                    retour.networkConnectionType = networkInterface.NetworkInterfaceType.ToString();
+                    retour.NetworkConnectionSpeed = networkInterface.Speed;
+                    retour.NetworkConnectionName = networkInterface.Name;
+                    retour.NetworkConnectionDescription = networkInterface.Description;
+                    retour.NetworkConnectionType = networkInterface.NetworkInterfaceType.ToString();
                     try
                     {
                         IPAddress[] adresses = Dns.GetHostAddresses(Dns.GetHostName());
                         for (int i = 0; i < adresses.Length; i++)
                         {
-                            if ((adresses[i].AddressFamily == AddressFamily.InterNetwork) && (retour.networkLocalIpAdresse == null))
+                            if ((adresses[i].AddressFamily == AddressFamily.InterNetwork) && (retour.NetworkLocalIpAdresse == null))
                             {
-                                retour.networkLocalIpAdresse = adresses[i].ToString();
+                                retour.NetworkLocalIpAdresse = adresses[i].ToString();
                             }
-                            if ((adresses[i].AddressFamily == AddressFamily.InterNetworkV6) && (retour.networkLocalIpAdresseV6 == null))
+                            if ((adresses[i].AddressFamily == AddressFamily.InterNetworkV6) && (retour.NetworkLocalIpAdresseV6 == null))
                             {
-                                retour.networkLocalIpAdresseV6 = adresses[i].ToString();
+                                retour.NetworkLocalIpAdresseV6 = adresses[i].ToString();
                             }
                         }
                     }
@@ -788,10 +787,10 @@ namespace Xtream_ToolBox
                     managementObjectEnumerator.MoveNext();
                     managementObject = (ManagementObject)managementObjectEnumerator.Current;
 
-                    retour.videoControllerName = managementObject["Name"].ToString();
-                    retour.videoControllerProcessor = managementObject["VideoProcessor"].ToString();
-                    retour.videoControllerMode = managementObject["VideoModeDescription"].ToString();
-                    retour.videoControllerRam = Convert.ToInt64(managementObject["AdapterRAM"]);
+                    retour.VideoControllerName = managementObject["Name"].ToString();
+                    retour.VideoControllerProcessor = managementObject["VideoProcessor"].ToString();
+                    retour.VideoControllerMode = managementObject["VideoModeDescription"].ToString();
+                    retour.VideoControllerRam = Convert.ToInt64(managementObject["AdapterRAM"]);
                 }
             }
             catch (Exception e)
@@ -822,20 +821,19 @@ namespace Xtream_ToolBox
             int second = 0;
             int millisec = 0;
             string dmtf = dmtfDate;
-            string tempString = System.String.Empty;
 
-            if (((System.String.Empty == dmtf) || (dmtf == null)))
+            if (string.IsNullOrEmpty(dmtf))
             {
                 return System.DateTime.MinValue;
             }
 
-            if ((dmtf.Length != 25))
+            if (dmtf.Length != 25)
             {
                 return System.DateTime.MinValue;
             }
 
-            tempString = dmtf.Substring(0, 4);
-            if (("****" != tempString))
+            string tempString = dmtf.Substring(0, 4);
+            if ("****" != tempString)
             {
                 year = System.Int32.Parse(tempString);
             }
@@ -891,59 +889,52 @@ namespace Xtream_ToolBox
     public class SystemInformations
     {
         // operating system informations
-        public String osCaption;
-        public String osVersion;
-        public String osManufacturer;
-        public String osWinDir;
-        public String osSerialNumber;
-        public DateTime osInstallDate;
-
+        public string OsCaption { get; set; }
+        public string OsVersion { get; set; }
+        public string OsManufacturer { get; set; }
+        public string OsWinDir { get; set; }
+        public string OsSerialNumber { get; set; }
+        public DateTime OsInstallDate { get; set; }
         // computer information
-        public String computerManufacturerName;
-        public String computerModel;
-        public String computerSystemType;
-        public String computerDomain;
-        public String computerUserName;
-        public String computerMachineName;
-
+        public string ComputerManufacturerName { get; set; }
+        public string ComputerModel { get; set; }
+        public string ComputerSystemType { get; set; }
+        public string ComputerDomain { get; set; }
+        public string ComputerUserName { get; set; }
+        public string ComputerMachineName { get; set; }
         // processor info
-        public String processorManufacturer;
-        public String processorCaption;
-        public Int64 processorMaxClockSpeed;
-        public Int64 processorL2CacheSize;
-
+        public string ProcessorManufacturer { get; set; }
+        public string ProcessorCaption { get; set; }
+        public long ProcessorMaxClockSpeed { get; set; }
+        public long ProcessorL2CacheSize { get; set; }
         // Display infos
-        public int displayNbScreen;
-        public String displayPrimaryScreenInfos;
-        public String displaySecondaryScreenInfos;
-
+        public int DisplayNbScreen { get; set; }
+        public string DisplayPrimaryScreenInfos { get; set; }
+        public string DisplaySecondaryScreenInfos { get; set; }
         // Bios info
-        public String biosCaption;
-        public String biosVersion;
-
+        public string BiosCaption { get; set; }
+        public string BiosVersion { get; set; }
         // memory configuration
-        public Int64 memoryTotalPageFileSpace;
-        public Int64 memoryTotalPhysicalMemory;
-
+        public long MemoryTotalPageFileSpace { get; set; }
+        public long MemoryTotalPhysicalMemory { get; set; }
         // Network connection
-        public String networkConnectionName;
-        public Int64 networkConnectionSpeed;
-        public String networkConnectionType;
-        public String networkConnectionDescription;
-        public String networkLocalIpAdresse;
-        public String networkLocalIpAdresseV6;
-
+        public string NetworkConnectionName { get; set; }
+        public long NetworkConnectionSpeed { get; set; }
+        public string NetworkConnectionType { get; set; }
+        public string NetworkConnectionDescription { get; set; }
+        public string NetworkLocalIpAdresse { get; set; }
+        public string NetworkLocalIpAdresseV6 { get; set; }
         // video controller
-        public String videoControllerName;
-        public String videoControllerProcessor;
-        public String videoControllerMode;
-        public Int64 videoControllerRam;
+        public string VideoControllerName { get; set; }
+        public string VideoControllerProcessor { get; set; }
+        public string VideoControllerMode { get; set; }
+        public long VideoControllerRam { get; set; }
     }
 
     class SingleInstanceApp : IDisposable
     {
         // Mutex
-        Mutex _siMutex;
+        readonly Mutex _siMutex;
         bool _siMutexOwned;
 
         // Constructeur
@@ -953,12 +944,12 @@ namespace Xtream_ToolBox
             _siMutexOwned = false;
         }
 
-        // Application déjà lancée ?
+        // Application dÃ©ja lancÃ©e ?
         public bool IsRunning()
         {
             // Acquisition du mutex.
             // Si _siMutexOwned vaut true, l'application acquiert le mutex car il est "libre"
-            // Sinon le mutex a déjà été acquis lors du lancement d'une instance précédente
+            // Sinon le mutex a dÃ©jÃ© Ã©tÃ© acquis lors du lancement d'une instance prÃ©cÃ©dente
             _siMutexOwned = _siMutex.WaitOne(0, true);
             return !(_siMutexOwned);
         }
@@ -966,7 +957,7 @@ namespace Xtream_ToolBox
         // Membre de IDisposable
         public void Dispose()
         {
-            // Libération du mutex si il a été acquis
+            // LibÃ©ration du mutex si il a Ã©tÃ© acquis
             if (_siMutexOwned)
             {
                 _siMutex.ReleaseMutex();

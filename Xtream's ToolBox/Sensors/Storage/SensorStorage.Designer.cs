@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors {
+﻿namespace XtreamToolbox.Sensors {
     partial class SensorStorage {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -47,7 +47,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.Drive;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.Drive;
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DoubleBuffered = true;
             this.Name = "SensorStorage";

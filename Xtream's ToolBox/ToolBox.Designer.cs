@@ -1,6 +1,6 @@
-namespace Xtream_ToolBox
+namespace XtreamToolbox
 {
-    partial class ToolBox
+    partial class Toolbox
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -29,7 +29,7 @@ namespace Xtream_ToolBox
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolBox));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Toolbox));
             this.toolboxContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -141,12 +141,12 @@ namespace Xtream_ToolBox
             this.networkDetectorTimer.Interval = 1000;
             this.networkDetectorTimer.Tick += new System.EventHandler(this.NetworkDetectorTimer_Tick);
             // 
-            // ToolBox
+            // Toolbox
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.background;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.background;
             this.CausesValidation = false;
             this.ControlBox = false;
             this.Controls.Add(this.toolBoxFlowLayoutPanel);
@@ -154,7 +154,7 @@ namespace Xtream_ToolBox
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ToolBox";
+            this.Name = "Toolbox";
             this.Opacity = 0D;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

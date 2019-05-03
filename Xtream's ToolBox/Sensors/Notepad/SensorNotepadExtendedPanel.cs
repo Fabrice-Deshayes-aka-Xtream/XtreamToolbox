@@ -7,13 +7,13 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Resources;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 using System.Runtime.InteropServices;
 
-namespace Xtream_ToolBox.Sensors {
+namespace XtreamToolbox.Sensors {
     public partial class SensorNotepadExtendedPanel : Form {
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         ResourceManager resources = Properties.Resources.ResourceManager;
 
         // constructor

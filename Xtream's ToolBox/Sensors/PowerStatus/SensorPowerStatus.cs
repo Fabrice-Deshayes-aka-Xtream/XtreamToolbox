@@ -8,21 +8,21 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Reflection;
 using System.Resources;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class SensorPowerStatus : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         // constructor
-        public SensorPowerStatus(ToolBox toolbox)
+        public SensorPowerStatus(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;
@@ -159,7 +159,7 @@ namespace Xtream_ToolBox.Sensors
             // nothing to do on this sensor
         }
 
-        // rafraichi le power status à chaque évenement lié à l'alimentation
+        // rafraichi le power status Ã© chaque Ã©venement liÃ© Ã© l'alimentation
         private void SystemEvents_PowerModeChanged(object sender, PowerModeChangedEventArgs e)
         {
             RefreshUI();

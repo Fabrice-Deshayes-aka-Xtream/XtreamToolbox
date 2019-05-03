@@ -8,37 +8,38 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Collections;
 using System.Collections.Specialized;
-using Xtream_ToolBox.Sensors;
+using XtreamToolbox.Sensors;
 using System.Drawing.Imaging;
 using System.Globalization;
 using System.Threading;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 using TimeSync;
 using System.Resources;
 
-namespace Xtream_ToolBox
+namespace XtreamToolbox
 {
     delegate void myDelegate();
 
-    public partial class ToolBox : Form
+    public partial class Toolbox : Form
     {
 
-        /** déclaration des form utilisée par la toolbox */
+        /** dÃ©claration des form utilisÃ©e par la toolbox */
         private About aboutBox = null;
         private OptionsForm optionsForm = null;
         private PhotosRenamerForm photosRenamerForm = null;
-        public List<int> magneticXPositions = new List<int>();
-        public List<int> magneticYPositions = new List<int>();
-        public String action = "";
         private bool lastIsInternetConnected = false;
-        public bool internetConnectionChangeState = false;
 
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         ResourceManager resources = Properties.Resources.ResourceManager;
 
+        public string Action { get; set; } = "";
+        public bool InternetConnectionChangeState { get; set; } = false;
+        public List<int> MagneticYPositions { get; } = new List<int>();
+        public List<int> MagneticXPositions { get; } = new List<int>();
+
         // constructeur
-        public ToolBox()
+        public Toolbox()
         {
             InitializeComponent();
             this.Opacity = 0;
@@ -66,7 +67,7 @@ namespace Xtream_ToolBox
                 this.MinimumSize = new Size(Properties.Settings.Default.lastToolboxWidth, 48);
             }
 
-            this.Text = resources.GetString("FormName_Toolbox");
+            this.Text = resources.GetString("FormName_Toolbox", new CultureInfo(Properties.Settings.Default.language));
 
             if (Properties.Settings.Default.location == null)
             {
@@ -141,7 +142,7 @@ namespace Xtream_ToolBox
             toolBoxFlowLayoutPanel.Controls.Add(new ToolBoxEnder(this));
             this.MinimumSize = new Size(48, 48);
             initBackgroundWorker.RunWorkerAsync();
-            action = "fade in";
+            Action = "fade in";
         }
 
         // quitte la toolbox
@@ -150,7 +151,7 @@ namespace Xtream_ToolBox
             Close();
         }
 
-        // mémorise la largeur de la toolbox pour l'afficher dans la bonne taille lors de la prochaine ouverture
+        // mÃ©morise la largeur de la toolbox pour l'afficher dans la bonne taille lors de la prochaine ouverture
         private void ToolBox_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.lastToolboxWidth = this.Width;
@@ -234,7 +235,7 @@ namespace Xtream_ToolBox
             String retour = null;
             String timeServer = doWorkEventArgs.Argument.ToString();
 
-            if ((timeServer != null) && (!timeServer.Equals("")))
+            if (!string.IsNullOrEmpty(timeServer))
             {
                 NTPClient client;
                 try
@@ -268,12 +269,12 @@ namespace Xtream_ToolBox
             // magnetic borders
             foreach (Screen currentScreen in Screen.AllScreens)
             {
-                magneticYPositions.Add(currentScreen.WorkingArea.Top);
-                magneticYPositions.Add(currentScreen.WorkingArea.Bottom);
-                magneticXPositions.Add(currentScreen.WorkingArea.Left);
-                magneticXPositions.Add(currentScreen.WorkingArea.Right);
-                magneticXPositions.Add(currentScreen.WorkingArea.Left + (currentScreen.WorkingArea.Width / 2));
-                magneticYPositions.Add(currentScreen.WorkingArea.Top + (currentScreen.WorkingArea.Height / 2));
+                MagneticYPositions.Add(currentScreen.WorkingArea.Top);
+                MagneticYPositions.Add(currentScreen.WorkingArea.Bottom);
+                MagneticXPositions.Add(currentScreen.WorkingArea.Left);
+                MagneticXPositions.Add(currentScreen.WorkingArea.Right);
+                MagneticXPositions.Add(currentScreen.WorkingArea.Left + (currentScreen.WorkingArea.Width / 2));
+                MagneticYPositions.Add(currentScreen.WorkingArea.Top + (currentScreen.WorkingArea.Height / 2));
             }
 
             autoTimeSynchTimer.Enabled = Properties.Settings.Default.timeAutoSynch;
@@ -301,50 +302,20 @@ namespace Xtream_ToolBox
 
         private void ActionTimer_Tick(object sender, EventArgs e)
         {
-            if (action == "fade in")
+            if (Action == "fade in")
             {
                 for (double i = 0; i <= Properties.Settings.Default.opacity; i += 0.1)
                 {
                     this.Opacity = i;
                     Thread.Sleep(100);
                 }
-                action = "";
+                Action = "";
             }
-            else if (action == "relaunch")
+            else if (Action == "relaunch")
             {
-                toolBoxFlowLayoutPanel.SuspendLayout();
-                List<Control> sensors = new List<Control>();
-                foreach (Control sensor in toolBoxFlowLayoutPanel.Controls)
-                {
-                    sensors.Add(sensor);
-                }
-                toolBoxFlowLayoutPanel.Controls.Clear();
-
-                toolBoxFlowLayoutPanel.Controls.Add(new ToolBoxStarter(this));
-                foreach (String sensorName in Properties.Settings.Default.sensors)
-                {
-                    bool found = false;
-                    // reinject sensors which was there before at their new position
-                    foreach (Control sensor in sensors)
-                    {
-                        if (sensor.GetType().ToString().EndsWith(sensorName))
-                        {
-                            toolBoxFlowLayoutPanel.Controls.Add(sensor);
-                            ((ISensor)sensor).InitUI();
-                            sensors.Remove(sensor);
-                            found = true;
-                            break;
-                        }
-                    }
-                    // add new sensor
-                    if (!found)
-                    {
-                        ManageSensorInFlowPanel(toolBoxFlowLayoutPanel, sensorName);
-                    }
-                }
-                toolBoxFlowLayoutPanel.Controls.Add(new ToolBoxEnder(this));
-                toolBoxFlowLayoutPanel.ResumeLayout();
-                action = "";
+                notifyIcon.Dispose();
+                Application.Restart();
+                Environment.Exit(0);
             }
         }
 
@@ -411,7 +382,7 @@ namespace Xtream_ToolBox
                 lastIsInternetConnected = isInternetConnected;
                 if (isInternetConnected)
                 {
-                    // on vient de récupérer la connection internet, on rafraichi certain sensors
+                    // on vient de rÃ©cupÃ©rer la connection internet, on rafraichi certain sensors
                     ISensor currentSensor;
                     foreach (Control sensor in toolBoxFlowLayoutPanel.Controls)
                     {

@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors {
+﻿namespace XtreamToolbox.Sensors {
     partial class SensorWeather {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -37,7 +37,7 @@
             // 
             resources.ApplyResources(this.weatherPictureBox, "weatherPictureBox");
             this.weatherPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.weatherPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.weather_small_na;
+            this.weatherPictureBox.Image = global::XtreamToolbox.Properties.Resources.weather_small_na;
             this.weatherPictureBox.Name = "weatherPictureBox";
             this.weatherPictureBox.TabStop = false;
             this.weatherPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SensorWeather_MouseClick);

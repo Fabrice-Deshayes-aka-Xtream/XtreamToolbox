@@ -6,21 +6,21 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using System.Resources;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class SensorKeyStatus : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         // constructor
-        public SensorKeyStatus(ToolBox toolbox)
+        public SensorKeyStatus(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;

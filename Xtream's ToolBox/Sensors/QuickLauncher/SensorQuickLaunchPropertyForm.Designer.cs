@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors
+﻿namespace XtreamToolbox.Sensors
 {
     partial class SensorQuickLaunchPropertyForm
     {
@@ -58,7 +58,7 @@
             // quickLaunchBrowseImageButton
             // 
             resources.ApplyResources(this.quickLaunchBrowseImageButton, "quickLaunchBrowseImageButton");
-            this.quickLaunchBrowseImageButton.Image = global::Xtream_ToolBox.Properties.Resources.folder_open_16;
+            this.quickLaunchBrowseImageButton.Image = global::XtreamToolbox.Properties.Resources.folder_open_16;
             this.quickLaunchBrowseImageButton.Name = "quickLaunchBrowseImageButton";
             this.quickLaunchBrowseImageButton.UseVisualStyleBackColor = true;
             this.quickLaunchBrowseImageButton.Click += new System.EventHandler(this.QuickLaunchBrowseImageButton_Click);
@@ -76,7 +76,7 @@
             // quickLaunchBrowseButton
             // 
             resources.ApplyResources(this.quickLaunchBrowseButton, "quickLaunchBrowseButton");
-            this.quickLaunchBrowseButton.Image = global::Xtream_ToolBox.Properties.Resources.folder_open_16;
+            this.quickLaunchBrowseButton.Image = global::XtreamToolbox.Properties.Resources.folder_open_16;
             this.quickLaunchBrowseButton.Name = "quickLaunchBrowseButton";
             this.quickLaunchBrowseButton.UseVisualStyleBackColor = true;
             this.quickLaunchBrowseButton.Click += new System.EventHandler(this.QuickLaunchBrowseButton_Click);
@@ -113,7 +113,7 @@
             // 
             resources.ApplyResources(this.saveButton, "saveButton");
             this.saveButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.saveButton.Image = global::Xtream_ToolBox.Properties.Resources.save_16;
+            this.saveButton.Image = global::XtreamToolbox.Properties.Resources.save_16;
             this.saveButton.Name = "saveButton";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);

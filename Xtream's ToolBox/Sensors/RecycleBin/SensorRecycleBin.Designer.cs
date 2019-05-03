@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox
+﻿namespace XtreamToolbox
 {
     partial class SensorRecycleBin
     {
@@ -52,7 +52,7 @@
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.TrashEmpty;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.TrashEmpty;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(0);

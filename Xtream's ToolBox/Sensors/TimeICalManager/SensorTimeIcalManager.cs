@@ -5,25 +5,25 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 using System.Threading;
 using System.Globalization;
 using System.Resources;
 using System.Collections;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class SensorTimeIcalManager : UserControl, ISensor
     {
 
         // reference on parent and child objects
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         // constructor
-        public SensorTimeIcalManager(ToolBox toolbox)
+        public SensorTimeIcalManager(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;

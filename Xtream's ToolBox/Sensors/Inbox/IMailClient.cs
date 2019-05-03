@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Collections.Specialized;
 
-namespace Xtream_ToolBox.Utils.Mail
+namespace XtreamToolbox.Utils.Mail
 {
     interface IMailClient
     {

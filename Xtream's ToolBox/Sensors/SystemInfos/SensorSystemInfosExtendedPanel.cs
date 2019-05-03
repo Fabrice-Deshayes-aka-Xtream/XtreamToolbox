@@ -8,17 +8,17 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
 using System.Resources;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 using System.Runtime.InteropServices;
-using Xtream_ToolBox.Sensors;
+using XtreamToolbox.Sensors;
 
-namespace Xtream_ToolBox {
+namespace XtreamToolbox {
     public partial class SensorSystemInfosMore : Form {
 
         private SensorSystemInfos sensorSystemInfos = null;
         
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         ResourceManager resources = Properties.Resources.ResourceManager;
 
         // Consrtructeur
@@ -32,43 +32,43 @@ namespace Xtream_ToolBox {
 
         // initialisation (one shot)
         public void Initialisation(){
-            if (sensorSystemInfos.systemInformations != null) {
-                osLabel1.Text = String.Format(resources.GetString("SysInfos_01"), sensorSystemInfos.systemInformations.osCaption, Environment.OSVersion.ServicePack);
-                osLabel3.Text = String.Format(resources.GetString("SysInfos_02"), sensorSystemInfos.systemInformations.osSerialNumber);
+            if (sensorSystemInfos.SystemInformations != null) {
+                osLabel1.Text = String.Format(resources.GetString("SysInfos_01"), sensorSystemInfos.SystemInformations.OsCaption, Environment.OSVersion.ServicePack);
+                osLabel3.Text = String.Format(resources.GetString("SysInfos_02"), sensorSystemInfos.SystemInformations.OsSerialNumber);
 
-                procRamLabel1.Text = String.Format(resources.GetString("SysInfos_03"), sensorSystemInfos.systemInformations.processorManufacturer, sensorSystemInfos.systemInformations.processorCaption);
-                procRamLabel4.Text = String.Format(resources.GetString("SysInfos_04"), SystemUtils.GetFriendlyBytesSize(sensorSystemInfos.systemInformations.memoryTotalPageFileSpace, "auto"));
+                procRamLabel1.Text = String.Format(resources.GetString("SysInfos_03"), sensorSystemInfos.SystemInformations.ProcessorManufacturer, sensorSystemInfos.SystemInformations.ProcessorCaption);
+                procRamLabel4.Text = String.Format(resources.GetString("SysInfos_04"), SystemUtils.GetFriendlyBytesSize(sensorSystemInfos.SystemInformations.MemoryTotalPageFileSpace, "auto"));
 
-                netUserLabel1.Text = String.Format(resources.GetString("SysInfos_05"), sensorSystemInfos.systemInformations.computerUserName, sensorSystemInfos.systemInformations.computerMachineName);
-                netUserLabel2.Text = String.Format(resources.GetString("SysInfos_06"), sensorSystemInfos.systemInformations.networkLocalIpAdresse, sensorSystemInfos.systemInformations.computerDomain);
-                netUserLabel3.Text = String.Format(resources.GetString("SysInfos_06_v6"), sensorSystemInfos.systemInformations.networkLocalIpAdresseV6);
-                netUserLabel4.Text = String.Format(resources.GetString("SysInfos_07"), sensorSystemInfos.systemInformations.networkConnectionType, (sensorSystemInfos.systemInformations.networkConnectionSpeed / 1000000));
+                netUserLabel1.Text = String.Format(resources.GetString("SysInfos_05"), sensorSystemInfos.SystemInformations.ComputerUserName, sensorSystemInfos.SystemInformations.ComputerMachineName);
+                netUserLabel2.Text = String.Format(resources.GetString("SysInfos_06"), sensorSystemInfos.SystemInformations.NetworkLocalIpAdresse, sensorSystemInfos.SystemInformations.ComputerDomain);
+                netUserLabel3.Text = String.Format(resources.GetString("SysInfos_06_v6"), sensorSystemInfos.SystemInformations.NetworkLocalIpAdresseV6);
+                netUserLabel4.Text = String.Format(resources.GetString("SysInfos_07"), sensorSystemInfos.SystemInformations.NetworkConnectionType, (sensorSystemInfos.SystemInformations.NetworkConnectionSpeed / 1000000));
 
-                cgLabel1.Text = String.Format(resources.GetString("SysInfos_08"), sensorSystemInfos.systemInformations.videoControllerName, SystemUtils.GetFriendlyBytesSize(sensorSystemInfos.systemInformations.videoControllerRam, "auto"));
-                cgLabel2.Text = String.Format(resources.GetString("SysInfos_09"), sensorSystemInfos.systemInformations.displayNbScreen);
+                cgLabel1.Text = String.Format(resources.GetString("SysInfos_08"), sensorSystemInfos.SystemInformations.VideoControllerName, SystemUtils.GetFriendlyBytesSize(sensorSystemInfos.SystemInformations.VideoControllerRam, "auto"));
+                cgLabel2.Text = String.Format(resources.GetString("SysInfos_09"), sensorSystemInfos.SystemInformations.DisplayNbScreen);
 
-                if (sensorSystemInfos.systemInformations.displaySecondaryScreenInfos.Equals("")) {
-                    cgLabel3.Text = String.Format(resources.GetString("SysInfos_10"), sensorSystemInfos.systemInformations.displayPrimaryScreenInfos);
+                if (string.IsNullOrEmpty(sensorSystemInfos.SystemInformations.DisplaySecondaryScreenInfos)) {
+                    cgLabel3.Text = String.Format(resources.GetString("SysInfos_10"), sensorSystemInfos.SystemInformations.DisplayPrimaryScreenInfos);
                 }
                 else {
-                    cgLabel3.Text = String.Format(resources.GetString("SysInfos_10"), sensorSystemInfos.systemInformations.displayPrimaryScreenInfos) + " / " + String.Format(resources.GetString("SysInfos_11"), sensorSystemInfos.systemInformations.displaySecondaryScreenInfos);
+                    cgLabel3.Text = String.Format(resources.GetString("SysInfos_10"), sensorSystemInfos.SystemInformations.DisplayPrimaryScreenInfos) + " / " + String.Format(resources.GetString("SysInfos_11"), sensorSystemInfos.SystemInformations.DisplaySecondaryScreenInfos);
                 }
 
-                biosLabel1.Text = sensorSystemInfos.systemInformations.biosCaption;
-                biosLabel2.Text = String.Format(resources.GetString("SysInfos_12"), sensorSystemInfos.systemInformations.biosVersion);
+                biosLabel1.Text = sensorSystemInfos.SystemInformations.BiosCaption;
+                biosLabel2.Text = String.Format(resources.GetString("SysInfos_12"), sensorSystemInfos.SystemInformations.BiosVersion);
             }
         }
 
         // initialisation des infos volatiles
         public void RefreshSystemInformation(String ramUsedStr, String cpuUsedStr, String processAndThreadStr) {
-            if (sensorSystemInfos.systemInformations != null) {
+            if (sensorSystemInfos.SystemInformations != null) {
                 
                 procRamLabel5.Text = processAndThreadStr;
                 procRamLabel3.Text = String.Format(resources.GetString("SysInfos_14"), ramUsedStr);
-                procRamLabel2.Text = String.Format(resources.GetString("SysInfos_15"), SystemUtils.FormatSpeedInHertz(Convert.ToInt64(sensorSystemInfos.systemInformations.processorMaxClockSpeed)), cpuUsedStr);
+                procRamLabel2.Text = String.Format(resources.GetString("SysInfos_15"), SystemUtils.FormatSpeedInHertz(Convert.ToInt64(sensorSystemInfos.SystemInformations.ProcessorMaxClockSpeed)), cpuUsedStr);
 
                 TimeSpan timespan = TimeSpan.FromMilliseconds(Environment.TickCount);
-                osLabel2.Text = String.Format(resources.GetString("SysInfos_16"), sensorSystemInfos.systemInformations.osInstallDate.ToString(resources.GetString("SysInfos_InstalleDateFormat")), timespan.Hours.ToString().PadLeft(2, '0'), timespan.Minutes.ToString().PadLeft(2, '0'), timespan.Seconds.ToString().PadLeft(2, '0'));
+                osLabel2.Text = String.Format(resources.GetString("SysInfos_16"), sensorSystemInfos.SystemInformations.OsInstallDate.ToString(resources.GetString("SysInfos_InstalleDateFormat")), timespan.Hours.ToString().PadLeft(2, '0'), timespan.Minutes.ToString().PadLeft(2, '0'), timespan.Seconds.ToString().PadLeft(2, '0'));
             }
         }
 

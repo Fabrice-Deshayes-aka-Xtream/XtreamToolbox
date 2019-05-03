@@ -4,7 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace Xtream_ToolBox.Utils
+namespace XtreamToolbox.Utils
 {
     class ToolBoxUtils
     {
@@ -75,7 +75,7 @@ namespace Xtream_ToolBox.Utils
             }
         }
 
-        public static void ManageExtendedPanelPosition(UserControl sensor, ToolBox toolbox, Form extendedPanel)
+        public static void ManageExtendedPanelPosition(UserControl sensor, Toolbox toolbox, Form extendedPanel)
         {
             if ((extendedPanel != null) && (!extendedPanel.IsDisposed))
             {
@@ -125,13 +125,13 @@ namespace Xtream_ToolBox.Utils
                     {
                         retour.X = currentMagneticPosition - (retour.Width / 2);
                     }
-                    // magnetisme à gauche
+                    // magnetisme Ã© gauche
                     if (Math.Abs(retour.Left - currentMagneticPosition) < precision)
                     {
                         retour.X = currentMagneticPosition;
                     }
 
-                    // magnetisme à droite
+                    // magnetisme Ã© droite
                     if (Math.Abs(retour.Right - currentMagneticPosition) < precision)
                     {
                         retour.X = currentMagneticPosition - retour.Width;

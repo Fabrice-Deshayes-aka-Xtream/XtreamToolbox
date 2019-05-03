@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors.ShutdownManager
+﻿namespace XtreamToolbox.Sensors.ShutdownManager
 {
     partial class ShutdownOptions
     {
@@ -66,7 +66,7 @@
             // 
             this.lockPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.lockPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lockPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_lock;
+            this.lockPictureBox.Image = global::XtreamToolbox.Properties.Resources.shutdownManager_lock;
             resources.ApplyResources(this.lockPictureBox, "lockPictureBox");
             this.lockPictureBox.Name = "lockPictureBox";
             this.lockPictureBox.TabStop = false;
@@ -76,7 +76,7 @@
             // 
             this.logOffPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.logOffPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logOffPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_logoff;
+            this.logOffPictureBox.Image = global::XtreamToolbox.Properties.Resources.shutdownManager_logoff;
             resources.ApplyResources(this.logOffPictureBox, "logOffPictureBox");
             this.logOffPictureBox.Name = "logOffPictureBox";
             this.logOffPictureBox.TabStop = false;
@@ -86,7 +86,7 @@
             // 
             this.swithUserPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.swithUserPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swithUserPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_switch_user;
+            this.swithUserPictureBox.Image = global::XtreamToolbox.Properties.Resources.shutdownManager_switch_user;
             resources.ApplyResources(this.swithUserPictureBox, "swithUserPictureBox");
             this.swithUserPictureBox.Name = "swithUserPictureBox";
             this.swithUserPictureBox.TabStop = false;
@@ -96,7 +96,7 @@
             // 
             this.restartPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.restartPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.restartPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_restart;
+            this.restartPictureBox.Image = global::XtreamToolbox.Properties.Resources.shutdownManager_restart;
             resources.ApplyResources(this.restartPictureBox, "restartPictureBox");
             this.restartPictureBox.Name = "restartPictureBox";
             this.restartPictureBox.TabStop = false;
@@ -106,7 +106,7 @@
             // 
             this.hibernatePictureBox.BackColor = System.Drawing.Color.Transparent;
             this.hibernatePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hibernatePictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_hibernate;
+            this.hibernatePictureBox.Image = global::XtreamToolbox.Properties.Resources.shutdownManager_hibernate;
             resources.ApplyResources(this.hibernatePictureBox, "hibernatePictureBox");
             this.hibernatePictureBox.Name = "hibernatePictureBox";
             this.hibernatePictureBox.TabStop = false;
@@ -116,7 +116,7 @@
             // 
             this.shutdownPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.shutdownPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shutdownPictureBox.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_shutdown;
+            this.shutdownPictureBox.Image = global::XtreamToolbox.Properties.Resources.shutdownManager_shutdown;
             resources.ApplyResources(this.shutdownPictureBox, "shutdownPictureBox");
             this.shutdownPictureBox.Name = "shutdownPictureBox";
             this.shutdownPictureBox.TabStop = false;
@@ -237,7 +237,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.shutdownOptionsBackground;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.shutdownOptionsBackground;
             this.ControlBox = false;
             this.Controls.Add(this.moveBoxRight);
             this.Controls.Add(this.moveBoxLeft);

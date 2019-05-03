@@ -7,15 +7,14 @@ using System.Text;
 using System.Windows.Forms;
 using System.Resources;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class SensorQuickLaunchPropertyForm : Form
     {
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         ResourceManager resources = Properties.Resources.ResourceManager;
-
-        public Location currentLocation = null;
+        public Location CurrentLocation { get; set; } = null;
 
         // constructor
         public SensorQuickLaunchPropertyForm(Location currentLocation)
@@ -23,20 +22,20 @@ namespace Xtream_ToolBox.Sensors
             InitializeComponent();
 
             this.Text = resources.GetString("FormName_QuickLaunchProperty");
-            this.currentLocation = currentLocation;
+            this.CurrentLocation = currentLocation;
             PopulateForm();
         }
 
         // populate form data with location informations
         private void PopulateForm()
         {
-            quicklaunchDisplayNameTextBox.Text = currentLocation.Name;
-            quicklaunchPathTextBox.Text = currentLocation.Loc;
+            quicklaunchDisplayNameTextBox.Text = CurrentLocation.Name;
+            quicklaunchPathTextBox.Text = CurrentLocation.Loc;
 
-            currentLocation.Parameters.TryGetValue("imagePath", out string imagePath);
-            currentLocation.Parameters.TryGetValue("arguments", out string arguments);
-            currentLocation.Parameters.TryGetValue("workingDirectory", out string workingDirectory);
-            currentLocation.Parameters.TryGetValue("description", out string description);
+            CurrentLocation.Parameters.TryGetValue("imagePath", out string imagePath);
+            CurrentLocation.Parameters.TryGetValue("arguments", out string arguments);
+            CurrentLocation.Parameters.TryGetValue("workingDirectory", out string workingDirectory);
+            CurrentLocation.Parameters.TryGetValue("description", out string description);
             quicklaunchImagePathTextBox.Text = imagePath;
             quickLaunchArgumentsTextBox.Text = arguments;
             quickLaunchWorkingDirTextBox.Text = workingDirectory;
@@ -53,16 +52,16 @@ namespace Xtream_ToolBox.Sensors
         // save location modifications
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            currentLocation.Name = quicklaunchDisplayNameTextBox.Text;
-            currentLocation.Loc = quicklaunchPathTextBox.Text;
-            currentLocation.Parameters.Remove("imagePath");
-            currentLocation.Parameters.Add("imagePath", quicklaunchImagePathTextBox.Text);
-            currentLocation.Parameters.Remove("arguments");
-            currentLocation.Parameters.Add("arguments", quickLaunchArgumentsTextBox.Text);
-            currentLocation.Parameters.Remove("workingDirectory");
-            currentLocation.Parameters.Add("workingDirectory", quickLaunchWorkingDirTextBox.Text);
-            currentLocation.Parameters.Remove("description");
-            currentLocation.Parameters.Add("description", quickLaunchDescriptionTextBox.Text);
+            CurrentLocation.Name = quicklaunchDisplayNameTextBox.Text;
+            CurrentLocation.Loc = quicklaunchPathTextBox.Text;
+            CurrentLocation.Parameters.Remove("imagePath");
+            CurrentLocation.Parameters.Add("imagePath", quicklaunchImagePathTextBox.Text);
+            CurrentLocation.Parameters.Remove("arguments");
+            CurrentLocation.Parameters.Add("arguments", quickLaunchArgumentsTextBox.Text);
+            CurrentLocation.Parameters.Remove("workingDirectory");
+            CurrentLocation.Parameters.Add("workingDirectory", quickLaunchWorkingDirTextBox.Text);
+            CurrentLocation.Parameters.Remove("description");
+            CurrentLocation.Parameters.Add("description", quickLaunchDescriptionTextBox.Text);
 
             this.DialogResult = DialogResult.OK;
             Close();

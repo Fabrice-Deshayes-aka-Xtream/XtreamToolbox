@@ -4,14 +4,14 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Data;
 using System.Windows.Forms;
-using Xtream_ToolBox;
+using XtreamToolbox;
 using System.Resources;
 using System.Threading;
 using System.Globalization;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 using System.Drawing.Drawing2D;
 
-namespace Xtream_ToolBox.Sensors {
+namespace XtreamToolbox.Sensors {
     /// <summary>
     /// Control name: Analog Clock Control
     /// Description: A customizable and resizable clock control
@@ -21,12 +21,10 @@ namespace Xtream_ToolBox.Sensors {
     /// </summary>
     public class SensorAnalogClock : UserControl, ISensor {
         // reference on toolbox
-        private readonly ToolBox toolbox = null;
+        private readonly Toolbox toolbox = null;
 
-        // ressource manager pour accéder aux chaines localisées
-        private readonly ResourceManager resources = Xtream_ToolBox.Properties.Resources.ResourceManager;
-
-        private const float PI = 3.141592654F;
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
+        private readonly ResourceManager resources = XtreamToolbox.Properties.Resources.ResourceManager;
 
         private DateTime dateTime;
 
@@ -58,7 +56,7 @@ namespace Xtream_ToolBox.Sensors {
         private System.ComponentModel.IContainer components;
 
         // constructor
-        public SensorAnalogClock(ToolBox toolbox) {
+        public SensorAnalogClock(Toolbox toolbox) {
             InitializeComponent();
 
             this.toolbox = toolbox;
@@ -73,7 +71,7 @@ namespace Xtream_ToolBox.Sensors {
         // init UI
         public void InitUI() {
             // set component margins (left, top, right, bottom)
-            Margin = new Padding(Xtream_ToolBox.Properties.Settings.Default.spaceBetweenSensor, 0, Xtream_ToolBox.Properties.Settings.Default.spaceBetweenSensor, 0);
+            Margin = new Padding(XtreamToolbox.Properties.Settings.Default.spaceBetweenSensor, 0, XtreamToolbox.Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // tips
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
@@ -150,7 +148,7 @@ namespace Xtream_ToolBox.Sensors {
             // SensorAnalogClock
             // 
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.Clock;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.Clock;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(0);

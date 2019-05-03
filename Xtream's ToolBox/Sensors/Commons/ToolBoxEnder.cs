@@ -5,28 +5,28 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 using System.Resources;
 using System.Threading;
 
-namespace Xtream_ToolBox
+namespace XtreamToolbox
 {
     public partial class ToolBoxEnder : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
-        /** variable necessaire la gestion du déplacement de la fenetre par la souris */
+        /** variable necessaire la gestion du dÃ©placement de la fenetre par la souris */
         private bool mouseIsDown = false;
         private int lastMousePositionX = 0;
         private int lastMousePositionY = 0;
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         ResourceManager resources = Properties.Resources.ResourceManager;
 
         // constructor
-        public ToolBoxEnder(ToolBox toolbox)
+        public ToolBoxEnder(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;
@@ -76,7 +76,7 @@ namespace Xtream_ToolBox
             // nothing to do on this sensor
         }
 
-        // gestion du déplacement de la toolbox : initialisation du déplacement
+        // gestion du dÃ©placement de la toolbox : initialisation du dÃ©placement
         private void MoveBox_MouseDown(object sender, MouseEventArgs e)
         {
             mouseIsDown = true;
@@ -84,18 +84,18 @@ namespace Xtream_ToolBox
             lastMousePositionY = e.Y;
         }
 
-        // gestion du déplacement de la toolbox : déplacement
+        // gestion du dÃ©placement de la toolbox : dÃ©placement
         private void MoveBox_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseIsDown && !Properties.Settings.Default.lockPosition)
             {
-                Rectangle toolboxArea = ToolBoxUtils.ManageMagneticPosition(new Rectangle(toolbox.Left - (lastMousePositionX - e.X), toolbox.Top - (lastMousePositionY - e.Y), toolbox.Width, toolbox.Height), toolbox.magneticXPositions, toolbox.magneticYPositions, 16, Properties.Settings.Default.magneticScreenBorder);
+                Rectangle toolboxArea = ToolBoxUtils.ManageMagneticPosition(new Rectangle(toolbox.Left - (lastMousePositionX - e.X), toolbox.Top - (lastMousePositionY - e.Y), toolbox.Width, toolbox.Height), toolbox.MagneticXPositions, toolbox.MagneticYPositions, 16, Properties.Settings.Default.magneticScreenBorder);
                 toolbox.Top = toolboxArea.Top;
                 toolbox.Left = toolboxArea.Left;
             }
         }
 
-        // gestion du déplacement de la toolbox : sauvegarde du déplacement
+        // gestion du dÃ©placement de la toolbox : sauvegarde du dÃ©placement
         private void MoveBox_MouseUp(object sender, MouseEventArgs e)
         {
             mouseIsDown = false;

@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox
+﻿namespace XtreamToolbox
 {
     partial class SensorSpacer
     {
@@ -34,7 +34,7 @@
             // 
             // separatorPanel1
             // 
-            separatorPanel1.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.background_separator;
+            separatorPanel1.BackgroundImage = global::XtreamToolbox.Properties.Resources.background_separator;
             separatorPanel1.Location = new System.Drawing.Point(0, 0);
             separatorPanel1.Margin = new System.Windows.Forms.Padding(0);
             separatorPanel1.Name = "separatorPanel1";

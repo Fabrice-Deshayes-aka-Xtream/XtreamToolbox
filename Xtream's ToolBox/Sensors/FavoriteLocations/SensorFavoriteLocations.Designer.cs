@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox
+﻿namespace XtreamToolbox
 {
     partial class SensorFavoriteLocations
     {
@@ -43,7 +43,7 @@
             // 
             // DocumentsPictureBox
             // 
-            this.DocumentsPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.fav_documents;
+            this.DocumentsPictureBox.BackgroundImage = global::XtreamToolbox.Properties.Resources.fav_documents;
             resources.ApplyResources(this.DocumentsPictureBox, "DocumentsPictureBox");
             this.DocumentsPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DocumentsPictureBox.Name = "DocumentsPictureBox";
@@ -52,7 +52,7 @@
             // 
             // MusicsPictureBox
             // 
-            this.MusicsPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.fav_Music;
+            this.MusicsPictureBox.BackgroundImage = global::XtreamToolbox.Properties.Resources.fav_Music;
             resources.ApplyResources(this.MusicsPictureBox, "MusicsPictureBox");
             this.MusicsPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MusicsPictureBox.Name = "MusicsPictureBox";
@@ -61,7 +61,7 @@
             // 
             // ImagesPictureBox
             // 
-            this.ImagesPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.fav_images;
+            this.ImagesPictureBox.BackgroundImage = global::XtreamToolbox.Properties.Resources.fav_images;
             resources.ApplyResources(this.ImagesPictureBox, "ImagesPictureBox");
             this.ImagesPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ImagesPictureBox.Name = "ImagesPictureBox";
@@ -70,7 +70,7 @@
             // 
             // DownloadsPictureBox
             // 
-            this.DownloadsPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.fav_downloads;
+            this.DownloadsPictureBox.BackgroundImage = global::XtreamToolbox.Properties.Resources.fav_downloads;
             resources.ApplyResources(this.DownloadsPictureBox, "DownloadsPictureBox");
             this.DownloadsPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DownloadsPictureBox.Name = "DownloadsPictureBox";
@@ -79,7 +79,7 @@
             // 
             // VideosPictureBox
             // 
-            this.VideosPictureBox.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.fav_videos;
+            this.VideosPictureBox.BackgroundImage = global::XtreamToolbox.Properties.Resources.fav_videos;
             resources.ApplyResources(this.VideosPictureBox, "VideosPictureBox");
             this.VideosPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.VideosPictureBox.Name = "VideosPictureBox";

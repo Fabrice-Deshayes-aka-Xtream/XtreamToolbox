@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.136
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xtream's ToolBox", "Xtream's ToolBox\Xtream's ToolBox.csproj", "{335D7684-C2DD-4695-A8C0-A9D4ED0FEE1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xtream's Toolbox", "Xtream's ToolBox\Xtream's Toolbox.csproj", "{335D7684-C2DD-4695-A8C0-A9D4ED0FEE1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

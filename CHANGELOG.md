@@ -1,3 +1,11 @@
+## version 2019.05.03
+- [Weather sensor] keep current condition when error prevent to connect to openweathermap
+- [Options] automatic toolbox restart on options change (prevent GUI problem and better management of language change)
+- update Newtonsoft.Json from version 12.0.1 to version 12.0.2
+- change .NET target framework to 4.6
+- upgrade dev environment to visual studio community 2019
+- fix code quality issues (change namespace Xtream_ToolBox to XtreamToolbox and toher minors stuffs)
+
 ## version 2019.03.17
 - [Weather sensor] replace the weather underground api by openweathermap.org [#13](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/13)
 

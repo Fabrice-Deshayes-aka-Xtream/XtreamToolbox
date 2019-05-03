@@ -1,4 +1,4 @@
-namespace Xtream_ToolBox.Sensors {
+namespace XtreamToolbox.Sensors {
     partial class EmptySensor {
         /// <summary> 
         /// Variable nécessaire au concepteur.

@@ -12,24 +12,24 @@ using System.Net.Sockets;
 using Microsoft.Win32;
 using System.Diagnostics;
 using System.Resources;
-using Xtream_ToolBox.Utils;
-using Xtream_ToolBox.Utils.Mail;
+using XtreamToolbox.Utils;
+using XtreamToolbox.Utils.Mail;
 using System.Collections.Specialized;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class SensorInbox : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
         private int nbEmail;
         private int nbSpam;
 
         private String hints;
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         private const int DONT_USE_THIS_RULE = 0;
@@ -42,7 +42,7 @@ namespace Xtream_ToolBox.Sensors
         private const int SPAM_MAIL = 3;
 
         // constructor
-        public SensorInbox(ToolBox toolbox)
+        public SensorInbox(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;
@@ -109,16 +109,16 @@ namespace Xtream_ToolBox.Sensors
             {
                 foreach (String locationStr in Properties.Settings.Default.location)
                 {
-                    Location location = Xtream_ToolBox.Location.FromString(locationStr);
+                    Location location = XtreamToolbox.Location.FromString(locationStr);
                     if (location != null)
                     {
                         switch (location.Type)
                         {
-                            case Xtream_ToolBox.Location.POP3ACCOUNT:
+                            case XtreamToolbox.Location.POP3ACCOUNT:
                                 location.Parameters.TryGetValue("user", out user);
                                 location.Parameters.TryGetValue("password", out password);
                                 location.Parameters.TryGetValue("port", out port);
-                                if (port == null || port.Equals(""))
+                                if (string.IsNullOrEmpty(port))
                                 {
                                     port = "110";
                                 }
@@ -157,7 +157,7 @@ namespace Xtream_ToolBox.Sensors
                 }
             }
 
-            hints = hints + String.Format(resources.GetString("Pop3Checker_OpenIt"),Environment.NewLine);
+            hints += String.Format(resources.GetString("Pop3Checker_OpenIt"),Environment.NewLine);
         }
 
         private int ApplySpamRules(Dictionary<String, StringCollection> mailHeader)
@@ -177,7 +177,7 @@ namespace Xtream_ToolBox.Sensors
         private int ApplySpamRule(int lastState, int ruleType, String ruleData, Dictionary<String, StringCollection> mailHeader)
         {
             int retour = SAFE_MAIL;
-            StringCollection value = null;
+            StringCollection value;
             String[] allowedDnsExtension;
             bool atLeastOne;
 
@@ -218,7 +218,7 @@ namespace Xtream_ToolBox.Sensors
                         mailHeader.TryGetValue("FROM", out value);
                         if (value != null)
                         {
-                            int pos1, pos2 = -1;
+                            int pos1, pos2;
                             foreach (String strValue in value)
                             {
                                 pos1 = strValue.IndexOf('<');
@@ -290,6 +290,7 @@ namespace Xtream_ToolBox.Sensors
         // refresh UI based on sensor Data
         public void RefreshUI()
         {
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
             emailLabel.Visible = true;
             spamLabel.Visible = true;
             progressPictureBox.Visible = false;
@@ -308,20 +309,20 @@ namespace Xtream_ToolBox.Sensors
 
             if (nbEmail == 0)
             {
-                emailLabel.Text = resources.GetString("Pop3Checker_nomail");
+                emailLabel.Text = resources.GetString("Pop3Checker_nomail", culture);
             }
             else
             {
-                emailLabel.Text = String.Format(resources.GetString("Pop3Checker_nbmails"), nbEmail);
+                emailLabel.Text = String.Format(resources.GetString("Pop3Checker_nbmails", culture), nbEmail);
             }
 
             if (nbSpam == 0)
             {
-                spamLabel.Text = resources.GetString("Pop3Checker_nospam");
+                spamLabel.Text = resources.GetString("Pop3Checker_nospam", culture);
             }
             else
             {
-                spamLabel.Text = String.Format(resources.GetString("Pop3Checker_nbspam"), nbSpam);
+                spamLabel.Text = String.Format(resources.GetString("Pop3Checker_nbspam", culture), nbSpam);
             }
         }
 

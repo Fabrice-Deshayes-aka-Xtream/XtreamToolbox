@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors
+﻿namespace XtreamToolbox.Sensors
 {
     partial class SensorMyComputer
     {
@@ -71,70 +71,70 @@
             // 
             // windowsUpdateToolStripMenuItem
             // 
-            this.windowsUpdateToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_Refresh;
+            this.windowsUpdateToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.MyComputer_Refresh;
             this.windowsUpdateToolStripMenuItem.Name = "windowsUpdateToolStripMenuItem";
             resources.ApplyResources(this.windowsUpdateToolStripMenuItem, "windowsUpdateToolStripMenuItem");
             this.windowsUpdateToolStripMenuItem.Click += new System.EventHandler(this.WindowsUpdateToolStripMenuItem_Click);
             // 
             // microsoftStoreToolStripMenuItem
             // 
-            this.microsoftStoreToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_MsStore;
+            this.microsoftStoreToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.MyComputer_MsStore;
             this.microsoftStoreToolStripMenuItem.Name = "microsoftStoreToolStripMenuItem";
             resources.ApplyResources(this.microsoftStoreToolStripMenuItem, "microsoftStoreToolStripMenuItem");
             this.microsoftStoreToolStripMenuItem.Click += new System.EventHandler(this.MicrosoftStoreToolStripMenuItem_Click);
             // 
             // windowsSettingsToolStripMenuItem
             // 
-            this.windowsSettingsToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_WindowsSettings;
+            this.windowsSettingsToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.MyComputer_WindowsSettings;
             this.windowsSettingsToolStripMenuItem.Name = "windowsSettingsToolStripMenuItem";
             resources.ApplyResources(this.windowsSettingsToolStripMenuItem, "windowsSettingsToolStripMenuItem");
             this.windowsSettingsToolStripMenuItem.Click += new System.EventHandler(this.WindowsSettingsToolStripMenuItem_Click);
             // 
             // systemInformationToolStripMenuItem
             // 
-            this.systemInformationToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_SysInfo;
+            this.systemInformationToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.MyComputer_SysInfo;
             this.systemInformationToolStripMenuItem.Name = "systemInformationToolStripMenuItem";
             resources.ApplyResources(this.systemInformationToolStripMenuItem, "systemInformationToolStripMenuItem");
             this.systemInformationToolStripMenuItem.Click += new System.EventHandler(this.SystemInformationToolStripMenuItem_Click);
             // 
             // applicationLaunchedOnStartupToolStripMenuItem
             // 
-            this.applicationLaunchedOnStartupToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_StartupApp;
+            this.applicationLaunchedOnStartupToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.MyComputer_StartupApp;
             this.applicationLaunchedOnStartupToolStripMenuItem.Name = "applicationLaunchedOnStartupToolStripMenuItem";
             resources.ApplyResources(this.applicationLaunchedOnStartupToolStripMenuItem, "applicationLaunchedOnStartupToolStripMenuItem");
             this.applicationLaunchedOnStartupToolStripMenuItem.Click += new System.EventHandler(this.ApplicationLaunchedOnStartupToolStripMenuItem_Click);
             // 
             // applicationsToolStripMenuItem
             // 
-            this.applicationsToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_InstalledApps;
+            this.applicationsToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.MyComputer_InstalledApps;
             this.applicationsToolStripMenuItem.Name = "applicationsToolStripMenuItem";
             resources.ApplyResources(this.applicationsToolStripMenuItem, "applicationsToolStripMenuItem");
             this.applicationsToolStripMenuItem.Click += new System.EventHandler(this.ApplicationsToolStripMenuItem_Click);
             // 
             // defaultApplicationsToolStripMenuItem
             // 
-            this.defaultApplicationsToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_DefaultApps;
+            this.defaultApplicationsToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.MyComputer_DefaultApps;
             this.defaultApplicationsToolStripMenuItem.Name = "defaultApplicationsToolStripMenuItem";
             resources.ApplyResources(this.defaultApplicationsToolStripMenuItem, "defaultApplicationsToolStripMenuItem");
             this.defaultApplicationsToolStripMenuItem.Click += new System.EventHandler(this.DefaultApplicationsToolStripMenuItem_Click);
             // 
             // optionalFeaturesToolStripMenuItem
             // 
-            this.optionalFeaturesToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_OptionalFeatures;
+            this.optionalFeaturesToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.MyComputer_OptionalFeatures;
             this.optionalFeaturesToolStripMenuItem.Name = "optionalFeaturesToolStripMenuItem";
             resources.ApplyResources(this.optionalFeaturesToolStripMenuItem, "optionalFeaturesToolStripMenuItem");
             this.optionalFeaturesToolStripMenuItem.Click += new System.EventHandler(this.OptionalFeaturesToolStripMenuItem_Click);
             // 
             // displaySettingsToolStripMenuItem
             // 
-            this.displaySettingsToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_DisplaySettings;
+            this.displaySettingsToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.MyComputer_DisplaySettings;
             this.displaySettingsToolStripMenuItem.Name = "displaySettingsToolStripMenuItem";
             resources.ApplyResources(this.displaySettingsToolStripMenuItem, "displaySettingsToolStripMenuItem");
             this.displaySettingsToolStripMenuItem.Click += new System.EventHandler(this.DisplaySettingsToolStripMenuItem_Click);
             // 
             // printersToolStripMenuItem
             // 
-            this.printersToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_Printer;
+            this.printersToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.MyComputer_Printer;
             this.printersToolStripMenuItem.Name = "printersToolStripMenuItem";
             resources.ApplyResources(this.printersToolStripMenuItem, "printersToolStripMenuItem");
             this.printersToolStripMenuItem.Click += new System.EventHandler(this.PrintersToolStripMenuItem_Click);
@@ -147,7 +147,7 @@
             this.servicesManagementToolStripMenuItem1,
             this.microsoftManagementConsoleMMCToolStripMenuItem,
             this.eventsViewerToolStripMenuItem1});
-            this.legacyToolsToolStripMenuItem.Image = global::Xtream_ToolBox.Properties.Resources.MyComputer_Legacy;
+            this.legacyToolsToolStripMenuItem.Image = global::XtreamToolbox.Properties.Resources.MyComputer_Legacy;
             this.legacyToolsToolStripMenuItem.Name = "legacyToolsToolStripMenuItem";
             resources.ApplyResources(this.legacyToolsToolStripMenuItem, "legacyToolsToolStripMenuItem");
             // 
@@ -193,7 +193,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.myComputer;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.myComputer;
             resources.ApplyResources(this, "$this");
             this.ContextMenuStrip = this.contextMenuStrip;
             this.Cursor = System.Windows.Forms.Cursors.Hand;

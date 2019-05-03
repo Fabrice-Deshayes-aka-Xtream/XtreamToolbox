@@ -7,14 +7,14 @@ using System.Text;
 using System.Windows.Forms;
 using System.Resources;
 using System.IO;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class StorageUserControl : UserControl
     {
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         private DriveInfo device = null;

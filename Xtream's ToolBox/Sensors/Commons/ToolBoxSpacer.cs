@@ -6,16 +6,16 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Xtream_ToolBox
+namespace XtreamToolbox
 {
     public partial class SensorSpacer : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
         // constructor
-        public SensorSpacer(ToolBox toolbox)
+        public SensorSpacer(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;

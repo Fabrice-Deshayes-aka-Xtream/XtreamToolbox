@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors
+﻿namespace XtreamToolbox.Sensors
 {
     partial class SensorStorageExtendedPanel
     {
@@ -92,7 +92,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.extendInfosBackground;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.extendInfosBackground;
             this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.drivesComboBox);

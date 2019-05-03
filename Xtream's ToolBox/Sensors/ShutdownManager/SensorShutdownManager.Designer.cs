@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox
+﻿namespace XtreamToolbox
 {
     partial class SensorShutdownManager
     {
@@ -40,7 +40,7 @@
             // lowerButton
             // 
             this.lowerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lowerButton.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_shutdown;
+            this.lowerButton.Image = global::XtreamToolbox.Properties.Resources.shutdownManager_shutdown;
             resources.ApplyResources(this.lowerButton, "lowerButton");
             this.lowerButton.Name = "lowerButton";
             this.lowerButton.TabStop = false;
@@ -57,7 +57,7 @@
             // upperButton
             // 
             this.upperButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.upperButton.Image = global::Xtream_ToolBox.Properties.Resources.shutdownManager_logoff;
+            this.upperButton.Image = global::XtreamToolbox.Properties.Resources.shutdownManager_logoff;
             resources.ApplyResources(this.upperButton, "upperButton");
             this.upperButton.Name = "upperButton";
             this.upperButton.TabStop = false;

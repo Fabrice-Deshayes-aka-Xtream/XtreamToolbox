@@ -7,21 +7,21 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Resources;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class SensorMyComputer : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         // constructor
-        public SensorMyComputer(ToolBox toolbox)
+        public SensorMyComputer(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;

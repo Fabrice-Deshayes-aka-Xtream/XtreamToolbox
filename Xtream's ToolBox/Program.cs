@@ -5,7 +5,7 @@ using System.Resources;
 using System.Threading;
 using System.Globalization;
 
-namespace Xtream_ToolBox
+namespace XtreamToolbox
 {
     static class Program
     {
@@ -31,7 +31,7 @@ namespace Xtream_ToolBox
                 {
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
-                    Application.Run(new ToolBox());
+                    Application.Run(new Toolbox());
                 }
             }
         }

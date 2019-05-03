@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors {
+﻿namespace XtreamToolbox.Sensors {
     partial class SensorTimeIcalManager {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -86,7 +86,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.MCalendar;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.MCalendar;
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.dayLabel);

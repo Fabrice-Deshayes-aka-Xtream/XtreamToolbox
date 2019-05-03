@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox
+﻿namespace XtreamToolbox
 {
     partial class OptionsForm
     {
@@ -480,7 +480,7 @@
             // 
             // timeSynchronizeButton
             // 
-            this.timeSynchronizeButton.Image = global::Xtream_ToolBox.Properties.Resources.refresh_16;
+            this.timeSynchronizeButton.Image = global::XtreamToolbox.Properties.Resources.refresh_16;
             this.timeSynchronizeButton.Location = new System.Drawing.Point(294, 17);
             this.timeSynchronizeButton.Name = "timeSynchronizeButton";
             this.timeSynchronizeButton.Size = new System.Drawing.Size(150, 24);
@@ -1050,7 +1050,7 @@
             // deleteSensorButton
             // 
             this.deleteSensorButton.Enabled = false;
-            this.deleteSensorButton.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
+            this.deleteSensorButton.Image = global::XtreamToolbox.Properties.Resources.trash_16;
             this.deleteSensorButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.deleteSensorButton.Location = new System.Drawing.Point(376, 51);
             this.deleteSensorButton.Name = "deleteSensorButton";
@@ -1113,7 +1113,7 @@
             // 
             // addSensorButton
             // 
-            this.addSensorButton.Image = global::Xtream_ToolBox.Properties.Resources.add_16;
+            this.addSensorButton.Image = global::XtreamToolbox.Properties.Resources.add_16;
             this.addSensorButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.addSensorButton.Location = new System.Drawing.Point(300, 166);
             this.addSensorButton.Name = "addSensorButton";
@@ -1416,7 +1416,7 @@
             // 
             // browseEmailClientButton
             // 
-            this.browseEmailClientButton.Image = global::Xtream_ToolBox.Properties.Resources.folder_open_16;
+            this.browseEmailClientButton.Image = global::XtreamToolbox.Properties.Resources.folder_open_16;
             this.browseEmailClientButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.browseEmailClientButton.Location = new System.Drawing.Point(365, 54);
             this.browseEmailClientButton.Name = "browseEmailClientButton";
@@ -1539,7 +1539,7 @@
             // popDeleteButton
             // 
             this.popDeleteButton.Enabled = false;
-            this.popDeleteButton.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
+            this.popDeleteButton.Image = global::XtreamToolbox.Properties.Resources.trash_16;
             this.popDeleteButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.popDeleteButton.Location = new System.Drawing.Point(379, 142);
             this.popDeleteButton.Name = "popDeleteButton";
@@ -1665,7 +1665,7 @@
             // 
             // textEditorPathBrowseButton
             // 
-            this.textEditorPathBrowseButton.Image = global::Xtream_ToolBox.Properties.Resources.folder_open_16;
+            this.textEditorPathBrowseButton.Image = global::XtreamToolbox.Properties.Resources.folder_open_16;
             this.textEditorPathBrowseButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textEditorPathBrowseButton.Location = new System.Drawing.Point(367, 16);
             this.textEditorPathBrowseButton.Name = "textEditorPathBrowseButton";
@@ -2119,7 +2119,7 @@
             // 
             this.saveButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.saveButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.saveButton.Image = global::Xtream_ToolBox.Properties.Resources.check_16;
+            this.saveButton.Image = global::XtreamToolbox.Properties.Resources.check_16;
             this.saveButton.Location = new System.Drawing.Point(395, 578);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 24);
@@ -2132,7 +2132,7 @@
             // cancelButton
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Image = global::Xtream_ToolBox.Properties.Resources.stop;
+            this.cancelButton.Image = global::XtreamToolbox.Properties.Resources.stop;
             this.cancelButton.Location = new System.Drawing.Point(314, 578);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 24);
@@ -2157,7 +2157,7 @@
             // 
             // exportOptionsButton
             // 
-            this.exportOptionsButton.Image = global::Xtream_ToolBox.Properties.Resources.save_16;
+            this.exportOptionsButton.Image = global::XtreamToolbox.Properties.Resources.save_16;
             this.exportOptionsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exportOptionsButton.Location = new System.Drawing.Point(4, 578);
             this.exportOptionsButton.Name = "exportOptionsButton";
@@ -2176,7 +2176,7 @@
             // 
             // importOptionsButton
             // 
-            this.importOptionsButton.Image = global::Xtream_ToolBox.Properties.Resources.folder_open_16;
+            this.importOptionsButton.Image = global::XtreamToolbox.Properties.Resources.folder_open_16;
             this.importOptionsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.importOptionsButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.importOptionsButton.Location = new System.Drawing.Point(110, 578);

@@ -8,21 +8,21 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Globalization;
 using System.Resources;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 
-namespace Xtream_ToolBox.Sensors
+namespace XtreamToolbox.Sensors
 {
     public partial class EmptySensor : UserControl, ISensor
     {
 
         // reference on toolbox
-        private ToolBox toolbox = null;
+        private Toolbox toolbox = null;
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         private ResourceManager resources = Properties.Resources.ResourceManager;
 
         // constructor
-        public EmptySensor(ToolBox toolbox)
+        public EmptySensor(Toolbox toolbox)
         {
             InitializeComponent();
             this.toolbox = toolbox;

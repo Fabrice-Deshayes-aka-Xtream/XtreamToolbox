@@ -1,4 +1,4 @@
-﻿namespace Xtream_ToolBox.Sensors
+﻿namespace XtreamToolbox.Sensors
 {
     partial class SensorNotepadExtendedPanel
     {
@@ -67,7 +67,7 @@
             // loadButton
             // 
             resources.ApplyResources(this.loadButton, "loadButton");
-            this.loadButton.Image = global::Xtream_ToolBox.Properties.Resources.folder_open_16;
+            this.loadButton.Image = global::XtreamToolbox.Properties.Resources.folder_open_16;
             this.loadButton.Name = "loadButton";
             this.helpToolTip.SetToolTip(this.loadButton, resources.GetString("loadButton.ToolTip"));
             this.loadButton.UseVisualStyleBackColor = true;
@@ -76,7 +76,7 @@
             // saveButton
             // 
             resources.ApplyResources(this.saveButton, "saveButton");
-            this.saveButton.Image = global::Xtream_ToolBox.Properties.Resources.save_16;
+            this.saveButton.Image = global::XtreamToolbox.Properties.Resources.save_16;
             this.saveButton.Name = "saveButton";
             this.helpToolTip.SetToolTip(this.saveButton, resources.GetString("saveButton.ToolTip"));
             this.saveButton.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             // clearButton
             // 
             resources.ApplyResources(this.clearButton, "clearButton");
-            this.clearButton.Image = global::Xtream_ToolBox.Properties.Resources.trash_16;
+            this.clearButton.Image = global::XtreamToolbox.Properties.Resources.trash_16;
             this.clearButton.Name = "clearButton";
             this.helpToolTip.SetToolTip(this.clearButton, resources.GetString("clearButton.ToolTip"));
             this.clearButton.UseVisualStyleBackColor = true;
@@ -105,7 +105,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = global::Xtream_ToolBox.Properties.Resources.extendInfosBackground;
+            this.BackgroundImage = global::XtreamToolbox.Properties.Resources.extendInfosBackground;
             this.ControlBox = false;
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.loadButton);

@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Resources;
 
-namespace Xtream_ToolBox.Sensors.ShutdownManager
+namespace XtreamToolbox.Sensors.ShutdownManager
 {
     public partial class ShutdownOptions : Form
     {

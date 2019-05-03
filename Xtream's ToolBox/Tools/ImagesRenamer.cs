@@ -6,21 +6,21 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using Xtream_ToolBox.Utils;
+using XtreamToolbox.Utils;
 using System.Diagnostics;
 using System.Threading;
 using System.Globalization;
 using System.Resources;
 
-namespace Xtream_ToolBox
+namespace XtreamToolbox
 {
     public partial class PhotosRenamerForm : Form
     {
 
-        // delegate méthode for adding line to listbox in threadsafe mode from background worker
+        // delegate mÃ©thode for adding line to listbox in threadsafe mode from background worker
         public delegate void addLogsDelegate(String logs);
 
-        // ressource manager pour accéder aux chaines localisées
+        // ressource manager pour accÃ©der aux chaines localisÃ©es
         ResourceManager resources = Properties.Resources.ResourceManager;
 
         // default search pattern for photos to rename
@@ -34,7 +34,10 @@ namespace Xtream_ToolBox
             SimulateButton.Enabled = false;
             renameButton.Enabled = false;
 
-            this.Text = resources.GetString("FormName_ExifRenamer");
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+            Thread.CurrentThread.CurrentCulture = culture;
+            Thread.CurrentThread.CurrentUICulture = culture;
+            this.Text = resources.GetString("FormName_ExifRenamer", culture);
         }
 
         // launch simulation
@@ -161,20 +164,19 @@ namespace Xtream_ToolBox
 
             timeWatcher.Start();
 
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(Properties.Settings.Default.language);
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Properties.Settings.Default.language);
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
 
             if (simulation)
             {
-                AddLogs(String.Format(resources.GetString("JpgRenamer_SimulationStart"), imagesPathTextBox.Text));
+                AddLogs(String.Format(resources.GetString("JpgRenamer_SimulationStart", culture), imagesPathTextBox.Text));
             }
             else
             {
-                AddLogs(String.Format(resources.GetString("JpgRenamer_RenameStart"), imagesPathTextBox.Text));
+                AddLogs(String.Format(resources.GetString("JpgRenamer_RenameStart", culture), imagesPathTextBox.Text));
             }
             List<FileSystemInfo> fileSystemInfos = FindFiles(imagesPathTextBox.Text, searchPattern, recursiveMode);
             progressMaximumValue = fileSystemInfos.Count;
-            AddLogs(String.Format(resources.GetString("JpgRenamer_NPhotosToRename"), progressMaximumValue));
+            AddLogs(String.Format(resources.GetString("JpgRenamer_NPhotosToRename", culture), progressMaximumValue));
             AddLogs("");
 
             if (progressMaximumValue != 0)
@@ -210,20 +212,20 @@ namespace Xtream_ToolBox
                             {
                                 // no changes to do. Filename is already good
                                 nbImgNoChange++;
-                                AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action1"), currentImageName));
+                                AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action1", culture), currentImageName));
                             }
                             else
                             {
                                 // correct EXIF date in filename
                                 nbImgCorrectDate++;
-                                AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action2"), currentImageName, newImageName));
+                                AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action2", culture), currentImageName, newImageName));
                             }
                         }
                         else
                         {
                             // rename image
                             newImageName = currentExifDate + currentImageName;
-                            AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action3"), currentImageName, newImageName));
+                            AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action3", culture), currentImageName, newImageName));
                             nbImgRenamed++;
                             if (!simulation)
                             {
@@ -234,14 +236,14 @@ namespace Xtream_ToolBox
                     else
                     {
                         // no EXIF datas. Can't rename this photo
-                        AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action4"), currentImageName));
+                        AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Action4", culture), currentImageName));
                         nbImgIgnored++;
                     }
                 }
                 catch (Exception exception)
                 {
                     // ERROR
-                    AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Error"), exception.Message));
+                    AddLogs(currentPhotoStr + String.Format(resources.GetString("JpgRenamer_Error", culture), exception.Message));
                     nbImgError++;
                 }
             }
@@ -249,54 +251,54 @@ namespace Xtream_ToolBox
 
             AddLogs("_____________________________________________________________________________________________");
             AddLogs("");
-            String recursiveModeStr = resources.GetString("JpgRenamer_RecursiveMode");
+            String recursiveModeStr = resources.GetString("JpgRenamer_RecursiveMode", culture);
             if (!recursiveMode)
             {
-                recursiveModeStr = resources.GetString("JpgRenamer_NormalMode");
+                recursiveModeStr = resources.GetString("JpgRenamer_NormalMode", culture);
             }
 
-            String completeStr = resources.GetString("JpgRenamer_Complete");
+            String completeStr = resources.GetString("JpgRenamer_Complete", culture);
             if (renamerBackgroundWorker.CancellationPending)
             {
-                completeStr = resources.GetString("JpgRenamer_Canceled");
+                completeStr = resources.GetString("JpgRenamer_Canceled", culture);
             }
 
             if (simulation)
             {
-                AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation1"), completeStr, progressMaximumValue, recursiveModeStr, (timeWatcher.ElapsedMilliseconds / 1000)));
-                AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation2"), nbImgRenamed));
+                AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation1", culture), completeStr, progressMaximumValue, recursiveModeStr, (timeWatcher.ElapsedMilliseconds / 1000)));
+                AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation2", culture), nbImgRenamed));
                 if (nbImgIgnored > 0)
                 {
-                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation3"), nbImgIgnored));
+                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation3", culture), nbImgIgnored));
                 }
                 if (nbImgNoChange > 0)
                 {
-                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation4"), nbImgNoChange));
+                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation4", culture), nbImgNoChange));
                 }
                 if (nbImgCorrectDate > 0)
                 {
-                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation5"), nbImgCorrectDate));
+                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportSimulation5", culture), nbImgCorrectDate));
                 }
             }
             else
             {
-                AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename1"), completeStr, progressMaximumValue, recursiveModeStr, (timeWatcher.ElapsedMilliseconds / 1000)));
-                AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename2"), nbImgRenamed));
+                AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename1", culture), completeStr, progressMaximumValue, recursiveModeStr, (timeWatcher.ElapsedMilliseconds / 1000)));
+                AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename2", culture), nbImgRenamed));
                 if (nbImgIgnored > 0)
                 {
-                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename3"), nbImgIgnored));
+                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename3", culture), nbImgIgnored));
                 }
                 if (nbImgNoChange > 0)
                 {
-                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename4"), nbImgNoChange));
+                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename4", culture), nbImgNoChange));
                 }
                 if (nbImgCorrectDate > 0)
                 {
-                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename5"), nbImgCorrectDate));
+                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename5", culture), nbImgCorrectDate));
                 }
                 if (nbImgError > 0)
                 {
-                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename6"), nbImgError));
+                    AddLogs(String.Format(resources.GetString("JpgRenamer_ReportRename6", culture), nbImgError));
                 }
             }
             AddLogs("_____________________________________________________________________________________________");
@@ -316,7 +318,7 @@ namespace Xtream_ToolBox
             ManageGUI(true);
         }
 
-        // récupère la liste des fichiers respectant la searchPattern (ex : *.jpg) contenu dans le chemin "path"
+        // rÃ©cupÃ©re la liste des fichiers respectant la searchPattern (ex : *.jpg) contenu dans le chemin "path"
         public static List<FileSystemInfo> FindFiles(String path, String searchPattern, bool recursiveMode)
         {
             List<FileSystemInfo> retour = new List<FileSystemInfo>();
