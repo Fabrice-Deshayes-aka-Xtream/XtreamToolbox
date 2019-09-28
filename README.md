@@ -1,6 +1,6 @@
 # Xtream's ToolBox - Customizable multifunctional toolbar
 
-> Note for non french people: even if this README is not yet translated in english, default language for the GUI toolbox is english so you won't be lost :-)
+> Note for non french people: even if this README is not yet translated in english, default language for the toolbox GUI is english so you won't be lost :-)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
 
