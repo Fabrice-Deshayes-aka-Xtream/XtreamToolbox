@@ -1974,7 +1974,7 @@ namespace XtreamToolbox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à {0} {1}.
+        ///   Recherche une chaîne localisée semblable à {0} (version {1}).
         /// </summary>
         internal static string SysInfos_01 {
             get {

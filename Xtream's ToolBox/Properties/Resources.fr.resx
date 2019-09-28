@@ -337,7 +337,7 @@
     <value>Clic gauche pour ouvrir le panneau d'informations systèmes{0}Clic droit pour choisir les informations à afficher sur le graphique</value>
   </data>
   <data name="SysInfos_01" xml:space="preserve">
-    <value>{0} {1}</value>
+    <value>{0} (version {1})</value>
   </data>
   <data name="SysInfos_02" xml:space="preserve">
     <value>Numéro de série : {0}</value>

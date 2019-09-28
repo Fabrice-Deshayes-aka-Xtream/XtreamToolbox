@@ -11,6 +11,7 @@ using System.Resources;
 using XtreamToolbox.Utils;
 using System.Runtime.InteropServices;
 using XtreamToolbox.Sensors;
+using Microsoft.Win32;
 
 namespace XtreamToolbox {
     public partial class SensorSystemInfosMore : Form {
@@ -33,7 +34,9 @@ namespace XtreamToolbox {
         // initialisation (one shot)
         public void Initialisation(){
             if (sensorSystemInfos.SystemInformations != null) {
-                osLabel1.Text = String.Format(resources.GetString("SysInfos_01"), sensorSystemInfos.SystemInformations.OsCaption, Environment.OSVersion.ServicePack);
+                string releaseId = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "ReleaseId", "").ToString();
+
+                osLabel1.Text = String.Format(resources.GetString("SysInfos_01"), sensorSystemInfos.SystemInformations.OsCaption, releaseId);
                 osLabel3.Text = String.Format(resources.GetString("SysInfos_02"), sensorSystemInfos.SystemInformations.OsSerialNumber);
 
                 procRamLabel1.Text = String.Format(resources.GetString("SysInfos_03"), sensorSystemInfos.SystemInformations.ProcessorManufacturer, sensorSystemInfos.SystemInformations.ProcessorCaption);
