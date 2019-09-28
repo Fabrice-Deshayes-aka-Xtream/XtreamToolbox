@@ -127,20 +127,27 @@ namespace XtreamToolbox.Sensors
         // hide or show extended panel
         private void SensorWeather_MouseClick(object sender, MouseEventArgs e)
         {
-            if ((extendedPanel == null) || (extendedPanel.IsDisposed))
+            if (e.Button == MouseButtons.Right)
             {
-                extendedPanel = new SensorWeatherExtendedPanel(this);
-                RefreshUI();
-            }
-
-            if (extendedPanel.Visible)
-            {
-                extendedPanel.Hide();
+                SystemUtils.OpenInDefaultBrowser("https://openweathermap.org/city/" + Properties.Settings.Default.weatherCityId);
             }
             else
             {
-                ToolBoxUtils.ManageExtendedPanelPosition(this, Toolbox, extendedPanel);
-                extendedPanel.Show();
+                if ((extendedPanel == null) || (extendedPanel.IsDisposed))
+                {
+                    extendedPanel = new SensorWeatherExtendedPanel(this);
+                    RefreshUI();
+                }
+
+                if (extendedPanel.Visible)
+                {
+                    extendedPanel.Hide();
+                }
+                else
+                {
+                    ToolBoxUtils.ManageExtendedPanelPosition(this, Toolbox, extendedPanel);
+                    extendedPanel.Show();
+                }
             }
         }
     }
