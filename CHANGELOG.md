@@ -1,3 +1,8 @@
+## version 2019.09.29
+- [System Info Sensor] Add Windows 10 release id (ie 1903 for march 2019) #20
+- [Weather Sensor] browse to your city weather forecast on OpenWeather on left click #21
+- [Common] fix tooltips #22
+
 ## version 2019.05.03
 - [Weather sensor] keep current condition when error prevent to connect to openweathermap
 - [Options] automatic toolbox restart on options change (prevent GUI problem and better management of language change)
