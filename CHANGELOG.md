@@ -1,7 +1,7 @@
 ## version 2019.09.29
-- [System Info Sensor] Add Windows 10 release id (ie 1903 for march 2019) #20
-- [Weather Sensor] browse to your city weather forecast on OpenWeather on left click #21
-- [Common] fix tooltips #22
+- [System Info Sensor] Add Windows 10 release id (ie 1903 for march 2019) [#20](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/20)
+- [Weather Sensor] browse to your city weather forecast on OpenWeather on left click [#21](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/21)
+- [Common] fix tooltips [#22](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/22)
 
 ## version 2019.05.03
 - [Weather sensor] keep current condition when error prevent to connect to openweathermap
@@ -208,13 +208,13 @@
   with extended panel)
 - correct tooltip display
 
-2008-05 :: version 0.9.8.6
+## 2008-05 :: version 0.9.8.6
 - Limit storage sensor to fixed drive only
 - Add icon for exe application
 - Allow connecting network drive on startup (see options)
 - Offer to import or export options in XML format
 
-2008-04 :: version 0.9.8.5
+## 2008-04 :: version 0.9.8.5
 - Improve LAN/WAN system informations 
     . replace int16 by int32
     . you can now disable lan or wan
@@ -228,17 +228,17 @@
   long workstation lock in System Sensor graph mode
 - Allow drag'n drop on Recycle Bin Sensor
 
-2007-12 :: version 0.9.8.4
+## 2007-12 :: version 0.9.8.4
 - Correct bad counter in exif renamer tools
 - Correct NTP time synchronizer (don't work if options weren’t open)
 - Don't delete favorite locations if not found
 
-2007-10 :: version 0.9.8.3
+## 2007-10 :: version 0.9.8.3
 - Correct null pointer exception when moving toolbox
 - Update Ical viewer en ical and DDay.iCal dll (0.40)
 - Correct extended panel behaviour on hide/show with systray icon
 
-2007-10 :: version 0.9.8.2
+## 2007-10 :: version 0.9.8.2
 - Improve POP3 Checker sensor: you can choose your defaut email
   client and pop server port.
 - Improve memory usage: 55 700 mb -> 38 700 mb :-)
@@ -251,39 +251,39 @@
 - Review tab order in Exif jpef renamer
 - Review tab order in Option
 
-2007-07 :: version 0.9.8.1
+## 2007-07 :: version 0.9.8.1
 - New WAAC.dll for Winamp Sensor has a memory leak. Come back to 
   older version
 - Unlock folder.jpg resource in Winamp Sensor when winamp 
   is closed.
 - Correct BackgroundWorker behavior if called when busy.
 
-2007-05 :: version 0.9.8
+## 2007-05 :: version 0.9.8
 - Update WAAC dll for Winamp Sensor. Correct song samplerate in HZ.
 
-2007-04 :: version 0.9.7
+## 2007-04 :: version 0.9.7
 - Debugging of Winamp sensor
 - Debugging of ICalendar viewer. Update DDay.iCal dll
 
-2007-03 :: version 0.9.6
+## 2007-03 :: version 0.9.6
 - New weather iconset by iconbest.com (by Wojciech Grzanka)
 - Complete refactoring of Time Manager sensor, with support
   for ical calendar format (local or remote)
 - Hide extended panels from alt-tab menu
 
-2007-03 :: version 0.9.5
+## 2007-03 :: version 0.9.5
 - Correct bug on QuickLaunch Sensor (shortcut property not saved 
   if modified)
 - Correct bug on Winamp Sensor: 
   - avoid msgBox if artist not found on audioscrubber
   - correct Live Messenger "now playing" behavior.
   
-2007-02 :: version 0.9
+## 2007-02 :: version 0.9
 - Correct some bugs on storage sensor and recycle bin tooltips
 - Adds some artist's tour info from LastFm (audio scrubber technology)
   on what's playing on winamp sensor.
 
-2007-01 :: version 0.8
+## 2007-01 :: version 0.8
 - Add new Winamp Sensor which analyzes current song played in
   Winamp (based on WAAC library by slowmo). 
   Display id3 tag and album cover. This sensor changes 
@@ -292,7 +292,7 @@
 - Order classes in one package for each sensor.
 - Improve CPU usage: less than 1% with all sensor on toolbox!
 
-2006-12 :: version 0.7
+## 2006-12 :: version 0.7
 - Debug time manager English date/time
 - Debug Weather sensor (n/a still in background for nothing)
 - Add max number of process and threads in SysInfo Sensor
@@ -307,21 +307,21 @@
 - Update Calendar sensor (design, event manager and reminder)
 - Update Inbox Sensor with spam manager
 
-2006-11 :: version 0.6
+## 2006-11 :: version 0.6
 - Manage arguments, start in directory and description in 
   QuickLaunch sensor
 - Remove vumeter's tooltip on sensor sysInfo (setTooltip .NET bug)
 - Remove trash's tooltip on sensor RecycleBin (setTooltip .NET bug)
 - Catch exceptions in POP3Checker Sensor
 
-2006-10 :: version 0.5
+## 2006-10 :: version 0.5
 - Debug http proxy
 - Debug network vumeter
 - Move TimeManager options in calendar forms
 - POP3 Checker Sensor
 - Redesign icon with new GRANT pack
 
-2006-09 :: version 0.4
+## 2006-09 :: version 0.4
 - French translation of Key status sensor
 - French translation of Time Manager sensor
 - French translation of Note pad sensor
@@ -349,7 +349,7 @@
 - Time synchronization using SNTP Time server (based on work by Valer Bocan)
 - Enhance Image renamer (work in background, cancel allowed...)
 
-2006-08 :: version 0.3
+## 2006-08 :: version 0.3
 - Complete refactoring of Sensor's code with multithreading for long 
   delay sensor's initialization
 - Progress barre on toolbox initialization
@@ -359,13 +359,13 @@
 - Upgrade Notepad Sensor (clear, load and save as button)
 - Externalize Rss Reader as tool which can be access by system tray
 
-2006-07 :: version 0.2
+## 2006-07 :: version 0.2
 - Development of My Computer Sensor
 - Development of Notepad Sensor
 - Development of Windows Calc Sensor
 - Development of The Weather Channel Sensor
 
-2006-06 :: version 0.1
+## 2006-06 :: version 0.1
 - Design and development of generic toolbox sensor architecture
 - Development of System information Sensor
 - Development of Recycle bin Sensor
