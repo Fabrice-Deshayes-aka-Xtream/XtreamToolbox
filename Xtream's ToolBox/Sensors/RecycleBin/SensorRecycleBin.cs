@@ -69,7 +69,7 @@ namespace XtreamToolbox
                 {
                     helpToolTip.RemoveAll();
                 }
-                ToolBoxUtils.SetTooltips(helpToolTip, this, String.Format(resources.GetString("RecycleBin_Infos"), SystemUtils.GetFriendlyBytesSize(sizeOfItemsInRecycleBin, "auto"), numItemsInRecycleBin.ToString(), Environment.NewLine));
+                ToolBoxUtils.SetTooltips(helpToolTip, this, String.Format(resources.GetString("RecycleBin_Infos"), SystemUtils.GetFriendlyBytesSize(sizeOfItemsInRecycleBin, "auto"), numItemsInRecycleBin.ToString()));
                 this.Cursor = Cursors.Hand;
             }
             else

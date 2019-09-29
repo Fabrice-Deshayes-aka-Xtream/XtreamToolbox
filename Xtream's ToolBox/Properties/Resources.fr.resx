@@ -121,7 +121,8 @@
     <value>Executer la calculatrice Windows</value>
   </data>
   <data name="TimeICalManager_Tip" xml:space="preserve">
-    <value>Clic gauche pour ouvrir le calendrier.{0}Clic droit pour ouvrir les contacts.</value>
+    <value>Clic gauche pour ouvrir le calendrier.
+Clic droit pour ouvrir les contacts.</value>
   </data>
   <data name="FormName_About" xml:space="preserve">
     <value>Xtream's ToolBox - A propos</value>
@@ -229,13 +230,15 @@
     <value>Le vérouillage du pavé numérique est activé</value>
   </data>
   <data name="MyComputer_tip" xml:space="preserve">
-    <value>Clic gauche pour ouvrir le poste de travail{0}Clic droit pour accéder aux outils d'administration</value>
+    <value>Clic gauche pour ouvrir le poste de travail
+Clic droit pour accéder aux outils d'administration</value>
   </data>
   <data name="not_available" xml:space="preserve">
     <value>n/d</value>
   </data>
   <data name="NotePad_tip" xml:space="preserve">
-    <value>Clic gauche pour ouvrir et fermer le bloc note.{0}Clic droit pour executer votre editeur de texte préféré.</value>
+    <value>Clic gauche pour ouvrir et fermer le bloc note
+Clic droit pour executer votre editeur de texte préféré</value>
   </data>
   <data name="Pop3Checker_Hint" xml:space="preserve">
     <value>{2} emails et {3} spams sur le compte {1} du serveur {0}{4}</value>
@@ -259,13 +262,18 @@
     <value>Cliquez ici pour configurer la manière dont votre ordinateur gère l'energie</value>
   </data>
   <data name="PowerStatus_Tips2" xml:space="preserve">
-    <value>Cliquez ici pour configurer la manière dont votre ordinateur gère l'energie{3}{3}Durée de la batterie en pleine charge : {0}{3}Durée restante : {1} ({2}%)</value>
+    <value>Cliquez ici pour configurer la manière dont votre ordinateur gère l'energie
+
+Durée de la batterie en pleine charge : {0}
+Durée restante : {1} ({2}%)</value>
   </data>
   <data name="RecycleBin_Empty" xml:space="preserve">
     <value>La poubelle est vide</value>
   </data>
   <data name="RecycleBin_Infos" xml:space="preserve">
-    <value>{0} ({1} items) dans la poubelle{2}Clic gauche pour ouvrir la poubelle{2}Clic droit pour la vider</value>
+    <value>{0} ({1} items) dans la poubelle
+Clic gauche pour ouvrir la poubelle
+Clic droit pour la vider</value>
   </data>
   <data name="ShutdownManager_ConfirmeLogOff" xml:space="preserve">
     <value>Voulez vous vraiment fermer votre session ?</value>
@@ -403,7 +411,8 @@
     <value>dd/MM/yy HH:mm</value>
   </data>
   <data name="SysInfosTips" xml:space="preserve">
-    <value>Clic gauche pour ouvrir les informations systèmes{0}Clic droit pour ouvrir le menu contextuel d'options</value>
+    <value>Clic gauche pour ouvrir les informations systèmes
+Clic droit pour ouvrir le menu contextuel d'options</value>
   </data>
   <data name="Toolbox_close" xml:space="preserve">
     <value>Fermer la ToolBox</value>
@@ -448,7 +457,8 @@
     <value>Impossible de récupérer les informations météo. Vérifiez votre code de localisation, votre connection réseau et le bon fonctionnement du site web openweathermap.org</value>
   </data>
   <data name="Weather_tip" xml:space="preserve">
-    <value>Ouvrir / Fermer les informations météo</value>
+    <value>Clic gauche pour ouvrir/fermer les informations météo
+Clic droit pour afficher la page OpenWeatherMap dans votre navigateur </value>
   </data>
   <data name="ShutdownManager_ConfirmeHibernate" xml:space="preserve">
     <value>Voulez vous vraiment mettre votre ordinateur en veille prolongée ?</value>
@@ -463,7 +473,8 @@
     <value>Confirmation de la mise en veille de l'ordinateur</value>
   </data>
   <data name="ShutdownManager_Tip" xml:space="preserve">
-    <value>Clic gauche pour effectuer l'action par défaut (voir options){0}Clic droit pour afficher le menu</value>
+    <value>Clic gauche pour effectuer l'action par défaut (voir options)
+Clic droit pour afficher le menu</value>
   </data>
   <data name="FormName_ShutdownManager" xml:space="preserve">
     <value>Xtream's ToolBox - Shutdown manager</value>
@@ -503,5 +514,20 @@
   </data>
   <data name="Weather_07" xml:space="preserve">
     <value>Pression : {0} {1}</value>
+  </data>
+  <data name="FavoriteLocationDocuments" xml:space="preserve">
+    <value>Ouvrir "mes documents"</value>
+  </data>
+  <data name="FavoriteLocationDownloads" xml:space="preserve">
+    <value>Ouvrir "mes téléchargements"</value>
+  </data>
+  <data name="FavoriteLocationImages" xml:space="preserve">
+    <value>Ouvrir "mes images"</value>
+  </data>
+  <data name="FavoriteLocationMusics" xml:space="preserve">
+    <value>Ouvrir "ma musique"</value>
+  </data>
+  <data name="FavoriteLocationVideos" xml:space="preserve">
+    <value>Ouvrir "mes vidéos"</value>
   </data>
 </root>

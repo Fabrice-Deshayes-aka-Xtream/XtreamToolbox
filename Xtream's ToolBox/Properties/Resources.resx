@@ -266,7 +266,8 @@
     <value>..\Resources\battery_c3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Weather_tip" xml:space="preserve">
-    <value>Open / Close weather informations</value>
+    <value>Left click to open/close weather information
+Right click to browse to weather forcast on OpenWeatherMap</value>
   </data>
   <data name="Sys_tbit" xml:space="preserve">
     <value>Tb</value>
@@ -287,7 +288,10 @@
     <value>computer shutdown confirmation</value>
   </data>
   <data name="PowerStatus_Tips2" xml:space="preserve">
-    <value>Click to configure energy saving for your computer{3}{3}Full charge battery duration : {0}{3}Battery remaining : {1} ({2}%)</value>
+    <value>Click to configure energy saving for your computer
+
+Full charge battery duration : {0}
+Battery remaining : {1} ({2}%)</value>
   </data>
   <data name="key_capslock_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key_capslock_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -365,7 +369,8 @@
     <value>Last mesure: {0}</value>
   </data>
   <data name="MyComputer_tip" xml:space="preserve">
-    <value>Left click to open my computer{0}Right click for administrative tools</value>
+    <value>Left click to open my computer
+Right click for administrative tools</value>
   </data>
   <data name="refresh_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -590,7 +595,9 @@
     <value>..\Resources\weather_small_50n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RecycleBin_Infos" xml:space="preserve">
-    <value>{0} ({1} items) in Recycle bin{2}Left click to open it{2}Right click to empty</value>
+    <value>{0} ({1} items) in Recycle bin
+Left click to open it
+Right click to empty</value>
   </data>
   <data name="weather_01d" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weather_01d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -767,10 +774,12 @@
     <value>..\Resources\weather_small_04n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NotePad_tip" xml:space="preserve">
-    <value>Left click to open / close notepad.{0}Right click to launch your preffered text editor.</value>
+    <value>Left click to open / close notepad
+Right click to launch your preffered text editor</value>
   </data>
   <data name="TimeICalManager_Tip" xml:space="preserve">
-    <value>Left click to open online calendar{0}Right click to open online contacts.</value>
+    <value>Left click to open online calendar
+Right click to open online contacts.</value>
   </data>
   <data name="SysInfos_20" xml:space="preserve">
     <value>Sent: {0}/s - Received: {1}/s{4}{2}% of {3}/s bandwidth used.</value>
@@ -806,7 +815,8 @@
     <value>    {0} photo(s) have been ignored because filename was already good</value>
   </data>
   <data name="SysInfosTips" xml:space="preserve">
-    <value>Left click to open SysInfo extended panel{0}Right click for context menu options</value>
+    <value>Left click to open SysInfo extended panel
+Right click for context menu options</value>
   </data>
   <data name="separator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\separator.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -824,7 +834,8 @@
     <value>..\Resources\MyComputer_Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ShutdownManager_Tip" xml:space="preserve">
-    <value>Left click to default action (see options){0}Right click for menu</value>
+    <value>Left click to default action (see options)
+Right click for menu</value>
   </data>
   <data name="JpgRenamer_NormalMode" xml:space="preserve">
     <value>(normal mode)</value>
@@ -978,5 +989,20 @@
   </data>
   <data name="background_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-right.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FavoriteLocationDocuments" xml:space="preserve">
+    <value>Open "my documents"</value>
+  </data>
+  <data name="FavoriteLocationDownloads" xml:space="preserve">
+    <value>Open "my downloads"</value>
+  </data>
+  <data name="FavoriteLocationImages" xml:space="preserve">
+    <value>Open "my images"</value>
+  </data>
+  <data name="FavoriteLocationMusics" xml:space="preserve">
+    <value>Open "my music"</value>
+  </data>
+  <data name="FavoriteLocationVideos" xml:space="preserve">
+    <value>Open "my videos"</value>
   </data>
 </root>

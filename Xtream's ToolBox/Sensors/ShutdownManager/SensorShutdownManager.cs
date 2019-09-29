@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Resources;
 using XtreamToolbox.Utils;
 using XtreamToolbox.Sensors.ShutdownManager;
+using System.Globalization;
 
 namespace XtreamToolbox
 {
@@ -43,8 +44,9 @@ namespace XtreamToolbox
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // Tooltips
-            helpToolTip.SetToolTip(upperButton, String.Format(resources.GetString("ShutdownManager_Tip"), Environment.NewLine));
-            helpToolTip.SetToolTip(lowerButton, String.Format(resources.GetString("ShutdownManager_Tip"), Environment.NewLine));
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+            helpToolTip.SetToolTip(upperButton, resources.GetString("ShutdownManager_Tip", culture));
+            helpToolTip.SetToolTip(lowerButton, resources.GetString("ShutdownManager_Tip", culture));
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             switch (Properties.Settings.Default.shutdownManagerDefaultActionUpperButton)

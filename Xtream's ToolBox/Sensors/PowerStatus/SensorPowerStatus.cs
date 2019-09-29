@@ -9,6 +9,7 @@ using Microsoft.Win32;
 using System.Reflection;
 using System.Resources;
 using XtreamToolbox.Utils;
+using System.Globalization;
 
 namespace XtreamToolbox.Sensors
 {
@@ -42,7 +43,8 @@ namespace XtreamToolbox.Sensors
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // tooltips
-            ToolBoxUtils.SetTooltips(helpToolTip, this, resources.GetString("PowerStatus_Tips1"));
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+            ToolBoxUtils.SetTooltips(helpToolTip, this, resources.GetString("PowerStatus_Tips1", culture));
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             SystemEvents.PowerModeChanged += new PowerModeChangedEventHandler(SystemEvents_PowerModeChanged);
@@ -72,7 +74,7 @@ namespace XtreamToolbox.Sensors
                     batteryLifeRemaining = SystemUtils.GetFriendlyTimespan(SystemInformation.PowerStatus.BatteryLifeRemaining, "auto");
                 }
                 double batteryLifePercent = Math.Truncate(SystemInformation.PowerStatus.BatteryLifePercent * 100);
-                ToolBoxUtils.SetTooltips(helpToolTip, this, String.Format(resources.GetString("PowerStatus_Tips2"), batteryFullLifetime, batteryLifeRemaining, batteryLifePercent, Environment.NewLine));
+                ToolBoxUtils.SetTooltips(helpToolTip, this, String.Format(resources.GetString("PowerStatus_Tips2"), batteryFullLifetime, batteryLifeRemaining, batteryLifePercent));
             }
 
             switch (SystemInformation.PowerStatus.PowerLineStatus)

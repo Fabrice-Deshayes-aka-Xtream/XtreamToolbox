@@ -51,10 +51,13 @@ namespace XtreamToolbox.Sensors
 
         public void InitUI()
         {
+
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
-            ToolBoxUtils.SetTooltips(helpToolTip, ViewCalendarPictureBox, String.Format(resources.GetString("TimeICalManager_Tip"), Environment.NewLine));
+            // tips
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+            ToolBoxUtils.SetTooltips(helpToolTip, ViewCalendarPictureBox, resources.GetString("TimeICalManager_Tip", culture));
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 
             timeLabel.ForeColor = Properties.Settings.Default.textColor;

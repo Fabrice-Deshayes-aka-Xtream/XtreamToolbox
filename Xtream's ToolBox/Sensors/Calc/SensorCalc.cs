@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Resources;
 using XtreamToolbox.Utils;
+using System.Globalization;
 
 namespace XtreamToolbox.Sensors
 {
@@ -40,7 +41,8 @@ namespace XtreamToolbox.Sensors
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // tips
-            helpToolTip.SetToolTip(this, resources.GetString("Calc_tip"));
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+            helpToolTip.SetToolTip(this, resources.GetString("Calc_tip", culture));
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
         }
 

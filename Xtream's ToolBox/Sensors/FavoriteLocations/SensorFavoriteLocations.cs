@@ -5,6 +5,9 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Resources;
+using XtreamToolbox.Utils;
 
 namespace XtreamToolbox
 {
@@ -13,6 +16,9 @@ namespace XtreamToolbox
 
         // reference on toolbox
         private Toolbox toolbox = null;
+
+        // ressource manager pour accéder aux chaines localisées
+        private ResourceManager resources = Properties.Resources.ResourceManager;
 
         // constructor
         public SensorFavoriteLocations(Toolbox toolbox)
@@ -34,6 +40,14 @@ namespace XtreamToolbox
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
+            // tips
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+            helpToolTip.SetToolTip(DocumentsPictureBox, resources.GetString("FavoriteLocationDocuments", culture));
+            helpToolTip.SetToolTip(MusicsPictureBox, resources.GetString("FavoriteLocationMusics", culture));
+            helpToolTip.SetToolTip(ImagesPictureBox, resources.GetString("FavoriteLocationImages", culture));
+            helpToolTip.SetToolTip(VideosPictureBox, resources.GetString("FavoriteLocationVideos", culture));
+            helpToolTip.SetToolTip(DownloadsPictureBox, resources.GetString("FavoriteLocationDownloads", culture));
+            ToolBoxUtils.ConfigureTooltips(helpToolTip);
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)

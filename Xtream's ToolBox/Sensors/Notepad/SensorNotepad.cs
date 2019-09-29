@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Resources;
 using XtreamToolbox.Utils;
 using System.IO;
+using System.Globalization;
 
 namespace XtreamToolbox.Sensors
 {
@@ -44,7 +45,8 @@ namespace XtreamToolbox.Sensors
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // tips
-            ToolBoxUtils.SetTooltips(helpToolTip, this, String.Format(resources.GetString("NotePad_tip"),Environment.NewLine));
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+            ToolBoxUtils.SetTooltips(helpToolTip, this, resources.GetString("NotePad_tip", culture));
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
         }
 

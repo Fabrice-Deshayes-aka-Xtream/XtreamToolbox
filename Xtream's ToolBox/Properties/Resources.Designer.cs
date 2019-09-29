@@ -570,6 +570,51 @@ namespace XtreamToolbox.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open &quot;my documents&quot;.
+        /// </summary>
+        internal static string FavoriteLocationDocuments {
+            get {
+                return ResourceManager.GetString("FavoriteLocationDocuments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open &quot;my downloads&quot;.
+        /// </summary>
+        internal static string FavoriteLocationDownloads {
+            get {
+                return ResourceManager.GetString("FavoriteLocationDownloads", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open &quot;my images&quot;.
+        /// </summary>
+        internal static string FavoriteLocationImages {
+            get {
+                return ResourceManager.GetString("FavoriteLocationImages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open &quot;my music&quot;.
+        /// </summary>
+        internal static string FavoriteLocationMusics {
+            get {
+                return ResourceManager.GetString("FavoriteLocationMusics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Open &quot;my videos&quot;.
+        /// </summary>
+        internal static string FavoriteLocationVideos {
+            get {
+                return ResourceManager.GetString("FavoriteLocationVideos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap folder_open_16 {
@@ -1234,7 +1279,8 @@ namespace XtreamToolbox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Left click to open my computer{0}Right click for administrative tools.
+        ///   Recherche une chaîne localisée semblable à Left click to open my computer
+        ///Right click for administrative tools.
         /// </summary>
         internal static string MyComputer_tip {
             get {
@@ -1300,7 +1346,8 @@ namespace XtreamToolbox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Left click to open / close notepad.{0}Right click to launch your preffered text editor..
+        ///   Recherche une chaîne localisée semblable à Left click to open / close notepad
+        ///Right click to launch your preffered text editor.
         /// </summary>
         internal static string NotePad_tip {
             get {
@@ -1372,7 +1419,10 @@ namespace XtreamToolbox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Click to configure energy saving for your computer{3}{3}Full charge battery duration : {0}{3}Battery remaining : {1} ({2}%).
+        ///   Recherche une chaîne localisée semblable à Click to configure energy saving for your computer
+        ///
+        ///Full charge battery duration : {0}
+        ///Battery remaining : {1} ({2}%).
         /// </summary>
         internal static string PowerStatus_Tips2 {
             get {
@@ -1410,7 +1460,9 @@ namespace XtreamToolbox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à {0} ({1} items) in Recycle bin{2}Left click to open it{2}Right click to empty.
+        ///   Recherche une chaîne localisée semblable à {0} ({1} items) in Recycle bin
+        ///Left click to open it
+        ///Right click to empty.
         /// </summary>
         internal static string RecycleBin_Infos {
             get {
@@ -1704,7 +1756,8 @@ namespace XtreamToolbox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Left click to default action (see options){0}Right click for menu.
+        ///   Recherche une chaîne localisée semblable à Left click to default action (see options)
+        ///Right click for menu.
         /// </summary>
         internal static string ShutdownManager_Tip {
             get {
@@ -2190,7 +2243,8 @@ namespace XtreamToolbox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Left click to open SysInfo extended panel{0}Right click for context menu options.
+        ///   Recherche une chaîne localisée semblable à Left click to open SysInfo extended panel
+        ///Right click for context menu options.
         /// </summary>
         internal static string SysInfosTips {
             get {
@@ -2209,7 +2263,8 @@ namespace XtreamToolbox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Left click to open online calendar{0}Right click to open online contacts..
+        ///   Recherche une chaîne localisée semblable à Left click to open online calendar
+        ///Right click to open online contacts..
         /// </summary>
         internal static string TimeICalManager_Tip {
             get {
@@ -2783,7 +2838,8 @@ namespace XtreamToolbox.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Open / Close weather informations.
+        ///   Recherche une chaîne localisée semblable à Left click to open/close weather information
+        ///Right click to browse to weather forcast on OpenWeatherMap.
         /// </summary>
         internal static string Weather_tip {
             get {

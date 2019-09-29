@@ -63,9 +63,11 @@ namespace XtreamToolbox.Sensors
             // couleur du text
             tempLabel.ForeColor = Properties.Settings.Default.textColor;
 
-            helpToolTip.SetToolTip(weatherPictureBox, resources.GetString("Weather_tip"));
-            helpToolTip.SetToolTip(tempLabel, resources.GetString("Weather_tip"));
-            helpToolTip.SetToolTip(this, resources.GetString("Weather_tip"));
+            // tips
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+            helpToolTip.SetToolTip(weatherPictureBox, resources.GetString("Weather_tip", culture));
+            helpToolTip.SetToolTip(tempLabel, resources.GetString("Weather_tip", culture));
+            helpToolTip.SetToolTip(this, resources.GetString("Weather_tip", culture));
 
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
 

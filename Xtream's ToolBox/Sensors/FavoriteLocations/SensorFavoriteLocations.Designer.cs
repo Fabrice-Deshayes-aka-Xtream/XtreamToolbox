@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SensorFavoriteLocations));
             this.DocumentsPictureBox = new System.Windows.Forms.PictureBox();
             this.MusicsPictureBox = new System.Windows.Forms.PictureBox();
             this.ImagesPictureBox = new System.Windows.Forms.PictureBox();
             this.DownloadsPictureBox = new System.Windows.Forms.PictureBox();
             this.VideosPictureBox = new System.Windows.Forms.PictureBox();
+            this.helpToolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DocumentsPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MusicsPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagesPictureBox)).BeginInit();
@@ -114,5 +116,6 @@
         private System.Windows.Forms.PictureBox ImagesPictureBox;
         private System.Windows.Forms.PictureBox DownloadsPictureBox;
         private System.Windows.Forms.PictureBox VideosPictureBox;
+        private System.Windows.Forms.ToolTip helpToolTip;
     }
 }

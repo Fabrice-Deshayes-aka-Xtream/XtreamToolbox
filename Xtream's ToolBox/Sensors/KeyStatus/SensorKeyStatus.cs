@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Resources;
 using XtreamToolbox.Utils;
+using System.Globalization;
 
 namespace XtreamToolbox.Sensors
 {
@@ -40,10 +41,11 @@ namespace XtreamToolbox.Sensors
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // Tips
-            helpToolTip.SetToolTip(capsLockStatusPictureBoxON, resources.GetString("KeyStatus_Caps_ON"));
-            helpToolTip.SetToolTip(capsLockStatusPictureBoxOFF, resources.GetString("KeyStatus_Caps_OFF"));
-            helpToolTip.SetToolTip(numLockStatusPictureBoxON, resources.GetString("KeyStatus_Num_ON"));
-            helpToolTip.SetToolTip(numLockStatusPictureBoxOFF, resources.GetString("KeyStatus_Num_OFF"));
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+            helpToolTip.SetToolTip(capsLockStatusPictureBoxON, resources.GetString("KeyStatus_Caps_ON", culture));
+            helpToolTip.SetToolTip(capsLockStatusPictureBoxOFF, resources.GetString("KeyStatus_Caps_OFF", culture));
+            helpToolTip.SetToolTip(numLockStatusPictureBoxON, resources.GetString("KeyStatus_Num_ON", culture));
+            helpToolTip.SetToolTip(numLockStatusPictureBoxOFF, resources.GetString("KeyStatus_Num_OFF", culture));
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
         }
 

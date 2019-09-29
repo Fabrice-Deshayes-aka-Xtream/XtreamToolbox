@@ -130,23 +130,23 @@ namespace XtreamToolbox.Sensors
             // set component margins (left, top, right, bottom)
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
-            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
 
             // tips
-            helpToolTip.SetToolTip(this, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(cpuLabel, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(ramLabel, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(lanLabel, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(wanLabel, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(c2DPushGraph, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(lanVumeterDBg, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(lanVumeterD, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(lanVumeterUBg, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(lanVumeterU, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(cpuVumeterBg, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(cpuVumeter, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(ramVumeterBg, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
-            helpToolTip.SetToolTip(ramVumeter, String.Format(resources.GetString("SysInfosTips", culture), Environment.NewLine));
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
+            helpToolTip.SetToolTip(this, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(cpuLabel, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(ramLabel, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(lanLabel, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(wanLabel, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(c2DPushGraph, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(lanVumeterDBg, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(lanVumeterD, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(lanVumeterUBg, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(lanVumeterU, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(cpuVumeterBg, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(cpuVumeter, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(ramVumeterBg, resources.GetString("SysInfosTips", culture));
+            helpToolTip.SetToolTip(ramVumeter, resources.GetString("SysInfosTips", culture));
 
             // option            
             cpuRamTimer.Interval = Properties.Settings.Default.sysInfosRefreshTime;

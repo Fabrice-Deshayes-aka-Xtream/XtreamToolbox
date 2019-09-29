@@ -57,6 +57,7 @@ namespace XtreamToolbox.Sensors
             Margin = new Padding(Properties.Settings.Default.spaceBetweenSensor, 0, Properties.Settings.Default.spaceBetweenSensor, 0);
 
             // tips
+            CultureInfo culture = new CultureInfo(Properties.Settings.Default.language);
             ToolBoxUtils.ConfigureTooltips(helpToolTip);
         }
 
