@@ -530,4 +530,7 @@ Clic droit pour afficher le menu</value>
   <data name="FavoriteLocationVideos" xml:space="preserve">
     <value>Ouvrir "mes vidéos"</value>
   </data>
+  <data name="CalendarEventDateTime" xml:space="preserve">
+    <value>dd/MM/yyyy HH:mm</value>
+  </data>
 </root>

@@ -1005,4 +1005,7 @@ Right click for menu</value>
   <data name="FavoriteLocationVideos" xml:space="preserve">
     <value>Open "my videos"</value>
   </data>
+  <data name="CalendarEventDateTime" xml:space="preserve">
+    <value>MM/dd/yyyy hh:mm</value>
+  </data>
 </root>

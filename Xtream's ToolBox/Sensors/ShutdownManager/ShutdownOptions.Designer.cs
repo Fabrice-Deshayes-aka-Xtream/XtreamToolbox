@@ -187,7 +187,9 @@
             this.doItLaterDateTimePicker.Cursor = System.Windows.Forms.Cursors.Arrow;
             resources.ApplyResources(this.doItLaterDateTimePicker, "doItLaterDateTimePicker");
             this.doItLaterDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.doItLaterDateTimePicker.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.doItLaterDateTimePicker.Name = "doItLaterDateTimePicker";
+            this.doItLaterDateTimePicker.ShowUpDown = true;
             this.doItLaterDateTimePicker.ValueChanged += new System.EventHandler(this.DoItLaterDateTimePicker_ValueChanged);
             // 
             // doTimedActionTimer
