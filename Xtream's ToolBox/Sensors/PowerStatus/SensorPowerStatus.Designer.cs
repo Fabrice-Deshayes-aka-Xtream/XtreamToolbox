@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.helpToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.RefreshUiTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // helpToolTip
@@ -39,6 +40,12 @@
             this.helpToolTip.InitialDelay = 1;
             this.helpToolTip.ReshowDelay = 0;
             this.helpToolTip.ShowAlways = true;
+            // 
+            // RefreshUiTimer
+            // 
+            this.RefreshUiTimer.Enabled = true;
+            this.RefreshUiTimer.Interval = 300000;
+            this.RefreshUiTimer.Tick += new System.EventHandler(this.RefreshUiTimer_Tick);
             // 
             // SensorPowerStatus
             // 
@@ -57,5 +64,6 @@
         #endregion
 
         private System.Windows.Forms.ToolTip helpToolTip;
+        private System.Windows.Forms.Timer RefreshUiTimer;
     }
 }

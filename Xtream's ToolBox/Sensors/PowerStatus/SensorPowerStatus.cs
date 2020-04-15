@@ -176,5 +176,10 @@ namespace XtreamToolbox.Sensors
                 MessageBox.Show(errMsg);
             }
         }
+
+        private void RefreshUiTimer_Tick(object sender, EventArgs e)
+        {
+            RefreshUI();
+        }
     }
 }
