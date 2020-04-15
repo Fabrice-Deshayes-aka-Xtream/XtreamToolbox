@@ -1,3 +1,8 @@
+## version 2020.04.15
+- [Shutdown sensor] can't specify time for scheduled shutdown [#25](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/25)
+- [Power Status Sensor] battery level indicator is no more update in real time (only on toolbox restart) [#23](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/23)
+- [Weather Sensor] remove popup when open weather api not reachable [#24](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/24)
+
 ## version 2019.09.29
 - [System Info Sensor] Add Windows 10 release id (ie 1903 for march 2019) [#20](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/20)
 - [Weather Sensor] browse to your city weather forecast on OpenWeather on left click [#21](https://github.com/Fabrice-Deshayes-aka-Xtream/XtreamToolbox/issues/21)
