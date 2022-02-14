@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
+using System.Globalization;
 using System.Resources;
 using System.Threading;
-using System.Globalization;
+using System.Windows.Forms;
 
 namespace XtreamToolbox
 {

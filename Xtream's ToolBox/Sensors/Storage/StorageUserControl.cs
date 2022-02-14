@@ -1,12 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
-using System.Resources;
 using System.IO;
+using System.Resources;
+using System.Windows.Forms;
 using XtreamToolbox.Utils;
 
 namespace XtreamToolbox.Sensors
@@ -24,7 +19,7 @@ namespace XtreamToolbox.Sensors
         {
             InitializeComponent();
             this.device = device;
-            switch(device.DriveType)
+            switch (device.DriveType)
             {
                 case DriveType.Fixed:
                     devicePictureBox.Image = Properties.Resources.Drive_harddisc;
@@ -61,7 +56,8 @@ namespace XtreamToolbox.Sensors
                     if (usedSpace > 100) usedSpace = 100;
                     deviceSpacePictureBox.Width = (int)(usedSpace / 2);
                     sizeInfoLabel.Text = String.Format(resources.GetString("StorageUserControlSize"), SystemUtils.GetFriendlyBytesSize(device.TotalSize, "auto"), usedSpace, SystemUtils.GetFriendlyBytesSize(device.TotalFreeSpace, "auto"));
-                } else
+                }
+                else
                 {
                     deviceSpacePictureBox.Visible = false;
                     sizeInfoLabel.Visible = false;

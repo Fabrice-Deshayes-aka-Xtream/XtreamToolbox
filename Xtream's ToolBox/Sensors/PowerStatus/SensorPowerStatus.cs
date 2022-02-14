@@ -1,15 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
 using Microsoft.Win32;
-using System.Reflection;
-using System.Resources;
-using XtreamToolbox.Utils;
+using System;
 using System.Globalization;
+using System.Resources;
+using System.Windows.Forms;
+using XtreamToolbox.Utils;
 
 namespace XtreamToolbox.Sensors
 {

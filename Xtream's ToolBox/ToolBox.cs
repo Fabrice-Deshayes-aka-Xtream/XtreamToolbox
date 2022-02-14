@@ -1,20 +1,14 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using System.Collections;
 using System.Collections.Specialized;
-using XtreamToolbox.Sensors;
-using System.Drawing.Imaging;
+using System.ComponentModel;
+using System.Drawing;
 using System.Globalization;
-using System.Threading;
-using XtreamToolbox.Utils;
-using TimeSync;
 using System.Resources;
+using System.Threading;
+using System.Windows.Forms;
+using TimeSync;
+using XtreamToolbox.Sensors;
 
 namespace XtreamToolbox
 {

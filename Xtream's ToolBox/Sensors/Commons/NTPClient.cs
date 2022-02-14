@@ -23,7 +23,6 @@ namespace TimeSync
     using System.Net;
     using System.Net.Sockets;
     using System.Runtime.InteropServices;
-    using XtreamToolbox;
 
     // Leap indicator field values
     public enum LeapIndicator

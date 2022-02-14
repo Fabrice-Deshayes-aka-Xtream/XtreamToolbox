@@ -1,14 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
-using System.IO;
-using System.Resources;
-using XtreamToolbox.Utils;
 using System.Globalization;
+using System.Resources;
+using System.Windows.Forms;
+using XtreamToolbox.Utils;
 
 namespace XtreamToolbox.Sensors
 {
@@ -127,7 +121,7 @@ namespace XtreamToolbox.Sensors
 
         private void OptionalFeaturesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SystemUtils.StartProcess("ms-settings:optionalfeatures", null); 
+            SystemUtils.StartProcess("ms-settings:optionalfeatures", null);
         }
 
         private void DefaultApplicationsToolStripMenuItem_Click(object sender, EventArgs e)

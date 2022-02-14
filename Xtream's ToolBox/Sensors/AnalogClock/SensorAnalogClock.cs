@@ -1,17 +1,12 @@
 using System;
-using System.Collections;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Windows.Forms;
-using XtreamToolbox;
-using System.Resources;
-using System.Threading;
-using System.Globalization;
-using XtreamToolbox.Utils;
 using System.Drawing.Drawing2D;
+using System.Resources;
+using System.Windows.Forms;
+using XtreamToolbox.Utils;
 
-namespace XtreamToolbox.Sensors {
+namespace XtreamToolbox.Sensors
+{
     /// <summary>
     /// Control name: Analog Clock Control
     /// Description: A customizable and resizable clock control
@@ -19,7 +14,8 @@ namespace XtreamToolbox.Sensors {
     /// Email: smehrozalam@yahoo.com
     /// URL: Programming Home "http://www.geocities.com/smehrozalam/"
     /// </summary>
-    public class SensorAnalogClock : UserControl, ISensor {
+    public class SensorAnalogClock : UserControl, ISensor
+    {
         // reference on toolbox
         private readonly Toolbox toolbox = null;
 
@@ -56,7 +52,8 @@ namespace XtreamToolbox.Sensors {
         private System.ComponentModel.IContainer components;
 
         // constructor
-        public SensorAnalogClock(Toolbox toolbox) {
+        public SensorAnalogClock(Toolbox toolbox)
+        {
             InitializeComponent();
 
             this.toolbox = toolbox;
@@ -64,12 +61,14 @@ namespace XtreamToolbox.Sensors {
         }
 
         // return extended panel if exist, null otherwise (for activate and hide/show)
-        public Form GetExtendedPanel() {
+        public Form GetExtendedPanel()
+        {
             return null;
         }
 
         // init UI
-        public void InitUI() {
+        public void InitUI()
+        {
             // set component margins (left, top, right, bottom)
             Margin = new Padding(XtreamToolbox.Properties.Settings.Default.spaceBetweenSensor, 0, XtreamToolbox.Properties.Settings.Default.spaceBetweenSensor, 0);
 
@@ -93,27 +92,33 @@ namespace XtreamToolbox.Sensors {
         }
 
         // init sensor data (will be called in asynch mode : no UI changed allowed!!)
-        public void InitSensorData() {
+        public void InitSensorData()
+        {
             // nothing to do on this sensor
         }
 
         // refresh UI based on sensor Data
-        public void RefreshUI() {
+        public void RefreshUI()
+        {
             this.dateTime = DateTime.Now;
             this.Refresh();
         }
 
         // update location of extended panel if needed
-        public void UpdateLocation() {
+        public void UpdateLocation()
+        {
             // nothing to do on this sensor
         }
 
         /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
-        protected override void Dispose(bool disposing) {
-            if (disposing) {
-                if (components != null) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (components != null)
+                {
                     components.Dispose();
                 }
             }
@@ -125,7 +130,8 @@ namespace XtreamToolbox.Sensors {
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             this.AnalogClockTimer = new System.Windows.Forms.Timer(this.components);
             this.helpToolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -160,24 +166,28 @@ namespace XtreamToolbox.Sensors {
         }
         #endregion
 
-        private void Timer1_Tick(object sender, System.EventArgs e) {
+        private void Timer1_Tick(object sender, System.EventArgs e)
+        {
             RefreshUI();
         }
 
-        private void DrawLine(float fThickness, float fLength, Color color, System.Windows.Forms.PaintEventArgs e) {
+        private void DrawLine(float fThickness, float fLength, Color color, System.Windows.Forms.PaintEventArgs e)
+        {
             e.Graphics.DrawLine(new Pen(color, fThickness), 0, fLength / 9, 0, -fLength);
         }
 
-        private void DrawPolygon(float fThickness, float fLength, Color color, System.Windows.Forms.PaintEventArgs e) {
+        private void DrawPolygon(float fThickness, float fLength, Color color, System.Windows.Forms.PaintEventArgs e)
+        {
             PointF A = new PointF(fThickness * 2F, 0);
             PointF B = new PointF(-fThickness * 2F, 0);
             PointF C = new PointF(0, -fLength);
             PointF D = new PointF(0, fThickness * 4F);
-            PointF[] points ={ A, D, B, C };
+            PointF[] points = { A, D, B, C };
             e.Graphics.FillPolygon(new SolidBrush(color), points);
         }
 
-        private void AnalogClock_Paint(object sender, System.Windows.Forms.PaintEventArgs e) {
+        private void AnalogClock_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
+        {
             e.Graphics.CompositingMode = System.Drawing.Drawing2D.CompositingMode.SourceOver;
             e.Graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -196,13 +206,17 @@ namespace XtreamToolbox.Sensors {
             DrawLine(this.fSecThickness, this.fSecLength, secColor, e);
 
 
-            for (int i = 0; i < 60; i++) {
+            for (int i = 0; i < 60; i++)
+            {
                 e.Graphics.Transform = m;
                 e.Graphics.RotateTransform(i * 6);
-                if (this.bDraw5MinuteTicks == true && i % 5 == 0){
+                if (this.bDraw5MinuteTicks == true && i % 5 == 0)
+                {
                     // Draw 5 minute ticks
                     e.Graphics.DrawLine(new Pen(ticksColor, fTicksThickness), 0, -this.fRadius / 1.50F, 0, -this.fRadius / 1.65F);
-                } else if (this.bDraw1MinuteTicks == true){
+                }
+                else if (this.bDraw1MinuteTicks == true)
+                {
                     // draw 1 minute ticks
                     e.Graphics.DrawLine(new Pen(ticksColor, fTicksThickness), 0, -this.fRadius / 1.50F, 0, -this.fRadius / 1.55F);
                 }
@@ -212,35 +226,42 @@ namespace XtreamToolbox.Sensors {
             e.Graphics.FillEllipse(new SolidBrush(circleColor), -fCenterCircleRadius / 2, -fCenterCircleRadius / 2, fCenterCircleRadius, fCenterCircleRadius);
         }
 
-        public Color HourHandColor {
+        public Color HourHandColor
+        {
             get { return this.hrColor; }
             set { this.hrColor = value; }
         }
 
-        public Color MinuteHandColor {
+        public Color MinuteHandColor
+        {
             get { return this.minColor; }
             set { this.minColor = value; }
         }
 
-        public Color SecondHandColor {
+        public Color SecondHandColor
+        {
             get { return this.secColor; }
-            set {
+            set
+            {
                 this.secColor = value;
                 this.circleColor = value;
             }
         }
 
-        public Color TicksColor {
+        public Color TicksColor
+        {
             get { return this.ticksColor; }
             set { this.ticksColor = value; }
         }
 
-        public bool Draw1MinuteTicks {
+        public bool Draw1MinuteTicks
+        {
             get { return this.bDraw1MinuteTicks; }
             set { this.bDraw1MinuteTicks = value; }
         }
 
-        public bool Draw5MinuteTicks {
+        public bool Draw5MinuteTicks
+        {
             get { return this.bDraw5MinuteTicks; }
             set { this.bDraw5MinuteTicks = value; }
         }

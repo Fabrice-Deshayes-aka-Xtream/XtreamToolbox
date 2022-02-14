@@ -1,12 +1,7 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
 using System.Net;
-using System.IO;
-using System.Globalization;
-using Newtonsoft.Json;
 
 namespace XtreamToolbox.Sensors
 {
@@ -113,7 +108,7 @@ namespace XtreamToolbox.Sensors
                         break;
                 }
             }
-            catch(WebException we)
+            catch (WebException)
             {
                 // log we.Message
                 return null;

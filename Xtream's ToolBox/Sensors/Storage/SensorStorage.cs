@@ -1,15 +1,10 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
+using System.Globalization;
 using System.Resources;
 using System.Threading;
-using System.Globalization;
+using System.Windows.Forms;
 using XtreamToolbox.Utils;
-using System.IO;
 
 namespace XtreamToolbox.Sensors
 {
@@ -100,7 +95,7 @@ namespace XtreamToolbox.Sensors
             else
             {
                 ToolBoxUtils.ManageExtendedPanelPosition(this, toolbox, extendedPanel);
-                extendedPanel.Init();                
+                extendedPanel.Init();
                 extendedPanel.Show();
             }
         }

@@ -1,15 +1,13 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Runtime.InteropServices;
-using System.Net;
-using System.Net.Sockets;
-using System.Management;
-using System.Net.NetworkInformation;
-using System.Threading;
-using System.Resources;
-using System.Windows.Forms;
 using System.Diagnostics;
+using System.Management;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
+using System.Resources;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace XtreamToolbox
 {
@@ -49,11 +47,11 @@ namespace XtreamToolbox
             [DllImport("advapi32.dll", CharSet = CharSet.Unicode)]
             internal static extern int AdjustTokenPrivileges(
                IntPtr TokenHandle,
-               [MarshalAs(UnmanagedType.Bool)]bool DisableAllPrivileges,
+               [MarshalAs(UnmanagedType.Bool)] bool DisableAllPrivileges,
                [MarshalAs(UnmanagedType.Struct)] ref TOKEN_PRIVILEGES NewState,
                int BufferLength,
-               long PreviousState,
-               long ReturnLength
+               IntPtr PreviousState,
+               IntPtr ReturnLength
            );
 
             [DllImport("user32.dll")]
@@ -93,7 +91,7 @@ namespace XtreamToolbox
             internal static extern int InternetAttemptConnect(uint res);
 
             [DllImport("wininet.dll", SetLastError = true)]
-            internal static extern bool InternetGetConnectedState(long flags, int reserved);
+            internal static extern bool InternetGetConnectedState(IntPtr flags, int reserved);
 
             // Start Get Key Status
             [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true, CallingConvention = CallingConvention.Winapi)]
@@ -198,7 +196,7 @@ namespace XtreamToolbox
         private const int ERROR_SUCCESS = 0;
         public static bool IsInternetConnected()
         {
-            long dwConnectionFlags = 0;
+            IntPtr dwConnectionFlags = (IntPtr)0;
             if (!NativeMethods.InternetGetConnectedState(dwConnectionFlags, 0))
                 return false;
 
@@ -294,7 +292,7 @@ namespace XtreamToolbox
             tp.Luid = luid;
 
             int tpsz = Marshal.SizeOf(tp);
-            NativeMethods.AdjustTokenPrivileges(TokenHandle, false, ref tp, tpsz, 0, 0);
+            NativeMethods.AdjustTokenPrivileges(TokenHandle, false, ref tp, tpsz, (IntPtr)0, (IntPtr)0);
             NativeMethods.ExitWindowsEx(EWX_VALUE, 0);
         }
 

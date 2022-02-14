@@ -1,20 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
-using System.Threading;
 using System.Globalization;
-using System.IO;
-using System.Net.Sockets;
-using Microsoft.Win32;
-using System.Diagnostics;
 using System.Resources;
+using System.Threading;
+using System.Windows.Forms;
 using XtreamToolbox.Utils;
 using XtreamToolbox.Utils.Mail;
-using System.Collections.Specialized;
 
 namespace XtreamToolbox.Sensors
 {
@@ -157,7 +150,7 @@ namespace XtreamToolbox.Sensors
                 }
             }
 
-            hints += String.Format(resources.GetString("Pop3Checker_OpenIt"),Environment.NewLine);
+            hints += String.Format(resources.GetString("Pop3Checker_OpenIt"), Environment.NewLine);
         }
 
         private int ApplySpamRules(Dictionary<String, StringCollection> mailHeader)

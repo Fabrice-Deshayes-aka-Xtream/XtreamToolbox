@@ -1,12 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
-using System.Resources;
 using System.IO;
+using System.Resources;
+using System.Windows.Forms;
 using XtreamToolbox.Utils;
 
 namespace XtreamToolbox.Sensors
@@ -128,10 +124,10 @@ namespace XtreamToolbox.Sensors
                 int maxPeak = maxRead > maxWrite ? maxRead : maxWrite;
                 if (maxPeak > 0)
                 {
-                    readWriteGraph.MaxPeekMagnitude = maxPeak/1024;
+                    readWriteGraph.MaxPeekMagnitude = maxPeak / 1024;
                 }
-                readWriteGraph.Push(currentReadFlow/1024, LINE_READ);
-                readWriteGraph.Push(currentWriteFlow/1024, LINE_WRITE);
+                readWriteGraph.Push(currentReadFlow / 1024, LINE_READ);
+                readWriteGraph.Push(currentWriteFlow / 1024, LINE_WRITE);
 
                 readMaxLabel.Text = "(max " + SystemUtils.GetFriendlyBytesSize(maxRead, "auto") + "/s)";
                 writeMaxLabel.Text = "(max " + SystemUtils.GetFriendlyBytesSize(maxWrite, "auto") + "/s)";

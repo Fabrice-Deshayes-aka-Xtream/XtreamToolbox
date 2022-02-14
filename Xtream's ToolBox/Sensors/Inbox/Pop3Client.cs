@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Net.Sockets;
-using System.IO;
 using System.Collections.Specialized;
+using System.IO;
+using System.Net.Sockets;
+using System.Text;
 
 namespace XtreamToolbox.Utils.Mail
 {

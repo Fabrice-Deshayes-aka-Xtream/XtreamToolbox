@@ -1,16 +1,11 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
-using System.Xml;
-using XtreamToolbox.Utils;
-using System.Runtime.Remoting.Messaging;
-using System.Threading;
 using System.Globalization;
 using System.Resources;
+using System.Threading;
+using System.Windows.Forms;
+using XtreamToolbox.Utils;
 
 namespace XtreamToolbox.Sensors
 {
@@ -81,11 +76,11 @@ namespace XtreamToolbox.Sensors
         public void InitSensorData()
         {
             CurrentCondition newCurrentCondition = CurrentCondition.GetCurrentCondition(Properties.Settings.Default.weatherCityId, Properties.Settings.Default.weatherTempUnit);
-            if (newCurrentCondition!=null)
+            if (newCurrentCondition != null)
             {
                 CurrentCondition = newCurrentCondition;
             }
-            
+
         }
 
         // refresh UI based on sensor Data
@@ -95,12 +90,14 @@ namespace XtreamToolbox.Sensors
             {
                 weatherPictureBox.Image = Properties.Resources.weather_small_na;
                 tempLabel.Text = resources.GetString("not_available");
-            } else if (!CurrentCondition.AvailableIcons.Contains(CurrentCondition.Weather[0].Icon))
+            }
+            else if (!CurrentCondition.AvailableIcons.Contains(CurrentCondition.Weather[0].Icon))
             {
                 weatherPictureBox.Image = Properties.Resources.weather_small_na;
-            } else
+            }
+            else
             {
-                tempLabel.Text = Math.Round(CurrentCondition.Main.Temp,1) + " " + CurrentCondition.TempUnits;
+                tempLabel.Text = Math.Round(CurrentCondition.Main.Temp, 1) + " " + CurrentCondition.TempUnits;
                 weatherPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject("weather_small_" + CurrentCondition.Weather[0].Icon);
             }
 
